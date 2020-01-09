@@ -12,7 +12,7 @@
 Summary: Process and resource monitor
 Name: gnome-system-monitor
 Version: 2.28.0
-Release: 9%{?dist}
+Release: 11%{?dist}
 License: GPLv2+
 Group: Applications/System
 URL: http://www.gnome.org/
@@ -66,6 +66,12 @@ Patch7: translation-updates.patch
 # https://bugzilla.redhat.com/show_bug.cgi?id=571597
 Patch8: scrollbar-buttons-v2.patch
 
+# https://bugzilla.redhat.com/show_bug.cgi?id=682011
+Patch9: gnome-system-monitor-ignore-missing-model.patch
+
+# https://bugzilla.redhat.com/show_bug.cgi?id=692956
+Patch10: gnome-system-monitor-use-clock-if-present.patch
+
 Requires(pre): GConf2 >= %{gconf_version}
 Requires(post): GConf2 >= %{gconf_version}
 Requires(post): scrollkeeper
@@ -88,6 +94,8 @@ such as CPU and memory.
 %patch6 -p1 -b .doc-category
 %patch7 -p1 -b .translations
 %patch8 -p1 -b .scrollbars
+%patch9 -p1 -b .missing-model
+%patch10 -p1 -b .use-clock
 
 autoreconf -i -f
 
@@ -170,6 +178,18 @@ scrollkeeper-update -q
 
 
 %changelog
+* Tue Jan 17 2012 Cosimo Cecchi <cosimoc@redhat.com> - 2.28.0-11
+- Add a patch from upstream that looks for the "clock" line in the
+  /proc/cpuinfo output. This fixes missing CPU speed for architectures
+  that put such information in the "clock" line, such as Power6
+Resolves: #692956
+
+* Tue Jan 17 2012 Cosimo Cecchi <cosimoc@redhat.com> - 2.28.0-10
+- Add a patch from upstream to ignore non CPU data from /proc/cpuinfo,
+  which would lead to a spurious processor displayed in the application,
+  under certain architectures
+Resolves: #682011
+
 * Wed Jul 27 2011 Cosimo Cecchi <cosimoc@redhat.com> 2.28.0-9
 - Update the previous scrolled window patch after QA testing
 Resolves: #571597

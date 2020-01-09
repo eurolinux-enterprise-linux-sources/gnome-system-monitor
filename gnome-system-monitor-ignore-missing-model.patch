@@ -1,0 +1,21 @@
+diff --git a/src/sysinfo.cpp b/src/sysinfo.cpp
+--- a/src/sysinfo.cpp
++++ b/src/sysinfo.cpp
+@@ -113,7 +113,7 @@ namespace {
+ 							 keys[j]));
+ 
+ 	if (!model)
+-	  model = _("Unknown CPU model");
++          continue;
+ 
+ 	this->processors.push_back(model);
+       }
+@@ -183,7 +183,7 @@ namespace {
+ 	{
+ 	  xmlXPathObjectPtr xpath;
+ 	  xpath = xmlXPathEvalExpression(BAD_CAST nodes[i].c_str(), context);
+-	  
++
+ 	  if (xpath and xpath->type == XPATH_STRING)
+ 	    values[i] = reinterpret_cast<const char*>(xpath->stringval);
+ 

@@ -12,7 +12,7 @@
 Summary: Process and resource monitor
 Name: gnome-system-monitor
 Version: 2.28.0
-Release: 7%{?dist}
+Release: 9%{?dist}
 License: GPLv2+
 Group: Applications/System
 URL: http://www.gnome.org/
@@ -63,6 +63,9 @@ Patch6: gnome-system-monitor-doc-category.patch
 
 Patch7: translation-updates.patch
 
+# https://bugzilla.redhat.com/show_bug.cgi?id=571597
+Patch8: scrollbar-buttons-v2.patch
+
 Requires(pre): GConf2 >= %{gconf_version}
 Requires(post): GConf2 >= %{gconf_version}
 Requires(post): scrollkeeper
@@ -84,6 +87,7 @@ such as CPU and memory.
 %patch5 -p1 -b .sysinfo
 %patch6 -p1 -b .doc-category
 %patch7 -p1 -b .translations
+%patch8 -p1 -b .scrollbars
 
 autoreconf -i -f
 
@@ -166,6 +170,14 @@ scrollkeeper-update -q
 
 
 %changelog
+* Wed Jul 27 2011 Cosimo Cecchi <cosimoc@redhat.com> 2.28.0-9
+- Update the previous scrolled window patch after QA testing
+Resolves: #571597
+
+* Mon Jul 18 2011 Cosimo Cecchi <cosimoc@redhat.com> 2.28.0-8
+- Add a patch to pack CPU buttons into a scrolled window
+Resolves: #571597
+
 * Tue Jul 27 2010 Soren Sandmann <ssp@redhat.com> - 2.28.0-7
 - Translation updates:
 Resolves: #593963

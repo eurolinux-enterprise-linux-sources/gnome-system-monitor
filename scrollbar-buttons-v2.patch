@@ -1,0 +1,256 @@
+diff --git a/src/interface.cpp b/src/interface.cpp
+index 81c4ae5..a07bab3 100644
+--- a/src/interface.cpp
++++ b/src/interface.cpp
+@@ -228,8 +228,7 @@ create_sys_view (ProcData *procdata)
+ 	GtkWidget *mem_legend_box, *net_legend_box;
+ 	GtkSizeGroup *sizegroup;
+ 	LoadGraph *cpu_graph, *mem_graph, *net_graph;
+-	gint i;
+-
++	gint i, rows_n, cols_n;
+ 
+ 	vbox = gtk_vbox_new (FALSE, 18);
+ 
+@@ -269,14 +268,31 @@ create_sys_view (ProcData *procdata)
+ 	gtk_box_pack_start (GTK_BOX (hbox), cpu_legend_box, 
+ 			    TRUE, TRUE, 0);*/
+ 
+-	GtkWidget* cpu_table = gtk_table_new(std::min(procdata->config.num_cpus / 4, 1),
+-					     std::min(procdata->config.num_cpus, 4),
+-					     TRUE);
++	rows_n = std::max(procdata->config.num_cpus / 4, 1);
++	cols_n = std::min(procdata->config.num_cpus, 4);
++
++	GtkWidget* cpu_table = gtk_table_new(rows_n, cols_n, TRUE);
+ 	gtk_table_set_row_spacings(GTK_TABLE(cpu_table), 6);
+ 	gtk_table_set_col_spacings(GTK_TABLE(cpu_table), 6);
+-	gtk_box_pack_start(GTK_BOX(hbox), cpu_table, TRUE, TRUE, 0);
+ 
+-	for (i=0;i<procdata->config.num_cpus; i++) {
++	if (rows_n > 2) {
++	  GtkWidget *viewport, *scrolled_window;
++
++	  viewport = gtk_viewport_new(NULL, NULL);
++	  gtk_viewport_set_shadow_type(GTK_VIEWPORT(viewport), GTK_SHADOW_NONE);
++
++	  scrolled_window = gtk_scrolled_window_new(NULL, NULL);
++	  gtk_scrolled_window_set_policy(GTK_SCROLLED_WINDOW(scrolled_window), GTK_POLICY_AUTOMATIC, GTK_POLICY_AUTOMATIC);
++	  gtk_scrolled_window_set_shadow_type(GTK_SCROLLED_WINDOW(scrolled_window), GTK_SHADOW_NONE);
++
++	  gtk_container_add(GTK_CONTAINER(viewport), cpu_table);
++	  gtk_container_add(GTK_CONTAINER(scrolled_window), viewport);
++	  gtk_box_pack_start(GTK_BOX(hbox), scrolled_window, TRUE, TRUE, 0);
++	} else {
++	  gtk_box_pack_start(GTK_BOX(hbox), cpu_table, TRUE, TRUE, 0);
++	}
++
++        for (i=0;i<procdata->config.num_cpus; i++) {
+ 		GtkWidget *temp_hbox;
+ 		gchar *text;
+ 		
+diff --git a/src/procman.cpp b/src/procman.cpp
+index c252ef9..09901e8 100644
+--- a/src/procman.cpp
++++ b/src/procman.cpp
+@@ -304,7 +304,7 @@ procman_data_new (GConfClient *client)
+ 		
+ 		color = gconf_client_get_string (client, key, NULL);
+ 		if (!color)
+-			color = g_strdup ("#f25915e815e8");
++			color = procman::generate_random_color();
+ 		gconf_client_notify_add (client, key, 
+ 			  	 color_changed_cb, pd, NULL, NULL);
+ 		gdk_color_parse(color, &pd->config.cpu_color[i]);
+diff --git a/src/sysinfo.cpp b/src/sysinfo.cpp
+index 76690eb..3e46ac5 100644
+--- a/src/sysinfo.cpp
++++ b/src/sysinfo.cpp
+@@ -483,6 +483,44 @@ add_section(GtkBox *vbox , const char * title, int num_row, int num_col, GtkWidg
+   return table;
+ }
+ 
++static GtkWidget*
++add_scrollable_section(GtkBox *vbox , const char * title, int num_row, int num_col)
++{
++  GtkWidget *table;
++
++  GtkWidget *scrolled_window = gtk_scrolled_window_new (NULL, NULL);
++  gtk_scrolled_window_set_policy(GTK_SCROLLED_WINDOW(scrolled_window), 
++				 GTK_POLICY_AUTOMATIC,
++				 GTK_POLICY_AUTOMATIC);
++  gtk_scrolled_window_set_shadow_type(GTK_SCROLLED_WINDOW(scrolled_window),
++				      GTK_SHADOW_NONE);
++  gtk_box_pack_start(GTK_BOX(vbox), scrolled_window, TRUE, TRUE, 0);
++
++  GtkWidget *viewport = gtk_viewport_new(NULL, NULL);
++  gtk_viewport_set_shadow_type(GTK_VIEWPORT(viewport), GTK_SHADOW_NONE);
++  gtk_container_add(GTK_CONTAINER(scrolled_window), viewport);
++
++  GtkWidget *frame = gtk_frame_new(title);
++  gtk_frame_set_label_align(GTK_FRAME(frame), 0.0, 0.5);
++  gtk_label_set_use_markup(
++			   GTK_LABEL(gtk_frame_get_label_widget(GTK_FRAME(frame))),
++			   TRUE
++			   );
++  gtk_frame_set_shadow_type(GTK_FRAME(frame), GTK_SHADOW_NONE);
++  gtk_container_add(GTK_CONTAINER(viewport), frame);
++
++  GtkWidget *alignment = gtk_alignment_new(0.5, 0.5, 1.0, 1.0);
++  gtk_alignment_set_padding(GTK_ALIGNMENT(alignment), 0, 0, 12, 0);
++  gtk_container_add(GTK_CONTAINER(frame), alignment);
++
++  table = gtk_table_new(num_row, num_col, FALSE);
++  gtk_table_set_row_spacings(GTK_TABLE(table), 6);
++  gtk_table_set_col_spacings(GTK_TABLE(table), 6);
++  gtk_container_set_border_width(GTK_CONTAINER(table), 6);
++  gtk_container_add(GTK_CONTAINER(alignment), table);
++
++  return table;
++}
+ 
+ static GtkWidget* 
+ add_row(GtkTable * table, const char * label, const char * value, int row)
+@@ -611,7 +649,11 @@ procman_create_sysinfo_view(void)
+   /* hardware section */
+ 
+   markup = g_strdup_printf(_("<b>Hardware</b>"));
+-  hardware_table = add_section(GTK_BOX(vbox), markup, data->processors.size(), 2, NULL);
++
++  if (data->processors.size() + 1 > 8)
++    hardware_table = add_scrollable_section(GTK_BOX(vbox), markup, data->processors.size(), 2);
++  else
++    hardware_table = add_section(GTK_BOX(vbox), markup, data->processors.size(), 2, NULL);
+   g_free(markup);
+ 
+   markup = procman::format_size(data->memory_bytes);
+diff --git a/src/util.cpp b/src/util.cpp
+index 9b1c9f5..160ee22 100644
+--- a/src/util.cpp
++++ b/src/util.cpp
+@@ -304,7 +304,85 @@ procman_debug_real(const char *file, int line, const char *func,
+ 	g_free(msg);
+ }
+ 
+-
++/* taken from gtk+/gtk/gtkstyle.c */
++static void
++hls_to_rgb (gdouble *h,
++            gdouble *l,
++            gdouble *s)
++{
++  gdouble hue;
++  gdouble lightness;
++  gdouble saturation;
++  gdouble m1, m2;
++  gdouble r, g, b;
++  
++  lightness = *l;
++  saturation = *s;
++  
++  if (lightness <= 0.5)
++    m2 = lightness * (1 + saturation);
++  else
++    m2 = lightness + saturation - lightness * saturation;
++  m1 = 2 * lightness - m2;
++  
++  if (saturation == 0)
++    {
++      *h = lightness;
++      *l = lightness;
++      *s = lightness;
++    }
++  else
++    {
++      hue = *h + 120;
++      while (hue > 360)
++        hue -= 360;
++      while (hue < 0)
++        hue += 360;
++      
++      if (hue < 60)
++        r = m1 + (m2 - m1) * hue / 60;
++      else if (hue < 180)
++        r = m2;
++      else if (hue < 240)
++        r = m1 + (m2 - m1) * (240 - hue) / 60;
++      else
++        r = m1;
++      
++      hue = *h;
++      while (hue > 360)
++        hue -= 360;
++      while (hue < 0)
++        hue += 360;
++      
++      if (hue < 60)
++        g = m1 + (m2 - m1) * hue / 60;
++      else if (hue < 180)
++        g = m2;
++      else if (hue < 240)
++        g = m1 + (m2 - m1) * (240 - hue) / 60;
++      else
++        g = m1;
++      
++      hue = *h - 120;
++      while (hue > 360)
++        hue -= 360;
++      while (hue < 0)
++        hue += 360;
++      
++      if (hue < 60)
++        b = m1 + (m2 - m1) * hue / 60;
++      else if (hue < 180)
++        b = m2;
++      else if (hue < 240)
++        b = m1 + (m2 - m1) * (240 - hue) / 60;
++      else
++        b = m1;
++      
++      *h = r;
++      *l = g;
++      *s = b;
++    }
++}
+ 
+ namespace procman
+ {
+@@ -504,7 +582,24 @@ namespace procman
+     return procman::format_rate(rate, max_rate, ProcData::get_instance()->config.network_in_bits);
+   }
+ 
+-}
+ 
++  gchar *generate_random_color (void)
++  {
++    GdkColor color;
++    gdouble h, l, s;
++
++    h = g_random_int_range(0, 255);
++    /* clip luma, as we don't want colors too light (unreadable on a white bg */
++    l = g_random_int_range(0, 224);
++    s = g_random_int_range(0, 255);
++
++    hls_to_rgb(&h, &l, &s);
+ 
++    color.red = h * 255;
++    color.green = l * 255;
++    color.blue = s * 255;
+ 
++    return gdk_color_to_string(&color);
++  }
++
++}
+diff --git a/src/util.h b/src/util.h
+index 89f0e61..59da691 100644
+--- a/src/util.h
++++ b/src/util.h
+@@ -145,6 +145,8 @@ namespace procman
+ 
+   std::string format_network(guint64 rate, guint64 max_rate = 0);
+   std::string format_network_rate(guint64 rate, guint64 max_rate = 0);
++
++  gchar *generate_random_color(void);
+ }
+ 
+ 

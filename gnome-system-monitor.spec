@@ -12,7 +12,7 @@
 Summary: Process and resource monitor
 Name: gnome-system-monitor
 Version: 2.28.0
-Release: 11%{?dist}
+Release: 13%{?dist}
 License: GPLv2+
 Group: Applications/System
 URL: http://www.gnome.org/
@@ -72,6 +72,12 @@ Patch9: gnome-system-monitor-ignore-missing-model.patch
 # https://bugzilla.redhat.com/show_bug.cgi?id=692956
 Patch10: gnome-system-monitor-use-clock-if-present.patch
 
+# https://bugzilla.redhat.com/show_bug.cgi?id=575667
+Patch11: gnome-system-monitor-2.28.0-fix-incorrect-font-rendering.patch
+
+# https://bugzilla.redhat.com/show_bug.cgi?id=1254334
+Patch12: gnome-system-monitor-2.28.0-fix-n-cpus-detection.patch
+
 Requires(pre): GConf2 >= %{gconf_version}
 Requires(post): GConf2 >= %{gconf_version}
 Requires(post): scrollkeeper
@@ -96,6 +102,8 @@ such as CPU and memory.
 %patch8 -p1 -b .scrollbars
 %patch9 -p1 -b .missing-model
 %patch10 -p1 -b .use-clock
+%patch11 -p1 -b .fix-font-rendering
+%patch12 -p1 -b .fix-n-cpus
 
 autoreconf -i -f
 
@@ -178,6 +186,12 @@ scrollkeeper-update -q
 
 
 %changelog
+* Tue Feb 02 2016 David King <dking@redhat.com> - 2.28.0-13
+- Fix unreliable detection of number of CPUs (#1254334)
+
+* Fri May 29 2015 David King <dking@redhat.com> - 2.28.0-12
+- Fix font rendering in Indic language (#575667)
+
 * Tue Jan 17 2012 Cosimo Cecchi <cosimoc@redhat.com> - 2.28.0-11
 - Add a patch from upstream that looks for the "clock" line in the
   /proc/cpuinfo output. This fixes missing CPU speed for architectures

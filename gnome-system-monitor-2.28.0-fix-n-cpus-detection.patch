@@ -1,0 +1,23 @@
+--- gnome-system-monitor-2.28.0/src/procman.cpp.orig	2015-08-17 13:21:56.394190551 -0300
++++ gnome-system-monitor-2.28.0/src/procman.cpp	2015-08-17 13:31:29.938183206 -0300
+@@ -379,17 +379,11 @@
+ 				       PROCMAN_TAB_SYSINFO,
+ 				       PROCMAN_TAB_DISKS);
+ 	
+-	/* Determinie number of cpus since libgtop doesn't really tell you*/
+-	pd->config.num_cpus = 0;
++	/* Determine number of cpus since libgtop doesn't really tell you*/
++	pd->config.num_cpus = sysconf(_SC_NPROCESSORS_ONLN);
++
+ 	glibtop_get_cpu (&cpu);
+ 	pd->frequency = cpu.frequency;
+-	i=0;
+-    	while (i < GLIBTOP_NCPU && cpu.xcpu_total[i] != 0) {
+-    	    pd->config.num_cpus ++;
+-    	    i++;
+-    	}
+-    	if (pd->config.num_cpus == 0)
+-    		pd->config.num_cpus = 1;
+ 
+ 	// delayed initialization as SmoothRefresh() needs ProcData
+ 	// i.e. we can't call ProcData::get_instance

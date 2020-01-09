@@ -1,0 +1,77 @@
+--- gnome-system-monitor-2.28.0/src/load-graph.cpp.old	2012-01-17 16:11:17.515687547 -0500
++++ gnome-system-monitor-2.28.0/src/load-graph.cpp	2012-01-17 16:12:59.722707732 -0500
+@@ -72,7 +72,9 @@ void draw_background(LoadGraph *g) {
+ 	guint i;
+ 	unsigned num_bars;
+ 	char *caption;
+-	cairo_text_extents_t extents;
++	PangoLayout* layout;
++	PangoFontDescription* font_desc;
++	PangoRectangle extents;
+ 
+ 	num_bars = g->num_bars();
+ 	g->graph_dely = (g->draw_height - 15) / num_bars; /* round to int to avoid AA blur */
+@@ -91,6 +93,12 @@ void draw_background(LoadGraph *g) {
+ 	gdk_cairo_set_source_color (cr, &style->bg[GTK_STATE_NORMAL]);
+ 	cairo_paint (cr);
+ 
++	layout = pango_cairo_create_layout (cr);
++	font_desc = pango_font_description_copy (style->font_desc);
++	pango_font_description_set_size (font_desc, 0.8 * g->fontsize * PANGO_SCALE);
++	pango_layout_set_font_description (layout, font_desc);
++	pango_font_description_free (font_desc);
++
+ 	/* draw frame */
+ 	cairo_translate (cr, FRAME_WIDTH, FRAME_WIDTH);
+ 	
+@@ -102,7 +110,6 @@ void draw_background(LoadGraph *g) {
+ 	
+ 	cairo_set_line_width (cr, 1.0);
+ 	cairo_set_dash (cr, dash, 2, 0);
+-	cairo_set_font_size (cr, g->fontsize);
+ 
+ 	for (i = 0; i <= num_bars; ++i) {
+ 		double y;
+@@ -119,15 +126,17 @@ void draw_background(LoadGraph *g) {
+ 			// operation orders matters so it's 0 if i == num_bars
+ 			unsigned rate = g->net.max - (i * g->net.max / num_bars);
+ 			const std::string caption(procman::format_network_rate(rate, g->net.max));
+-			cairo_text_extents (cr, caption.c_str(), &extents);
+-			cairo_move_to (cr, g->indent - extents.width + 20, y);
+-			cairo_show_text (cr, caption.c_str());
++			pango_layout_set_text (layout, caption.c_str(), -1);
++			pango_layout_get_extents (layout, NULL, &extents);
++			cairo_move_to (cr, g->indent - 1.0 * extents.width / PANGO_SCALE + 20, y - 1.0 * extents.height / PANGO_SCALE / 2);
++			pango_cairo_show_layout (cr, layout);
+ 		} else {
+ 			// operation orders matters so it's 0 if i == num_bars
+ 			caption = g_strdup_printf("%d %%", 100 - i * (100 / num_bars));
+-			cairo_text_extents (cr, caption, &extents);
+-			cairo_move_to (cr, g->indent - extents.width + 20, y);
+-			cairo_show_text (cr, caption);
++			pango_layout_set_text (layout, caption, -1);
++			pango_layout_get_extents (layout, NULL, &extents);
++			cairo_move_to (cr, g->indent - 1.0 * extents.width / PANGO_SCALE + 20, y - 1.0 * extents.height / PANGO_SCALE / 2);
++			pango_cairo_show_layout (cr, layout);
+ 			g_free (caption);
+ 		}
+ 
+@@ -154,13 +163,15 @@ void draw_background(LoadGraph *g) {
+ 		else
+ 			format = "%u";
+ 		caption = g_strdup_printf(format, seconds);
+-		cairo_text_extents (cr, caption, &extents);
+-		cairo_move_to (cr, ((ceil(x) + 0.5) + g->rmargin + g->indent) - (extents.width/2), g->draw_height);
++		pango_layout_set_text (layout, caption, -1);
++		pango_layout_get_extents (layout, NULL, &extents);
++		cairo_move_to (cr, ((ceil(x) + 0.5) + g->rmargin + g->indent) - (1.0 * extents.width / PANGO_SCALE/2), g->draw_height - 1.0 * extents.height / PANGO_SCALE);
+ 		gdk_cairo_set_source_color (cr, &style->fg[GTK_STATE_NORMAL]);
+-		cairo_show_text (cr, caption);
++		pango_cairo_show_layout (cr, layout);
+ 		g_free (caption);
+ 	}
+ 
++	g_object_unref(layout);
+ 	cairo_stroke (cr);
+ 	cairo_destroy (cr);
+ }

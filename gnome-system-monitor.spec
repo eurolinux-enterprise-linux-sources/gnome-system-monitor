@@ -4,7 +4,7 @@
 
 Name:           gnome-system-monitor
 Version:        3.22.2
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        Process and resource monitor
 
 License:        GPLv2+
@@ -12,6 +12,7 @@ URL:            http://www.gnome.org/
 Source0:        http://download.gnome.org/sources/%{name}/3.22/%{name}-%{version}.tar.xz
 # https://bugzilla.redhat.com/show_bug.cgi?id=1449674
 Patch0:         gnome-system-monitor-3.22.2-ja-translation.patch
+Patch1:         0001-Add-a-process-GPU-memory-usage-column.patch
 
 BuildRequires:  pkgconfig(libgtop-2.0) >= %{libgtop2_version}
 BuildRequires:  pkgconfig(libwnck-3.0) >= %{libwnck_version}
@@ -23,6 +24,8 @@ BuildRequires:  pkgconfig(libxml-2.0)
 BuildRequires:  desktop-file-utils
 BuildRequires:  intltool gettext
 BuildRequires:  itstool
+BuildRequires:  automake, autoconf, libtool, gnome-common
+BuildRequires:  yelp-tools
 
 %description
 gnome-system-monitor allows to graphically view and manipulate the running
@@ -32,8 +35,10 @@ such as CPU and memory.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %build
+autoreconf -fiv
 %configure --enable-systemd --enable-wnck
 make %{?_smp_mflags}
 
@@ -67,6 +72,10 @@ glib-compile-schemas %{_datadir}/glib-2.0/schemas &>/dev/null || :
 %{_libexecdir}/gnome-system-monitor/gsm-*
 
 %changelog
+* Thu Nov  9 2017 Rui Matos <rmatos@redhat.com> - 3.22.2-3
+- Add a process GPU memory usage column
+- Related: #1300852
+
 * Tue May 30 2017 David King <dking@redhat.com> - 3.22.2-2
 - Update Japanese translation (#1449674)
 

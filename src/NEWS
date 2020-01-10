@@ -1,9 +1,273 @@
-New in 3.22.2 - 8 November 2016
+New in 3.28.2 - 9 May 2018
+
+* added/updated translations
+  Stas Solovey (ru)
+  Matej Urbančič (sl)
+  Dz Chen (zh_CN)
+  Guillaume Bernard (fr)
+
+List of fixed bugs
+  788066 End process dialog box title expands to full length of process title
+
+New in 3.28.1 - 9 April 2018
+
+* added/updated translations
+  Stas Solovey (ru)
+  Matej Urbančič (sl)
+  Dz Chen (zh_CN)
+  Guillaume Bernard (fr)
+
+List of fixed bugs
+  795051 fixed bytes to bits conversion
+
+New in 3.28.0 - 12 March 2018
+
+* added/updated translations
+  Sveinn í Felli (is)
+  Marek Černocký (cz)
+  Милош Поповић (sr@latin)
+  Ask Hjorth Larsen (da)
+  gogo (hr)
+  A S Alam (pa)
+  Efstathios Iosifidis (el)
+
+New in 3.27.92 - 5 March 2018
+
+* added/updated translations
+  Tim Sabsch (de)
+  Marek Černocký (cz)
+  GunChleoc (gd)
+  Guillaume Bernard (fr)
+  Aurimas Černius (lt)
+  Baurzhan Muftakhidinov (kk)
+  Gábor Kelemen (hu)
+
+New in 3.27.90 - 9 February 2018
+
+* added/updated translations
+  Daniel Mustieles (es)
+  Piotr Drąg (pl)
+  Марко Костић (sr)
+  Anders Jonsson (sv)
+  Jiri Grönroos (fi)
+  Balázs Úr (hu)
+
+List of fixed bugs
+  790570 translation rules fixes
+  792574 Scroll process table to selected row
+  792360 Theme-based background color for charts
+  789905 Multipe token entry for search
+  778697 Use a scrolledwindow for resources
+  789603 Better alignment for network stats
+         Style the kill confirmation as destructive action
+         Redraw loadgraph background on theme change
+
+New in 3.27.2 - 14 November 2017
+
+* added/updated translations
+  hanniedu (nl)
+  Piotr Drąg (pl)
+  Arash Mousavi (fa)
+  Evangelos Skarmoutsos (el)
+  Xavi Ivars (ca@valencia)
+  Pawan Chitrakar (ne)
+  Isak Östlund (sv)
+  Mingcong Bai (zh_CN)
+  Charles Monzat (fr)
+  Marek Cernocky (cz)
+  Fabio Tomat (fur)
+  Mario Blättermann (de)
+  Kjartan Maraas (nb)
+  gogo (hr)
+
+List of fixed bugs
+  788922 fix inaccurate CPU% values in the Processes table (Daniel van Vugt)
+  786944 gettext migration
+  790146 install appdata to the new location
+
+New in 3.26.0 - 11 September 2017
+
+* added/updated translations
+  Joe Hansen (da)
+  Alain Lojewski (fr)
+  Rafael Fontenelle (pt_BR)
+  A S Alam (pa)
+  Inaki Larranaga Murgoitio (eu)
+  Muhammet Kara (tr)
+  Jordi Mas (ca)
+  Lyubomir Vasilev (bg)
+  Anders Jonsson (sv)
+
+List of fixed bugs
+         wnck build error fixed (Benoît Dejean)
+New in 3.25.92 - 4 September 2017
+
+* added/updated translations
+  Jordi Mas (ca)
+  Fran Dieguez (gl)
+  Dušan Kazik (sk)
+  Aurimas Černius (lt)
+  Ask Hjorth Larsen (da)
+  Cheng-Chia Tseng (zh_TW)
+  Muhammet Kara (tr)
+  Daniel Mustieles (es)
+  Rūdolfs Mazurs (lv)
+  Jiri Grönroos (fi)
+  Milo Casagrande (it)
+  Wolfgang Stöggl (de)
+  Yuras Shumovich (be)
+  Seong-ho Cho,	Kyung-gon Kim (ko)
+
+New in 3.25.91 - 21 August 2017
+
+* added/updated translations
+  Baurzhan Muftakhidinov (kk)
+  Claude Paroz (fr)
+  Мирослав Николић (sr)
+  Piotr Drąg (pl)
+  Matej Urbančič (sl)
+  Balázs Meskó (hu)
+  Andika Triwidada (id)
+  Fabio Tomat (fur)
+  Mark Cernocky (cz)
+
+New in 3.25.90 - 07 August 2017
+
+* added/updated translations
+  Fran Dieguez (gl)
+  Marek Cernocky (cs)
+  Pawan Chitrakar (ne)
+  Daniel Mustieles (es)
+  Isak Östlund (sv)
+
+List of fixed bugs
+  783993 fixed build failure (Benoît Dejean)
+         added option to monitor process disk usage (Robert Roth)
+
+New in 3.25.3 - 19 June 2017
+
+* added/updated translations
+  Mario Blättermann (de)
+  Baurzhan Muftakhidinov (kk)
+  Gábor Kelemen (hu)
+  Daniel Mustieles (es)
+
+List of fixed bugs
+         fixed several memory leaks (Benoît Dejean)
+
+New in 3.25.2 - 22 May 2017
+
+* added/updated translations
+  Tiago Santos (pt)
+  Piotr Drąg (pl)
+  gogo (hr)
+  Tom Tryfonidis (he)
+  Fabio Tomat (fur)
+  Kukuh Syafaat (id)
+  Mario Blättermann (de)
+  Balázs Úr (hu)
+
+List of fixed bugs
+  780574 Add 'Activity' keyword
+  780644 Sane minimum width for disks table columns
+  779812 Does not build
+  776653 Process information refactoring
+  781508 Help front page formatting
+  776430 Add F10 shortcut for process menu
+         Improved use of space on small size
+
+New in 3.24.0 - 20 March 2017
+
+* added/updated translations
+  Yuri Myasoedov (ru)
+  gogo (hr)
+  Rūdolfs Mazurs (lv)
+  Seong-ho Cho (ko)
+  Daniel Korostil (uk)
+
+New in 3.23.92 - 13 March 2017
+
+* added/updated translations
+  Anders Jonsson (sv)
+  Aurimas Černius (lt)
+  Jordi Mas (ca)
+  Mario Blättermann (de)
+  Cédric Valmary (oc)
+  GunChleoc (gd)
+  Joe Hansen (da)
+  Kukuh Syafaat (id)
+  Milo Casagrande (it)
+  Rafael Fontenelle (pt_br)
+  Fran Dieguez (gl)
+
+New in 3.23.91 - 27 February 2017
+
+* added/updated translations
+  Marek Černocký (ru)
+  Baurzhan Muftakhidinov (kk)
+  Ask Hjorth Larsen (dk)
+  Claude Paroz (fr)
+  Dušan Kazik (sk)
+  Kjartan Maraas (nb)
+  Rafael Fontenelle (pt_br)
+  Dušan Kazik (sk)
+  Piotr Drąg (pl)
+  Daniel Mustieles (es)
+  Мирослав Николић (sr, sr@latin)
+  Rafael Fontenelle (pt_br)
+  Fabio Tomat (fur)
+  Balázs Meskó (hu)
+  Chao-Hsiung Liao (zh_TW)
+  Jiri Grönroos (fi)
+  Inaki Larranaga Murgoitio (eu)
+
+List of fixed bugs
+         smooth chart setting should only affect cpu chart (Robert Roth)
+  778776 fixed broken wnck option (Benoît Dejean)
+
+
+New in 3.23.90 - 13 February 2017
+
+* added/updated translations
+  Stas Solovey (ru)
+  Balázs Meskó (hu)
+  A S Alam (pa)
+  Gianvito Cavasoli (it)
+  Baurzhan Muftakhidinov (kk)
+  Sveinn í Felli (is)
+  Rafael Fontenelle (pt_br)
+  Dušan Kazik (sk)
+  Anders Jonsson (se)
+
+List of fixed bugs
+  778470 Add option to disable smooth (curves) graph (Robert Roth)
+
+New in 3.23.2 - 21 November 2016
 
 * added/updated translations
   gogo (hr)
   Milo Casagrande (it)
   Kjartan Maraas (nb)
+  Boyuan Yang (zh_CN)
+  Piotr Drąg (pl)
+  Mario Blättermann (de)
+  Marek Černocký (cz)
+  Fabio Tomat (fur)
+  Daniel Mustieles (es)
+
+List of fixed bugs
+         Fixed typo in Spanish translation headers (Jeremy Bicha)
+         Use real widget types, eliminate downcasting (Artem Vorotnikov)
+         Remove deprecated GtkAlignments (Benoit Dejean)
+         Use relative positions to the labels to attach the net pickers (Benoit Dejean)
+         Port to Gio::Settings (Artem Vorotnikov)
+         Fixed menu popup problems (Robert Roth)
+  773016 Cgroup reform (Artem Vorotnikov, Benoit Dejean)
+         Simplified resource view structure (Robert Roth)
+         Use unicode in translatable strings (Piotr Drąg)
+         Do not use deprecated calls (Robert Roth)
+ 
+
 
 New in 3.22.0 - 19 September 2016
 

@@ -10,7 +10,7 @@
 #include "application.h"
 #include "util.h"
 #include "settings-keys.h"
-#include "treeview.h"
+#include "legacy/treeview.h"
 
 enum DiskColumns
 {
@@ -238,7 +238,7 @@ disks_update(GsmApplication *app)
     gboolean show_all_fs;
 
     list = GTK_LIST_STORE(gtk_tree_view_get_model(GTK_TREE_VIEW(app->disk_list)));
-    show_all_fs = g_settings_get_boolean (app->settings, GSM_SETTING_SHOW_ALL_FS);
+    show_all_fs = app->settings->get_boolean (GSM_SETTING_SHOW_ALL_FS);
     entries = glibtop_get_mountlist (&mountlist, show_all_fs);
 
     remove_old_disks(GTK_TREE_MODEL(list), entries, mountlist.number);
@@ -336,21 +336,12 @@ cb_disk_list_destroying (GtkWidget *self, gpointer data)
                                           data);
 }
 
-static void
-cb_show_all_fs_changed (GSettings *settings, const gchar *key, gpointer data)
-{
-    GsmApplication *app = (GsmApplication *) data;
-
-    disks_update (app);
-    disks_reset_timeout (app);
-}
-
 
 void
 create_disk_view(GsmApplication *app, GtkBuilder *builder)
 {
-    GtkWidget *scrolled;
-    GtkWidget *disk_tree;
+    GtkScrolledWindow *scrolled;
+    GsmTreeView *disk_tree;
     GtkListStore *model;
     GtkTreeViewColumn *col;
     GtkCellRenderer *cell;
@@ -367,9 +358,7 @@ create_disk_view(GsmApplication *app, GtkBuilder *builder)
         N_("Used")
     };
 
-    GSettings * settings = g_settings_get_child (app->settings, GSM_SETTINGS_CHILD_DISKS);
-
-    scrolled = GTK_WIDGET (gtk_builder_get_object (builder, "disks_scrolled"));
+    scrolled = GTK_SCROLLED_WINDOW (gtk_builder_get_object (builder, "disks_scrolled"));
 
     model = gtk_list_store_new(DISK_N_COLUMNS,      /* n columns */
                                G_TYPE_STRING,       /* DISK_DEVICE */
@@ -382,12 +371,12 @@ create_disk_view(GsmApplication *app, GtkBuilder *builder)
                                GDK_TYPE_PIXBUF,     /* DISK_ICON */
                                G_TYPE_INT           /* DISK_USED_PERCENTAGE */
         );
-    disk_tree = gsm_tree_view_new (settings, TRUE);
+    disk_tree = gsm_tree_view_new (g_settings_get_child (app->settings->gobj(), GSM_SETTINGS_CHILD_DISKS), TRUE);
     gtk_tree_view_set_model (GTK_TREE_VIEW (disk_tree), GTK_TREE_MODEL (model));
 
     g_signal_connect(G_OBJECT(disk_tree), "row-activated", G_CALLBACK(open_dir), NULL);
     app->disk_list = disk_tree;
-    gtk_container_add(GTK_CONTAINER(scrolled), disk_tree);
+    gtk_container_add(GTK_CONTAINER(scrolled), GTK_WIDGET (disk_tree));
     g_object_unref(G_OBJECT(model));
 
     /* icon + device */
@@ -396,6 +385,7 @@ create_disk_view(GsmApplication *app, GtkBuilder *builder)
     cell = gtk_cell_renderer_pixbuf_new();
     
     gtk_tree_view_column_pack_start(col, cell, FALSE);
+    gtk_tree_view_column_set_min_width(col, 30);
     gtk_tree_view_column_set_attributes(col, cell, "pixbuf", DISK_ICON,
                                         NULL);
 
@@ -421,6 +411,7 @@ create_disk_view(GsmApplication *app, GtkBuilder *builder)
         gtk_tree_view_column_set_resizable(col, TRUE);
         gtk_tree_view_column_set_sort_column_id(col, i);
         gtk_tree_view_column_set_reorderable(col, TRUE);
+        gtk_tree_view_column_set_min_width(col, i == DISK_TYPE ? 40 : 72);
         gtk_tree_view_column_set_sizing(col, GTK_TREE_VIEW_COLUMN_FIXED);
         gsm_tree_view_append_and_bind_column (GSM_TREE_VIEW (disk_tree), col);
         switch (i) {
@@ -447,6 +438,7 @@ create_disk_view(GsmApplication *app, GtkBuilder *builder)
     col = gtk_tree_view_column_new();
     cell = gtk_cell_renderer_text_new();
     g_object_set(cell, "xalign", 1.0f, NULL);
+    gtk_tree_view_column_set_min_width(col, 72);
     gtk_tree_view_column_set_sizing(col, GTK_TREE_VIEW_COLUMN_FIXED);
     gtk_tree_view_column_pack_start(col, cell, FALSE);
     gtk_tree_view_column_set_cell_data_func(col, cell,
@@ -478,8 +470,7 @@ create_disk_view(GsmApplication *app, GtkBuilder *builder)
     g_signal_connect (G_OBJECT (model), "sort-column-changed",
                       G_CALLBACK (cb_sort_changed), app);
 
-    g_signal_connect (app->settings, "changed::" GSM_SETTING_SHOW_ALL_FS,
-                      G_CALLBACK (cb_show_all_fs_changed), app);
+    app->settings->signal_changed(GSM_SETTING_SHOW_ALL_FS).connect ([app](const Glib::ustring&) { disks_update (app); disks_reset_timeout (app); });
 
-    gtk_widget_show (disk_tree);
+    gtk_widget_show (GTK_WIDGET (disk_tree));
 }

@@ -2,13 +2,12 @@
 #ifndef _GSM_UTIL_H_
 #define _GSM_UTIL_H_
 
-#include <glib.h>
-#include <gtk/gtk.h>
+#include <gtkmm.h>
 #include <string>
 
 using std::string;
 
-GtkWidget*
+GtkLabel*
 procman_make_label_for_mmaps_or_ofiles(const char *format,
                                        const char *process_name,
                                        unsigned pid);
@@ -25,7 +24,7 @@ procman_debug_real(const char *file, int line, const char *func,
 
 #define procman_debug(FMT, ...) procman_debug_real(__FILE__, __LINE__, __func__, FMT, ##__VA_ARGS__)
 
-gchar * get_monospace_system_font_name (void);
+Glib::ustring get_monospace_system_font_name (void);
 
 inline string make_string(char *c_str)
 {
@@ -45,6 +44,10 @@ namespace procman
     char* format_duration_for_display(unsigned centiseconds);
 
     void size_cell_data_func(GtkTreeViewColumn *col, GtkCellRenderer *renderer,
+                             GtkTreeModel *model, GtkTreeIter *iter,
+                             gpointer user_data);
+
+    void io_rate_cell_data_func(GtkTreeViewColumn *col, GtkCellRenderer *renderer,
                              GtkTreeModel *model, GtkTreeIter *iter,
                              gpointer user_data);
 
@@ -116,16 +119,16 @@ namespace procman
         tree_store_update<const char>(model, iter, column, new_value);
     }
 
-    gchar* format_size(guint64 size, guint64 max = 0, bool want_bits = false);
+    gchar* format_size(guint64 size, bool want_bits = false);
 
     gchar* get_nice_level (gint nice);
 
     gchar* get_nice_level_with_priority (gint nice);
 
-    std::string format_rate(guint64 rate, guint64 max_rate = 0, bool want_bits = false);
+    std::string format_rate(guint64 rate, bool want_bits = false);
 
-    std::string format_network(guint64 rate, guint64 max_rate = 0);
-    std::string format_network_rate(guint64 rate, guint64 max_rate = 0);
+    std::string format_network(guint64 rate);
+    std::string format_network_rate(guint64 rate);
 
     class NonCopyable
     {
@@ -137,6 +140,24 @@ namespace procman
         NonCopyable& operator=(const NonCopyable&) /* = delete */;
     };
 
+
+    // join the elements of c with sep
+    template<typename C, typename S>
+        auto join(const C& c, const S& sep) -> decltype(c[0] + sep)
+    {
+        decltype(c[0] + sep) r;
+        bool first = true;
+
+        for(const auto& e : c) {
+            if (!first) {
+                r += sep;
+            }
+            first = false;
+            r += e;
+        }
+
+        return r;
+    }
 }
 
 #endif /* _GSM_UTIL_H_ */

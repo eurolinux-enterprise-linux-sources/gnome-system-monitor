@@ -7,11 +7,11 @@
 
 #include <algorithm>
 
-class ProcInfo;
 struct LoadGraph;
 
 #include "smooth_refresh.h"
 #include "prettytable.h"
+#include "legacy/treeview.h"
 #include "util.h"
 
 static const unsigned MIN_UPDATE_INTERVAL =   1 * 1000;
@@ -42,6 +42,7 @@ struct ProcConfig
 	num_cpus(0),
 	solaris_mode(false),
 	draw_stacked(false),
+	draw_smooth(true),
 	network_in_bits(false)
     {
       std::fill(&this->cpu_color[0], &this->cpu_color[GLIBTOP_NCPU], GdkRGBA());
@@ -60,6 +61,7 @@ struct ProcConfig
     gint            num_cpus;
     bool solaris_mode;
     bool draw_stacked;
+    bool draw_smooth;
     bool network_in_bits;
 };
 
@@ -70,8 +72,7 @@ struct MutableProcInfo
 {
 
 MutableProcInfo()
-  : user(),
-    vmsize(0UL),
+  : vmsize(0UL),
     memres(0UL),
     memshared(0UL),
     memwritable(0UL),
@@ -81,21 +82,19 @@ MutableProcInfo()
 #endif
     start_time(0UL),
     cpu_time(0ULL),
+    disk_read_bytes_total(0ULL),
+    disk_write_bytes_total(0ULL),
+    disk_read_bytes_current(0ULL),
+    disk_write_bytes_current(0ULL),
     status(0U),
     pcpu(0U),
-    nice(0),
-    cgroup_name(NULL),
-    unit(NULL),
-    session(NULL),
-    seat(NULL),
-    owner()
+    nice(0)
     {
-      wchan[0] = '\0';
     }
 
     std::string user;
 
-    gchar wchan[40];
+    std::string wchan;
 
     // all these members are filled with libgtop which uses
     // guint64 (to have fixed size data) but we don't need more
@@ -114,14 +113,18 @@ MutableProcInfo()
 
     gulong start_time;
     guint64 cpu_time;
+    guint64 disk_read_bytes_total;
+    guint64 disk_write_bytes_total;
+    guint64 disk_read_bytes_current;
+    guint64 disk_write_bytes_current;
     guint status;
     guint pcpu;
     gint nice;
-    gchar *cgroup_name;
+    std::string cgroup_name;
 
-    gchar *unit;
-    gchar *session;
-    gchar *seat;
+    std::string unit;
+    std::string session;
+    std::string seat;
 
     std::string owner;
 };
@@ -130,31 +133,10 @@ MutableProcInfo()
 class ProcInfo
 : public MutableProcInfo
 {
-    /* undefined */ ProcInfo& operator=(const ProcInfo&);
-    /* undefined */ ProcInfo(const ProcInfo&);
-
-    typedef std::map<guint, std::string> UserMap;
-    /* cached username */
-    static UserMap users;
-
   public:
-
-    // TODO: use a set instead
-    // sorted by pid. The map has a nice property : it is sorted
-    // by pid so this helps a lot when looking for the parent node
-    // as ppid is nearly always < pid.
-    typedef std::map<pid_t, ProcInfo*> List;
-    typedef List::iterator Iterator;
-
-    static List all;
-
-    static ProcInfo* find(pid_t pid);
-    static Iterator begin() { return ProcInfo::all.begin(); }
-    static Iterator end() { return ProcInfo::all.end(); }
-
-
+    ProcInfo& operator=(const ProcInfo&) = delete;
+    ProcInfo(const ProcInfo&) = delete;
     ProcInfo(pid_t pid);
-    ~ProcInfo();
     // adds one more ref to icon
     void set_icon(Glib::RefPtr<Gdk::Pixbuf> icon);
     void set_user(guint uid);
@@ -162,32 +144,46 @@ class ProcInfo
 
     GtkTreeIter     node;
     Glib::RefPtr<Gdk::Pixbuf> pixbuf;
-    gchar           *tooltip;
-    gchar           *name;
-    gchar           *arguments;
+    std::string     tooltip;
+    std::string     name;
+    std::string     arguments;
 
-    gchar           *security_context;
+    std::string     security_context;
 
     const pid_t     pid;
     pid_t           ppid;
     guint           uid;
-
-// private:
-    // tracks cpu time per process keeps growing because if a
-    // ProcInfo is deleted this does not mean that the process is
-    // not going to be recreated on the next update.  For example,
-    // if dependencies + (My or Active), the proclist is cleared
-    // on each update.  This is a workaround
-    static std::map<pid_t, guint64> cpu_times;
 };
 
+class ProcList {
+    // TODO: use a set instead
+    // sorted by pid. The map has a nice property : it is sorted
+    // by pid so this helps a lot when looking for the parent node
+    // as ppid is nearly always < pid.
+    typedef std::map<pid_t, ProcInfo> List;
+    List data;
+    std::mutex data_lock;
+public:
+    std::map<pid_t, unsigned long> cpu_times;
+    typedef List::iterator Iterator;
+    Iterator begin() { return std::begin(data); }
+    Iterator end() { return std::end(data); }
+    Iterator erase(Iterator it) {
+        std::lock_guard<std::mutex> lg(data_lock);
+        return data.erase(it);
+    }
+    ProcInfo* add(pid_t pid) { return &data.emplace(std::piecewise_construct, std::forward_as_tuple(pid), std::forward_as_tuple(pid)).first->second; }
+    void clear() { return data.clear(); }
 
+    ProcInfo* find(pid_t pid);
+};
 
 class GsmApplication : public Gtk::Application, private procman::NonCopyable
 
 {
 private:
     void load_settings();
+    void load_resources();
 
     void on_preferences_activate(const Glib::VariantBase&);
     void on_lsof_activate(const Glib::VariantBase&);
@@ -201,17 +197,18 @@ public:
     void save_config();
     void shutdown();
 
-    GtkWidget        *tree;
-    GtkWidget        *proc_actionbar_revealer;
-    GtkWidget        *popup_menu;
-    GtkWidget        *disk_list;
-    GtkWidget        *stack;
-    GtkWidget        *refresh_button;
-    GtkWidget        *process_menu_button;
-    GtkWidget        *end_process_button;
-    GtkWidget        *search_button;
-    GtkWidget        *search_entry;
-    GtkWidget        *search_bar;
+    ProcList         processes;
+    GsmTreeView      *tree;
+    GtkRevealer      *proc_actionbar_revealer;
+    GtkMenu          *popup_menu;
+    GsmTreeView      *disk_list;
+    GtkStack         *stack;
+    GtkButton        *refresh_button;
+    GtkMenuButton    *process_menu_button;
+    GtkButton        *end_process_button;
+    GtkButton        *search_button;
+    GtkSearchEntry   *search_entry;
+    GtkSearchBar     *search_bar;
     ProcConfig        config;
     LoadGraph        *cpu_graph;
     LoadGraph        *mem_graph;
@@ -228,8 +225,8 @@ public:
 
     PrettyTable      *pretty_table;
 
-    GSettings        *settings;
-    GtkWidget        *main_window;
+    Glib::RefPtr<Gio::Settings> settings;
+    GtkApplicationWindow *main_window;
 
     unsigned         frequency;
 

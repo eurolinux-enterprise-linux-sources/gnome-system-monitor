@@ -3,15 +3,16 @@
 # This file is distributed under the same license as the procman package.
 #
 # Iñaki Larrañaga Murgoitio <dooteo@zundan.com>, 2004, 2006, 2007, 2008, 2009, 2010, 2011.
-# Iñaki Larrañaga Murgoitio <dooteo@zundan.com>, 2012, 2013, 2014, 2015.
+# Iñaki Larrañaga Murgoitio <dooteo@zundan.com>, 2012, 2013, 2014, 2015, 2017.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-system-monitor master\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-14 12:29+0200\n"
-"PO-Revision-Date: 2015-10-09 22:47+0200\n"
+"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?"
+"product=system-monitor&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2017-08-10 08:16+0000\n"
+"PO-Revision-Date: 2017-08-27 16:03+0200\n"
 "Last-Translator: Iñaki Larrañaga Murgoitio <dooteo@zundan.com>\n"
-"Language-Team: Basque <Basque <librezale@librezale.org>>\n"
+"Language-Team: Basque <librezale@librezale.eus>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,7 +21,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../gnome-system-monitor.desktop.in.in.h:1 ../data/interface.ui.h:1
-#: ../src/application.cpp:262 ../src/interface.cpp:363
+#: ../src/application.cpp:244 ../src/interface.cpp:363
 msgid "System Monitor"
 msgstr "Sistemako monitorea"
 
@@ -30,15 +31,18 @@ msgid "View current processes and monitor system state"
 msgstr "Ikusi uneko prozesuak eta monitorizatu sistemako egoera"
 
 #: ../gnome-system-monitor.desktop.in.in.h:3
+#| msgid ""
+#| "Monitor;System;Process;CPU;Memory;Network;History;Usage;Performance;Task;"
+#| "Manager;"
 msgid ""
 "Monitor;System;Process;CPU;Memory;Network;History;Usage;Performance;Task;"
-"Manager;"
+"Manager;Activity;"
 msgstr ""
 "Monitorea;Sistema;Prozesua;PUZ;Memoria;Sarea;Historia;Erabilpena;"
-"Errendimendua;Zeregina;Ataza;Kudeatzailea;"
+"Errendimendua;Zeregina;Ataza;Kudeatzailea;Jarduera;"
 
 #: ../gnome-system-monitor-kde.desktop.in.in.h:1
-#: ../gnome-system-monitor.appdata.xml.in.h:1 ../src/application.cpp:318
+#: ../gnome-system-monitor.appdata.xml.in.h:1 ../src/application.cpp:299
 msgid "GNOME System Monitor"
 msgstr "GNOMEren sistemako monitorea"
 
@@ -79,12 +83,28 @@ msgstr ""
 "ikuspegi orokor azkar bat erakutsiko dizu, sarearen, memoriaren eta "
 "prozesadorearen azken erabilpena bistaratuz."
 
+#: ../gnome-system-monitor.appdata.xml.in.h:6
+msgid "Process list view"
+msgstr "Prozesuen zerrendaren ikuspegia"
+
+#: ../gnome-system-monitor.appdata.xml.in.h:7
+msgid "Resources overview"
+msgstr "Baliabideen ikuspegia"
+
+#: ../gnome-system-monitor.appdata.xml.in.h:8
+msgid "File Systems view"
+msgstr "Fitxategi-sistemen ikuspegia"
+
+#: ../gnome-system-monitor.appdata.xml.in.h:9
+msgid "The GNOME Project"
+msgstr "GNOME proiektua"
+
 #: ../org.gnome.gnome-system-monitor.policy.in.in.h:1
 msgid "Kill process"
 msgstr "Hil prozesua"
 
 #: ../org.gnome.gnome-system-monitor.policy.in.in.h:2
-msgid "Privileges are required to control other users' processes"
+msgid "Privileges are required to control other users’ processes"
 msgstr "Pribilegioak behar dira beste erabiltzaileen prozesuak kontrolatzeko"
 
 #: ../org.gnome.gnome-system-monitor.policy.in.in.h:3
@@ -116,7 +136,7 @@ msgid "Memory and Swap History"
 msgstr "Memoriaren eta Swap-aren historia"
 
 #: ../data/interface.ui.h:7 ../src/interface.cpp:260
-#: ../src/procproperties.cpp:70 ../src/proctable.cpp:347
+#: ../src/procproperties.cpp:70 ../src/proctable.cpp:337
 msgid "Memory"
 msgstr "Memoria"
 
@@ -128,7 +148,7 @@ msgstr "Swap"
 msgid "Network History"
 msgstr "Sareko historia"
 
-#: ../data/interface.ui.h:10 ../src/interface.cpp:300
+#: ../data/interface.ui.h:10 ../src/interface.cpp:302
 msgid "Receiving"
 msgstr "Jasotzen"
 
@@ -136,7 +156,7 @@ msgstr "Jasotzen"
 msgid "Total Received"
 msgstr "Jasotakoak guztira"
 
-#: ../data/interface.ui.h:12 ../src/interface.cpp:315
+#: ../data/interface.ui.h:12 ../src/interface.cpp:317
 msgid "Sending"
 msgstr "Bidaltzen"
 
@@ -144,11 +164,11 @@ msgstr "Bidaltzen"
 msgid "Total Sent"
 msgstr "Bidalitakoak guztira"
 
-#: ../data/interface.ui.h:14 ../data/preferences.ui.h:13
+#: ../data/interface.ui.h:14 ../data/preferences.ui.h:14
 msgid "Resources"
 msgstr "Baliabideak"
 
-#: ../data/interface.ui.h:15 ../data/preferences.ui.h:16
+#: ../data/interface.ui.h:15 ../data/preferences.ui.h:17
 msgid "File Systems"
 msgstr "Fitxategi-sistemak"
 
@@ -207,20 +227,17 @@ msgid "_Dependencies"
 msgstr "_Mendekotasunak"
 
 #: ../data/menus.ui.h:11
-msgid "_Stop"
-msgstr "_Gelditu"
+msgid "_Properties"
+msgstr "_Propietateak"
 
 #: ../data/menus.ui.h:12
-msgid "_Continue"
-msgstr "_Jarraitu"
+msgid "_Memory Maps"
+msgstr "_Memoriaren mapak"
 
-#: ../data/menus.ui.h:13
-msgid "_End"
-msgstr "_Amaitu"
-
+#. Translators: this means
 #: ../data/menus.ui.h:14
-msgid "_Kill"
-msgstr "_Hil"
+msgid "Open _Files"
+msgstr "Ireki _fitxategiak"
 
 #: ../data/menus.ui.h:15
 msgid "_Change Priority"
@@ -251,17 +268,20 @@ msgid "Custom"
 msgstr "Pertsonalizatua"
 
 #: ../data/menus.ui.h:22
-msgid "_Memory Maps"
-msgstr "_Memoriaren mapak"
+msgid "_Stop"
+msgstr "_Gelditu"
 
-#. Translators: this means 'Files that are open' (open is not a verb here)
+#: ../data/menus.ui.h:23
+msgid "_Continue"
+msgstr "_Jarraitu"
+
 #: ../data/menus.ui.h:24
-msgid "Open _Files"
-msgstr "Ireki _fitxategiak"
+msgid "_End"
+msgstr "_Amaitu"
 
 #: ../data/menus.ui.h:25
-msgid "_Properties"
-msgstr "_Propietateak"
+msgid "_Kill"
+msgstr "_Hil"
 
 #: ../data/openfiles.ui.h:1
 msgid "Open Files"
@@ -308,18 +328,22 @@ msgid "_Draw CPU chart as stacked area chart"
 msgstr "_Marraztu PUZaren diagrama metatutako areen diagrama gisa"
 
 #: ../data/preferences.ui.h:12
+msgid "Draw CPU chart as s_mooth graph"
+msgstr "Marraztu PUZaren diagrama grafiko _leun gisa"
+
+#: ../data/preferences.ui.h:13
 msgid "_Show network speed in bits"
 msgstr "_Erakutsi sareko abiadura bitetan"
 
-#: ../data/preferences.ui.h:14
+#: ../data/preferences.ui.h:15
 msgid "Show _all file systems"
 msgstr "Erakutsi fitxategi-sistema g_uztiak"
 
-#: ../data/preferences.ui.h:15
+#: ../data/preferences.ui.h:16
 msgid "File system i_nformation shown in list:"
 msgstr "Fitxategi-sistemako _informazioa zerrendan erakutsita:"
 
-#: ../data/renice.ui.h:1 ../src/procdialogs.cpp:123
+#: ../data/renice.ui.h:1 ../src/procdialogs.cpp:153
 msgid "_Cancel"
 msgstr "_Utzi"
 
@@ -339,7 +363,7 @@ msgstr ""
 "<small><i><b>Oharra:</b> prozesu baten lehentasuna bere 'nice' balioak "
 "ematen du. 'nice' balio baxu batek lehentasun altu bati dagokio.</i></small>"
 
-#: ../src/application.cpp:304
+#: ../src/application.cpp:285
 msgid "A simple process and system monitor."
 msgstr "Prozesu eta sistemaren monitore bakuna."
 
@@ -356,114 +380,49 @@ msgid "Show the File Systems tab"
 msgstr "Erakutsi fitxategi-sistemen fitxa"
 
 #: ../src/argv.cpp:36
-msgid "Show the application's version"
+msgid "Show the application’s version"
 msgstr "Erakutsi aplikazioaren bertsioa"
 
-#: ../src/disks.cpp:361 ../src/memmaps.cpp:329
+#: ../src/disks.cpp:352 ../src/memmaps.cpp:329
 msgid "Device"
 msgstr "Gailua"
 
-#: ../src/disks.cpp:362
+#: ../src/disks.cpp:353
 msgid "Directory"
 msgstr "Direktorioa"
 
-#: ../src/disks.cpp:363 ../src/gsm_color_button.c:165 ../src/openfiles.cpp:252
+#: ../src/disks.cpp:354 ../src/legacy/gsm_color_button.c:165
+#: ../src/openfiles.cpp:253
 msgid "Type"
 msgstr "Mota"
 
-#: ../src/disks.cpp:364
+#: ../src/disks.cpp:355
 msgid "Total"
 msgstr "Guztira"
 
-#: ../src/disks.cpp:365
+#: ../src/disks.cpp:356
 msgid "Free"
 msgstr "Libre"
 
-#: ../src/disks.cpp:366
+#: ../src/disks.cpp:357
 msgid "Available"
 msgstr "Erabilgarri"
 
-#: ../src/disks.cpp:367
+#: ../src/disks.cpp:358
 msgid "Used"
 msgstr "Erabilita"
 
-#. xgettext: ? stands for unknown
-#: ../src/e_date.c:156
-msgid "?"
-msgstr "?"
-
-#: ../src/e_date.c:163
-msgid "Today %l:%M %p"
-msgstr "Gaur %H:%M"
-
-#: ../src/e_date.c:172
-msgid "Yesterday %l:%M %p"
-msgstr "Atzo %H:%M"
-
-#: ../src/e_date.c:184
-msgid "%a %l:%M %p"
-msgstr "%a %H:%M"
-
-#: ../src/e_date.c:192
-msgid "%b %d %l:%M %p"
-msgstr "%d %b %H:%M"
-
-#: ../src/e_date.c:194
-msgid "%b %d %Y"
-msgstr "%Y %b %d"
-
-#: ../src/gsm_color_button.c:141
-msgid "Fraction"
-msgstr "Frakzioa"
-
-#. TRANSLATORS: description of the pie color picker's (mem, swap) filled percentage property
-#: ../src/gsm_color_button.c:143
-msgid "Percentage full for pie color pickers"
-msgstr "Tartaren kolore hautatzaileen ehuneko osoa"
-
-#: ../src/gsm_color_button.c:150
-msgid "Title"
-msgstr "Titulua"
-
-#: ../src/gsm_color_button.c:151
-msgid "The title of the color selection dialog"
-msgstr "Kolore-hautapenaren elkarrizketa-koadroko titulua"
-
-#: ../src/gsm_color_button.c:152 ../src/gsm_color_button.c:512
-msgid "Pick a Color"
-msgstr "Hautatu kolorea"
-
-#: ../src/gsm_color_button.c:158
-msgid "Current Color"
-msgstr "Uneko kolorea"
-
-#: ../src/gsm_color_button.c:159
-msgid "The selected color"
-msgstr "Hautatutako kolorea"
-
-#: ../src/gsm_color_button.c:166
-msgid "Type of color picker"
-msgstr "Kolore-hautatzaile mota"
-
-#: ../src/gsm_color_button.c:434
-msgid "Received invalid color data\n"
-msgstr "Baliogabeko kolore-datua jaso da\n"
-
-#: ../src/gsm_color_button.c:535
-msgid "Click to set graph colors"
-msgstr "Egin klik grafikoen koloreak ezartzeko"
-
 #. Translators: color picker title, %s is CPU, Memory, Swap, Receiving, Sending
-#: ../src/interface.cpp:187
+#: ../src/interface.cpp:185
 #, c-format
-msgid "Pick a Color for '%s'"
-msgstr "Hautatu '%s'(r)en kolorea"
+msgid "Pick a Color for “%s”"
+msgstr "Hautatu ”%s”(r)en kolorea"
 
-#: ../src/interface.cpp:220 ../src/procproperties.cpp:78
+#: ../src/interface.cpp:219 ../src/procproperties.cpp:78
 msgid "CPU"
 msgstr "PUZ"
 
-#: ../src/interface.cpp:222
+#: ../src/interface.cpp:221
 #, c-format
 msgid "CPU%d"
 msgstr "%d.PUZ"
@@ -472,19 +431,85 @@ msgstr "%d.PUZ"
 msgid "translator-credits"
 msgstr "Iñaki Larrañaga Murgoitio <dooteo@zundan.com>"
 
-#: ../src/load-graph.cpp:161
+#. xgettext: ? stands for unknown
+#: ../src/legacy/e_date.c:156
+msgid "?"
+msgstr "?"
+
+#: ../src/legacy/e_date.c:163
+msgid "Today %l∶%M %p"
+msgstr "Gaur %l∶%M %p"
+
+#: ../src/legacy/e_date.c:172
+msgid "Yesterday %l∶%M %p"
+msgstr "Atzo %l∶%M %p"
+
+#: ../src/legacy/e_date.c:184
+msgid "%a %l∶%M %p"
+msgstr "%a %l∶%M %p"
+
+#: ../src/legacy/e_date.c:192
+msgid "%b %d %l∶%M %p"
+msgstr "%d %b %l∶%M %p"
+
+#: ../src/legacy/e_date.c:194
+msgid "%b %d %Y"
+msgstr "%Y %b %d"
+
+#: ../src/legacy/gsm_color_button.c:141
+msgid "Fraction"
+msgstr "Frakzioa"
+
+#. TRANSLATORS: description of the pie color picker's (mem, swap) filled percentage property
+#: ../src/legacy/gsm_color_button.c:143
+msgid "Percentage full for pie color pickers"
+msgstr "Tartaren kolore hautatzaileen ehuneko osoa"
+
+#: ../src/legacy/gsm_color_button.c:150
+msgid "Title"
+msgstr "Titulua"
+
+#: ../src/legacy/gsm_color_button.c:151
+msgid "The title of the color selection dialog"
+msgstr "Kolore-hautapenaren elkarrizketa-koadroko titulua"
+
+#: ../src/legacy/gsm_color_button.c:152 ../src/legacy/gsm_color_button.c:515
+msgid "Pick a Color"
+msgstr "Hautatu kolorea"
+
+#: ../src/legacy/gsm_color_button.c:158
+msgid "Current Color"
+msgstr "Uneko kolorea"
+
+#: ../src/legacy/gsm_color_button.c:159
+msgid "The selected color"
+msgstr "Hautatutako kolorea"
+
+#: ../src/legacy/gsm_color_button.c:166
+msgid "Type of color picker"
+msgstr "Kolore-hautatzaile mota"
+
+#: ../src/legacy/gsm_color_button.c:437
+msgid "Received invalid color data\n"
+msgstr "Baliogabeko kolore-datua jaso da\n"
+
+#: ../src/legacy/gsm_color_button.c:538
+msgid "Click to set graph colors"
+msgstr "Egin klik grafikoen koloreak ezartzeko"
+
+#: ../src/load-graph.cpp:157
 #, c-format
 msgid "%u second"
 msgid_plural "%u seconds"
 msgstr[0] "segundo %u"
 msgstr[1] "%u segundo"
 
-#: ../src/load-graph.cpp:370
+#: ../src/load-graph.cpp:373
 msgid "not available"
 msgstr "ez dago erabilgarri"
 
 #. xgettext: 540MiB (53 %) of 1.0 GiB
-#: ../src/load-graph.cpp:373
+#: ../src/load-graph.cpp:376
 #, c-format
 msgid "%s (%.1f%%) of %s"
 msgstr "%s (%%%.1f) / %s"
@@ -503,15 +528,15 @@ msgid_plural "%d matching open files"
 msgstr[0] "Bat datorren irekitako fitxategi %d"
 msgstr[1] "Bat datozen irekitako %d fitxategi"
 
-#: ../src/lsof.cpp:247
+#: ../src/lsof.cpp:245
 msgid "Process"
 msgstr "Prozesua"
 
-#: ../src/lsof.cpp:259
+#: ../src/lsof.cpp:257
 msgid "PID"
 msgstr "PIDa"
 
-#: ../src/lsof.cpp:269 ../src/memmaps.cpp:307
+#: ../src/lsof.cpp:267 ../src/memmaps.cpp:307
 msgid "Filename"
 msgstr "Fitxategia"
 
@@ -567,14 +592,14 @@ msgstr "Partekatua zikina"
 msgid "Inode"
 msgstr "Inodoa"
 
-#: ../src/memmaps.cpp:440
+#: ../src/memmaps.cpp:438
 msgid "Memory Maps"
 msgstr "Memoria-mapak"
 
-#: ../src/memmaps.cpp:452
+#: ../src/memmaps.cpp:450
 #, c-format
-msgid "_Memory maps for process \"%s\" (PID %u):"
-msgstr "\"%s\" prozesuaren (PID %u) _memoria-mapak:"
+msgid "_Memory maps for process “%s” (PID %u):"
+msgstr "”%s” prozesuaren (PID %u) _memoria-mapak:"
 
 #: ../src/openfiles.cpp:40
 msgid "file"
@@ -603,18 +628,18 @@ msgstr "mota ezezaguna"
 #. Translators: "FD" here means "File Descriptor". Please use
 #. a very short translation if possible, and at most
 #. 2-3 characters for it to be able to fit in the UI.
-#: ../src/openfiles.cpp:251
+#: ../src/openfiles.cpp:252
 msgid "FD"
 msgstr "FD"
 
-#: ../src/openfiles.cpp:253
+#: ../src/openfiles.cpp:254
 msgid "Object"
 msgstr "Objektua"
 
-#: ../src/openfiles.cpp:336
+#: ../src/openfiles.cpp:337
 #, c-format
-msgid "_Files opened by process \"%s\" (PID %u):"
-msgstr "\"%s\" prozesuak (PID %u) irekitako fitxategiak:"
+msgid "_Files opened by process “%s” (PID %u):"
+msgstr "”%s” prozesuak (PID %u) irekitako fitxategiak:"
 
 #: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:1
 msgid "Main window size and position in the form (width, height, xpos, ypos)"
@@ -636,13 +661,13 @@ msgstr "Solaris moduaren PUZ ehunekoa"
 
 #: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:5
 msgid ""
-"If TRUE, system-monitor operates in 'Solaris mode' where a task's CPU usage "
-"is divided by the total number of CPUs. Otherwise, it operates in 'Irix "
-"mode'."
+"If TRUE, system-monitor operates in “Solaris mode” where a task’s CPU usage "
+"is divided by the total number of CPUs. Otherwise, it operates in “Irix "
+"mode”."
 msgstr ""
-"TRUE (egia) bada, sistemako monitorea 'Solaris modua'n funtzionatuko du, non "
-"atazen PUZ erabilpena PUZ kopuru osoaren artean zatituko den. Bestela 'Irix "
-"modua'n funtziona dezake."
+"TRUE (egia) bada, sistemako monitorea ”Solaris modua”n funtzionatuko du, non "
+"atazen PUZ erabilpena PUZ kopuru osoaren artean zatituko den. Bestela ”Irix "
+"modua”n funtziona dezake."
 
 #: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:6
 msgid "Show CPU chart as stacked area chart"
@@ -657,359 +682,411 @@ msgstr ""
 "diagrama gisa erakutsiko du, marren diagrama baten ordez."
 
 #: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:8
+msgid "Show CPU chart as smooth graph using Bezier curves"
+msgstr "Marraztu PUZaren diagrama grafiko leun gisa Bezier kurbak erabiliz"
+
+#: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:9
+msgid ""
+"If TRUE, system-monitor shows the CPU chart as a smoothed graph, otherwise "
+"as a line chart."
+msgstr ""
+"TRUE (egia) bada, sistemaren monitoreak PUZaren diagrama leundutako grafiko "
+"gisa erakutsiko du, bestela marren diagrama batekin."
+
+#: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:10
 msgid "Enable/Disable smooth refresh"
 msgstr "Gaitu/Desgaitu freskatze leuna"
 
-#: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:9
+#: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:11
 msgid "Show warning dialog when killing processes"
 msgstr "Erakutsi abisuko elkarrizketa-koadroa prozesuak hiltzean"
 
-#: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:10
+#: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:12
 msgid "Time in milliseconds between updates of the process view"
 msgstr "Prozesuen ikuspegia eguneratzeko tartearen denbora (milisegundotan)"
 
-#: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:11
+#: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:13
 msgid "Time in milliseconds between updates of the graphs"
 msgstr "Grafikoak eguneratzeko tartearen denbora (milisegundotan)"
 
-#: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:12
+#: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:14
 msgid "Whether information about all file systems should be displayed"
 msgstr ""
 "Fitxategi-sistema guztiei buruzko informazioa bistaratu behar den ala ez"
 
-#: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:13
+#: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:15
 msgid ""
 "Whether to display information about all file systems (including types like "
-"'autofs' and 'procfs'). Useful for getting a list of all currently mounted "
+"“autofs” and “procfs”). Useful for getting a list of all currently mounted "
 "file systems."
 msgstr ""
-"Fitxategi-sistema guztiei buruzko informazioa bistaratu ala ez ('autofs' eta "
-"'procfs' motak bezalakoak barne). Erabilgarria unean muntatuta dauden "
+"Fitxategi-sistema guztiei buruzko informazioa bistaratu ala ez (“autofs“ eta "
+"“procfs“ motak bezalakoak barne). Erabilgarria unean muntatuta dauden "
 "fitxategi-sistema guztiak zerrendatzeko."
 
-#: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:14
+#: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:16
 msgid "Time in milliseconds between updates of the devices list"
 msgstr "Gailuen zerrendaren eguneratzeko tartearen denbora (milisegundotan)"
 
-#: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:15
+#: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:17
 msgid "Determines which processes to show."
 msgstr "Zer prozesu erakutsi zehazten du."
 
-#: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:16
+#: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:18
 msgid "Saves the currently viewed tab"
 msgstr "Gorde unean fitxan ikusten dena"
 
-#: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:17
+#: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:19
 msgid "CPU colors"
 msgstr "PUZen koloreak"
 
-#: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:18
+#: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:20
 msgid "Each entry is in the format (CPU#, Hexadecimal color value)"
 msgstr "Sarrera bakoitzak (PUZ, kolorearen balio hamaseitarra) formatua du"
 
-#: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:19
+#: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:21
 msgid "Default graph memory color"
 msgstr "Memoriaren grafikoaren kolore lehenetsia"
 
-#: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:20
+#: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:22
 msgid "Default graph swap color"
 msgstr "Swap-aren grafikoaren kolore lehenetsia"
 
-#: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:21
+#: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:23
 msgid "Default graph incoming network traffic color"
 msgstr "Sareko sarrerako grafikoaren kolore lehenetsia"
 
-#: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:22
+#: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:24
 msgid "Default graph outgoing network traffic color"
 msgstr "Sareko irteerako grafikoaren kolore lehenetsia"
 
-#: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:23
+#: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:25
 msgid "Show network traffic in bits"
 msgstr "Erakutsi sareko trafikoa bitetan"
 
-#: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:24
+#: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:26
 msgid "Process view sort column"
 msgstr "Prozesuen ikuspegi-ordena zutabea"
 
-#: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:25
+#: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:27
 msgid "Process view columns order"
 msgstr "Prozesu-ikuspegiko zutabeak"
 
-#: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:26
+#: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:28
 msgid "Process view sort order"
 msgstr "Prozesuen ikuspegiaren ordena"
 
-#: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:27
-msgid "Width of process 'Name' column"
-msgstr "Prozesuaren 'Izena' zutabearen zabalera"
-
-#: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:28
-msgid "Show process 'Name' column on startup"
-msgstr "Erakutsi prozesuaren 'Izena' zutabea abioan"
-
 #: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:29
-msgid "Width of process 'User' column"
-msgstr "Prozesuaren 'Erabiltzailea' zutabearen zabalera"
+msgid "Width of process “Name” column"
+msgstr "Prozesuaren “Izena“ zutabearen zabalera"
 
 #: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:30
-msgid "Show process 'User' column on startup"
-msgstr "Erakutsi prozesuaren 'Erabiltzailea' zutabea abioan"
+msgid "Show process “Name” column on startup"
+msgstr "Erakutsi prozesuaren “Izena“ zutabea abioan"
 
 #: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:31
-msgid "Width of process 'Status' column"
-msgstr "Prozesuaren 'Egoera' zutabearen zabalera"
+msgid "Width of process “User” column"
+msgstr "Prozesuaren “Erabiltzailea“ zutabearen zabalera"
 
 #: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:32
-msgid "Show process 'Status' column on startup"
-msgstr "Erakutsi prozesuaren 'Egoera' zutabea abioan"
+msgid "Show process “User” column on startup"
+msgstr "Erakutsi prozesuaren “Erabiltzailea“ zutabea abioan"
 
 #: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:33
-msgid "Width of process 'Virtual Memory' column"
-msgstr "Prozesuaren 'Memoria birtuala' zutabearen zabalera"
+msgid "Width of process “Status” column"
+msgstr "Prozesuaren “Egoera“ zutabearen zabalera"
 
 #: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:34
-msgid "Show process 'Virtual Memory' column on startup"
-msgstr "Erakutsi prozesuaren 'Memoria birtuala' zutabea abioan"
+msgid "Show process “Status” column on startup"
+msgstr "Erakutsi prozesuaren “Egoera“ zutabea abioan"
 
 #: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:35
-msgid "Width of process 'Resident Memory' column"
-msgstr "Prozesuaren 'Memoria egoiliarra' zutabearen zabalera"
+msgid "Width of process “Virtual Memory” column"
+msgstr "Prozesuaren “Memoria birtuala“ zutabearen zabalera"
 
 #: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:36
-msgid "Show process 'Resident Memory' column on startup"
-msgstr "Erakutsi prozesuaren 'Memoria egoiliarra' zutabea abioan"
+msgid "Show process “Virtual Memory” column on startup"
+msgstr "Erakutsi prozesuaren “Memoria birtuala“ zutabea abioan"
 
 #: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:37
-msgid "Width of process 'Writable Memory' column"
-msgstr "Prozesuaren 'Memoria idazgarria' zutabearen zabalera"
+msgid "Width of process “Resident Memory” column"
+msgstr "Prozesuaren “Memoria egoiliarra“ zutabearen zabalera"
 
 #: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:38
-msgid "Show process 'Writable Memory' column on startup"
-msgstr "Erakutsi prozesuaren 'Memoria idazgarria' zutabea abioan"
+msgid "Show process “Resident Memory” column on startup"
+msgstr "Erakutsi prozesuaren “Memoria egoiliarra“ zutabea abioan"
 
 #: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:39
-msgid "Width of process 'Shared Memory' column"
-msgstr "Prozesuaren 'Memoria partekatua' zutabearen zabalera"
+msgid "Width of process “Writable Memory” column"
+msgstr "Prozesuaren “Memoria idazgarria“ zutabearen zabalera"
 
 #: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:40
-msgid "Show process 'Shared Memory' column on startup"
-msgstr "Erakutsi prozesuaren 'Memoria partekatua' zutabea abioan"
+msgid "Show process “Writable Memory” column on startup"
+msgstr "Erakutsi prozesuaren “Memoria idazgarria“ zutabea abioan"
 
 #: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:41
-msgid "Width of process 'X Server Memory' column"
-msgstr "Prozesuaren 'X zerbitzari-memoria' zutabearen zabalera"
+msgid "Width of process “Shared Memory” column"
+msgstr "Prozesuaren “Memoria partekatua“ zutabearen zabalera"
 
 #: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:42
-msgid "Show process 'X Server Memory' column on startup"
-msgstr "Erakutsi prozesuaren 'X zerbitzari-memoria' zutabea abioan"
+msgid "Show process “Shared Memory” column on startup"
+msgstr "Erakutsi prozesuaren “Memoria partekatua“ zutabea abioan"
+
+#: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:43
+msgid "Width of process “X Server Memory” column"
+msgstr "Prozesuaren “X zerbitzari-memoria“ zutabearen zabalera"
 
 #: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:44
-#, no-c-format
-msgid "Width of process 'CPU %' column"
-msgstr "Prozesuaren '% PUZ' zutabearen zabalera"
+msgid "Show process “X Server Memory” column on startup"
+msgstr "Erakutsi prozesuaren “X zerbitzari-memoria“ zutabea abioan"
 
 #: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:46
 #, no-c-format
-msgid "Show process 'CPU %' column on startup"
-msgstr "Erakutsi prozesuaren '% PUZ' zutabea abioan"
-
-#: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:47
-msgid "Width of process 'CPU Time' column"
-msgstr "Prozesuaren 'PUZ denbora' zutabearen zabalera"
+msgid "Width of process “CPU %” column"
+msgstr "Prozesuaren “% PUZ“ zutabearen zabalera"
 
 #: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:48
-msgid "Show process 'CPU Time' column on startup"
-msgstr "Erakutsi prozesuaren 'PUZ denbora' zutabea abioan"
+#, no-c-format
+msgid "Show process “CPU %” column on startup"
+msgstr "Erakutsi prozesuaren “% PUZ“ zutabea abioan"
 
 #: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:49
-msgid "Width of process 'Started' column"
-msgstr "Prozesuaren 'Hasita' zutabearen zabalera"
+msgid "Width of process “CPU Time” column"
+msgstr "Prozesuaren “PUZ denbora“ zutabearen zabalera"
 
 #: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:50
-msgid "Show process 'Started' column on startup"
-msgstr "Erakutsi prozesuaren 'Hasita' zutabea abioan"
+msgid "Show process “CPU Time” column on startup"
+msgstr "Erakutsi prozesuaren “PUZ denbora“ zutabea abioan"
 
 #: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:51
-msgid "Width of process 'Nice' column"
-msgstr "Prozesuaren 'Lehentasuna' zutabearen zabalera"
+msgid "Width of process “Started” column"
+msgstr "Prozesuaren “Hasita“ zutabearen zabalera"
 
 #: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:52
-msgid "Show process 'Nice' column on startup"
-msgstr "Erakutsi prozesuaren 'Lehentasuna' zutabea abioan"
+msgid "Show process “Started” column on startup"
+msgstr "Erakutsi prozesuaren “Hasita“ zutabea abioan"
 
 #: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:53
-msgid "Width of process 'PID' column"
-msgstr "Prozesuaren 'PID' zutabearen zabalera"
+msgid "Width of process “Nice” column"
+msgstr "Prozesuaren “Lehentasuna“ zutabearen zabalera"
 
 #: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:54
-msgid "Show process 'PID' column on startup"
-msgstr "Erakutsi prozesuaren 'PID' zutabea abioan"
+msgid "Show process “Nice” column on startup"
+msgstr "Erakutsi prozesuaren “Lehentasuna“ zutabea abioan"
 
 #: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:55
-msgid "Width of process 'SELinux Security Context' column"
-msgstr "Prozesuaren 'SELinux segurtasun testuingurua' zutabearen zabalera"
+msgid "Width of process “PID” column"
+msgstr "Prozesuaren “PID“ zutabearen zabalera"
 
 #: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:56
-msgid "Show process 'SELinux Security Context' column on startup"
-msgstr "Erakutsi prozesuaren 'SELinux segurtasun testuingurua' zutabea abioan"
+msgid "Show process “PID” column on startup"
+msgstr "Erakutsi prozesuaren “PID“ zutabea abioan"
 
 #: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:57
-msgid "Width of process 'Command Line' column"
-msgstr "Prozesuaren 'Komando-lerroa' zutabearen zabalera"
+msgid "Width of process “SELinux Security Context” column"
+msgstr "Prozesuaren “SELinux segurtasun testuingurua“ zutabearen zabalera"
 
 #: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:58
-msgid "Show process 'Command Line' column on startup"
-msgstr "Erakutsi prozesuaren 'Komando-lerroa' zutabea abioan"
+msgid "Show process “SELinux Security Context” column on startup"
+msgstr "Erakutsi prozesuaren “SELinux segurtasun testuingurua“ zutabea abioan"
 
 #: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:59
-msgid "Width of process 'Memory' column"
-msgstr "Prozesuaren 'Memoria' zutabearen zabalera"
+msgid "Width of process “Command Line” column"
+msgstr "Prozesuaren “Komando-lerroa“ zutabearen zabalera"
 
 #: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:60
-msgid "Show process 'Memory' column on startup"
-msgstr "Erakutsi prozesuaren 'Memoria' zutabea abioan"
+msgid "Show process “Command Line” column on startup"
+msgstr "Erakutsi prozesuaren “Komando-lerroa“ zutabea abioan"
 
 #: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:61
-msgid "Width of process 'Waiting Channel' column"
-msgstr "Prozesuaren 'Kanala zain' zutabearen zabalera"
+msgid "Width of process “Memory” column"
+msgstr "Prozesuaren “Memoria“ zutabearen zabalera"
 
 #: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:62
-msgid "Show process 'Waiting Channel' column on startup"
-msgstr "Erakutsi prozesuaren 'Kanala zain' zutabea abioan"
+msgid "Show process “Memory” column on startup"
+msgstr "Erakutsi prozesuaren “Memoria“ zutabea abioan"
 
 #: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:63
-msgid "Width of process 'Control Group' column"
-msgstr "Prozesuaren 'Kontrol taldea' zutabearen zabalera"
+msgid "Width of process “Waiting Channel” column"
+msgstr "Prozesuaren “Itxaron kanala“ zutabearen zabalera"
 
 #: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:64
-msgid "Show process 'Control Group' column on startup"
-msgstr "Erakutsi prozesuaren 'Kontrol taldea' zutabea abioan"
+msgid "Show process “Waiting Channel” column on startup"
+msgstr "Erakutsi prozesuaren “Itxaron kanala“ zutabea abioan"
 
 #: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:65
-msgid "Width of process 'Unit' column"
-msgstr "Prozesuaren 'Unitatea' zutabearen zabalera"
+msgid "Width of process “Control Group” column"
+msgstr "Prozesuaren “Kontrol taldea“ zutabearen zabalera"
 
 #: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:66
-msgid "Show process 'Unit' column on startup"
-msgstr "Erakutsi prozesuaren 'Unitatea' zutabea abioan"
+msgid "Show process “Control Group” column on startup"
+msgstr "Erakutsi prozesuaren “Kontrol taldea“ zutabea abioan"
 
 #: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:67
-msgid "Width of process 'Session' column"
-msgstr "Prozesuaren 'Saioa' zutabearen zabalera"
+msgid "Width of process “Unit” column"
+msgstr "Prozesuaren “Unitatea“ zutabearen zabalera"
 
 #: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:68
-msgid "Show process 'Session' column on startup"
-msgstr "Erakutsi prozesuaren 'Saioa' zutabea abioan"
+msgid "Show process “Unit” column on startup"
+msgstr "Erakutsi prozesuaren “Unitatea“ zutabea abioan"
 
 #: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:69
-msgid "Width of process 'Seat' column"
-msgstr "Prozesuaren 'Eserlekua' zutabearen zabalera"
+msgid "Width of process “Session” column"
+msgstr "Prozesuaren “Saioa“ zutabearen zabalera"
 
 #: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:70
-msgid "Show process 'Seat' column on startup"
-msgstr "Erakutsi prozesuaren 'Eserlekua' zutabea abioan"
+msgid "Show process “Session” column on startup"
+msgstr "Erakutsi prozesuaren “Saioa“ zutabea abioan"
 
 #: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:71
-msgid "Width of process 'Owner' column"
-msgstr "Prozesuaren 'Jabea' zutabearen zabalera"
+msgid "Width of process “Seat” column"
+msgstr "Prozesuaren “Eserlekua“ zutabearen zabalera"
 
 #: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:72
-msgid "Show process 'Owner' column on startup"
-msgstr "Erakutsi prozesuaren 'Jabea' zutabea abioan"
+msgid "Show process “Seat” column on startup"
+msgstr "Erakutsi prozesuaren “Eserlekua“ zutabea abioan"
 
 #: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:73
-msgid "Width of process 'Priority' column"
-msgstr "Prozesuaren 'Lehentasuna' zutabearen zabalera"
+msgid "Width of process “Owner” column"
+msgstr "Prozesuaren “Jabea“ zutabearen zabalera"
 
 #: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:74
-msgid "Show process 'Priority' column on startup"
-msgstr "Erakutsi prozesuaren 'Lehentasuna' zutabea abioan"
+msgid "Show process “Owner” column on startup"
+msgstr "Erakutsi prozesuaren “Jabea“ zutabea abioan"
 
 #: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:75
+#| msgid "Width of process “Started” column"
+msgid "Width of process “Total disk write” column"
+msgstr "Prozesuaren “Guztira diskoan idatzita“ zutabearen zabalera"
+
+#: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:76
+#| msgid "Show process “Started” column on startup"
+msgid "Show process “Total disk write” column on startup"
+msgstr "Erakutsi prozesuaren “Guztira diskoan idatzita“ zutabea abioan"
+
+#: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:77
+#| msgid "Width of process “Started” column"
+msgid "Width of process “Total disk read” column"
+msgstr "Prozesuaren “Guztira diskotik irakurrita“ zutabearen zabalera"
+
+#: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:78
+#| msgid "Show process “Started” column on startup"
+msgid "Show process “Total disk read” column on startup"
+msgstr "Erakutsi prozesuaren “Guztira diskotik irakurrita“ zutabea abioan"
+
+#: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:79
+#| msgid "Width of process “User” column"
+msgid "Width of process “Disk read” column"
+msgstr "Prozesuaren “Diskotik irakurrita“ zutabearen zabalera"
+
+#: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:80
+#| msgid "Show process “User” column on startup"
+msgid "Show process “Disk read” column on startup"
+msgstr "Erakutsi prozesuaren “Diskotik irakurrita“ zutabea abioan"
+
+#: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:81
+#| msgid "Width of process “Priority” column"
+msgid "Width of process “Disk write” column"
+msgstr "Prozesuaren “Diskoan idatzita“ zutabearen zabalera"
+
+#: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:82
+#| msgid "Show process “Priority” column on startup"
+msgid "Show process “Disk write” column on startup"
+msgstr "Erakutsi prozesuaren “Diskoan idatzita“ zutabea abioan"
+
+#: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:83
+msgid "Width of process “Priority” column"
+msgstr "Prozesuaren “Lehentasuna“ zutabearen zabalera"
+
+#: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:84
+msgid "Show process “Priority” column on startup"
+msgstr "Erakutsi prozesuaren “Lehentasuna“ zutabea abioan"
+
+#: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:85
 msgid "Disk view sort column"
 msgstr "Diskoen ikuspegi-ordena zutabea"
 
-#: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:76
+#: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:86
 msgid "Disk view sort order"
 msgstr "Diskoen ikuspegiaren ordena"
 
-#: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:77
+#: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:87
 msgid "Disk view columns order"
 msgstr "Disko-ikuspegiko zutabeak"
 
-#: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:78
-msgid "Width of disk view 'Device' column"
-msgstr "Diskoaren ikuspegiaren 'Gailua' zutabearen zabalera"
-
-#: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:79
-msgid "Show disk view 'Device' column on startup"
-msgstr "Erakutsi diskoaren ikuspegiaren 'Gailua' zutabea abioan"
-
-#: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:80
-msgid "Width of disk view 'Directory' column"
-msgstr "Diskoaren ikuspegiaren 'Direktorioa' zutabearen zabalera"
-
-#: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:81
-msgid "Show disk view 'Directory' column on startup"
-msgstr "Erakutsi diskoaren ikuspegiaren 'Direktorioa' zutabea abioan"
-
-#: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:82
-msgid "Width of disk view 'Type' column"
-msgstr "Diskoaren ikuspegiaren 'Mota' zutabearen zabalera"
-
-#: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:83
-msgid "Show disk view 'Type' column on startup"
-msgstr "Erakutsi diskoaren ikuspegiaren 'Mota' zutabea abioan"
-
-#: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:84
-msgid "Width of disk view 'Total' column"
-msgstr "Diskoaren ikuspegiaren 'Guztira' zutabearen zabalera"
-
-#: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:85
-msgid "Show disk view 'Total' column on startup"
-msgstr "Erakutsi diskoaren ikuspegiaren 'Guztira' zutabea abioan"
-
-#: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:86
-msgid "Width of disk view 'Free' column"
-msgstr "Diskoaren ikuspegiaren 'Librea' zutabearen zabalera"
-
-#: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:87
-msgid "Show disk view 'Free' column on startup"
-msgstr "Erakutsi diskoaren ikuspegiaren 'Libre' zutabea abioan"
-
 #: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:88
-msgid "Width of disk view 'Available' column"
-msgstr "Diskoaren ikuspegiaren 'Erabilgarri' zutabearen zabalera"
+msgid "Width of disk view “Device” column"
+msgstr "Diskoaren ikuspegiaren “Gailua“ zutabearen zabalera"
 
 #: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:89
-msgid "Show disk view 'Available' column on startup"
-msgstr "Erakutsi diskoaren ikuspegiaren 'Erabilgarri' zutabea abioan"
+msgid "Show disk view “Device” column on startup"
+msgstr "Erakutsi diskoaren ikuspegiaren “Gailua“ zutabea abioan"
 
 #: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:90
-msgid "Width of disk view 'Used' column"
-msgstr "Diskoaren ikuspegiaren 'Erabilita' zutabearen zabalera"
+msgid "Width of disk view “Directory” column"
+msgstr "Diskoaren ikuspegiaren “Direktorioa“ zutabearen zabalera"
 
 #: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:91
-msgid "Show disk view 'Used' column on startup"
-msgstr "Erakutsi diskoaren ikuspegiaren 'Erabilita' zutabea abioan"
+msgid "Show disk view “Directory” column on startup"
+msgstr "Erakutsi diskoaren ikuspegiaren “Direktorioa“ zutabea abioan"
 
 #: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:92
+msgid "Width of disk view “Type” column"
+msgstr "Diskoaren ikuspegiaren “Mota“ zutabearen zabalera"
+
+#: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:93
+msgid "Show disk view “Type” column on startup"
+msgstr "Erakutsi diskoaren ikuspegiaren “Mota“ zutabea abioan"
+
+#: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:94
+msgid "Width of disk view “Total” column"
+msgstr "Diskoaren ikuspegiaren “Guztira“ zutabearen zabalera"
+
+#: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:95
+msgid "Show disk view “Total” column on startup"
+msgstr "Erakutsi diskoaren ikuspegiaren “Guztira“ zutabea abioan"
+
+#: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:96
+msgid "Width of disk view “Free” column"
+msgstr "Diskoaren ikuspegiaren “Librea“ zutabearen zabalera"
+
+#: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:97
+msgid "Show disk view “Free” column on startup"
+msgstr "Erakutsi diskoaren ikuspegiaren “Libre“ zutabea abioan"
+
+#: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:98
+msgid "Width of disk view “Available” column"
+msgstr "Diskoaren ikuspegiaren “Erabilgarri“ zutabearen zabalera"
+
+#: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:99
+msgid "Show disk view “Available” column on startup"
+msgstr "Erakutsi diskoaren ikuspegiaren “Erabilgarri“ zutabea abioan"
+
+#: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:100
+msgid "Width of disk view “Used” column"
+msgstr "Diskoaren ikuspegiaren “Erabilita“ zutabearen zabalera"
+
+#: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:101
+msgid "Show disk view “Used” column on startup"
+msgstr "Erakutsi diskoaren ikuspegiaren “Erabilita“ zutabea abioan"
+
+#: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:102
 msgid "Memory map sort column"
 msgstr "Memoria maparen ordena zutabea"
 
-#: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:93
+#: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:103
 msgid "Memory map sort order"
 msgstr "Memoria maparen ordenazioa"
 
-#: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:94
+#: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:104
 msgid "Open files sort column"
 msgstr "Irekitako fitxategien ordena zutabea"
 
-#: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:95
+#: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:105
 msgid "Open files sort order"
 msgstr "Irekitako fitxategien ordenazioa"
 
-#: ../src/prefsdialog.cpp:171
+#: ../src/prefsdialog.cpp:168
 msgid "Icon"
 msgstr "Ikonoa"
 
@@ -1032,19 +1109,26 @@ msgstr ""
 "%s"
 
 #. xgettext: primary alert message for killing single process
-#: ../src/procdialogs.cpp:75
+#: ../src/procdialogs.cpp:76
 #, c-format
 msgid "Are you sure you want to kill the selected process “%s” (PID: %u)?"
 msgstr "Ziur zaude hautatutako '%s' prozesua (PIDa: %u) hil nahi duzula?"
 
 #. xgettext: primary alert message for ending single process
-#: ../src/procdialogs.cpp:80
+#: ../src/procdialogs.cpp:82
 #, c-format
 msgid "Are you sure you want to end the selected process “%s” (PID: %u)?"
 msgstr "Ziur zaude hautatutako '%s' prozesua (PIDa: %u) amaitu nahi duzula?"
 
+#. SIGSTOP
+#. xgettext: primary alert message for stopping single process
+#: ../src/procdialogs.cpp:88
+#, c-format
+msgid "Are you sure you want to stop the selected process “%s” (PID: %u)?"
+msgstr "Ziur zaude hautatutako “%s“ prozesua (PIDa: %u) amaitu nahi duzula?"
+
 #. xgettext: primary alert message for killing multiple processes
-#: ../src/procdialogs.cpp:87
+#: ../src/procdialogs.cpp:97
 #, c-format
 msgid "Are you sure you want to kill the selected process?"
 msgid_plural "Are you sure you want to kill the %d selected processes?"
@@ -1052,15 +1136,24 @@ msgstr[0] "Ziur zaude hautatutako prozesua hil nahi duzula?"
 msgstr[1] "Ziur zaude hautatutako %d prozesu hil nahi dituzula?"
 
 #. xgettext: primary alert message for ending multiple processes
-#: ../src/procdialogs.cpp:91
+#: ../src/procdialogs.cpp:103
 #, c-format
 msgid "Are you sure you want to end the selected process?"
 msgid_plural "Are you sure you want to end the %d selected processes?"
 msgstr[0] "Ziur zaude hautatutako prozesua amaitu nahi duzula?"
 msgstr[1] "Ziur zaude hautatutako %d prozesu amaitu nahi dituzula?"
 
+#. SIGSTOP
+#. xgettext: primary alert message for stopping multiple processes
+#: ../src/procdialogs.cpp:109
+#, c-format
+msgid "Are you sure you want to stop the selected process?"
+msgid_plural "Are you sure you want to stop the %d selected processes?"
+msgstr[0] "Ziur zaude hautatutako prozesua gelditu nahi duzula?"
+msgstr[1] "Ziur zaude hautatutako %d prozesu gelditu nahi dituzula?"
+
 #. xgettext: secondary alert message
-#: ../src/procdialogs.cpp:98 ../src/procdialogs.cpp:104
+#: ../src/procdialogs.cpp:119
 msgid ""
 "Killing a process may destroy data, break the session or introduce a "
 "security risk. Only unresponsive processes should be killed."
@@ -1068,35 +1161,60 @@ msgstr ""
 "Prozesu bat hiltzean datuak galdu, saioa hondatu edo segurtasun arriskua sor "
 "daiteke. Erantzuten ez duten prozesuak bakarrik hil beharko lirateke."
 
-#: ../src/procdialogs.cpp:101
+#: ../src/procdialogs.cpp:122
 msgid "_Kill Process"
 msgid_plural "_Kill Processes"
 msgstr[0] "_Hil prozesua"
 msgstr[1] "_Hil prozesuak"
 
-#: ../src/procdialogs.cpp:107
+#. xgettext: secondary alert message
+#: ../src/procdialogs.cpp:126
+msgid ""
+"Ending a process may destroy data, break the session or introduce a security "
+"risk. Only unresponsive processes should be ended."
+msgstr ""
+"Prozesu bat amaitzean datuak galdu, saioa hondatu edo segurtasun arriskua "
+"sor daiteke. Erantzuten ez duten prozesuak bakarrik hil beharko lirateke."
+
+#: ../src/procdialogs.cpp:129
 msgid "_End Process"
 msgid_plural "_End Processes"
 msgstr[0] "_Amaitu prozesua"
 msgstr[1] "_Amaitu prozesuak"
 
-#: ../src/procdialogs.cpp:188
+#. SIGSTOP
+#. xgettext: secondary alert message
+#: ../src/procdialogs.cpp:133
+msgid ""
+"Stopping a process may destroy data, break the session or introduce a "
+"security risk. Only unresponsive processes should be stopped."
+msgstr ""
+"Prozesu bat gelditzean datuak galdu, saioa hondatu edo segurtasun arriskua "
+"sor daiteke. Erantzuten ez duten prozesuak bakarrik gelditu beharko lirateke."
+
+#: ../src/procdialogs.cpp:136
+msgid "_Stop Process"
+msgid_plural "_Stop Processes"
+msgstr[0] "_Gelditu prozesua"
+msgstr[1] "_Gelditu prozesuak"
+
+#: ../src/procdialogs.cpp:218
 #, c-format
 msgid "Change Priority of Process “%s” (PID: %u)"
 msgstr "Aldatu '%s' prozesuaren lehentasuna (PIDa: %u)"
 
-#: ../src/procdialogs.cpp:191
+#: ../src/procdialogs.cpp:221
 #, c-format
 msgid "Change Priority of the selected process"
 msgid_plural "Change Priority of %d selected processes"
 msgstr[0] "Aldatu hautatutako prozesuaren lehentasuna"
 msgstr[1] "Aldatu hautatutako %d prozesuren lehentasuna"
 
-#: ../src/procdialogs.cpp:210
+#: ../src/procdialogs.cpp:240
 msgid "Note:"
 msgstr "Oharra:"
 
-#: ../src/procdialogs.cpp:211
+#: ../src/procdialogs.cpp:241
 msgid ""
 "The priority of a process is given by its nice value. A lower nice value "
 "corresponds to a higher priority."
@@ -1105,76 +1223,76 @@ msgstr ""
 "batek lehentasun altu bati dagokio."
 
 #: ../src/procproperties.cpp:50 ../src/procproperties.cpp:84
-#: ../src/procproperties.cpp:87 ../src/util.cpp:432
+#: ../src/procproperties.cpp:87 ../src/util.cpp:432 ../src/util.cpp:471
 msgid "N/A"
 msgstr "E/E"
 
-#: ../src/procproperties.cpp:67 ../src/proctable.cpp:332
+#: ../src/procproperties.cpp:67 ../src/proctable.cpp:322
 msgid "Process Name"
 msgstr "Prozesuaren izena"
 
-#: ../src/procproperties.cpp:68 ../src/proctable.cpp:333
+#: ../src/procproperties.cpp:68 ../src/proctable.cpp:323
 msgid "User"
 msgstr "Erabiltzailea"
 
-#: ../src/procproperties.cpp:69 ../src/proctable.cpp:334
+#: ../src/procproperties.cpp:69 ../src/proctable.cpp:324
 msgid "Status"
 msgstr "Egoera"
 
-#: ../src/procproperties.cpp:71 ../src/proctable.cpp:335
+#: ../src/procproperties.cpp:71 ../src/proctable.cpp:325
 msgid "Virtual Memory"
 msgstr "Memoria birtuala"
 
-#: ../src/procproperties.cpp:72 ../src/proctable.cpp:336
+#: ../src/procproperties.cpp:72 ../src/proctable.cpp:326
 msgid "Resident Memory"
 msgstr "Memoria egoiliarra"
 
-#: ../src/procproperties.cpp:73 ../src/proctable.cpp:337
+#: ../src/procproperties.cpp:73 ../src/proctable.cpp:327
 msgid "Writable Memory"
 msgstr "Memoria idazgarria"
 
-#: ../src/procproperties.cpp:74 ../src/proctable.cpp:338
+#: ../src/procproperties.cpp:74 ../src/proctable.cpp:328
 msgid "Shared Memory"
 msgstr "Memoria partekatua"
 
-#: ../src/procproperties.cpp:76 ../src/proctable.cpp:339
+#: ../src/procproperties.cpp:76 ../src/proctable.cpp:329
 msgid "X Server Memory"
 msgstr "X zerbitzariaren memoria"
 
-#: ../src/procproperties.cpp:79 ../src/proctable.cpp:341
+#: ../src/procproperties.cpp:79 ../src/proctable.cpp:331
 msgid "CPU Time"
 msgstr "PUZ denbora"
 
-#: ../src/procproperties.cpp:80 ../src/proctable.cpp:342
+#: ../src/procproperties.cpp:80 ../src/proctable.cpp:332
 msgid "Started"
 msgstr "Hasita"
 
-#: ../src/procproperties.cpp:81 ../src/proctable.cpp:343
+#: ../src/procproperties.cpp:81 ../src/proctable.cpp:333
 msgid "Nice"
 msgstr "Lehentasuna"
 
-#: ../src/procproperties.cpp:82 ../src/proctable.cpp:357
+#: ../src/procproperties.cpp:82 ../src/proctable.cpp:351
 msgid "Priority"
 msgstr "Lehentasuna"
 
-#: ../src/procproperties.cpp:83 ../src/proctable.cpp:344
+#: ../src/procproperties.cpp:83 ../src/proctable.cpp:334
 msgid "ID"
 msgstr "IDa"
 
-#: ../src/procproperties.cpp:84 ../src/proctable.cpp:345
+#: ../src/procproperties.cpp:84 ../src/proctable.cpp:335
 msgid "Security Context"
 msgstr "Segurtasun testuingurua"
 
-#: ../src/procproperties.cpp:85 ../src/proctable.cpp:346
+#: ../src/procproperties.cpp:85 ../src/proctable.cpp:336
 msgid "Command Line"
 msgstr "Komando-lerroa"
 
 #. xgettext: combined noun, the function the process is waiting in, see wchan ps(1)
-#: ../src/procproperties.cpp:86 ../src/proctable.cpp:349
+#: ../src/procproperties.cpp:86 ../src/proctable.cpp:339
 msgid "Waiting Channel"
-msgstr "Kanala zain"
+msgstr "Itxaron kanala"
 
-#: ../src/procproperties.cpp:87 ../src/proctable.cpp:350
+#: ../src/procproperties.cpp:87 ../src/proctable.cpp:340
 msgid "Control Group"
 msgstr "Kontrol taldea"
 
@@ -1183,28 +1301,45 @@ msgstr "Kontrol taldea"
 msgid "%s (PID %u)"
 msgstr "%s (PIDa: %u)"
 
-#: ../src/proctable.cpp:340
+#: ../src/proctable.cpp:330
 #, no-c-format
 msgid "% CPU"
 msgstr "% PUZ"
 
-#: ../src/proctable.cpp:351
+#: ../src/proctable.cpp:341
 msgid "Unit"
 msgstr "Unitatea"
 
-#: ../src/proctable.cpp:352
+#: ../src/proctable.cpp:342
 msgid "Session"
 msgstr "Saioa"
 
 #. TRANSLATORS: Seat = i.e. the physical seat the session of the process belongs to, only
 #. for multi-seat environments. See http://en.wikipedia.org/wiki/Multiseat_configuration
-#: ../src/proctable.cpp:355
+#: ../src/proctable.cpp:345
 msgid "Seat"
 msgstr "Eserlekua"
 
-#: ../src/proctable.cpp:356
+#: ../src/proctable.cpp:346
 msgid "Owner"
 msgstr "Jabea"
+
+#: ../src/proctable.cpp:347
+msgid "Disk read total"
+msgstr "Diskotik irakurrita guztira"
+
+#: ../src/proctable.cpp:348
+msgid "Disk write total"
+msgstr "Diskoan idatzita guztira"
+
+#: ../src/proctable.cpp:349
+msgid "Disk read"
+msgstr "Diskotik irakurrita"
+
+#: ../src/proctable.cpp:350
+#| msgid "Disk view sort order"
+msgid "Disk write"
+msgstr "Diskoan idatzita"
 
 #: ../src/util.cpp:27
 msgid "Running"
@@ -1325,7 +1460,7 @@ msgid "Very Low Priority"
 msgstr "Lehentasun oso baxua"
 
 #. xgettext: rate, 10MiB/s or 10Mbit/s
-#: ../src/util.cpp:630
+#: ../src/util.cpp:667
 #, c-format
 msgid "%s/s"
 msgstr "%s/s"
@@ -1380,9 +1515,6 @@ msgstr "%s/s"
 
 #~ msgid "_View"
 #~ msgstr "_Ikusi"
-
-#~ msgid "_Stop Process"
-#~ msgstr "_Gelditu prozesua"
 
 #~ msgid "Stop process"
 #~ msgstr "Gelditu prozesua"
@@ -1463,13 +1595,6 @@ msgstr "%s/s"
 #~ msgstr ""
 #~ "0 (sistemaren datuak), 1 (prozesuen zerrenda), 2 (baliabideak) eta 3 "
 #~ "(diskoen zerrenda)"
-
-#~ msgid ""
-#~ "Ending a process may destroy data, break the session or introduce a "
-#~ "security risk. Only unresponsive processes should be ended."
-#~ msgstr ""
-#~ "Prozesu bat amaitzean datuak galdu, saioa hondatu edo segurtasun arriskua "
-#~ "sor daiteke. Erantzuten ez duten prozesuak bakarrik hil beharko lirateke."
 
 #~ msgid "Load averages for the last 1, 5, 15 minutes: %0.2f, %0.2f, %0.2f"
 #~ msgstr ""

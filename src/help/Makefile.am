@@ -29,8 +29,9 @@ HELP_FILES = \
 	solaris-mode.page \
 	units.page
 
-HELP_MEDIA =
+HELP_MEDIA = \
+	figures/monitorlogo.png
 
-HELP_LINGUAS = cs de el es fr hu ko pt ro
+HELP_LINGUAS = cs de el es fr hu ko pl pt pt_BR ro sv
 
 -include $(top_srcdir)/git.mk

@@ -1,31 +1,26 @@
-%global libgtop2_version 2.28.2
-%global libwnck_version 2.91.0
-%global desktop_file_utils_version 0.2.90
+%global libgtop2_version 2.37.2
 
 Name:           gnome-system-monitor
-Version:        3.22.2
-Release:        3%{?dist}
+Version:        3.28.2
+Release:        1%{?dist}
 Summary:        Process and resource monitor
 
 License:        GPLv2+
 URL:            http://www.gnome.org/
-Source0:        http://download.gnome.org/sources/%{name}/3.22/%{name}-%{version}.tar.xz
-# https://bugzilla.redhat.com/show_bug.cgi?id=1449674
-Patch0:         gnome-system-monitor-3.22.2-ja-translation.patch
-Patch1:         0001-Add-a-process-GPU-memory-usage-column.patch
+Source0:        http://download.gnome.org/sources/%{name}/3.28/%{name}-%{version}.tar.xz
 
 BuildRequires:  pkgconfig(libgtop-2.0) >= %{libgtop2_version}
-BuildRequires:  pkgconfig(libwnck-3.0) >= %{libwnck_version}
 BuildRequires:  pkgconfig(gtk+-3.0)
 BuildRequires:  pkgconfig(gtkmm-3.0)
 BuildRequires:  pkgconfig(libsystemd)
 BuildRequires:  pkgconfig(librsvg-2.0)
 BuildRequires:  pkgconfig(libxml-2.0)
 BuildRequires:  desktop-file-utils
-BuildRequires:  intltool gettext
+BuildRequires:  gettext
 BuildRequires:  itstool
-BuildRequires:  automake, autoconf, libtool, gnome-common
-BuildRequires:  yelp-tools
+BuildRequires:  polkit-devel
+
+Requires:       libgtop2%{?_isa} >= %{libgtop2_version}
 
 %description
 gnome-system-monitor allows to graphically view and manipulate the running
@@ -34,12 +29,9 @@ such as CPU and memory.
 
 %prep
 %setup -q
-%patch0 -p1
-%patch1 -p1
 
 %build
-autoreconf -fiv
-%configure --enable-systemd --enable-wnck
+%configure --enable-systemd
 make %{?_smp_mflags}
 
 %install
@@ -63,15 +55,20 @@ glib-compile-schemas %{_datadir}/glib-2.0/schemas &>/dev/null || :
 %license COPYING
 %doc AUTHORS NEWS README
 %{_bindir}/gnome-system-monitor
-%{_datadir}/appdata/gnome-system-monitor.appdata.xml
 %{_datadir}/applications/gnome-system-monitor.desktop
 %{_datadir}/applications/gnome-system-monitor-kde.desktop
 %{_datadir}/glib-2.0/schemas/org.gnome.gnome-system-monitor.enums.xml
 %{_datadir}/glib-2.0/schemas/org.gnome.gnome-system-monitor.gschema.xml
+%{_datadir}/gnome-system-monitor/
+%{_datadir}/metainfo/gnome-system-monitor.appdata.xml
 %{_datadir}/polkit-1/actions/org.gnome.gnome-system-monitor.policy
-%{_libexecdir}/gnome-system-monitor/gsm-*
+%{_libexecdir}/gnome-system-monitor/
 
 %changelog
+* Wed Jun 06 2018 Richard Hughes <rhughes@redhat.com> - 3.28.2-1
+- Update to 3.28.2
+- Resolves: #1568626
+
 * Thu Nov  9 2017 Rui Matos <rmatos@redhat.com> - 3.22.2-3
 - Add a process GPU memory usage column
 - Related: #1300852

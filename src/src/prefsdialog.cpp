@@ -14,7 +14,7 @@
 #include "systemd.h"
 #include "util.h"
 
-static GtkWidget *prefs_dialog = NULL;
+static GtkDialog *prefs_dialog = NULL;
 
 static void
 prefs_dialog_button_pressed (GtkDialog *dialog, gint id, gpointer data)
@@ -45,8 +45,7 @@ private:
     {
         int new_value = int(1000 * gtk_spin_button_get_value(spin));
 
-        g_settings_set_int(GsmApplication::get()->settings,
-                           this->key.c_str(), new_value);
+        GsmApplication::get()->settings->set_int(this->key, new_value);
 
         procman_debug("set %s to %d", this->key.c_str(), new_value);
     }
@@ -62,8 +61,7 @@ field_toggled (const gchar *gsettings_parent, gchar *path_str, gpointer data)
     GtkTreeIter iter;
     GtkTreeViewColumn *column;
     gboolean toggled;
-    GSettings *settings = g_settings_get_child (GsmApplication::get()->settings, gsettings_parent);
-    gchar *key;
+    auto settings = GsmApplication::get()->settings->get_child (gsettings_parent);
     int id;
 
     if (!path)
@@ -79,9 +77,8 @@ field_toggled (const gchar *gsettings_parent, gchar *path_str, gpointer data)
 
     id = gtk_tree_view_column_get_sort_column_id (column);
 
-    key = g_strdup_printf ("col-%d-visible", id);
-    g_settings_set_boolean (settings, key, !toggled);
-    g_free (key);
+    auto key = Glib::ustring::compose ("col-%1-visible", id);
+    settings->set_boolean (key, !toggled);
 
     gtk_tree_path_free (path);
 
@@ -110,7 +107,7 @@ disk_field_toggled (GtkCellRendererToggle *cell, gchar *path_str, gpointer data)
 }
 
 static void
-create_field_page(GtkBuilder* builder, GtkWidget *tree, const gchar *widgetname)
+create_field_page(GtkBuilder* builder, GtkTreeView *tree, const gchar *widgetname)
 {
     GtkTreeView *treeview;
     GList *it, *columns;
@@ -203,11 +200,11 @@ create_preferences_dialog (GsmApplication *app)
     static SBU graph_interval_updater("graph-update-interval");
     static SBU disks_interval_updater("disks-interval");
 
-    GtkWidget *notebook;
+    GtkNotebook *notebook;
     GtkAdjustment *adjustment;
-    GtkWidget *spin_button;
-    GtkWidget *check_button;
-    GtkWidget *smooth_button;
+    GtkSpinButton *spin_button;
+    GtkCheckButton *check_button;
+    GtkCheckButton *smooth_button;
     GtkBuilder *builder;
     gfloat update;
 
@@ -217,11 +214,11 @@ create_preferences_dialog (GsmApplication *app)
     builder = gtk_builder_new();
     gtk_builder_add_from_resource (builder, "/org/gnome/gnome-system-monitor/data/preferences.ui", NULL);
 
-    prefs_dialog = GTK_WIDGET (gtk_builder_get_object (builder, "preferences_dialog"));
+    prefs_dialog = GTK_DIALOG (gtk_builder_get_object (builder, "preferences_dialog"));
 
-    notebook = GTK_WIDGET (gtk_builder_get_object (builder, "notebook"));
+    notebook = GTK_NOTEBOOK (gtk_builder_get_object (builder, "notebook"));
 
-    spin_button = GTK_WIDGET (gtk_builder_get_object (builder, "processes_interval_spinner"));
+    spin_button = GTK_SPIN_BUTTON (gtk_builder_get_object (builder, "processes_interval_spinner"));
 
     update = (gfloat) app->config.update_interval;
     adjustment = gtk_spin_button_get_adjustment (GTK_SPIN_BUTTON(spin_button));
@@ -235,43 +232,48 @@ create_preferences_dialog (GsmApplication *app)
     g_signal_connect (G_OBJECT (spin_button), "focus_out_event",
                       G_CALLBACK (SBU::callback), &interval_updater);
 
-    smooth_button = GTK_WIDGET (gtk_builder_get_object (builder, "smooth_button"));
-    g_settings_bind(app->settings, SmoothRefresh::KEY.c_str(), smooth_button, "active", G_SETTINGS_BIND_DEFAULT);
+    smooth_button = GTK_CHECK_BUTTON (gtk_builder_get_object (builder, "smooth_button"));
+    g_settings_bind(app->settings->gobj (), SmoothRefresh::KEY.c_str(), smooth_button, "active", G_SETTINGS_BIND_DEFAULT);
 
-    check_button = GTK_WIDGET (gtk_builder_get_object (builder, "check_button"));
-    g_settings_bind (app->settings, GSM_SETTING_SHOW_KILL_DIALOG,
+    check_button = GTK_CHECK_BUTTON (gtk_builder_get_object (builder, "check_button"));
+    g_settings_bind (app->settings->gobj (), GSM_SETTING_SHOW_KILL_DIALOG,
                      check_button, "active",
                      G_SETTINGS_BIND_DEFAULT);
 
-    GtkWidget *solaris_button = GTK_WIDGET (gtk_builder_get_object (builder, "solaris_button"));
-    g_settings_bind (app->settings, GSM_SETTING_SOLARIS_MODE,
+    GtkCheckButton *solaris_button = GTK_CHECK_BUTTON (gtk_builder_get_object (builder, "solaris_button"));
+    g_settings_bind (app->settings->gobj (), GSM_SETTING_SOLARIS_MODE,
                      solaris_button, "active",
                      G_SETTINGS_BIND_DEFAULT);
 
-    GtkWidget *draw_stacked_button = GTK_WIDGET (gtk_builder_get_object (builder, "draw_stacked_button"));
-    g_settings_bind (app->settings, GSM_SETTING_DRAW_STACKED,
+    GtkCheckButton *draw_stacked_button = GTK_CHECK_BUTTON (gtk_builder_get_object (builder, "draw_stacked_button"));
+    g_settings_bind (app->settings->gobj (), GSM_SETTING_DRAW_STACKED,
                      draw_stacked_button, "active",
                      G_SETTINGS_BIND_DEFAULT);
 
-    create_field_page (builder, app->tree, "proctree");
+    GtkCheckButton *draw_smooth_button = GTK_CHECK_BUTTON (gtk_builder_get_object (builder, "draw_smooth_button"));
+    g_settings_bind (app->settings->gobj (), GSM_SETTING_DRAW_SMOOTH,
+                     draw_smooth_button, "active",
+                     G_SETTINGS_BIND_DEFAULT);
+
+    create_field_page (builder, GTK_TREE_VIEW (app->tree), "proctree");
 
     update = (gfloat) app->config.graph_update_interval;
-    spin_button = GTK_WIDGET (gtk_builder_get_object (builder, "resources_interval_spinner"));                                                 
-    adjustment = gtk_spin_button_get_adjustment (GTK_SPIN_BUTTON(spin_button));
+    spin_button = GTK_SPIN_BUTTON (gtk_builder_get_object (builder, "resources_interval_spinner"));                                                 
+    adjustment = gtk_spin_button_get_adjustment (spin_button);
     gtk_adjustment_configure (adjustment, update / 1000.0, 0.25,
                               100.0, 0.25, 1.0, 0);
     g_signal_connect (G_OBJECT (spin_button), "focus_out_event",
                       G_CALLBACK(SBU::callback),
                       &graph_interval_updater);
 
-    GtkWidget *bits_button = GTK_WIDGET (gtk_builder_get_object (builder, "bits_button"));
-    g_settings_bind(app->settings, GSM_SETTING_NETWORK_IN_BITS,
+    GtkCheckButton *bits_button = GTK_CHECK_BUTTON (gtk_builder_get_object (builder, "bits_button"));
+    g_settings_bind(app->settings->gobj (), GSM_SETTING_NETWORK_IN_BITS,
                     bits_button, "active",
                     G_SETTINGS_BIND_DEFAULT);
 
     update = (gfloat) app->config.disks_update_interval;
-    spin_button = GTK_WIDGET (gtk_builder_get_object (builder, "devices_interval_spinner"));
-    adjustment = gtk_spin_button_get_adjustment (GTK_SPIN_BUTTON(spin_button));
+    spin_button = GTK_SPIN_BUTTON (gtk_builder_get_object (builder, "devices_interval_spinner"));
+    adjustment = gtk_spin_button_get_adjustment (spin_button);
     gtk_adjustment_configure (adjustment, update / 1000.0, 1.0,
                               100.0, 1.0, 1.0, 0);
     g_signal_connect (G_OBJECT (spin_button), "focus_out_event",
@@ -279,28 +281,26 @@ create_preferences_dialog (GsmApplication *app)
                       &disks_interval_updater);
 
 
-    check_button = GTK_WIDGET (gtk_builder_get_object (builder, "all_devices_check"));
-    g_settings_bind (app->settings, GSM_SETTING_SHOW_ALL_FS,
+    check_button = GTK_CHECK_BUTTON (gtk_builder_get_object (builder, "all_devices_check"));
+    g_settings_bind (app->settings->gobj (), GSM_SETTING_SHOW_ALL_FS,
                      check_button, "active",
                      G_SETTINGS_BIND_DEFAULT);
 
-    create_field_page (builder, app->disk_list, "disktreenew");
+    create_field_page (builder, GTK_TREE_VIEW (app->disk_list), "disktreenew");
 
     gtk_window_set_transient_for (GTK_WINDOW (prefs_dialog), GTK_WINDOW (GsmApplication::get()->main_window));
 
-    gtk_widget_show_all (prefs_dialog);
+    gtk_widget_show_all (GTK_WIDGET (prefs_dialog));
     g_signal_connect (G_OBJECT (prefs_dialog), "response",
                       G_CALLBACK (prefs_dialog_button_pressed), app);
 
-    char *current_tab = g_settings_get_string (app->settings, GSM_SETTING_CURRENT_TAB);
-    if (strcmp (current_tab, "processes") == 0)
+    auto current_tab = app->settings->get_string(GSM_SETTING_CURRENT_TAB);
+    if (current_tab == "processes")
         gtk_notebook_set_current_page(GTK_NOTEBOOK(notebook), 0);
-    else if (strcmp (current_tab, "resources") == 0)
+    else if (current_tab == "resources")
         gtk_notebook_set_current_page(GTK_NOTEBOOK(notebook), 1);
-    else if (strcmp (current_tab, "disks") == 0)
+    else if (current_tab == "disks")
         gtk_notebook_set_current_page(GTK_NOTEBOOK(notebook), 2);
-
-    g_free (current_tab);
 
     gtk_builder_connect_signals (builder, NULL);
     g_object_unref (G_OBJECT (builder));

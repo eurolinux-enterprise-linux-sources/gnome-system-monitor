@@ -28,6 +28,7 @@
             <property name="valign">center</property>
             <property name="halign">end</property>
             <property name="direction">none</property>
+            <accelerator key="F10" signal="clicked"/>
             <style>
               <class name="title-button"/>
             </style>
@@ -66,6 +67,7 @@
         <property name="visible">True</property>
         <property name="can_focus">False</property>
         <property name="orientation">vertical</property>
+        <property name="width_request">560</property>
         <child>
           <object class="GtkStack" id="stack">
             <property name="visible">True</property>
@@ -167,36 +169,37 @@
               </packing>
             </child>
             <child>
-              <object class="GtkBox" id="res_box">
+              <object class="GtkScrolledWindow" id="res_scrolled">
                 <property name="visible">True</property>
-                <property name="can_focus">False</property>
+                <property name="can_focus">True</property>
                 <property name="hexpand">True</property>
                 <property name="vexpand">True</property>
-                <property name="border_width">12</property>
-                <property name="orientation">vertical</property>
-                <property name="spacing">12</property>
+                <property name="shadow_type">none</property>
                 <child>
-                  <object class="GtkLabel" id="cpu_label">
+                  <object class="GtkBox" id="res_box">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="halign">start</property>
-                    <property name="label" translatable="yes">CPU History</property>
-                    <attributes>
-                      <attribute name="weight" value="bold"/>
-                    </attributes>
-                  </object>
-                  <packing>
-                    <property name="expand">False</property>
-                    <property name="fill">True</property>
-                    <property name="position">0</property>
-                  </packing>
-                </child>
-                <child>
-                  <object class="GtkBox" id="cpu_box">
-                    <property name="visible">True</property>
-                    <property name="can_focus">False</property>
+                    <property name="hexpand">True</property>
+                    <property name="vexpand">True</property>
+                    <property name="border_width">8</property>
                     <property name="orientation">vertical</property>
                     <property name="spacing">10</property>
+                    <child>
+                      <object class="GtkLabel" id="cpu_label">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="halign">start</property>
+                        <property name="label" translatable="yes">CPU History</property>
+                        <attributes>
+                          <attribute name="weight" value="bold"/>
+                        </attributes>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">0</property>
+                      </packing>
+                    </child>
                     <child>
                       <object class="GtkBox" id="cpu_graph_box">
                         <property name="visible">True</property>
@@ -211,7 +214,7 @@
                             <property name="can_focus">False</property>
                             <property name="margin_start">57</property>
                             <property name="hexpand">True</property>
-                            <property name="row_spacing">6</property>
+                            <property name="row_spacing">1</property>
                             <property name="column_spacing">6</property>
                             <property name="row_homogeneous">True</property>
                             <property name="column_homogeneous">True</property>
@@ -250,45 +253,29 @@
                             <property name="position">0</property>
                           </packing>
                         </child>
-                        <child>
-                          <placeholder/>
-                        </child>
                       </object>
                       <packing>
-                        <property name="expand">True</property>
+                        <property name="expand">False</property>
                         <property name="fill">True</property>
                         <property name="position">1</property>
                       </packing>
                     </child>
-                  </object>
-                  <packing>
-                    <property name="expand">False</property>
-                    <property name="fill">True</property>
-                    <property name="position">1</property>
-                  </packing>
-                </child>
-                <child>
-                  <object class="GtkLabel" id="mem_label">
-                    <property name="visible">True</property>
-                    <property name="can_focus">False</property>
-                    <property name="halign">start</property>
-                    <property name="label" translatable="yes">Memory and Swap History</property>
-                    <attributes>
-                      <attribute name="weight" value="bold"/>
-                    </attributes>
-                  </object>
-                  <packing>
-                    <property name="expand">False</property>
-                    <property name="fill">True</property>
-                    <property name="position">2</property>
-                  </packing>
-                </child>
-                <child>
-                  <object class="GtkBox" id="mem_box">
-                    <property name="visible">True</property>
-                    <property name="can_focus">False</property>
-                    <property name="orientation">vertical</property>
-                    <property name="spacing">10</property>
+                    <child>
+                      <object class="GtkLabel" id="mem_label">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="halign">start</property>
+                        <property name="label" translatable="yes">Memory and Swap History</property>
+                        <attributes>
+                          <attribute name="weight" value="bold"/>
+                        </attributes>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">2</property>
+                      </packing>
+                    </child>
                     <child>
                       <object class="GtkBox" id="mem_graph_box">
                         <property name="visible">True</property>
@@ -303,7 +290,7 @@
                             <property name="can_focus">False</property>
                             <property name="margin_start">54</property>
                             <property name="hexpand">True</property>
-                            <property name="row_spacing">6</property>
+                            <property name="row_spacing">0</property>
                             <property name="column_spacing">6</property>
                             <property name="row_homogeneous">True</property>
                             <child>
@@ -357,38 +344,25 @@
                       <packing>
                         <property name="expand">True</property>
                         <property name="fill">True</property>
-                        <property name="position">1</property>
+                        <property name="position">3</property>
                       </packing>
                     </child>
-                  </object>
-                  <packing>
-                    <property name="expand">False</property>
-                    <property name="fill">True</property>
-                    <property name="position">3</property>
-                  </packing>
-                </child>
-                <child>
-                  <object class="GtkLabel" id="net_label">
-                    <property name="visible">True</property>
-                    <property name="can_focus">False</property>
-                    <property name="halign">start</property>
-                    <property name="label" translatable="yes">Network History</property>
-                    <attributes>
-                      <attribute name="weight" value="bold"/>
-                    </attributes>
-                  </object>
-                  <packing>
-                    <property name="expand">False</property>
-                    <property name="fill">True</property>
-                    <property name="position">4</property>
-                  </packing>
-                </child>
-                <child>
-                  <object class="GtkBox" id="net_box">
-                    <property name="visible">True</property>
-                    <property name="can_focus">False</property>
-                    <property name="orientation">vertical</property>
-                    <property name="spacing">10</property>
+                    <child>
+                      <object class="GtkLabel" id="net_label">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="halign">start</property>
+                        <property name="label" translatable="yes">Network History</property>
+                        <attributes>
+                          <attribute name="weight" value="bold"/>
+                        </attributes>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">4</property>
+                      </packing>
+                    </child>
                     <child>
                       <object class="GtkBox" id="net_graph_box">
                         <property name="visible">True</property>
@@ -402,16 +376,16 @@
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
                             <property name="margin_start">54</property>
-                            <property name="margin_end">38</property>
+                            <property name="margin_end">12</property>
                             <property name="hexpand">True</property>
-                            <property name="row_spacing">6</property>
+                            <property name="row_spacing">0</property>
                             <property name="column_spacing">6</property>
                             <property name="row_homogeneous">True</property>
                             <child>
                               <object class="GtkLabel" id="receiving_label">
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
-                                <property name="hexpand">True</property>
+                                <property name="hexpand">False</property>
                                 <property name="halign">start</property>
                                 <property name="label" translatable="yes">Receiving</property>
                               </object>
@@ -426,7 +400,7 @@
                               <object class="GtkLabel" id="total_received_label">
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
-                                <property name="hexpand">True</property>
+                                <property name="hexpand">False</property>
                                 <property name="halign">start</property>
                                 <property name="label" translatable="yes">Total Received</property>
                               </object>
@@ -441,7 +415,7 @@
                               <object class="GtkLabel" id="sending_label">
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
-                                <property name="hexpand">True</property>
+                                <property name="hexpand">False</property>
                                 <property name="halign">start</property>
                                 <property name="label" translatable="yes">Sending</property>
                               </object>
@@ -456,7 +430,7 @@
                               <object class="GtkLabel" id="total_sent_label">
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
-                                <property name="hexpand">True</property>
+                                <property name="hexpand">False</property>
                                 <property name="halign">start</property>
                                 <property name="label" translatable="yes">Total Sent</property>
                               </object>
@@ -468,49 +442,13 @@
                               </packing>
                             </child>
                             <child>
-                              <object class="GtkLabel" id="spacer">
-                                <property name="width_request">38</property>
-                                <property name="visible">True</property>
-                                <property name="can_focus">False</property>
-                              </object>
-                              <packing>
-                                <property name="left_attach">3</property>
-                                <property name="top_attach">0</property>
-                                <property name="width">1</property>
-                                <property name="height">2</property>
-                              </packing>
+                              <placeholder/>
                             </child>
                             <child>
-                              <object class="GtkAlignment" id="receiving_picker_alignment">
-                                <property name="visible">True</property>
-                                <property name="can_focus">False</property>
-                                <property name="border_width">6</property>
-                                <child>
-                                  <placeholder/>
-                                </child>
-                              </object>
-                              <packing>
-                                <property name="left_attach">0</property>
-                                <property name="top_attach">0</property>
-                                <property name="width">1</property>
-                                <property name="height">2</property>
-                              </packing>
+                              <placeholder/>
                             </child>
                             <child>
-                              <object class="GtkAlignment" id="sending_picker_alignment">
-                                <property name="visible">True</property>
-                                <property name="can_focus">False</property>
-                                <property name="border_width">6</property>
-                                <child>
-                                  <placeholder/>
-                                </child>
-                              </object>
-                              <packing>
-                                <property name="left_attach">4</property>
-                                <property name="top_attach">0</property>
-                                <property name="width">1</property>
-                                <property name="height">2</property>
-                              </packing>
+                              <placeholder/>
                             </child>
                             <child>
                               <placeholder/>
@@ -533,15 +471,10 @@
                       <packing>
                         <property name="expand">True</property>
                         <property name="fill">True</property>
-                        <property name="position">1</property>
+                        <property name="position">5</property>
                       </packing>
                     </child>
                   </object>
-                  <packing>
-                    <property name="expand">False</property>
-                    <property name="fill">True</property>
-                    <property name="position">5</property>
-                  </packing>
                 </child>
               </object>
               <packing>

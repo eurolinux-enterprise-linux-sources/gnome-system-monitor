@@ -2,7 +2,7 @@
 <page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="process-many" xml:lang="ko">
   <info>
     <revision version="0.1" date="2014-01-25" status="review"/>
-    <link type="guide" xref="index" group="processes-info"/>
+    <link type="guide" xref="index#processes-info" group="processes-info"/>
     
     <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
     
@@ -12,12 +12,12 @@
       <years>2014</years>
     </credit>
     
-    <desc>수많은 시스템 프로세스는 백그라운드에서 자동으로 동작합니다</desc>
+    <desc>많은 시스템 프로세스는 백그라운드에서 자동으로 동작합니다.</desc>
   
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>조성호</mal:name>
       <mal:email>shcho@gnome.org</mal:email>
-      <mal:years>2016.</mal:years>
+      <mal:years>2016, 2017</mal:years>
     </mal:credit>
   </info>
 

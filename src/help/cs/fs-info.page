@@ -2,7 +2,7 @@
 <page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="fs-info" xml:lang="cs">
   <info>
     <revision version="0.1" date="2014-01-27" status="review"/>
-    <link type="guide" xref="index" group="filesystems"/>
+    <link type="guide" xref="index#filesystems" group="filesystems"/>
     <link type="seealso" xref="fs-device"/>
     <link type="seealso" xref="units"/>
     

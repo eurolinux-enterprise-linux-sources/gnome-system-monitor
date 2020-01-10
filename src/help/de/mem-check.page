@@ -3,7 +3,7 @@
 
   <info>
     <revision pkgversion="3.11" date="2014-01-28" status="candidate"/>
-    <link type="guide" xref="index" group="memory"/>
+    <link type="guide" xref="index#memory" group="memory"/>
 
     <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
 
@@ -36,6 +36,12 @@
       <mal:name>Benjamin Steinwender</mal:name>
       <mal:email>b@stbe.at</mal:email>
       <mal:years>2014</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Mario Blättermann</mal:name>
+      <mal:email>mario.blaettermann@gmail.com</mal:email>
+      <mal:years>2017</mal:years>
     </mal:credit>
   </info>
 

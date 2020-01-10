@@ -2,7 +2,7 @@
 <page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="cpu-mem-normal" xml:lang="es">
   <info>
     <revision version="0.1" date="2014-01-28" status="review"/>
-    <link type="guide" xref="index" group="cpu"/>
+    <link type="guide" xref="index#cpu" group="cpu"/>
     
     <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
     

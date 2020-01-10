@@ -1,3 +1,1055 @@
+2018-05-09  Ognjen Galic  <smclt30p@gmail.com>
+
+	dialog: use short process name instead of full
+
+	When there is a long process name, the name of the
+	process in the kill dialog is show in full. This is a problem
+	because long process names (such as google chrome) cause the dialog
+	to extend all the way across the room.
+
+	This patch fixes that by just displaying the short process name
+	without the command line parameters.
+
+	Signed-off-by: Ognjen Galic <smclt30p@gmail.com>
+
+	https://bugzilla.gnome.org/show_bug.cgi?id=788066
+
+2018-04-17  Jordi Mas  <jmas@softcatala.org>
+
+	Update Catalan translation
+
+2018-04-09  Robert Roth  <robert.roth.off@gmail.com>
+
+	Prepared release 3.28.1
+
+2018-04-07  Benoît Dejean  <bdejean@gmail.com>
+
+	Fix bytes to bits conversion.
+
+	Patch by atkinson.tommy@nsoft.com
+	https://bugzilla.gnome.org/show_bug.cgi?id=795051
+
+2018-03-26  Guillaume Bernard  <associations@guillaume-bernard.fr>
+
+	Update French translation
+
+2018-03-23  Dz Chen  <wsxy162@gmail.com>
+
+	Update zh_CN translation
+
+2018-03-20  Matej Urbančič  <mateju@svn.gnome.org>
+
+	Added Slovenian translation
+
+2018-03-13  Stas Solovey  <whats_up@tut.by>
+
+	Update Russian translation
+
+2018-03-13  Robert Roth  <robert.roth.off@gmail.com>
+
+	Prepared release 3.28.0
+
+2018-03-12  Sveinn í Felli  <sv1@fellsnet.is>
+
+	Update Icelandic translation
+
+2018-03-10  Милош Поповић  <gpopac@gmail.com>
+
+	Update Serbian Latin translation
+
+2018-03-08  Ask Hjorth Larsen  <asklarsen@gmail.com>
+
+	Updated Danish translation
+
+2018-03-07  gogo  <trebelnik2@gmail.com>
+
+	Update Croatian translation
+
+2018-03-06  A S Alam  <aalam@users.sf.net>
+
+	Updated Punjabi Translation
+
+2018-03-06  Efstathios Iosifidis  <eiosifidis@gnome.org>
+
+	Update Greek translation
+
+2018-03-06  Robert Roth  <robert.roth.off@gmail.com>
+
+	Prepared release 3.27.92
+
+2018-03-03  Baurzhan Muftakhidinov  <baurthefirst@gmail.com>
+
+	Update Kazakh translation
+
+2018-03-03  Aurimas Černius  <aurisc4@gmail.com>
+
+	Updated Lithuanian translation
+
+2018-03-02  Bruce Cowan  <bruce@bcowan.eu>
+
+	Update British English translation
+
+2018-03-02  GNOME Translation Robot  <gnome-sysadmin@gnome.org>
+
+	Update Scottish Gaelic translation
+
+	(cherry picked from commit 74735e1ae6c3606972f64953a5055ead14b1e47d)
+
+2018-03-01  Claude Paroz  <claude@2xlibre.net>
+
+	Update French translation
+
+2018-02-26  Dušan Kazik  <prescott66@gmail.com>
+
+	Update Slovak translation
+
+2018-02-26  Milo Casagrande  <milo@ubuntu.com>
+
+	Update Italian translation
+
+2018-02-24  Rūdolfs Mazurs  <rudolfsm@src.gnome.org>
+
+	Update Latvian translation
+
+2018-02-22  GNOME Translation Robot  <gnome-sysadmin@gnome.org>
+
+	Update Dutch translation
+
+2018-02-20  Cheng-Chia Tseng  <pswo10680@gmail.com>
+
+	Update Chinese (Taiwan) translation
+
+2018-02-19  Piotr Drąg  <piotrdrag@gmail.com>
+
+	Remove help/C/l10n.txt
+
+	How did it even survive to see 2018?
+
+2018-02-17  Fran Dieguez  <frandieguez@gnome.org>
+
+	Update Galician translation
+
+2018-02-10  Emin Tufan Çetin  <etcetin@gmail.com>
+
+	Update Turkish translation
+
+2018-02-09  Enrico Nicoletto  <liverig@gmail.com>
+
+	Update Brazilian Portuguese translation
+
+2018-02-09  Robert Roth  <robert.roth.off@gmail.com>
+
+	Prepared release 3.27.90
+
+2018-02-05  Piotr Drąg  <piotrdrag@gmail.com>
+
+	Update Polish translation
+
+2018-02-03  Robert Roth  <robert.roth.off@gmail.com>
+
+	Add destructive action style to process kill confirmation
+
+2018-02-03  Robert Roth  <robert.roth.off@gmail.com>
+
+	Better alignment for network stats on Resources (bgo#789603)
+
+2018-02-03  Mike Gorse  <mgorse@suse.com>
+
+	Enclose the resources tab in a GtkScrolledWindow (bgo#778697)
+
+2018-02-03  Robert Roth  <robert.roth.off@gmail.com>
+
+	Fix warning on column resize
+
+2018-02-03  Robert Roth  <robert.roth.off@gmail.com>
+
+	Add minimum width for columns to avoid disappearing (bgo#788327)
+
+2018-02-03  Robert Roth  <robert.roth.off@gmail.com>
+
+	Refresh loadgraph on theme change
+
+2018-02-03  Robert Roth  <robert.roth.off@gmail.com>
+
+	Add a subtle gradient to the loadgraphs (bgo#792360)
+
+2018-02-03  Robert Roth  <robert.roth.off@gmail.com>
+
+	Support searching for multiple tokens (bgo#789905)
+
+2018-01-24  Voldemar Khramtsov  <harestomper@gmail.com>
+
+	Patch that fixes background color of graphs (bgo#792360).
+
+	https://bugzilla.gnome.org/show_bug.cgi?id=792360
+
+2018-01-24  Aldo Nogueira  <aldo.nogueira@gmail.com>
+
+	Scroll process table to the selected row.
+
+	https://bugzilla.gnome.org/show_bug.cgi?id=792574
+
+2018-01-24  Ting-Wei Lan  <lantw@src.gnome.org>
+
+	Fix desktop files generation by adding rules to merge translations
+
+	https://bugzilla.gnome.org/show_bug.cgi?id=790570
+
+2018-01-24  Ting-Wei Lan  <lantw@src.gnome.org>
+
+	Fix gschema validation error caused by missing file
+
+	We cannot and should not merge translations into gschema files.
+
+	https://bugzilla.gnome.org/show_bug.cgi?id=790570
+
+2018-01-21  Balázs Úr  <balazs@urbalazs.hu>
+
+	Update Hungarian translation
+
+2018-01-09  Jiri Grönroos  <jiri.gronroos@iki.fi>
+
+	Update Finnish translation
+
+2017-12-26  Anders Jonsson  <anders.jonsson@norsjovallen.se>
+
+	Update Swedish translation
+
+2017-12-25  Марко Костић  <marko.m.kostic@gmail.com>
+
+	Update Serbian translation
+
+2017-12-20  Daniel Mustieles  <daniel.mustieles@gmail.com>
+
+	Updated Spanish translation
+
+2017-12-15  Shiv Dhar  <shivdhar@gmail.com>
+
+	Fix reversed disk read/write columns (bgo#788923)
+
+2017-12-03  Kukuh Syafaat  <syafaatkukuh@gmail.com>
+
+	Update Indonesian translation
+
+2017-11-28  Benoît Dejean  <bdejean@gmail.com>
+
+	Move load_graph data from float to natural double.
+
+2017-11-28  Benoît Dejean  <bdejean@gmail.com>
+
+	Use glib new g_format_size_full flags instead of custom function.
+
+2017-11-28  Benoît Dejean  <bdejean@gmail.com>
+
+	Drop the max_rate/max_size arguments for format_*. This may introduce UI regression int graph scales. But that's the only way to use the generic g_format_size_full instead.
+
+2017-11-14  Robert Roth  <robert.roth.off@gmail.com>
+
+	Prepared release 3.27.2
+
+2017-11-11  Kjartan Maraas  <kmaraas@gnome.org>
+
+	Updated Norwegian bokmål translation.
+
+2017-11-10  Robert Roth  <robert.roth.off@gmail.com>
+
+	Install appdata to the new location (bgo#790146)
+
+2017-11-09  gogo  <trebelnik2@gmail.com>
+
+	Update Croatian translation
+
+2017-11-08  Kjartan Maraas  <kmaraas@gnome.org>
+
+	Updated Norwegian bokmål translation.
+
+2017-11-06  Mario Blättermann  <mario.blaettermann@gmail.com>
+
+	Update German translation
+
+2017-11-05  Fabio Tomat  <f.t.public@gmail.com>
+
+	Update Friulian translation
+
+2017-11-02  Marek Cernocky  <marek_cernocky@conel.cz>
+
+	Updated Czech translation
+
+2017-11-01  Piotr Drąg  <piotrdrag@gmail.com>
+
+	Remove intltool markers from the KDE .desktop file
+
+	Also add translator comments.
+
+2017-11-01  Piotr Drąg  <piotrdrag@gmail.com>
+
+	Fix translator comment in the .desktop file
+
+2017-11-01  Piotr Drąg  <piotrdrag@gmail.com>
+
+	Remove intltool markers from the .policy file
+
+2017-11-01  Robert Roth  <robert.roth.off@gmail.com>
+
+	Gettext migration improvements based on feedback (bgo#786944)
+
+2017-11-01  Robert Roth  <robert.roth.off@gmail.com>
+
+	Migrate from intltool
+
+	https://bugzilla.gnome.org/show_bug.cgi?id=786944
+
+2017-11-01  Robert Roth  <robert.roth.off@gmail.com>
+
+	Migrate from gnome-common
+
+	https://bugzilla.gnome.org/show_bug.cgi?id=786944
+
+2017-10-31  Daniel van Vugt  <daniel.van.vugt@canonical.com>
+
+	Fix inaccurate %CPU values in the Processes table
+
+	Multi-core machines were displaying inaccurate %CPU values due to a
+	loss of precision from performing integer division before multiplication.
+	This changes the order of operations so that no precision is lost, and
+	now all machines will display process %CPU values to within 1% accuracy.
+
+	https://bugzilla.gnome.org/show_bug.cgi?id=788922
+	Signed-off-by: Benoît Dejean <bdejean@gmail.com>
+
+2017-10-21  Piotr Drąg  <piotrdrag@gmail.com>
+
+	help: Add missing figure to HELP_MEDIA
+
+	It was forgotten in 03f2dafdc60d192269bfbd3a46ab20add0979c99,
+	causing the icon to not be displayed in Yelp.
+
+2017-10-21  Charles Monzat  <superboa@hotmail.fr>
+
+	Update French translation
+
+2017-10-21  Mingcong Bai  <jeffbai@aosc.xyz>
+
+	Update zh_CN translation
+
+2017-10-19  Isak Östlund  <translate@catnip.nu>
+
+	Add Swedish help translation
+
+2017-10-18  Pawan Chitrakar  <chautari@gmail.com>
+
+	Update Nepali translation
+
+2017-10-05  Xavi Ivars  <xavi.ivars@gmail.com>
+
+	[l10n] Updated Catalan (Valencian) translation
+
+2017-10-05  Evangelos Skarmoutsos  <skarmoutsosv@gmail.com>
+
+	Update Greek translation
+
+2017-09-30  Arash Mousavi  <mousavi.arash@gmail.com>
+
+	[L10N] Update Persian translation
+
+2017-09-18  Piotr Drąg  <piotrdrag@gmail.com>
+
+	Update Polish translation
+
+2017-09-12  hanniedu  <hannie@ubuntu-nl.org>
+
+	Updated Dutch translation Master 3.26
+
+2017-09-11  Robert Roth  <robert.roth.off@gmail.com>
+
+	Prepared release 3.26.0
+
+2017-09-10  Anders Jonsson  <anders.jonsson@norsjovallen.se>
+
+	Update Swedish translation
+
+2017-09-10  Lyubomir Vasilev  <lyubomirv@abv.bg>
+
+	Updated Bulgarian translation
+
+2017-09-10  Jordi Mas  <jmas@softcatala.org>
+
+	Fixes to Catalan translation
+
+2017-09-09  Muhammet Kara  <muhammetk@gmail.com>
+
+	Updated Turkish translation
+
+2017-09-09  Inaki Larranaga Murgoitio  <dooteo@zundan.com>
+
+	Update Basque language
+
+2017-09-08  A S Alam  <aalam@users.sf.net>
+
+	updated Punjabi Translation
+
+2017-09-08  Rafael Fontenelle  <rafaelff@gnome.org>
+
+	Update Brazilian Portuguese translation
+
+2017-09-08  Rafael Fontenelle  <rafaelff@gnome.org>
+
+	Update Brazilian Portuguese translation
+
+2017-09-08  Alain Lojewski  <allomervan@gmail.com>
+
+	Update French translation
+
+2017-09-07  Benoît Dejean  <bdejean@gmail.com>
+
+	Fix build with wnck support.
+
+	Issue reported by Yuri <me@slie.ru>.
+	https://github.com/GNOME/gnome-system-monitor/commit/a535df9252633561d4898ed0ae0cc867b95d9cf2#commitcomment-24128012
+
+2017-09-05  Joe Hansen  <joedalton2@yahoo.dk>
+
+	Updated Danish translation
+
+2017-09-05  Robert Roth  <robert.roth.off@gmail.com>
+
+	Prepared release 3.25.92
+
+2017-09-03  Kyung-gon Kim  <1942kg@gmail.com>
+
+	Updated Korean translation
+
+2017-09-02  Seong-ho Cho  <shcho@gnome.org>
+
+	Update Korean translation
+
+2017-09-01  Yuras Shumovich  <shumovichy@gmail.com>
+
+	Update Belarusian translation
+
+2017-09-01  Wolfgang Stöggl  <c72578@yahoo.de>
+
+	Update German translation
+
+2017-08-31  Milo Casagrande  <milo@ubuntu.com>
+
+	Update Italian translation
+
+2017-08-29  Jiri Grönroos  <jiri.gronroos@iki.fi>
+
+	Update Finnish translation
+
+2017-08-28  Rūdolfs Mazurs  <rudolfsm@src.gnome.org>
+
+	Update Latvian translation
+
+2017-08-28  Daniel Mustieles  <daniel.mustieles@gmail.com>
+
+	Update Spanish translation
+
+2017-08-27  Muhammet Kara  <muhammetk@gmail.com>
+
+	Update Turkish translation
+
+2017-08-27  Cheng-Chia Tseng  <pswo10680@gmail.com>
+
+	Update Chinese (Taiwan) translation
+
+2017-08-26  Ask Hjorth Larsen  <asklarsen@gmail.com>
+
+	Updated Danish translation
+
+2017-08-23  Aurimas Černius  <aurisc4@gmail.com>
+
+	Updated Lithuanian translation
+
+2017-08-23  Dušan Kazik  <prescott66@gmail.com>
+
+	Update Slovak translation
+
+2017-08-23  Fran Dieguez  <frandieguez@gnome.org>
+
+	Update Galician translation
+
+2017-08-22  Jordi Mas  <jmas@softcatala.org>
+
+	Update Catalan translation
+
+2017-08-21  Robert Roth  <robert.roth.off@gmail.com>
+
+	Prepared release 3.25.91
+
+2017-08-20  gogo  <trebelnik2@gmail.com>
+
+	Update Croatian translation
+
+2017-08-20  Baurzhan Muftakhidinov  <baurthefirst@gmail.com>
+
+	Update Kazakh translation
+
+2017-08-17  Claude Paroz  <claude@2xlibre.net>
+
+	Update French translation
+
+2017-08-14  Мирослав Николић  <miroslavnikolic@rocketmail.com>
+
+	Updated Serbian translation
+
+2017-08-11  Piotr Drąg  <piotrdrag@gmail.com>
+
+	Update Polish translation
+
+2017-08-11  Matej Urbančič  <mateju@svn.gnome.org>
+
+	Updated Slovenian translation
+
+2017-08-10  Balázs Meskó  <meskobalazs@fedoraproject.org>
+
+	Update Hungarian translation
+
+2017-08-09  Andika Triwidada  <atriwidada@gnome.org>
+
+	Update Indonesian translation
+
+2017-08-08  Fabio Tomat  <f.t.public@gmail.com>
+
+	Update Friulian translation
+
+2017-08-08  Marek Cernocky  <marek_cernocky@conel.cz>
+
+	Updated Czech translation
+
+2017-08-08  Robert Roth  <robert.roth.off@gmail.com>
+
+	Prepared release 3.25.90
+
+2017-08-07  Fran Dieguez  <frandieguez@gnome.org>
+
+	Update Galician translation
+
+2017-07-30  Marek Cernocky  <marek_cernocky@conel.cz>
+
+	Updated Czech translation
+
+2017-07-27  Piotr Drąg  <piotrdrag@gmail.com>
+
+	Add Polish help translation
+
+2017-07-25  Pawan Chitrakar  <chautari@gmail.com>
+
+	Update Nepali translation
+
+2017-07-25  Daniel Mustieles  <daniel.mustieles@gmail.com>
+
+	Update Spanish translation
+
+2017-07-09  Robert Roth  <robert.roth.off@gmail.com>
+
+	Implemented disk io monitoring
+
+2017-06-26  Benoît Dejean  <bdejean@gmail.com>
+
+	Instead of using an Iterator adaptor as in f8761542 to avoid the use of the deleted copy-constructor of ProcInfo by g++ 5.4, use piecewise_construct version of std::emplace.
+
+	I still don't understand if the normal emplace is valid or not, although it
+	is accepted by g++ >= 6 and clang++ >= 3.4.
+
+2017-06-26  Benoît Dejean  <bdejean@gmail.com>
+
+	Revert "After 35d69c72, std::map<pid_t, ProcInfo> requires ProcInfo to be"
+
+	This reverts commit f876154239d2ac92381c40cf5ed1e68362000717.
+
+2017-06-22  Benoît Dejean  <bdejean@gmail.com>
+
+	After 35d69c72, std::map<pid_t, ProcInfo> requires ProcInfo to be CopyConstructible for older compiler like gcc 5.4. Make it a std::map<pid_t, std::shared_ptr<ProcInfo>> and implement a wrapper to minimize code change.
+
+	https://bugzilla.gnome.org/show_bug.cgi?id=783993
+
+2017-06-22  Isak Östlund  <translate@catnip.nu>
+
+	Update Swedish translation
+
+2017-06-20  Robert Roth  <robert.roth.off@gmail.com>
+
+	Prepared release 3.25.3
+
+2017-06-19  Daniel Mustieles  <daniel.mustieles@gmail.com>
+
+	Updated Spanish translation
+
+2017-06-17  Gábor Kelemen  <kelemeng@openscope.org>
+
+	Update Hungarian translation
+
+2017-06-17  Baurzhan Muftakhidinov  <baurthefirst@gmail.com>
+
+	Update Kazakh translation
+
+2017-06-15  Benoît Dejean  <bdejean@gmail.com>
+
+	Fix one more gchar* leak.
+
+2017-06-15  Benoît Dejean  <bdejean@gmail.com>
+
+	Fix memory leaks when converting gchar* to string.
+
+	https://bugzilla.gnome.org/show_bug.cgi?id=783447
+
+2017-06-15  Benoît Dejean  <bdejean@gmail.com>
+
+	Revert some changes introduces by Artem's patches in e9173fbc..42d939e1.
+
+	Make ProcList::find(pid) return a pointer instead of having to deal with
+	exceptions. Not finding a process is common. And having big try/catch blocks
+	may silent legit exception.
+
+	Also move back ProcInfo initialization back to its contructor.
+	The whole point of having a seperate ProcList class was not to move ProcInfo
+	code there.
+
+2017-05-28  Mario Blättermann  <mario.blaettermann@gmail.com>
+
+	Update German translation
+
+2017-05-22  Robert Roth  <robert.roth.off@gmail.com>
+
+	Prepared release 3.25.2
+
+2017-05-22  Robert Roth  <robert.roth.off@gmail.com>
+
+	Fixed distcheck
+
+2017-05-22  Robert Roth  <robert.roth.off@gmail.com>
+
+	Better use of space on minimum size
+
+2017-05-22  Benoît Dejean  <bdejean@gmail.com>
+
+	Fixed compilation after the transition from char* to std::string.
+
+2017-05-22  Robert Roth  <robert.roth.off@gmail.com>
+
+	Added F10 shortcut for hamburger menu (bgo#776430)
+
+2017-05-22  Patrick Pace  <patrickqpace@gmail.com>
+
+	Adjust front page formatting
+
+	Group topics into sections to improve readability and add a
+	short introduction. Add an icon to be displayed before the
+	application name.
+
+	https://bugzilla.gnome.org/show_bug.cgi?id=781508
+
+2017-05-22  Artem Vorotnikov  <artem@vorotnikov.me>
+
+	ProcInfo now has std::string fields
+
+	Signed-off-by: Artem Vorotnikov <artem@vorotnikov.me>
+
+	https://bugzilla.gnome.org/show_bug.cgi?id=776653
+
+2017-05-22  Artem Vorotnikov  <artem@vorotnikov.me>
+
+	Moved process list into separate class, now owned by GsmApplication
+
+	Signed-off-by: Artem Vorotnikov <artem@vorotnikov.me>
+
+	https://bugzilla.gnome.org/show_bug.cgi?id=776653
+
+2017-05-22  Artem Vorotnikov  <artem@vorotnikov.me>
+
+	Deleted ProcInfo's copy and copy-assignment constructors
+
+	Signed-off-by: Artem Vorotnikov <artem@vorotnikov.me>
+
+	https://bugzilla.gnome.org/show_bug.cgi?id=776653
+
+2017-05-22  Artem Vorotnikov  <artem@vorotnikov.me>
+
+	ProcInfos owned by ProcInfo::all, ProcInfo::find returns references now
+
+	Signed-off-by: Artem Vorotnikov <artem@vorotnikov.me>
+
+	https://bugzilla.gnome.org/show_bug.cgi?id=776653
+
+2017-05-22  Artem Vorotnikov  <artem@vorotnikov.me>
+
+	Use ProcInfo::all directly
+
+	Signed-off-by: Artem Vorotnikov <artem@vorotnikov.me>
+
+	https://bugzilla.gnome.org/show_bug.cgi?id=776653
+
+2017-05-22  Benoît Dejean  <bdejean@gmail.com>
+
+	Do not compile the GResource to C but create bundle instead. Load it in GsmApplication. Install it in .../share/gnome-system-monitor.
+
+	https://bugzilla.gnome.org/show_bug.cgi?id=779812
+
+2017-05-21  Piotr Drąg  <piotrdrag@gmail.com>
+
+	Fix Keywords in Slovenian translation
+
+2017-05-14  Balázs Úr  <urbalazs@gmail.com>
+
+	Update Hungarian translation
+
+2017-05-12  Mario Blättermann  <mario.blaettermann@gmail.com>
+
+	Update German translation
+
+2017-04-29  gogo  <trebelnik2@gmail.com>
+
+	Update Croatian translation
+
+2017-04-26  Kukuh Syafaat  <syafaatkukuh@gmail.com>
+
+	Update Indonesian translation
+
+2017-04-21  Fabio Tomat  <f.t.public@gmail.com>
+
+	Update Friulian translation
+
+2017-04-08  Tom Tryfonidis  <tomtryf@gnome.org>
+
+	Update Greek translation
+
+	(cherry picked from commit 9140c85af3964cf1529d39ffa45dc4e6ec0cfc5e)
+
+2017-04-08  gogo  <trebelnik2@gmail.com>
+
+	Update Croatian translation
+
+	(cherry picked from commit 7f36b66936fbd317bb49c15c524e581d56fb5bf5)
+
+2017-04-07  Robert Roth  <robert.roth.off@gmail.com>
+
+	Set sane minimum column widths for disks table (bgo#780644)
+
+2017-04-07  Piotr Drąg  <piotrdrag@gmail.com>
+
+	Fix Keywords in the .desktop file
+
+	It needs the trailing semicolon to validate.
+
+2017-04-07  Daniel Aleksandersen  <code@daniel.priv.no>
+
+	Add `Activity` keyword to .desktop file
+
+	For users used to macOS’ `Activity Monitor`.
+
+2017-03-25  Piotr Drąg  <piotrdrag@gmail.com>
+
+	Update Polish translation
+
+2017-03-23  Tiago Santos  <tiagofsantos81@sapo.pt>
+
+	Update Portuguese translation
+
+2017-03-21  Robert Roth  <robert.roth.off@gmail.com>
+
+	Prepared release 3.24.0
+
+2017-03-20  Daniel Korostil  <ted.korostiled@gmail.com>
+
+	Updated Ukrainian translation
+
+2017-03-19  Seong-ho Cho  <shcho@gnome.org>
+
+	Update Korean translation
+
+2017-03-17  Rūdolfs Mazurs  <rudolfsm@src.gnome.org>
+
+	Update Latvian translation
+
+2017-03-15  gogo  <trebelnik2@gmail.com>
+
+	Update Croatian translation
+
+2017-03-15  Yuri Myasoedov  <ymyasoedov@yandex.ru>
+
+	Updated Russian translation
+
+2017-03-13  Robert Roth  <robert.roth.off@gmail.com>
+
+	Prepared release 3.23.92
+
+2017-03-11  Fran Dieguez  <frandieguez@gnome.org>
+
+	Update Galician translation
+
+2017-03-10  Benoît Dejean  <bdejean@gmail.com>
+
+	Really rename the wnck option to broken-wnck.
+
+2017-03-09  Rafael Fontenelle  <rafaelff@gnome.org>
+
+	Add Brazilian Portuguese translation
+
+2017-03-09  Milo Casagrande  <milo@ubuntu.com>
+
+	Update Italian translation
+
+2017-03-09  Kukuh Syafaat  <syafaatkukuh@gmail.com>
+
+	Update Indonesian translation
+
+2017-03-07  Joe Hansen  <joedalton2@yahoo.dk>
+
+	Updated Danish translation
+
+2017-03-07  GNOME Translation Robot  <gnome-sysadmin@gnome.org>
+
+	Update Scottish Gaelic translation
+
+	(cherry picked from commit 52a7d16c8124a6d65185d7d3f8d75550e596cb83)
+
+2017-03-05  Cédric Valmary  <cvalmary@yahoo.fr>
+
+	Update Occitan translation
+
+2017-03-05  Mario Blättermann  <mario.blaettermann@gmail.com>
+
+	Update German translation
+
+2017-03-05  Jordi Mas  <jmas@softcatala.org>
+
+	Update Catalan translation
+
+2017-03-04  Aurimas Černius  <aurisc4@gmail.com>
+
+	Updated Lithuanian translation
+
+2017-02-28  Anders Jonsson  <anders.jonsson@norsjovallen.se>
+
+	Update Swedish translation
+
+2017-02-28  Benoît Dejean  <bdejean@gmail.com>
+
+	Fix build with -Wl,--as-needed. Patch by Dominique Leuenberger.
+
+	https://bugzilla.gnome.org/show_bug.cgi?id=779365
+
+2017-02-27  Robert Roth  <robert.roth.off@gmail.com>
+
+	Prepared release 3.23.91
+
+2017-02-27  Daniel Mustieles  <daniel.mustieles@gmail.com>
+
+	Updated Spanish translation
+
+2017-02-26  Мирослав Николић  <miroslavnikolic@rocketmail.com>
+
+	Updated Serbian translation
+
+2017-02-26  Rafael Fontenelle  <rafaelff@gnome.org>
+
+	Update Brazilian Portuguese translation
+
+2017-02-24  Fabio Tomat  <f.t.public@gmail.com>
+
+	Update Friulian translation
+
+2017-02-22  Balázs Meskó  <meskobalazs@fedoraproject.org>
+
+	Update Hungarian translation
+
+2017-02-22  Chao-Hsiung Liao  <j_h_liau@yahoo.com.tw>
+
+	Update Chinese (Taiwan) translation
+
+2017-02-21  Jiri Grönroos  <jiri.gronroos@iki.fi>
+
+	Update Finnish translation
+
+2017-02-20  Inaki Larranaga Murgoitio  <dooteo@zundan.com>
+
+	Update Basque language
+
+2017-02-20  Piotr Drąg  <piotrdrag@gmail.com>
+
+	Update POTFILES.in
+
+2017-02-20  Benoît Dejean  <bdejean@gmail.com>
+
+	Force linking of the UI resources.
+
+2017-02-20  Benoît Dejean  <bdejean@gmail.com>
+
+	Move all C files to src/legacy. This is required because PKG_MODULE_CHEK doesn't know the difference between C and C++. So This way, the C files are built with C flags.
+
+2017-02-19  Piotr Drąg  <piotrdrag@gmail.com>
+
+	Update Polish translation
+
+2017-02-19  Benoît Dejean  <bdejean@gmail.com>
+
+	Mark the WNCK feature as broken.
+
+	https://bugzilla.gnome.org/show_bug.cgi?id=778776
+
+2017-02-19  Benoît Dejean  <bdejean@gmail.com>
+
+	Add missing <config.h> include.
+
+2017-02-18  Kjartan Maraas  <kmaraas@gnome.org>
+
+	Updated Norwegian bokmål translation.
+
+2017-02-18  Dušan Kazik  <prescott66@gmail.com>
+
+	Update Slovak translation
+
+2017-02-17  Claude Paroz  <claude@2xlibre.net>
+
+	Updated French translation
+
+2017-02-16  Ask Hjorth Larsen  <asklarsen@gmail.com>
+
+	Updated Danish translation
+
+2017-02-16  Baurzhan Muftakhidinov  <baurthefirst@gmail.com>
+
+	Update Kazakh translation
+
+2017-02-15  Robert Roth  <robert.roth.off@gmail.com>
+
+	Smooth chart setting should only affect CPU chart
+
+2017-02-13  Marek Černocký  <marek@manet.cz>
+
+	Updated Czech translation
+
+2017-02-14  Robert Roth  <robert.roth.off@gmail.com>
+
+	Prepared release 3.23.90
+
+2017-02-13  Robert Roth  <robert.roth.off@gmail.com>
+
+	Added option to disable smooth cpu chart (bgo#778470)
+
+2017-02-05  Anders Jonsson  <anders.jonsson@norsjovallen.se>
+
+	Update Swedish translation
+
+2017-01-27  Piotr Drąg  <piotrdrag@gmail.com>
+
+	Update Polish translation
+
+2017-01-19  Dušan Kazik  <prescott66@gmail.com>
+
+	Update Slovak translation
+
+2017-01-15  Rafael Fontenelle  <rafaelff@gnome.org>
+
+	Update Brazilian Portuguese translation
+
+2017-01-09  Sveinn í Felli  <sv1@fellsnet.is>
+
+	Update Icelandic translation (cherry picked from commit 408c30ccaef02eb13d74e7a6038514bfa38b958d)
+
+2016-12-09  Baurzhan Muftakhidinov  <baurthefirst@gmail.com>
+
+	Update Kazakh translation
+
+2016-12-09  Gianvito Cavasoli  <gianvito@gmx.it>
+
+	Update Italian translation (cherry picked from commit 3192ddbe23d15b6cc196f7506713d5e1240e2ef5)
+
+2016-12-06  A S Alam  <aalam@users.sf.net>
+
+	updated Punjabi Translation
+
+2016-12-01  Balázs Meskó  <meskobalazs@gmail.com>
+
+	Update Hungarian translation
+
+2016-11-23  Stas Solovey  <whats_up@tut.by>
+
+	Update Russian translation (cherry picked from commit ea79cbef8037e98090428bd024bf61c57ee760cd)
+
+2016-11-23  Stas Solovey  <whats_up@tut.by>
+
+	Update Russian translation (cherry picked from commit 147163c4e0ac8e3236b23566290a2077b72e2bdb)
+
+2016-11-22  Robert Roth  <robert.roth.off@gmail.com>
+
+	Prepared release 3.23.2
+
+2016-11-22  Robert Roth  <robert.roth.off@gmail.com>
+
+	Replaced deprecated calls
+
+2016-11-21  Kjartan Maraas  <kmaraas@gnome.org>
+
+	Updated Norwegian bokmål translation.
+
+2016-11-18  Daniel Mustieles  <daniel.mustieles@gmail.com>
+
+	Update Spanish translation
+
+2016-11-17  Fabio Tomat  <f.t.public@gmail.com>
+
+	Update Friulian translation
+
+2016-11-17  Fabio Tomat  <f.t.public@gmail.com>
+
+	Update Friulian translation
+
+2016-11-17  Marek Černocký  <marek@manet.cz>
+
+	Updated Czech translation
+
+2016-11-16  Mario Blättermann  <mario.blaettermann@gmail.com>
+
+	Update German translation
+
+2016-11-16  Piotr Drąg  <piotrdrag@gmail.com>
+
+	Update Polish translation
+
+2016-11-16  Piotr Drąg  <piotrdrag@gmail.com>
+
+	Use Unicode in translatable strings
+
+	See https://developer.gnome.org/hig/stable/typography.html
+
+2016-10-28  Benoît Dejean  <bdejean@gmail.com>
+
+	Simpler string building with procman::join.
+
+2016-10-28  Benoît Dejean  <bdejean@gmail.com>
+
+	Add generic function to join elements of a collection.
+
+2016-10-28  Benoît Dejean  <bdejean@gmail.com>
+
+	Reformat.
+
+2016-10-28  Benoît Dejean  <bdejean@gmail.com>
+
+	Cache cgroup expansive parsing by file and line which makes it even faster than the original C code. Parse all cgroups because previously systemd cgroups were ignored. Condensed output for cgroups with multiple categories.
+
+2016-10-28  Benoît Dejean  <bdejean@gmail.com>
+
+	Move the UserMap directly into ProcInfo::lookup_user(...). Less code for the same thing.
+
+2016-10-22  Robert Roth  <robert.roth.off@gmail.com>
+
+	Simplified resources view structure
+
+2016-10-22  Artem Vorotnikov  <artem@vorotnikov.me>
+
+	Cgroup reform
+
+	https://bugzilla.gnome.org/show_bug.cgi?id=773016
+
+2016-10-22  Robert Roth  <robert.roth.off@gmail.com>
+
+	Fixed menu popup problems
+
 2016-10-18  Boyuan Yang  <073plan@gmail.com>
 
 	Update zh_CN translation
@@ -6,13 +1058,47 @@
 
 	Updated Norwegian bokmål translation from Kjartan Maraas.
 
+2016-10-13  Benoît Dejean  <bdejean@gmail.com>
+
+	Bump glibmm/giomm required version to 2.46.
+
+2016-10-12  Artem Vorotnikov  <artem@vorotnikov.me>
+
+	Port to Gio::Settings
+
 2016-10-07  Milo Casagrande  <milo@ubuntu.com>
 
-	Update Italian translation
+	Update Italian translation (cherry picked from commit 5d49e3f3b3a80eed9ee3fff5eb70524e1cb0f7c6)
+
+2016-09-30  Benoit Dejean  <bdejean@gmail.com>
+
+	Use relative positions to the labels to attach the net pickers.
+
+2016-09-30  Benoit Dejean  <bdejean@gmail.com>
+
+	Going for 3.90.0.
+
+2016-09-30  Benoit Dejean  <bdejean@gmail.com>
+
+	Remove deprecated GtkAlignments.
 
 2016-09-24  gogo  <trebelnik2@gmail.com>
 
-	Updated Croatian translation
+	Updated Croatian translation (cherry picked from commit 8e6b08a68383bfc6cc274be31735ba9eb275015a)
+
+2016-09-21  Artem Vorotnikov  <artem@vorotnikov.me>
+
+	Use real widget types, eliminate downcasting
+
+	Right now for some mysterious reason GSM's GtkBuilder code
+	dumbs down all widgets to GtkWidget*.
+	This leads to extensive downcasting and code that is
+	heavy-on-paper - it is not possible to determine widget type
+	by just looking at the GsmApplication class definition.
+
+	With this patch widgets reclaim their real types.
+	Upcasting is provided for where it is necessary to use widgets
+	as GtkWidget*.
 
 2016-09-21  Benoit Dejean  <bdejean@gmail.com>
 

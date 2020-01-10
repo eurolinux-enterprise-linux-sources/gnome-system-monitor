@@ -2,7 +2,7 @@
 <page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="fs-showall" xml:lang="ro">
   <info>
     <revision version="0.1" date="2014-01-27" status="review"/>
-    <link type="guide" xref="index" group="filesystems"/>
+    <link type="guide" xref="index#filesystems" group="filesystems"/>
     
     <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
 

@@ -2,7 +2,7 @@
 <page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="process-kill" xml:lang="cs">
   <info>
     <revision version="0.1" date="2014-01-28" status="review"/>
-    <link type="guide" xref="index" group="processes-info"/>
+    <link type="guide" xref="index#processes-info" group="processes-info"/>
     <link type="seealso" xref="process-identify-hog"/>
     
     <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>

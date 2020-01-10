@@ -12,7 +12,7 @@
 #include "application.h"
 
 extern "C" {
-#include "e_date.h"
+#include "legacy/e_date.h"
 }
 
 
@@ -111,19 +111,19 @@ procman::format_duration_for_display(unsigned centiseconds)
 
 
 
-GtkWidget*
+GtkLabel*
 procman_make_label_for_mmaps_or_ofiles(const char *format,
                                        const char *process_name,
                                        unsigned pid)
 {
-    GtkWidget *label;
+    GtkLabel* label;
     char *name, *title;
 
     name = mnemonic_safe_process_name (process_name);
     title = g_strdup_printf(format, name, pid);
-    label = gtk_label_new_with_mnemonic (title);
-    gtk_widget_set_valign (label, GTK_ALIGN_CENTER);
-    gtk_widget_set_halign (label, GTK_ALIGN_START);
+    label = GTK_LABEL (gtk_label_new_with_mnemonic (title));
+    gtk_widget_set_valign (GTK_WIDGET (label), GTK_ALIGN_CENTER);
+    gtk_widget_set_halign (GTK_WIDGET (label), GTK_ALIGN_START);
 
     g_free (title);
     g_free (name);
@@ -145,67 +145,13 @@ procman_make_label_for_mmaps_or_ofiles(const char *format,
  **/
 
 gchar*
-procman::format_size(guint64 size, guint64 max_size, bool want_bits)
+procman::format_size(guint64 size, bool want_bits)
 {
-
-    enum {
-        K_INDEX,
-        M_INDEX,
-        G_INDEX,
-        T_INDEX
-    };
-
-    struct Format {
-        guint64 factor;
-        const char* string;
-    };
-
-    const Format all_formats[2][4] = {
-        { { G_GUINT64_CONSTANT(1) << 10,       N_("%.1f KiB")  },
-          { G_GUINT64_CONSTANT(1) << 20,       N_("%.1f MiB")  },
-          { G_GUINT64_CONSTANT(1) << 30,       N_("%.1f GiB")  },
-          { G_GUINT64_CONSTANT(1) << 40,       N_("%.1f TiB")  } },
-        { { G_GUINT64_CONSTANT(1000),          N_("%.3g kbit") },
-          { G_GUINT64_CONSTANT(1000000),       N_("%.3g Mbit") },
-          { G_GUINT64_CONSTANT(1000000000),    N_("%.3g Gbit") },
-          { G_GUINT64_CONSTANT(1000000000000), N_("%.3g Tbit") } }
-    };
-
-    const Format (&formats)[4] = all_formats[want_bits ? 1 : 0];
-
-    if (want_bits) {
+    if (want_bits)
         size *= 8;
-        max_size *= 8;
-    }
 
-    if (max_size == 0)
-        max_size = size;
-
-    if (max_size < formats[K_INDEX].factor) {
-        const char *format = (want_bits
-                              ? dngettext(GETTEXT_PACKAGE, "%u bit", "%u bits", (guint) size)
-                              : dngettext(GETTEXT_PACKAGE, "%u byte", "%u bytes",(guint) size));
-        return g_strdup_printf (format, (guint) size);
-    } else {
-        guint64 factor;
-        const char* format = NULL;
-
-        if (max_size < formats[M_INDEX].factor) {
-            factor = formats[K_INDEX].factor;
-            format = formats[K_INDEX].string;
-        } else if (max_size < formats[G_INDEX].factor) {
-            factor = formats[M_INDEX].factor;
-            format = formats[M_INDEX].string;
-        } else if (max_size < formats[T_INDEX].factor) {
-            factor = formats[G_INDEX].factor;
-            format = formats[G_INDEX].string;
-        } else {
-            factor = formats[T_INDEX].factor;
-            format = formats[T_INDEX].string;
-        }
-
-        return g_strdup_printf(_(format), size / (double)factor);
-    }
+    const GFormatSizeFlags flags = (want_bits ? G_FORMAT_SIZE_BITS : G_FORMAT_SIZE_IEC_UNITS);
+    return g_format_size_full(size, flags);
 }
 
 gchar *
@@ -440,6 +386,43 @@ namespace procman
         }
 
     }
+
+    void io_rate_cell_data_func(GtkTreeViewColumn *, GtkCellRenderer *renderer,
+                                GtkTreeModel *model, GtkTreeIter *iter,
+                                gpointer user_data)
+    {
+        const guint index = GPOINTER_TO_UINT(user_data);
+
+        guint64 size;
+        GValue value = { 0 };
+
+        gtk_tree_model_get_value(model, iter, index, &value);
+
+        switch (G_VALUE_TYPE(&value)) {
+            case G_TYPE_ULONG:
+                size = g_value_get_ulong(&value);
+                break;
+
+            case G_TYPE_UINT64:
+                size = g_value_get_uint64(&value);
+                break;
+
+            default:
+                g_assert_not_reached();
+        }
+
+        g_value_unset(&value);
+
+        if (size == 0) {
+            char *str = g_strdup_printf ("<i>%s</i>", _("N/A"));
+            g_object_set(renderer, "markup", str, NULL);
+            g_free(str);
+        }
+        else {
+            g_object_set(renderer, "text", procman::format_rate(size, FALSE).c_str(), NULL);
+        }
+
+    }
     
     /*
         Cell data function to format a size value with SI units (to be used only for disk size, see bugzilla 693630)
@@ -623,9 +606,9 @@ namespace procman
     }
 
 
-    std::string format_rate(guint64 rate, guint64 max_rate, bool want_bits)
+    std::string format_rate(guint64 rate, bool want_bits)
     {
-        char* bytes = procman::format_size(rate, max_rate, want_bits);
+        char* bytes = procman::format_size(rate, want_bits);
         // xgettext: rate, 10MiB/s or 10Mbit/s
         std::string formatted_rate(make_string(g_strdup_printf(_("%s/s"), bytes)));
         g_free(bytes);
@@ -633,30 +616,24 @@ namespace procman
     }
 
 
-    std::string format_network(guint64 rate, guint64 max_rate)
+    std::string format_network(guint64 rate)
     {
-        char* bytes = procman::format_size(rate, max_rate, GsmApplication::get()->config.network_in_bits);
+        char* bytes = procman::format_size(rate, GsmApplication::get()->config.network_in_bits);
         std::string formatted(bytes);
         g_free(bytes);
         return formatted;
     }
 
 
-    std::string format_network_rate(guint64 rate, guint64 max_rate)
+    std::string format_network_rate(guint64 rate)
     {
-        return procman::format_rate(rate, max_rate, GsmApplication::get()->config.network_in_bits);
+        return procman::format_rate(rate, GsmApplication::get()->config.network_in_bits);
     }
 
 }
 
-gchar *
+Glib::ustring
 get_monospace_system_font_name ()
 {
-    GSettings *desktop_settings = g_settings_new ("org.gnome.desktop.interface");
-    char *font;
-
-    font = g_settings_get_string (desktop_settings, "monospace-font-name");
-    g_object_unref (desktop_settings);
-
-    return font;
+    return Gio::Settings::create ("org.gnome.desktop.interface")->get_string ("monospace-font-name");
 }

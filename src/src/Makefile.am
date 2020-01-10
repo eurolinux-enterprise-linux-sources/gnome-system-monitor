@@ -3,13 +3,12 @@
 AM_CPPFLAGS = \
 	-DGNOMELOCALEDIR=\""$(datadir)/locale"\" \
 	-DGSM_LIBEXEC_DIR=\""$(pkglibexecdir)"\" \
+	-DGSM_RESOURCE_FILE=\""$(gsmsharedir)/$(gsmshare_DATA)"\" \
 	$(GSM_CFLAGS) \
 	$(SYSTEMD_CFLAGS) \
 	$(WNCK_CFLAGS)
 
 bin_PROGRAMS = gnome-system-monitor
-
-BUILT_SOURCES = gsm-resources.c
 
 gnome_system_monitor_cpp_files = \
 	argv.cpp \
@@ -35,51 +34,48 @@ gnome_system_monitor_cpp_files = \
 	prefsdialog.cpp \
 	application.cpp
 
-gnome_system_monitor_c_files = \
-	e_date.c \
-	gsm_color_button.c \
-	treeview.c
 
 gnome_system_monitor_h_files = \
 	$(gnome_system_monitor_cpp_files:.cpp=.h) \
-	$(gnome_system_monitor_c_files:.c=.h) \
 	defaulttable.h \
 	settings-keys.h
 
 gnome_system_monitor_SOURCES = \
-	$(BUILT_SOURCES) \
 	$(gnome_system_monitor_h_files) \
 	$(gnome_system_monitor_cpp_files) \
-	$(gnome_system_monitor_c_files) \
 	main.cpp
 
 LDADD = \
+	legacy/libgsmlegacy.la \
 	$(GSM_LIBS) \
 	$(SYSTEMD_LIBS) \
 	$(WNCK_LIBS)
 
-gsm-resources.c: gsm.gresource.xml $(shell glib-compile-resources --sourcedir=$(top_srcdir) --generate-dependencies $(srcdir)/gsm.gresource.xml)
-	$(AM_V_GEN) glib-compile-resources --target=$@ --sourcedir=$(top_srcdir) --generate-source $(srcdir)/gsm.gresource.xml
-
 
 # GSettings schemas, enum files and conversion file
 gsettings_ENUM_NAMESPACE = org.gnome.gnome-system-monitor
-gsettings_ENUM_FILES = $(top_srcdir)/src/*.h
-gsettings_in_file = org.gnome.gnome-system-monitor.gschema.xml.in
-gsettings_SCHEMAS = $(gsettings_in_file:.xml.in=.xml)
-@INTLTOOL_XML_NOMERGE_RULE@
+gsettings_ENUM_FILES = $(top_srcdir)/src/*.h $(top_srcdir)/src/legacy/*.h
+gsettings_SCHEMAS = org.gnome.gnome-system-monitor.gschema.xml
 @GSETTINGS_RULES@
 
 dist_noinst_DATA = \
-	$(gsettings_in_file)
+	$(gsettings_in_file) \
+	$(top_srcdir)/src/gsm.gresource.xml
 
-EXTRA_DIST = \
-	gsm.gresource.xml
+gsm.gresource: $(top_srcdir)/src/gsm.gresource.xml $(shell glib-compile-resources --sourcedir=$(top_srcdir) --generate-dependencies $(top_srcdir)/src/gsm.gresource.xml)
+	$(AM_V_GEN) glib-compile-resources --target=$@ --sourcedir=$(top_srcdir) $(top_srcdir)/src/gsm.gresource.xml
+
+
+gsmsharedir = $(datadir)/@PACKAGE@
+gsmshare_DATA = \
+	gsm.gresource
 
 CLEANFILES = \
 	$(gsettings_SCHEMAS) \
-	$(BUILT_SOURCES)
+	$(gsmshare_DATA)
 
 MAINTAINERCLEANFILES = $(gsettings_SCHEMAS:.xml=.valid)
+
+SUBDIRS = legacy
 
 -include $(top_srcdir)/git.mk

@@ -23,6 +23,7 @@
 #include <glib.h>
 #include <gtk/gtk.h>
 #include "application.h"
+#include "legacy/treeview.h"
 
 enum
 {
@@ -48,6 +49,10 @@ enum
     COL_SESSION,
     COL_SEAT,
     COL_OWNER,
+    COL_DISK_READ_TOTAL,
+    COL_DISK_WRITE_TOTAL,
+    COL_DISK_READ_CURRENT,
+    COL_DISK_WRITE_CURRENT,
     COL_PRIORITY,
     COL_PIXBUF,
     COL_POINTER,
@@ -56,7 +61,7 @@ enum
 };
 
 
-GtkWidget*      proctable_new (GsmApplication *app);
+GsmTreeView*      proctable_new (GsmApplication *app);
 void            proctable_update (GsmApplication *app);
 void            proctable_free_table (GsmApplication *app);
 void            proctable_freeze (GsmApplication *app);

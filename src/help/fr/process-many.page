@@ -2,7 +2,7 @@
 <page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="process-many" xml:lang="fr">
   <info>
     <revision version="0.1" date="2014-01-25" status="review"/>
-    <link type="guide" xref="index" group="processes-info"/>
+    <link type="guide" xref="index#processes-info" group="processes-info"/>
     
     <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
     
@@ -12,7 +12,7 @@
       <years>2014</years>
     </credit>
     
-    <desc>De nombreux processus système tournent automatiquement en arrière-plan</desc>
+    <desc>De nombreux processus système tournent automatiquement en arrière-plan.</desc>
   
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>naybnet</mal:name>

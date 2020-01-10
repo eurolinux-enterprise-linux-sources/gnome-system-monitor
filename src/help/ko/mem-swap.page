@@ -3,7 +3,7 @@
 
   <info>
     <revision pkgversion="3.11" date="2014-01-28" status="final"/>
-    <link type="guide" xref="index" group="memory"/>
+    <link type="guide" xref="index#memory" group="memory"/>
 
     <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
 
@@ -24,7 +24,7 @@
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>조성호</mal:name>
       <mal:email>shcho@gnome.org</mal:email>
-      <mal:years>2016.</mal:years>
+      <mal:years>2016, 2017</mal:years>
     </mal:credit>
   </info>
 

@@ -1,0 +1,47 @@
+From 624ec06b5cd58982a5e107b08356c001d84fb981 Mon Sep 17 00:00:00 2001
+From: Helio Chissini de Castro <helio@kde.org>
+Date: Mon, 17 Aug 2015 14:53:21 -0300
+Subject: [PATCH] Unreliable cpu detection through glibtop
+
+glibtop not provides the number of cpus on the machine directly, relying
+on a list with the current load of each core.
+Original code assume that a 0 load core is the end of cpu list, which is
+invalid in cases of machines with high number of cores, that happens to
+some cores stay idle with 0 load.
+Since this can happens in any core number, if a machine has 192 cores,
+but the core number 5 have 0 load, then 4 cpus will be wrongly reported.
+Using standard sysconf api solves the issue in a simple way.
+---
+ src/application.cpp | 15 +++++----------
+ 1 file changed, 5 insertions(+), 10 deletions(-)
+
+diff --git a/src/application.cpp b/src/application.cpp
+index e1b77a2..5ddf3a0 100644
+--- a/src/application.cpp
++++ b/src/application.cpp
+@@ -182,17 +182,12 @@ GsmApplication::load_settings()
+     g_signal_connect (settings, "changed::" GSM_SETTING_DISKS_UPDATE_INTERVAL,
+                       G_CALLBACK (cb_timeouts_changed), this);
+ 
+-    /* Determine number of cpus since libgtop doesn't really tell you*/
+-    config.num_cpus = 0;
+-    glibtop_get_cpu (&cpu);
++	/* Use proper number of cpus instead of unreliable check for active cpu */
++	/* Some machines with high number of procs can have some core with 0 load */
++    config.num_cpus = sysconf(_SC_NPROCESSORS_ONLN);
++
++	glibtop_get_cpu (&cpu);
+     frequency = cpu.frequency;
+-    i=0;
+-    while (i < GLIBTOP_NCPU && cpu.xcpu_total[i] != 0) {
+-        config.num_cpus ++;
+-        i++;
+-    }
+-    if (config.num_cpus == 0)
+-        config.num_cpus = 1;
+ 
+     apply_cpu_color_settings (settings, this);
+     g_signal_connect (settings, "changed::" GSM_SETTING_CPU_COLORS,
+-- 
+2.4.3
+

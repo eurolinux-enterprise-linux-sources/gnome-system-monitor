@@ -1,0 +1,25 @@
+From 924da759b73138d5d06ac9eb4b6871f6397d1f33 Mon Sep 17 00:00:00 2001
+From: Kalev Lember <kalevlember@gmail.com>
+Date: Tue, 14 Oct 2014 09:38:01 +0200
+Subject: [PATCH] Fix desktop file keywords translation syntax error
+
+---
+ po/bn_IN.po | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/po/bn_IN.po b/po/bn_IN.po
+index 20a6422..9f4cd7b 100644
+--- a/po/bn_IN.po
++++ b/po/bn_IN.po
+@@ -42,7 +42,7 @@ msgid ""
+ "Manager;"
+ msgstr ""
+ "মনিটর;সিস্টেম;প্রক্রিয়া;CPU;মেমরি;নেটওয়ার্ক;ইতিহাস;ব্যবহার;পারফরমেন্স;কাজ;ম্"
+-"যানেজার"
++"যানেজার;"
+ 
+ #: ../gnome-system-monitor-kde.desktop.in.in.h:1
+ #: ../gnome-system-monitor.appdata.xml.in.h:1 ../src/application.cpp:324
+-- 
+2.1.0
+

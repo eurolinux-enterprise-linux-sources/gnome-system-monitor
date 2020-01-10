@@ -1,0 +1,26 @@
+From 0e208f3fa6349df811114bd93e3827e17d726bc3 Mon Sep 17 00:00:00 2001
+From: Kalev Lember <kalevlember@gmail.com>
+Date: Mon, 22 Sep 2014 23:55:28 +0200
+Subject: [PATCH] Fix Ukrainian translation for desktop file keywords
+
+It's a string list and must be terminated with a semicolon.
+---
+ po/uk.po | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/po/uk.po b/po/uk.po
+index 2fff968..d80c969 100644
+--- a/po/uk.po
++++ b/po/uk.po
+@@ -39,7 +39,7 @@ msgid ""
+ "Manager;"
+ msgstr ""
+ "Монітор;Система;Процес;Процесор;Пам'ять;Мережа;Історія;Використання;Завдання"
+-";Менеджер"
++";Менеджер;"
+ 
+ #: ../gnome-system-monitor-kde.desktop.in.in.h:1
+ #: ../gnome-system-monitor.appdata.xml.in.h:1 ../src/application.cpp:324
+-- 
+2.1.0
+

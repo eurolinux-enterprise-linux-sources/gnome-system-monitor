@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <id type="desktop">gnome-system-monitor.desktop</id>
+  <licence>CC0</licence>
+  <_name>GNOME System Monitor</_name>
+  <_summary>View and manage system resources</_summary>
+  <description>
+    <_p>
+      System Monitor is a process viewer and system monitor with
+      an attractive, easy-to-use interface. 
+    </_p>
+    <_p>
+      System Monitor can help you find out what applications are using the processor
+      or the memory of your computer, can manage the running applications, force
+      stop processes not responding, and change the state or priority of existing 
+      processes.
+    </_p>
+    <_p>
+      The resource graphs feature shows you a quick overview of what is going on with your
+      computer displaying recent network, memory and processor usage.
+    </_p>
+  </description>
+  <screenshots>
+    <screenshot type="default" width="1176" height="650">https://wiki.gnome.org/Apps/SystemMonitor?action=AttachFile&amp;do=get&amp;target=Processes.png</screenshot>
+    <screenshot width="1176" height="650">https://wiki.gnome.org/Apps/SystemMonitor?action=AttachFile&amp;do=get&amp;target=Resources.png</screenshot>
+    <screenshot width="1176" height="650">https://wiki.gnome.org/Apps/SystemMonitor?action=AttachFile&amp;do=get&amp;target=Disks.png</screenshot>
+  </screenshots>
+  <url type="homepage">https://wiki.gnome.org/Apps/SystemMonitor</url>
+  <updatecontact>robert.roth.off_at_gmail.com</updatecontact>
+</application>
+
+

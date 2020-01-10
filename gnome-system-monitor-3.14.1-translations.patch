@@ -1,0 +1,4611 @@
+diff -urN gnome-system-monitor-3.14.1/po/de.po gnome-system-monitor-3.14.1_localized/po/de.po
+--- gnome-system-monitor-3.14.1/po/de.po	2014-09-25 00:46:09.000000000 +0530
++++ gnome-system-monitor-3.14.1_localized/po/de.po	2016-03-15 16:11:04.616792278 +0530
+@@ -10,44 +10,42 @@
+ # Mario Blättermann <mario.blaettermann@gmail.com>, 2011, 2012.
+ # Tobias Endrigkeit <tobiasendrigkeit@googlemail.com>, 2012.
+ # Benjamin Steinwender <b@stbe.at>, 2013.
+-#
++# pnemade <pnemade@redhat.com>, 2016. #zanata
+ msgid ""
+ msgstr ""
+ "Project-Id-Version: gnome-system-monitor master\n"
+-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=system-"
+-"monitor&keywords=I18N+L10N&component=general\n"
+-"POT-Creation-Date: 2014-08-08 07:40+0000\n"
+-"PO-Revision-Date: 2014-08-13 21:22+0100\n"
+-"Last-Translator: Benjamin Steinwender <b@stbe.at>\n"
+-"Language-Team: Deutsch <gnome-de@gnome.org>\n"
+-"Language: de\n"
++"Report-Msgid-Bugs-To: \n"
++"POT-Creation-Date: 2016-02-10 09:58+0530\n"
+ "MIME-Version: 1.0\n"
+ "Content-Type: text/plain; charset=UTF-8\n"
+ "Content-Transfer-Encoding: 8bit\n"
++"PO-Revision-Date: 2014-08-13 08:22+0000\n"
++"Last-Translator: Benjamin Steinwender <b@stbe.at>\n"
++"Language-Team: Deutsch <gnome-de@gnome.org>\n"
++"Language: de\n"
+ "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+ "X-DamnedLies-Scope: partial\n"
+-"X-Generator: Poedit 1.6.7\n"
++"X-Generator: Zanata 3.8.2\n"
+ 
+ #: ../gnome-system-monitor.desktop.in.in.h:1 ../data/interface.ui.h:1
+-#: ../src/application.cpp:268 ../src/interface.cpp:363
++#: ../src/application.cpp:263 ../src/interface.cpp:371
+ msgid "System Monitor"
+ msgstr "Systemüberwachung"
+ 
+ #: ../gnome-system-monitor.desktop.in.in.h:2
+-#: ../gnome-system-monitor-kde.desktop.in.in.h:2 ../src/interface.cpp:364
++#: ../gnome-system-monitor-kde.desktop.in.in.h:2 ../src/interface.cpp:372
+ msgid "View current processes and monitor system state"
+-msgstr "Momentan laufende Prozesse betrachten und den Systemzustand überwachen"
++msgstr ""
++"Momentan laufende Prozesse betrachten und den Systemzustand überwachen"
+ 
+ #: ../gnome-system-monitor.desktop.in.in.h:3
+ msgid ""
+-"Monitor;System;Process;CPU;Memory;Network;History;Usage;Performance;Task;"
+-"Manager;"
++"Monitor;System;Process;CPU;Memory;Network;History;Usage;Performance;Task;Manager;"
+ msgstr ""
+-"Überwachung;System;Prozess;CPU;Speicher;Netzwerk;Chronik;Last;Leistung;"
+-"Aufgabe;Dienst;Verwaltung;"
++"Überwachung;System;Prozess;CPU;Speicher;Netzwerk;Chronik;Last;Leistung;Aufgabe;Dienst;Verwaltung;"
+ 
+ #: ../gnome-system-monitor-kde.desktop.in.in.h:1
+-#: ../gnome-system-monitor.appdata.xml.in.h:1 ../src/application.cpp:324
++#: ../gnome-system-monitor.appdata.xml.in.h:1 ../src/application.cpp:319
+ msgid "GNOME System Monitor"
+ msgstr "GNOME Systemüberwachung"
+ 
+@@ -95,7 +93,8 @@
+ 
+ #: ../org.gnome.gnome-system-monitor.policy.in.in.h:2
+ msgid "Privileges are required to control other users' processes"
+-msgstr "Berechtigung zur Steuerung der Prozesse anderer Benutzer wird benötigt"
++msgstr ""
++"Berechtigung zur Steuerung der Prozesse anderer Benutzer wird benötigt"
+ 
+ #: ../org.gnome.gnome-system-monitor.policy.in.in.h:3
+ msgid "Renice process"
+@@ -125,12 +124,12 @@
+ msgid "Memory and Swap History"
+ msgstr "Speicher- und Auslagerungschronik"
+ 
+-#: ../data/interface.ui.h:7 ../src/interface.cpp:260
++#: ../data/interface.ui.h:7 ../src/interface.cpp:268
+ #: ../src/procproperties.cpp:92 ../src/proctable.cpp:337
+ msgid "Memory"
+ msgstr "Speicher"
+ 
+-#: ../data/interface.ui.h:8 ../src/interface.cpp:272
++#: ../data/interface.ui.h:8 ../src/interface.cpp:280
+ msgid "Swap"
+ msgstr "Swap"
+ 
+@@ -138,7 +137,7 @@
+ msgid "Network History"
+ msgstr "Netzwerk-Chronik"
+ 
+-#: ../data/interface.ui.h:10 ../src/interface.cpp:300
++#: ../data/interface.ui.h:10 ../src/interface.cpp:308
+ msgid "Receiving"
+ msgstr "Empfangen"
+ 
+@@ -146,7 +145,7 @@
+ msgid "Total Received"
+ msgstr "Insgesamt empfangen"
+ 
+-#: ../data/interface.ui.h:12 ../src/interface.cpp:315
++#: ../data/interface.ui.h:12 ../src/interface.cpp:323
+ msgid "Sending"
+ msgstr "Senden"
+ 
+@@ -350,7 +349,7 @@
+ "Priorität fest. Ein kleinerer Nice-Wert entspricht einer höheren Priorität.</"
+ "i></small>"
+ 
+-#: ../src/application.cpp:310
++#: ../src/application.cpp:305
+ msgid "A simple process and system monitor."
+ msgstr "Eine einfache Prozess- und Systemüberwachung."
+ 
+@@ -470,16 +469,16 @@
+ msgid "Pick a Color for '%s'"
+ msgstr "Eine Farbe für »%s« wählen"
+ 
+-#: ../src/interface.cpp:220 ../src/procproperties.cpp:100
++#: ../src/interface.cpp:228 ../src/procproperties.cpp:100
+ msgid "CPU"
+ msgstr "CPU"
+ 
+-#: ../src/interface.cpp:222
++#: ../src/interface.cpp:230
+ #, c-format
+ msgid "CPU%d"
+ msgstr "CPU%d"
+ 
+-#: ../src/interface.cpp:374
++#: ../src/interface.cpp:382
+ msgid "translator-credits"
+ msgstr ""
+ "Christian Meyer <chrisime@gnome.org>\n"
+@@ -531,15 +530,15 @@
+ msgstr[0] "%d passende offene Datei"
+ msgstr[1] "%d passende offene Dateien"
+ 
+-#: ../src/lsof.cpp:248
++#: ../src/lsof.cpp:246
+ msgid "Process"
+ msgstr "Prozess"
+ 
+-#: ../src/lsof.cpp:260
++#: ../src/lsof.cpp:258
+ msgid "PID"
+ msgstr "Prozesskennung"
+ 
+-#: ../src/lsof.cpp:270 ../src/memmaps.cpp:303
++#: ../src/lsof.cpp:268 ../src/memmaps.cpp:303
+ msgid "Filename"
+ msgstr "Dateiname"
+ 
+@@ -595,11 +594,11 @@
+ msgid "Inode"
+ msgstr "Inode"
+ 
+-#: ../src/memmaps.cpp:437
++#: ../src/memmaps.cpp:436
+ msgid "Memory Maps"
+ msgstr "Speicherfelder"
+ 
+-#: ../src/memmaps.cpp:449
++#: ../src/memmaps.cpp:448
+ #, c-format
+ msgid "_Memory maps for process \"%s\" (PID %u):"
+ msgstr "_Speicherfelder für Prozess »%s« (Prozesskennung %u):"
+@@ -639,7 +638,7 @@
+ msgid "Object"
+ msgstr "Objekt"
+ 
+-#: ../src/openfiles.cpp:337
++#: ../src/openfiles.cpp:336
+ #, c-format
+ msgid "_Files opened by process \"%s\" (PID %u):"
+ msgstr "Von Prozess »%s« (Prozesskennung %u) geöffnete _Dateien:"
+@@ -1045,8 +1044,7 @@
+ 
+ #: ../src/procactions.cpp:75
+ #, c-format
+-msgid ""
+-"Cannot change the priority of process with PID %d to %d.\n"
++msgid "Cannot change the priority of process with PID %d to %d.\n"
+ "%s"
+ msgstr ""
+ "Die Priorität des Prozesses mit der Prozesskennung %d konnte nicht auf %d "
+@@ -1055,8 +1053,7 @@
+ 
+ #: ../src/procactions.cpp:153
+ #, c-format
+-msgid ""
+-"Cannot kill process with PID %d with signal %d.\n"
++msgid "Cannot kill process with PID %d with signal %d.\n"
+ "%s"
+ msgstr ""
+ "Der Prozess mit der Prozesskennung %d konnte nicht mit dem Signal %d "
+@@ -1094,7 +1091,8 @@
+ msgid "Are you sure you want to end the selected process?"
+ msgid_plural "Are you sure you want to end the %d selected processes?"
+ msgstr[0] "Sind Sie sicher, dass Sie den gewählten Prozess beenden wollen?"
+-msgstr[1] "Sind Sie sicher, dass Sie die %d gewählten Prozesse beenden wollen?"
++msgstr[1] ""
++"Sind Sie sicher, dass Sie die %d gewählten Prozesse beenden wollen?"
+ 
+ #. xgettext: secondary alert message
+ #: ../src/procdialogs.cpp:98 ../src/procdialogs.cpp:104
+@@ -1143,7 +1141,7 @@
+ "Nice-Wert einer hohen Priorität entspricht."
+ 
+ #: ../src/procproperties.cpp:55 ../src/procproperties.cpp:106
+-#: ../src/procproperties.cpp:109 ../src/util.cpp:432
++#: ../src/procproperties.cpp:109 ../src/util.cpp:510
+ msgid "N/A"
+ msgstr "N/V"
+ 
+@@ -1223,7 +1221,7 @@
+ msgid "Control Group"
+ msgstr "Kontrollgruppe"
+ 
+-#: ../src/procproperties.cpp:222
++#: ../src/procproperties.cpp:221
+ #, c-format
+ msgid "%s (PID %u)"
+ msgstr "%s (PID %u)"
+@@ -1370,77 +1368,7 @@
+ msgstr "Sehr niedrige Priorität"
+ 
+ #. xgettext: rate, 10MiB/s or 10Mbit/s
+-#: ../src/util.cpp:630
++#: ../src/util.cpp:708
+ #, c-format
+ msgid "%s/s"
+ msgstr "%s/s"
+-
+-#~ msgid "_Name contains:"
+-#~ msgstr "_Name enthält:"
+-
+-#~ msgid "_Find"
+-#~ msgstr "_Suchen"
+-
+-#~ msgid "C_lear"
+-#~ msgstr "_Löschen"
+-
+-#~ msgid "S_earch results:"
+-#~ msgstr "S_uchergebnisse:"
+-
+-#~ msgid "_Close"
+-#~ msgstr "S_chließen"
+-
+-#~ msgid "_Help"
+-#~ msgstr "_Hilfe"
+-
+-#~ msgid "Process Properties"
+-#~ msgstr "Prozesseigenschaften"
+-
+-#~ msgid "Properties of process \"%s\" (PID %u):"
+-#~ msgstr "Eigenschaften für Prozess »%s« (Prozesskennung %u):"
+-
+-#~ msgid "Sensitive"
+-#~ msgstr "Empfindlich"
+-
+-#~ msgid "The sensitivity value"
+-#~ msgstr "Der Empfindlichkeitswert"
+-
+-#~ msgid "Show processor usage graph"
+-#~ msgstr "Prozessorauslastungsgrafik anzeigen"
+-
+-#~ msgid "Show memory and swap usage graph"
+-#~ msgstr ""
+-#~ "Physikalische und virtuelle Arbeitsspeicherauslastungsgrafik anzeigen"
+-
+-#~ msgid "Show network traffic graph"
+-#~ msgstr "Netzwerkverkehrgrafik anzeigen"
+-
+-#~ msgid "Load averages for the last 1, 5, 15 minutes: %0.2f, %0.2f, %0.2f"
+-#~ msgstr ""
+-#~ "Durchschnittslast der letzten 1, 5 und 15 Minuten: %0.2f, %0.2f, %0.2f"
+-
+-#~ msgid "View"
+-#~ msgstr "_Ansicht"
+-
+-#~ msgid "_Stop Process"
+-#~ msgstr "Prozess _anhalten"
+-
+-#~ msgid "Main Window width"
+-#~ msgstr "Breite des Hauptfensters"
+-
+-#~ msgid "Main Window height"
+-#~ msgstr "Höhe des Hauptfensters"
+-
+-#~ msgid "Main Window X position"
+-#~ msgstr "X-Position des Hauptfensters"
+-
+-#~ msgid "Main Window Y position"
+-#~ msgstr "Y-Position des Hauptfensters"
+-
+-#~ msgid ""
+-#~ "Ending a process may destroy data, break the session or introduce a "
+-#~ "security risk. Only unresponsive processes should be ended."
+-#~ msgstr ""
+-#~ "Durch Beenden eines Prozesses können Daten zerstört, die laufende Sitzung "
+-#~ "unterbrochen oder ein Sicherheitsrisiko erzeugt werden. Es sollten nur "
+-#~ "Prozesse beendet werden, die nicht mehr reagieren."
+diff -urN gnome-system-monitor-3.14.1/po/es.po gnome-system-monitor-3.14.1_localized/po/es.po
+--- gnome-system-monitor-3.14.1/po/es.po	2014-07-20 10:12:35.000000000 +0530
++++ gnome-system-monitor-3.14.1_localized/po/es.po	2016-03-15 16:11:04.629793638 +0530
+@@ -2,51 +2,48 @@
+ # translation of gnome-system-monitor to Spanish
+ # Copyright © 2001,2002,2003, 2006, 2007, 2008 Free Software Foundation, Inc.
+ # This file is distributed under the same license as the gnome-system-monitor package.
+-#
++# 
+ # Carlos Perelló Marín <carlos@gnome-db.org>, 2001.
+ # Héctor García Álvarez <hector@scouts-es.org>, 2002.
+ # Pablo Gonzalo del Campo <pablodc@bigfoot.com>,2002, 2003.
+ # Francisco Javier F. Serrador <serrador@cvs.gnome.org>, 2004, 2005, 2006.
+ # Jorge González <jorgegonz@svn.gnome.org>, 2007, 2009, 2010, 2011.
+ # Daniel Mustieles <daniel.mustieles@gmail.com>, 2011, 2012, 2013, 2014.
+-#
++# pnemade <pnemade@redhat.com>, 2016. #zanata
+ msgid ""
+ msgstr ""
+ "Project-Id-Version: gnome-system-monitor.HEAD\n"
+-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=system-"
+-"monitor&keywords=I18N+L10N&component=general\n"
+-"POT-Creation-Date: 2014-06-11 07:38+0000\n"
+-"PO-Revision-Date: 2014-06-12 17:37+0200\n"
+-"Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
+-"Language-Team: Español; Castellano <gnome-es-list@gnome.org>\n"
+-"Language: \n"
++"Report-Msgid-Bugs-To: \n"
++"POT-Creation-Date: 2016-02-10 09:58+0530\n"
+ "MIME-Version: 1.0\n"
+ "Content-Type: text/plain; charset=UTF-8\n"
+ "Content-Transfer-Encoding: 8bit\n"
+-"X-Generator: Gtranslator 2.91.6\n"
++"PO-Revision-Date: 2014-06-12 03:37+0000\n"
++"Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
++"Language-Team: Español; Castellano <gnome-es-list@gnome.org>\n"
++"Language: es\n"
++"X-Generator: Zanata 3.8.2\n"
+ "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+ 
+ #: ../gnome-system-monitor.desktop.in.in.h:1 ../data/interface.ui.h:1
+-#: ../src/application.cpp:268 ../src/interface.cpp:362
++#: ../src/application.cpp:263 ../src/interface.cpp:371
+ msgid "System Monitor"
+ msgstr "Monitor del sistema"
+ 
+ #: ../gnome-system-monitor.desktop.in.in.h:2
+-#: ../gnome-system-monitor-kde.desktop.in.in.h:2 ../src/interface.cpp:363
++#: ../gnome-system-monitor-kde.desktop.in.in.h:2 ../src/interface.cpp:372
+ msgid "View current processes and monitor system state"
+ msgstr "Vea los procesos actuales y monitorizar el estado del sistema"
+ 
+ #: ../gnome-system-monitor.desktop.in.in.h:3
+-#| msgid "Monitor;System;Process;CPU;Memory;Network;History;Usage;"
+ msgid ""
+-"Monitor;System;Process;CPU;Memory;Network;History;Usage;Performance;Task;"
+-"Manager;"
++"Monitor;System;Process;CPU;Memory;Network;History;Usage;Performance;Task;Manager;"
+ msgstr ""
+ "Monitor;Sistema;Proceso;CPU;Memoria;Red;Histórico;Uso;Rendimiento;Tarea:"
+ "Gestor;Administrador;"
+ 
+ #: ../gnome-system-monitor-kde.desktop.in.in.h:1
+-#: ../gnome-system-monitor.appdata.xml.in.h:1 ../src/application.cpp:324
++#: ../gnome-system-monitor.appdata.xml.in.h:1 ../src/application.cpp:319
+ msgid "GNOME System Monitor"
+ msgstr "Monitor del sistema de GNOME"
+ 
+@@ -123,12 +120,12 @@
+ msgid "Memory and Swap History"
+ msgstr "Histórico de memoria e intercambio"
+ 
+-#: ../data/interface.ui.h:7 ../src/interface.cpp:259
++#: ../data/interface.ui.h:7 ../src/interface.cpp:268
+ #: ../src/procproperties.cpp:92 ../src/proctable.cpp:337
+ msgid "Memory"
+ msgstr "Memoria"
+ 
+-#: ../data/interface.ui.h:8 ../src/interface.cpp:271
++#: ../data/interface.ui.h:8 ../src/interface.cpp:280
+ msgid "Swap"
+ msgstr "Intercambio"
+ 
+@@ -136,7 +133,7 @@
+ msgid "Network History"
+ msgstr "Histórico de la red"
+ 
+-#: ../data/interface.ui.h:10 ../src/interface.cpp:299
++#: ../data/interface.ui.h:10 ../src/interface.cpp:308
+ msgid "Receiving"
+ msgstr "Recibiendo"
+ 
+@@ -144,7 +141,7 @@
+ msgid "Total Received"
+ msgstr "Total recibidos"
+ 
+-#: ../data/interface.ui.h:12 ../src/interface.cpp:314
++#: ../data/interface.ui.h:12 ../src/interface.cpp:323
+ msgid "Sending"
+ msgstr "Enviando"
+ 
+@@ -234,23 +231,23 @@
+ msgid "_Change Priority"
+ msgstr "_Cambiar prioridad"
+ 
+-#: ../data/menus.ui.h:16 ../src/util.cpp:214
++#: ../data/menus.ui.h:16 ../src/util.cpp:215
+ msgid "Very High"
+ msgstr "Muy alta"
+ 
+-#: ../data/menus.ui.h:17 ../src/util.cpp:216
++#: ../data/menus.ui.h:17 ../src/util.cpp:217
+ msgid "High"
+ msgstr "Alta"
+ 
+-#: ../data/menus.ui.h:18 ../src/util.cpp:218
++#: ../data/menus.ui.h:18 ../src/util.cpp:219
+ msgid "Normal"
+ msgstr "Normal"
+ 
+-#: ../data/menus.ui.h:19 ../src/util.cpp:220
++#: ../data/menus.ui.h:19 ../src/util.cpp:221
+ msgid "Low"
+ msgstr "Baja"
+ 
+-#: ../data/menus.ui.h:20 ../src/util.cpp:222
++#: ../data/menus.ui.h:20 ../src/util.cpp:223
+ msgid "Very Low"
+ msgstr "Muy baja"
+ 
+@@ -347,7 +344,7 @@
+ "<small><i><b>Nota:</b> la prioridad de un proceso está dada por su valor "
+ "nice. Un valor nice bajo corresponde a una prioridad más alta.</i></small>"
+ 
+-#: ../src/application.cpp:310
++#: ../src/application.cpp:305
+ msgid "A simple process and system monitor."
+ msgstr "Un sencillo monitor de procesos y del sistema."
+ 
+@@ -467,16 +464,16 @@
+ msgid "Pick a Color for '%s'"
+ msgstr "Coger un color de «%s»"
+ 
+-#: ../src/interface.cpp:220 ../src/procproperties.cpp:100
++#: ../src/interface.cpp:228 ../src/procproperties.cpp:100
+ msgid "CPU"
+ msgstr "CPU"
+ 
+-#: ../src/interface.cpp:222
++#: ../src/interface.cpp:230
+ #, c-format
+ msgid "CPU%d"
+ msgstr "CPU %d"
+ 
+-#: ../src/interface.cpp:373
++#: ../src/interface.cpp:382
+ msgid "translator-credits"
+ msgstr ""
+ "Daniel Mustieles <daniel.mustieles@gmail.com>, 2011, 2013\n"
+@@ -526,15 +523,15 @@
+ msgstr[0] "%d archivo abierto coincidente"
+ msgstr[1] "%d archivos abiertos coincidentes"
+ 
+-#: ../src/lsof.cpp:248
++#: ../src/lsof.cpp:246
+ msgid "Process"
+ msgstr "Proceso"
+ 
+-#: ../src/lsof.cpp:260
++#: ../src/lsof.cpp:258
+ msgid "PID"
+ msgstr "PID"
+ 
+-#: ../src/lsof.cpp:270 ../src/memmaps.cpp:303
++#: ../src/lsof.cpp:268 ../src/memmaps.cpp:303
+ msgid "Filename"
+ msgstr "Archivo"
+ 
+@@ -590,11 +587,11 @@
+ msgid "Inode"
+ msgstr "Nodo-i"
+ 
+-#: ../src/memmaps.cpp:437
++#: ../src/memmaps.cpp:436
+ msgid "Memory Maps"
+ msgstr "Mapas de memoria"
+ 
+-#: ../src/memmaps.cpp:449
++#: ../src/memmaps.cpp:448
+ #, c-format
+ msgid "_Memory maps for process \"%s\" (PID %u):"
+ msgstr "Mapas de _memoria para el proceso «%s» (PID %u):"
+@@ -634,7 +631,7 @@
+ msgid "Object"
+ msgstr "Objeto"
+ 
+-#: ../src/openfiles.cpp:337
++#: ../src/openfiles.cpp:336
+ #, c-format
+ msgid "_Files opened by process \"%s\" (PID %u):"
+ msgstr "_Archivos abiertos por el proceso «%s» (PID %u):"
+@@ -1041,20 +1038,16 @@
+ 
+ #: ../src/procactions.cpp:75
+ #, c-format
+-msgid ""
+-"Cannot change the priority of process with PID %d to %d.\n"
++msgid "Cannot change the priority of process with PID %d to %d.\n"
+ "%s"
+-msgstr ""
+-"No se puede cambiar la prioridad del proceso con pid %d a %d.\n"
++msgstr "No se puede cambiar la prioridad del proceso con pid %d a %d.\n"
+ "%s"
+ 
+ #: ../src/procactions.cpp:153
+ #, c-format
+-msgid ""
+-"Cannot kill process with PID %d with signal %d.\n"
++msgid "Cannot kill process with PID %d with signal %d.\n"
+ "%s"
+-msgstr ""
+-"No se puede matar el proceso con pid %d con la señal %d.\n"
++msgstr "No se puede matar el proceso con pid %d con la señal %d.\n"
+ "%s"
+ 
+ #. xgettext: primary alert message for killing single process
+@@ -1132,7 +1125,7 @@
+ "corresponde a una prioridad más alta."
+ 
+ #: ../src/procproperties.cpp:55 ../src/procproperties.cpp:106
+-#: ../src/procproperties.cpp:109 ../src/util.cpp:431
++#: ../src/procproperties.cpp:109 ../src/util.cpp:510
+ msgid "N/A"
+ msgstr "N/D"
+ 
+@@ -1212,7 +1205,7 @@
+ msgid "Control Group"
+ msgstr "Grupo de control"
+ 
+-#: ../src/procproperties.cpp:222
++#: ../src/procproperties.cpp:221
+ #, c-format
+ msgid "%s (PID %u)"
+ msgstr "%s (PID %u)"
+@@ -1284,333 +1277,82 @@
+ msgid "%u:%02u.%02u"
+ msgstr "%u:%02u.%02u"
+ 
+-#: ../src/util.cpp:163
++#: ../src/util.cpp:164
+ #, c-format
+ msgid "%.1f KiB"
+ msgstr "%.1f KiB"
+ 
+-#: ../src/util.cpp:164
++#: ../src/util.cpp:165
+ #, c-format
+ msgid "%.1f MiB"
+ msgstr "%.1f MiB"
+ 
+-#: ../src/util.cpp:165
++#: ../src/util.cpp:166
+ #, c-format
+ msgid "%.1f GiB"
+ msgstr "%.1f GiB"
+ 
+-#: ../src/util.cpp:166
++#: ../src/util.cpp:167
+ #, c-format
+ msgid "%.1f TiB"
+ msgstr "%.1f TiB"
+ 
+-#: ../src/util.cpp:167
++#: ../src/util.cpp:168
+ #, c-format
+ msgid "%.3g kbit"
+ msgstr "%.3g kbit"
+ 
+-#: ../src/util.cpp:168
++#: ../src/util.cpp:169
+ #, c-format
+ msgid "%.3g Mbit"
+ msgstr "%.3g Mbit"
+ 
+-#: ../src/util.cpp:169
++#: ../src/util.cpp:170
+ #, c-format
+ msgid "%.3g Gbit"
+ msgstr "%.3g Gbit"
+ 
+-#: ../src/util.cpp:170
++#: ../src/util.cpp:171
+ #, c-format
+ msgid "%.3g Tbit"
+ msgstr "%.3g Tbit"
+ 
+-#: ../src/util.cpp:185
++#: ../src/util.cpp:186
+ #, c-format
+ msgid "%u bit"
+ msgid_plural "%u bits"
+ msgstr[0] "%u bit"
+ msgstr[1] "%u bit"
+ 
+-#: ../src/util.cpp:186
++#: ../src/util.cpp:187
+ #, c-format
+ msgid "%u byte"
+ msgid_plural "%u bytes"
+ msgstr[0] "%u byte"
+ msgstr[1] "%u bytes"
+ 
+-#: ../src/util.cpp:229
++#: ../src/util.cpp:230
+ msgid "Very High Priority"
+ msgstr "Prioridad muy alta"
+ 
+-#: ../src/util.cpp:231
++#: ../src/util.cpp:232
+ msgid "High Priority"
+ msgstr "Prioridad alta"
+ 
+-#: ../src/util.cpp:233
++#: ../src/util.cpp:234
+ msgid "Normal Priority"
+ msgstr "Prioridad normal"
+ 
+-#: ../src/util.cpp:235
++#: ../src/util.cpp:236
+ msgid "Low Priority"
+ msgstr "Prioridad baja"
+ 
+-#: ../src/util.cpp:237
++#: ../src/util.cpp:238
+ msgid "Very Low Priority"
+ msgstr "Prioridad muy baja"
+ 
+ #. xgettext: rate, 10MiB/s or 10Mbit/s
+-#: ../src/util.cpp:629
++#: ../src/util.cpp:708
+ #, c-format
+ msgid "%s/s"
+ msgstr "%s/s"
+-
+-#~ msgid "_Name contains:"
+-#~ msgstr "El _nombre contiene:"
+-
+-#~ msgid "_Find"
+-#~ msgstr "_Buscar"
+-
+-#~ msgid "C_lear"
+-#~ msgstr "_Limpiar"
+-
+-#~ msgid "S_earch results:"
+-#~ msgstr "Resultados de la _búsqueda:"
+-
+-#~ msgid "_Close"
+-#~ msgstr "_Cerrar"
+-
+-#~ msgid "_Help"
+-#~ msgstr "_Ayuda"
+-
+-#~ msgid "Process Properties"
+-#~ msgstr "Propiedades del proceso"
+-
+-#~ msgid "Properties of process \"%s\" (PID %u):"
+-#~ msgstr "Propiedades del proceso «%s» (PID %u):"
+-
+-#~ msgid "Show processor usage graph"
+-#~ msgstr "Mostrar el gráfico de uso del procesador"
+-
+-#~ msgid "Show memory and swap usage graph"
+-#~ msgstr "Mostrar el gráfico de uso de memoria y de intercambio"
+-
+-#~ msgid "Show network traffic graph"
+-#~ msgstr "Mostrar el gráfico de uso de la red"
+-
+-#~ msgid "Sensitive"
+-#~ msgstr "Sensibilidad"
+-
+-#~ msgid "The sensitivity value"
+-#~ msgstr "El valor de sensibilidad"
+-
+-#~ msgid "Load averages for the last 1, 5, 15 minutes: %0.2f, %0.2f, %0.2f"
+-#~ msgstr "Carga media para los últimos 1, 5 y 15 minutos: %0.2f, %0.2f, %0.2f"
+-
+-#~ msgid "View"
+-#~ msgstr "Ver"
+-
+-#~ msgid "_Stop Process"
+-#~ msgstr "_Detener proceso"
+-
+-#~| msgid "_Draw CPU chart as stacked area chart"
+-#~ msgid "_Draw as stacked area chart"
+-#~ msgstr "_Dibujar como un diagrama de áreas apiladas"
+-
+-#~| msgid "Show process 'Memory' column on startup"
+-#~ msgid "Show _processor usage graph"
+-#~ msgstr "Mostrar el gráfico de uso del _procesador"
+-
+-#~ msgid "Show _memory and swap usage graph"
+-#~ msgstr "Mostrar el gráfico de uso de memoria y de intercambio"
+-
+-#~| msgid "Show network traffic in bits"
+-#~ msgid "Show _network traffic graph"
+-#~ msgstr "Mostrar el gráfico de uso de la _red"
+-
+-#~ msgid "Main Window width"
+-#~ msgstr "Anchura de la ventana principal"
+-
+-#~ msgid "Main Window height"
+-#~ msgstr "Altura de la ventana principal"
+-
+-#~ msgid "Main Window X position"
+-#~ msgstr "Posición X de la ventana principal"
+-
+-#~ msgid "Main Window Y position"
+-#~ msgstr "Posición Y de la ventana principal"
+-
+-#~ msgid ""
+-#~ "Ending a process may destroy data, break the session or introduce a "
+-#~ "security risk. Only unresponsive processes should be ended."
+-#~ msgstr ""
+-#~ "Finalizar un proceso puede destruir los datos, romper la sesión de "
+-#~ "trabajo o crear un riesgo de seguridad. Sólo deberían finalizarse los "
+-#~ "procesos que no respondan."
+-
+-#~ msgid ""
+-#~ "0 for the processes list, 1 for the resources and 2 for the disks list"
+-#~ msgstr ""
+-#~ "0 para la lista de procesos, 1 para los recursos y 2 para la lista de "
+-#~ "discos"
+-
+-#~ msgid "_View"
+-#~ msgstr "_Ver"
+-
+-#~ msgid "Stop process"
+-#~ msgstr "Detener proceso"
+-
+-#~ msgid "Continue process if stopped"
+-#~ msgstr "Continuar el proceso si está detenido"
+-
+-#~ msgid "Force process to finish normally"
+-#~ msgstr "Forzar al proceso a finalizar normalmente"
+-
+-#~ msgid "Force process to finish immediately"
+-#~ msgstr "Forzar al proceso a finalizar inmediatamente"
+-
+-#~ msgid "Refresh the process list"
+-#~ msgstr "Refrescar la lista de procesos"
+-
+-#~ msgid "Open the memory maps associated with a process"
+-#~ msgstr "Abrir los mapas de memoria asociados con un proceso"
+-
+-#~ msgid "View the files opened by a process"
+-#~ msgstr "Ver los archivos abiertos por un proceso"
+-
+-#~ msgid "View additional information about a process"
+-#~ msgstr "Ver información adicional sobre un proceso"
+-
+-#~ msgid "Show parent/child relationship between processes"
+-#~ msgstr "Mostrar las relaciones de ascendencia entre los procesos"
+-
+-#~ msgid "Show active processes"
+-#~ msgstr "Mostrar procesos activos"
+-
+-#~ msgid "Show all processes"
+-#~ msgstr "Mostrar todos los procesos"
+-
+-#~ msgid "Show only user-owned processes"
+-#~ msgstr "Mostrar sólo los procesos pertenecientes al usuario"
+-
+-#~ msgid "Set process priority to very high"
+-#~ msgstr "Establecer la prioridad del proceso a muy alta"
+-
+-#~ msgid "Set process priority to high"
+-#~ msgstr "Establecer la prioridad del proceso a alta"
+-
+-#~ msgid "Set process priority to normal"
+-#~ msgstr "Establecer la prioridad del proceso a normal"
+-
+-#~ msgid "Set process priority to low"
+-#~ msgstr "Establecer la prioridad del proceso a baja"
+-
+-#~ msgid "Set process priority to very low"
+-#~ msgstr "Establecer la prioridad del proceso a muy baja"
+-
+-#~ msgid "Set process priority manually"
+-#~ msgstr "Establecer la prioridad del proceso manualmente"
+-
+-#~ msgid ""
+-#~ "Determines which processes to show by default. 0 is All, 1 is user, and 2 "
+-#~ "is active"
+-#~ msgstr ""
+-#~ "Determina qué procesos se mostrarán por omisión. 0 es todos, 1 es "
+-#~ "usuario, y 2 es activo"
+-
+-#~ msgid "Sent"
+-#~ msgstr "Enviado"
+-
+-#~ msgid "System"
+-#~ msgstr "Sistema"
+-
+-#~ msgid "\n"
+-#~ msgstr "\n"
+-
+-#~ msgid "Show the System tab"
+-#~ msgstr "Mostrar la pestaña Sistema"
+-
+-#~ msgid "_Monitor"
+-#~ msgstr "_Monitor"
+-
+-#~ msgid "_Edit"
+-#~ msgstr "_Editar"
+-
+-#~ msgid "Search for _Open Files"
+-#~ msgstr "Buscar archivos a_biertos"
+-
+-#~ msgid "Quit the program"
+-#~ msgstr "Sale del programa"
+-
+-#~ msgid "_Contents"
+-#~ msgstr "Índ_ice"
+-
+-#~ msgid "Open the manual"
+-#~ msgstr "Abrir el manual"
+-
+-#~ msgid "About this application"
+-#~ msgstr "Acerca de esta aplicación"
+-
+-#~ msgid "(%s Priority)"
+-#~ msgstr "(Prioridad %s)"
+-
+-#~ msgid "Release %s %s"
+-#~ msgstr "Versión %s de %s"
+-
+-#~ msgid "%d-bit"
+-#~ msgstr "%d-bit"
+-
+-#~ msgid "Kernel %s"
+-#~ msgstr "Núcleo %s"
+-
+-#~ msgid "GNOME %s"
+-#~ msgstr "GNOME %s"
+-
+-#~| msgid "<b>Hardware</b>"
+-#~ msgid "Hardware"
+-#~ msgstr "Hardware"
+-
+-#~ msgid "Memory:"
+-#~ msgstr "Memoria:"
+-
+-#~ msgid "Processor:"
+-#~ msgstr "Procesador:"
+-
+-#~| msgid "<b>System Status</b>"
+-#~ msgid "System Status"
+-#~ msgstr "Estado del sistema"
+-
+-#~ msgid "Available disk space:"
+-#~ msgstr "Espacio disponible en disco:"
+-
+-#~ msgid "<i>N/A</i>"
+-#~ msgstr "<i>N/D</i>"
+-
+-#~ msgid "Unknown model"
+-#~ msgstr "Modelo desconocido"
+-
+-#~ msgid "Default graph CPU color"
+-#~ msgstr "Color predeterminado de la gráfica de la CPU"
+-
+-#~ msgid "_Change Priority…"
+-#~ msgstr "_Cambiar la prioridad…"
+-
+-#~ msgid "Processor %d:"
+-#~ msgstr "Procesador %d:"
+-
+-#~ msgid "Solaris mode"
+-#~ msgstr "Modo Solaris"
+-
+-#~ msgid "_Change Priority..."
+-#~ msgstr "_Cambiar la prioridad…"
+-
+-#~ msgid "Show process 'arguments' column on startup"
+-#~ msgstr "Mostrar la columna «argumentos» del proceso al inicio"
+-
+-#~ msgid "Show process 'estimated memory usage' column on startup"
+-#~ msgstr "Mostrar la columna «uso de memoria estimado» del proceso al inicio"
+-
+-#~ msgid "Width of process 'arguments' column"
+-#~ msgstr "Anchura de la columna «argumentos» del proceso"
+-
+-#~ msgid "Width of process 'estimated memory usage' column"
+-#~ msgstr "Anchura de la columna «uso estimado de memoria» del proceso"
+diff -urN gnome-system-monitor-3.14.1/po/fr.po gnome-system-monitor-3.14.1_localized/po/fr.po
+--- gnome-system-monitor-3.14.1/po/fr.po	2014-09-25 00:46:09.000000000 +0530
++++ gnome-system-monitor-3.14.1_localized/po/fr.po	2016-03-15 16:11:04.641794893 +0530
+@@ -1,7 +1,7 @@
+ # French translation of gnome-system-monitor.
+ # Copyright (C) 2002-2014 Free Software Foundation, Inc.
+ # This file is distributed under the same license as the gnome-system-monitor package.
+-#
++# 
+ # Mathieu Gauthier-Pilote <mathieu.g.p@videotron.ca>, 2002.
+ # Christophe Merlet <redfox@redfoxcenter.org>, 2002-2006.
+ # Benoît Dejean <benoit@placenet.org>, 2006-2007.
+@@ -10,42 +10,41 @@
+ # Claude Paroz <claude@2xlibre.net>, 2007-2014.
+ # Alain Lojewski <allomervan@gmail.com>, 2012-2013.
+ # Bruno Brouard <annoa.b@gmail.com>, 2012
++# pnemade <pnemade@redhat.com>, 2016. #zanata
+ msgid ""
+ msgstr ""
+ "Project-Id-Version: gnome-system-monitor HEAD\n"
+-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=system-"
+-"monitor&keywords=I18N+L10N&component=general\n"
+-"POT-Creation-Date: 2014-08-30 07:43+0000\n"
+-"PO-Revision-Date: 2014-08-30 12:12+0200\n"
+-"Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
+-"Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
+-"Language: fr\n"
++"Report-Msgid-Bugs-To: \n"
++"POT-Creation-Date: 2016-02-10 09:58+0530\n"
+ "MIME-Version: 1.0\n"
+ "Content-Type: text/plain; charset=UTF-8\n"
+ "Content-Transfer-Encoding: 8bit\n"
++"PO-Revision-Date: 2014-08-29 10:12+0000\n"
++"Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
++"Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
++"Language: fr\n"
+ "Plural-Forms: nplurals=2; plural=n>1;\n"
++"X-Generator: Zanata 3.8.2\n"
+ 
+ #: ../gnome-system-monitor.desktop.in.in.h:1 ../data/interface.ui.h:1
+-#: ../src/application.cpp:268 ../src/interface.cpp:363
++#: ../src/application.cpp:263 ../src/interface.cpp:371
+ msgid "System Monitor"
+ msgstr "Moniteur système"
+ 
+ # Utilisation de l'infinitif dans les infobulles du Bureau
+ #: ../gnome-system-monitor.desktop.in.in.h:2
+-#: ../gnome-system-monitor-kde.desktop.in.in.h:2 ../src/interface.cpp:364
++#: ../gnome-system-monitor-kde.desktop.in.in.h:2 ../src/interface.cpp:372
+ msgid "View current processes and monitor system state"
+ msgstr "Afficher les processus en cours et surveiller l'état du système"
+ 
+ #: ../gnome-system-monitor.desktop.in.in.h:3
+ msgid ""
+-"Monitor;System;Process;CPU;Memory;Network;History;Usage;Performance;Task;"
+-"Manager;"
++"Monitor;System;Process;CPU;Memory;Network;History;Usage;Performance;Task;Manager;"
+ msgstr ""
+-"Moniteur;Système;Processus;CPU;Mémoire;Réseau;Historique;Utilisation;"
+-"Performance;Tâche;"
++"Moniteur;Système;Processus;CPU;Mémoire;Réseau;Historique;Utilisation;Performance;Tâche;"
+ 
+ #: ../gnome-system-monitor-kde.desktop.in.in.h:1
+-#: ../gnome-system-monitor.appdata.xml.in.h:1 ../src/application.cpp:324
++#: ../gnome-system-monitor.appdata.xml.in.h:1 ../src/application.cpp:319
+ msgid "GNOME System Monitor"
+ msgstr "Moniteur système GNOME"
+ 
+@@ -127,12 +126,12 @@
+ msgstr ""
+ "Historique d'utilisation de la mémoire physique et du fichier d'échange"
+ 
+-#: ../data/interface.ui.h:7 ../src/interface.cpp:260
++#: ../data/interface.ui.h:7 ../src/interface.cpp:268
+ #: ../src/procproperties.cpp:92 ../src/proctable.cpp:337
+ msgid "Memory"
+ msgstr "Mémoire"
+ 
+-#: ../data/interface.ui.h:8 ../src/interface.cpp:272
++#: ../data/interface.ui.h:8 ../src/interface.cpp:280
+ msgid "Swap"
+ msgstr "Swap"
+ 
+@@ -140,7 +139,7 @@
+ msgid "Network History"
+ msgstr "Historique du trafic réseau"
+ 
+-#: ../data/interface.ui.h:10 ../src/interface.cpp:300
++#: ../data/interface.ui.h:10 ../src/interface.cpp:308
+ msgid "Receiving"
+ msgstr "Réception"
+ 
+@@ -148,7 +147,7 @@
+ msgid "Total Received"
+ msgstr "Total reçu"
+ 
+-#: ../data/interface.ui.h:12 ../src/interface.cpp:315
++#: ../data/interface.ui.h:12 ../src/interface.cpp:323
+ msgid "Sending"
+ msgstr "Envoi"
+ 
+@@ -352,7 +351,7 @@
+ "sa valeur « nice ». Une valeur nice plus basse correspond à une plus haute "
+ "priorité.</i></small>"
+ 
+-#: ../src/application.cpp:310
++#: ../src/application.cpp:305
+ msgid "A simple process and system monitor."
+ msgstr "Surveillance simple des processus et du système."
+ 
+@@ -473,16 +472,16 @@
+ msgid "Pick a Color for '%s'"
+ msgstr "Choisissez une couleur pour « %s »"
+ 
+-#: ../src/interface.cpp:220 ../src/procproperties.cpp:100
++#: ../src/interface.cpp:228 ../src/procproperties.cpp:100
+ msgid "CPU"
+ msgstr "CPU"
+ 
+-#: ../src/interface.cpp:222
++#: ../src/interface.cpp:230
+ #, c-format
+ msgid "CPU%d"
+ msgstr "CPU%d"
+ 
+-#: ../src/interface.cpp:374
++#: ../src/interface.cpp:382
+ msgid "translator-credits"
+ msgstr ""
+ "Mathieu Gauthier-Pilote <mathieu.g.p@videotron.ca>\n"
+@@ -804,7 +803,8 @@
+ 
+ #: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:34
+ msgid "Show process 'Virtual Memory' column on startup"
+-msgstr "Afficher la colonne de la mémoire virtuelle des processus au démarrage"
++msgstr ""
++"Afficher la colonne de la mémoire virtuelle des processus au démarrage"
+ 
+ #: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:35
+ msgid "Width of process 'Resident Memory' column"
+@@ -812,7 +812,8 @@
+ 
+ #: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:36
+ msgid "Show process 'Resident Memory' column on startup"
+-msgstr "Afficher la colonne de la mémoire résidente des processus au démarrage"
++msgstr ""
++"Afficher la colonne de la mémoire résidente des processus au démarrage"
+ 
+ #: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:37
+ msgid "Width of process 'Writable Memory' column"
+@@ -848,7 +849,8 @@
+ #: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:46
+ #, no-c-format
+ msgid "Show process 'CPU %' column on startup"
+-msgstr "Afficher la colonne du % de CPU utilisé par les processus au démarrage"
++msgstr ""
++"Afficher la colonne du % de CPU utilisé par les processus au démarrage"
+ 
+ #: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:47
+ msgid "Width of process 'CPU Time' column"
+@@ -982,7 +984,8 @@
+ 
+ #: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:79
+ msgid "Show disk view 'Device' column on startup"
+-msgstr "Afficher la colonne du périphérique de la vue des disques au démarrage"
++msgstr ""
++"Afficher la colonne du périphérique de la vue des disques au démarrage"
+ 
+ #: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:80
+ msgid "Width of disk view 'Directory' column"
+@@ -1024,7 +1027,8 @@
+ #: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:89
+ msgid "Show disk view 'Available' column on startup"
+ msgstr ""
+-"Afficher la colonne de l'espace disponible de la vue des disques au démarrage"
++"Afficher la colonne de l'espace disponible de la vue des disques au "
++"démarrage"
+ 
+ #: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:90
+ msgid "Width of disk view 'Used' column"
+@@ -1057,27 +1061,24 @@
+ 
+ #: ../src/procactions.cpp:75
+ #, c-format
+-msgid ""
+-"Cannot change the priority of process with PID %d to %d.\n"
++msgid "Cannot change the priority of process with PID %d to %d.\n"
+ "%s"
+-msgstr ""
+-"Impossible de changer la priorité du processus du PID %d vers %d.\n"
++msgstr "Impossible de changer la priorité du processus du PID %d vers %d.\n"
+ "%s"
+ 
+ #: ../src/procactions.cpp:153
+ #, c-format
+-msgid ""
+-"Cannot kill process with PID %d with signal %d.\n"
++msgid "Cannot kill process with PID %d with signal %d.\n"
+ "%s"
+-msgstr ""
+-"Impossible de tuer le processus au PID %d avec le signal %d.\n"
++msgstr "Impossible de tuer le processus au PID %d avec le signal %d.\n"
+ "%s"
+ 
+ #. xgettext: primary alert message for killing single process
+ #: ../src/procdialogs.cpp:75
+ #, c-format
+ msgid "Are you sure you want to kill the selected process “%s” (PID: %u)?"
+-msgstr "Voulez-vous vraiment tuer le processus « %s » sélectionné (PID : %u) ?"
++msgstr ""
++"Voulez-vous vraiment tuer le processus « %s » sélectionné (PID : %u) ?"
+ 
+ #. xgettext: primary alert message for ending single process
+ #: ../src/procdialogs.cpp:80
+@@ -1149,7 +1150,7 @@
+ "valeur nice plus basse correspond à une plus haute priorité."
+ 
+ #: ../src/procproperties.cpp:55 ../src/procproperties.cpp:106
+-#: ../src/procproperties.cpp:109 ../src/util.cpp:432
++#: ../src/procproperties.cpp:109 ../src/util.cpp:510
+ msgid "N/A"
+ msgstr "N/D"
+ 
+@@ -1376,31 +1377,7 @@
+ msgstr "Priorité très basse"
+ 
+ #. xgettext: rate, 10MiB/s or 10Mbit/s
+-#: ../src/util.cpp:630
++#: ../src/util.cpp:708
+ #, c-format
+ msgid "%s/s"
+ msgstr "%s/s"
+-
+-#~ msgid "_Name contains:"
+-#~ msgstr "Le _nom contient :"
+-
+-#~ msgid "_Find"
+-#~ msgstr "C_hercher"
+-
+-#~ msgid "C_lear"
+-#~ msgstr "Effa_cer"
+-
+-#~ msgid "S_earch results:"
+-#~ msgstr "Résultats de la r_echerche :"
+-
+-#~ msgid "_Close"
+-#~ msgstr "_Fermer"
+-
+-#~ msgid "_Help"
+-#~ msgstr "Aid_e"
+-
+-#~ msgid "Process Properties"
+-#~ msgstr "Propriétés du processus"
+-
+-#~ msgid "Properties of process \"%s\" (PID %u):"
+-#~ msgstr "Propriétés du processus « %s » (PID %u) :"
+diff -urN gnome-system-monitor-3.14.1/po/it.po gnome-system-monitor-3.14.1_localized/po/it.po
+--- gnome-system-monitor-3.14.1/po/it.po	2014-10-12 12:45:52.000000000 +0530
++++ gnome-system-monitor-3.14.1_localized/po/it.po	2016-03-15 16:11:04.652796044 +0530
+@@ -5,52 +5,48 @@
+ # Davide Falanga <davide.falanga@alice.it>, 2009.
+ # Luca Ferretti <lferrett@gnome.org>, 2007, 2008, 2011.
+ # Milo Casagrande <milo@milo.name>, 2008, 2009, 2012, 2013, 2014.
+-#
++# pnemade <pnemade@redhat.com>, 2016. #zanata
+ msgid ""
+ msgstr ""
+ "Project-Id-Version: gnome-system-monitor\n"
+-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=system-"
+-"monitor&keywords=I18N+L10N&component=general\n"
+-"POT-Creation-Date: 2014-10-05 07:47+0000\n"
+-"PO-Revision-Date: 2014-10-05 17:34+0100\n"
+-"Last-Translator: Milo Casagrande <milo@milo.name>\n"
+-"Language-Team: Italian <tp@lists.linux.it>\n"
+-"Language: it\n"
++"Report-Msgid-Bugs-To: \n"
++"POT-Creation-Date: 2016-02-10 09:58+0530\n"
+ "MIME-Version: 1.0\n"
+ "Content-Type: text/plain; charset=UTF-8\n"
+ "Content-Transfer-Encoding: 8bit\n"
++"PO-Revision-Date: 2014-10-05 04:34+0000\n"
++"Last-Translator: Milo Casagrande <milo@milo.name>\n"
++"Language-Team: Italian <tp@lists.linux.it>\n"
++"Language: it\n"
+ "Plural-Forms: nplurals=2; plural=(n!=1);\n"
+ "X-Launchpad-Export-Date: 2012-04-05 10:00+0000\n"
+-"X-Generator: Poedit 1.6.9\n"
++"X-Generator: Zanata 3.8.2\n"
+ 
+ #: ../gnome-system-monitor.desktop.in.in.h:1 ../data/interface.ui.h:1
+-#: ../src/application.cpp:268 ../src/interface.cpp:363
++#: ../src/application.cpp:263 ../src/interface.cpp:371
+ msgid "System Monitor"
+ msgstr "Monitor di sistema"
+ 
+ #: ../gnome-system-monitor.desktop.in.in.h:2
+-#: ../gnome-system-monitor-kde.desktop.in.in.h:2 ../src/interface.cpp:364
++#: ../gnome-system-monitor-kde.desktop.in.in.h:2 ../src/interface.cpp:372
+ msgid "View current processes and monitor system state"
+ msgstr "Visualizza i processi correnti e controlla lo stato del sistema"
+ 
+ #: ../gnome-system-monitor.desktop.in.in.h:3
+ msgid ""
+-"Monitor;System;Process;CPU;Memory;Network;History;Usage;Performance;Task;"
+-"Manager;"
++"Monitor;System;Process;CPU;Memory;Network;History;Usage;Performance;Task;Manager;"
+ msgstr ""
+-"Monitor;Controllo;Sistema;Processo;Processi;CPU;Memoria;Network;Rete;"
+-"Cronologia;Utilizzo;Uso;Prestazioni;Performance;Task;Lavori;Manager;Gestione;"
++"Monitor;Controllo;Sistema;Processo;Processi;CPU;Memoria;Network;Rete;Cronologia;Utilizzo;Uso;Prestazioni;Performance;Task;Lavori;Manager;Gestione;"
+ 
+ #: ../gnome-system-monitor-kde.desktop.in.in.h:1
+-#: ../gnome-system-monitor.appdata.xml.in.h:1 ../src/application.cpp:324
++#: ../gnome-system-monitor.appdata.xml.in.h:1 ../src/application.cpp:319
+ msgid "GNOME System Monitor"
+ msgstr "Monitor di sistema GNOME"
+ 
+ #: ../gnome-system-monitor-kde.desktop.in.in.h:3
+ msgid "Monitor;System;Process;CPU;Memory;Network;History;Usage;"
+ msgstr ""
+-"Monitor;Controllo;Sistema;Processo;Processi;CPU;Memoria;Network;Rete;"
+-"Cronologia;Utilizzo;Uso;"
++"Monitor;Controllo;Sistema;Processo;Processi;CPU;Memoria;Network;Rete;Cronologia;Utilizzo;Uso;"
+ 
+ #: ../gnome-system-monitor.appdata.xml.in.h:2
+ msgid "View and manage system resources"
+@@ -122,12 +118,12 @@
+ msgid "Memory and Swap History"
+ msgstr "Cronologia memoria e swap"
+ 
+-#: ../data/interface.ui.h:7 ../src/interface.cpp:260
++#: ../data/interface.ui.h:7 ../src/interface.cpp:268
+ #: ../src/procproperties.cpp:92 ../src/proctable.cpp:337
+ msgid "Memory"
+ msgstr "Memoria"
+ 
+-#: ../data/interface.ui.h:8 ../src/interface.cpp:272
++#: ../data/interface.ui.h:8 ../src/interface.cpp:280
+ msgid "Swap"
+ msgstr "Swap"
+ 
+@@ -135,7 +131,7 @@
+ msgid "Network History"
+ msgstr "Cronologia rete"
+ 
+-#: ../data/interface.ui.h:10 ../src/interface.cpp:300
++#: ../data/interface.ui.h:10 ../src/interface.cpp:308
+ msgid "Receiving"
+ msgstr "Ricevuti"
+ 
+@@ -144,7 +140,7 @@
+ msgid "Total Received"
+ msgstr "Totale ricevuti"
+ 
+-#: ../data/interface.ui.h:12 ../src/interface.cpp:315
++#: ../data/interface.ui.h:12 ../src/interface.cpp:323
+ msgid "Sending"
+ msgstr "Invio"
+ 
+@@ -349,7 +345,7 @@
+ "<small><i><b>Nota:</b> la priorità di un processo è data dal suo valore di "
+ "nice. Un valore più basso corrisponde a una priorità più alta.</i></small>"
+ 
+-#: ../src/application.cpp:310
++#: ../src/application.cpp:305
+ msgid "A simple process and system monitor."
+ msgstr "Un semplice monitor dei processi e del sistema."
+ 
+@@ -474,16 +470,16 @@
+ msgid "Pick a Color for '%s'"
+ msgstr "Scelta colore per «%s»"
+ 
+-#: ../src/interface.cpp:220 ../src/procproperties.cpp:100
++#: ../src/interface.cpp:228 ../src/procproperties.cpp:100
+ msgid "CPU"
+ msgstr "CPU"
+ 
+-#: ../src/interface.cpp:222
++#: ../src/interface.cpp:230
+ #, c-format
+ msgid "CPU%d"
+ msgstr "CPU%d"
+ 
+-#: ../src/interface.cpp:374
++#: ../src/interface.cpp:382
+ msgid "translator-credits"
+ msgstr ""
+ "Milo Casagrande <milo@ubuntu.com>\n"
+@@ -1046,20 +1042,16 @@
+ 
+ #: ../src/procactions.cpp:75
+ #, c-format
+-msgid ""
+-"Cannot change the priority of process with PID %d to %d.\n"
++msgid "Cannot change the priority of process with PID %d to %d.\n"
+ "%s"
+-msgstr ""
+-"Impossibile cambiare la priorità del processo con PID %d a %d.\n"
++msgstr "Impossibile cambiare la priorità del processo con PID %d a %d.\n"
+ "%s"
+ 
+ #: ../src/procactions.cpp:153
+ #, c-format
+-msgid ""
+-"Cannot kill process with PID %d with signal %d.\n"
++msgid "Cannot kill process with PID %d with signal %d.\n"
+ "%s"
+-msgstr ""
+-"Impossibile uccidere il processo con PID %d con il segnale %d.\n"
++msgstr "Impossibile uccidere il processo con PID %d con il segnale %d.\n"
+ "%s"
+ 
+ #. xgettext: primary alert message for killing single process
+@@ -1129,9 +1121,9 @@
+ msgstr "Nota:"
+ 
+ # NdT: questo appare nella UI come
+-#
++# 
+ #    Nota: la priorità...
+-#
++# 
+ # È staccato per non mettere i markup, peccato si siano
+ # dimenticati che anche i : vanno localizzati... mah  --Luca
+ #: ../src/procdialogs.cpp:211
+@@ -1143,7 +1135,7 @@
+ "basso corrisponde a una priorità più alta."
+ 
+ #: ../src/procproperties.cpp:55 ../src/procproperties.cpp:106
+-#: ../src/procproperties.cpp:109 ../src/util.cpp:432
++#: ../src/procproperties.cpp:109 ../src/util.cpp:510
+ msgid "N/A"
+ msgstr "N/D"
+ 
+@@ -1373,31 +1365,7 @@
+ msgstr "Priorità molto bassa"
+ 
+ #. xgettext: rate, 10MiB/s or 10Mbit/s
+-#: ../src/util.cpp:630
++#: ../src/util.cpp:708
+ #, c-format
+ msgid "%s/s"
+ msgstr "%s/s"
+-
+-#~ msgid "_Name contains:"
+-#~ msgstr "_Nome contiene:"
+-
+-#~ msgid "_Find"
+-#~ msgstr "_Trova"
+-
+-#~ msgid "C_lear"
+-#~ msgstr "Pu_lisci"
+-
+-#~ msgid "S_earch results:"
+-#~ msgstr "Risultati della ric_erca:"
+-
+-#~ msgid "_Close"
+-#~ msgstr "_Chiudi"
+-
+-#~ msgid "_Help"
+-#~ msgstr "A_iuto"
+-
+-#~ msgid "Process Properties"
+-#~ msgstr "Priorità processi"
+-
+-#~ msgid "Properties of process \"%s\" (PID %u):"
+-#~ msgstr "Proprietà del process «%s» (PID %u):"
+diff -urN gnome-system-monitor-3.14.1/po/ja.po gnome-system-monitor-3.14.1_localized/po/ja.po
+--- gnome-system-monitor-3.14.1/po/ja.po	2014-07-20 10:12:35.000000000 +0530
++++ gnome-system-monitor-3.14.1_localized/po/ja.po	2016-03-15 16:11:04.661796986 +0530
+@@ -7,56 +7,73 @@
+ # Jiro Matsuzawa <jmatsuzawa@gnome.org>, 2011-2013.
+ # Hideki Yamane <henrich@debian.org>, 2011.
+ # Noriko Mizumoto <noriko@fedoraproject.org>, 2012.
+-#
++# kmoriguc <kmoriguc@redhat.com>, 2016. #zanata
++# pnemade <pnemade@redhat.com>, 2016. #zanata
+ msgid ""
+ msgstr ""
+ "Project-Id-Version: gnome-system-monitor master\n"
+-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=system-monitor&keywords=I18N+L10N&component=general\n"
+-"POT-Creation-Date: 2013-09-21 19:49+0000\n"
+-"PO-Revision-Date: 2013-09-22 12:25+0900\n"
+-"Last-Translator: Jiro Matsuzawa <jmatsuzawa@gnome.org>\n"
+-"Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
+-"Language: ja\n"
++"Report-Msgid-Bugs-To: \n"
++"POT-Creation-Date: 2016-02-10 09:58+0530\n"
+ "MIME-Version: 1.0\n"
+ "Content-Type: text/plain; charset=UTF-8\n"
+ "Content-Transfer-Encoding: 8bit\n"
++"PO-Revision-Date: 2016-03-14 01:23+0000\n"
++"Last-Translator: kmoriguc <kmoriguc@redhat.com>\n"
++"Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
++"Language: ja\n"
+ "Plural-Forms: nplurals=1; plural=0;\n"
++"X-Generator: Zanata 3.8.2\n"
+ 
+ #: ../gnome-system-monitor.desktop.in.in.h:1 ../data/interface.ui.h:1
+-#: ../src/application.cpp:233 ../src/interface.cpp:363
++#: ../src/application.cpp:263 ../src/interface.cpp:371
+ msgid "System Monitor"
+ msgstr "システムモニター"
+ 
+ #: ../gnome-system-monitor.desktop.in.in.h:2
+-#: ../gnome-system-monitor-kde.desktop.in.in.h:2 ../src/interface.cpp:364
++#: ../gnome-system-monitor-kde.desktop.in.in.h:2 ../src/interface.cpp:372
+ msgid "View current processes and monitor system state"
+ msgstr "現在のプロセスを表示してシステムの状態を監視します"
+ 
+ #: ../gnome-system-monitor.desktop.in.in.h:3
+-#: ../gnome-system-monitor-kde.desktop.in.in.h:3
+-msgid "Monitor;System;Process;CPU;Memory;Network;History;Usage;"
+-msgstr "Monitor;System;Process;CPU;Memory;Network;History;Usage;モニター;システム;プロセス;メモリー;ネットワーク;履歴;使用量;"
++msgid ""
++"Monitor;System;Process;CPU;Memory;Network;History;Usage;Performance;Task;Manager;"
++msgstr "モニター;システム;プロセス;CPU;メモリー;ネットワーク;履歴;使用量;パフォーマンス;タスク;マネージャー;"
+ 
+ #: ../gnome-system-monitor-kde.desktop.in.in.h:1
+-#: ../gnome-system-monitor.appdata.xml.in.h:1 ../src/application.cpp:289
++#: ../gnome-system-monitor.appdata.xml.in.h:1 ../src/application.cpp:319
+ msgid "GNOME System Monitor"
+ msgstr "GNOME システムモニター"
+ 
++#: ../gnome-system-monitor-kde.desktop.in.in.h:3
++msgid "Monitor;System;Process;CPU;Memory;Network;History;Usage;"
++msgstr ""
++"Monitor;System;Process;CPU;Memory;Network;History;Usage;モニター;システム;プロセス;メモリー;ネットワーク;履歴;使用量;"
++
+ #: ../gnome-system-monitor.appdata.xml.in.h:2
+ msgid "View and manage system resources"
+ msgstr "システムリソースの表示と管理を行います"
+ 
+ #: ../gnome-system-monitor.appdata.xml.in.h:3
+-msgid "System Monitor is a process viewer and system monitor with an attractive, easy-to-use interface."
++msgid ""
++"System Monitor is a process viewer and system monitor with an attractive, "
++"easy-to-use interface."
+ msgstr "GNOME システムモニターは、魅力的で使いやすいインターフェースを備えたプロセスビューアー兼システムモニターです。"
+ 
+ #: ../gnome-system-monitor.appdata.xml.in.h:4
+-msgid "System Monitor can help you find out what applications are using the processor or the memory of your computer, can manage the running applications, force stop processes not responding, and change the state or priority of existing processes."
+-msgstr "システムモニターを使えば、お使いのコンピューターのプロセッサーやメモリを使用しているアプリケーションを特定する、実行中のアプリケーションを管理する、応答しないプロセスを強制終了する、既存のプロセスの状態や優先度を変更する、などができます。"
++msgid ""
++"System Monitor can help you find out what applications are using the "
++"processor or the memory of your computer, can manage the running "
++"applications, force stop processes not responding, and change the state or "
++"priority of existing processes."
++msgstr ""
++"システムモニターを使えば、お使いのコンピューターのプロセッサーやメモリを使用しているアプリケーションを特定する、実行中のアプリケーションを管理する、応答しないプロセスを強制終了する、既存のプロセスの状態や優先度を変更する、などができます。"
+ 
+ #: ../gnome-system-monitor.appdata.xml.in.h:5
+-msgid "The resource graphs feature shows you a quick overview of what is going on with your computer displaying recent network, memory and processor usage."
+-msgstr "リソースグラフは、最近のネットワークやメモリ、CPU の使用状況を表示して、お使いのコンピューターで何が起きているかをすばやく把握できます。"
++msgid ""
++"The resource graphs feature shows you a quick overview of what is going on "
++"with your computer displaying recent network, memory and processor usage."
++msgstr ""
++"リソースグラフは、最近のネットワークやメモリ、CPU の使用状況を表示して、お使いのコンピューターで何が起きているかをすばやく把握できます。"
+ 
+ #: ../org.gnome.gnome-system-monitor.policy.in.in.h:1
+ msgid "Kill process"
+@@ -82,7 +99,7 @@
+ msgid "Show process properties"
+ msgstr "プロセスのプロパティを表示します"
+ 
+-#: ../data/interface.ui.h:4 ../data/preferences.ui.h:11
++#: ../data/interface.ui.h:4 ../data/preferences.ui.h:9
+ msgid "Processes"
+ msgstr "プロセス"
+ 
+@@ -94,12 +111,12 @@
+ msgid "Memory and Swap History"
+ msgstr "メモリとスワップの履歴"
+ 
+-#: ../data/interface.ui.h:7 ../src/interface.cpp:260
+-#: ../src/procproperties.cpp:87 ../src/proctable.cpp:336
++#: ../data/interface.ui.h:7 ../src/interface.cpp:268
++#: ../src/procproperties.cpp:92 ../src/proctable.cpp:337
+ msgid "Memory"
+ msgstr "メモリ"
+ 
+-#: ../data/interface.ui.h:8 ../src/interface.cpp:272
++#: ../data/interface.ui.h:8 ../src/interface.cpp:280
+ msgid "Swap"
+ msgstr "スワップ"
+ 
+@@ -107,7 +124,7 @@
+ msgid "Network History"
+ msgstr "ネットワークの履歴"
+ 
+-#: ../data/interface.ui.h:10 ../src/interface.cpp:300
++#: ../data/interface.ui.h:10 ../src/interface.cpp:308
+ msgid "Receiving"
+ msgstr "受信:"
+ 
+@@ -115,7 +132,7 @@
+ msgid "Total Received"
+ msgstr "受信の合計:"
+ 
+-#: ../data/interface.ui.h:12 ../src/interface.cpp:315
++#: ../data/interface.ui.h:12 ../src/interface.cpp:323
+ msgid "Sending"
+ msgstr "送信:"
+ 
+@@ -123,11 +140,11 @@
+ msgid "Total Sent"
+ msgstr "送信の合計:"
+ 
+-#: ../data/interface.ui.h:14 ../data/preferences.ui.h:15
++#: ../data/interface.ui.h:14 ../data/preferences.ui.h:13
+ msgid "Resources"
+ msgstr "リソース"
+ 
+-#: ../data/interface.ui.h:15 ../data/preferences.ui.h:18
++#: ../data/interface.ui.h:15 ../data/preferences.ui.h:16
+ msgid "File Systems"
+ msgstr "ファイルシステム"
+ 
+@@ -137,30 +154,13 @@
+ msgstr "ファイルを開いているプロセスの検索"
+ 
+ #: ../data/lsof.ui.h:2
+-msgid "_Name contains:"
+-msgstr "ファイル名が次を含む(_N):"
++msgid "Filter files by name"
++msgstr "名前でファイルをフィルターする"
+ 
+ #: ../data/lsof.ui.h:3
+-msgid "_Find"
+-msgstr "検索(_F)"
+-
+-#: ../data/lsof.ui.h:4
+-msgid "Case insensitive matching"
++msgid "Case insensitive"
+ msgstr "大/小文字を区別しない"
+ 
+-#: ../data/lsof.ui.h:5
+-msgid "C_lear"
+-msgstr "クリア(_L)"
+-
+-#: ../data/lsof.ui.h:6
+-msgid "S_earch results:"
+-msgstr "検索結果(_E):"
+-
+-#: ../data/lsof.ui.h:7 ../data/openfiles.ui.h:2 ../data/preferences.ui.h:3
+-#: ../src/memmaps.cpp:438 ../src/procproperties.cpp:216
+-msgid "_Close"
+-msgstr "閉じる(_C)"
+-
+ #: ../data/menus.ui.h:1
+ msgctxt "Menu item to Open 'Search for Open Files' dialog"
+ msgid "Search for Open Files"
+@@ -222,23 +222,23 @@
+ msgid "_Change Priority"
+ msgstr "優先度の変更(_C)"
+ 
+-#: ../data/menus.ui.h:16 ../src/util.cpp:214
++#: ../data/menus.ui.h:16 ../src/util.cpp:215
+ msgid "Very High"
+ msgstr "非常に高い"
+ 
+-#: ../data/menus.ui.h:17 ../src/util.cpp:216
++#: ../data/menus.ui.h:17 ../src/util.cpp:217
+ msgid "High"
+ msgstr "高い"
+ 
+-#: ../data/menus.ui.h:18 ../src/util.cpp:218
++#: ../data/menus.ui.h:18 ../src/util.cpp:219
+ msgid "Normal"
+ msgstr "普通"
+ 
+-#: ../data/menus.ui.h:19 ../src/util.cpp:220
++#: ../data/menus.ui.h:19 ../src/util.cpp:221
+ msgid "Low"
+ msgstr "低い"
+ 
+-#: ../data/menus.ui.h:20 ../src/util.cpp:222
++#: ../data/menus.ui.h:20 ../src/util.cpp:223
+ msgid "Very Low"
+ msgstr "非常に低い"
+ 
+@@ -268,58 +268,54 @@
+ msgstr "システムモニターの設定"
+ 
+ #: ../data/preferences.ui.h:2
+-msgid "_Help"
+-msgstr "ヘルプ(_H)"
+-
+-#: ../data/preferences.ui.h:4
+ msgid "Behavior"
+ msgstr "動作"
+ 
+-#: ../data/preferences.ui.h:5
++#: ../data/preferences.ui.h:3
+ msgid "_Update interval in seconds:"
+ msgstr "更新間隔(秒)(_U):"
+ 
+-#: ../data/preferences.ui.h:6
++#: ../data/preferences.ui.h:4
+ msgid "Enable _smooth refresh"
+ msgstr "スムーズ更新を有効にする(_S)"
+ 
+-#: ../data/preferences.ui.h:7
++#: ../data/preferences.ui.h:5
+ msgid "Alert before ending or _killing processes"
+ msgstr "プロセスを終了または強制終了する前に警告する(_K)"
+ 
+-#: ../data/preferences.ui.h:8
++#: ../data/preferences.ui.h:6
+ msgid "_Divide CPU usage by CPU count"
+ msgstr "CPUの使用量をCPUの数で割る(_D)"
+ 
+-#: ../data/preferences.ui.h:9
++#: ../data/preferences.ui.h:7
+ msgid "Information Fields"
+ msgstr "表示する項目"
+ 
+-#: ../data/preferences.ui.h:10
++#: ../data/preferences.ui.h:8
+ msgid "Process i_nformation shown in list:"
+ msgstr "一覧に表示するプロセスの情報(_N):"
+ 
+-#: ../data/preferences.ui.h:12
++#: ../data/preferences.ui.h:10
+ msgid "Graphs"
+ msgstr "グラフ"
+ 
+-#: ../data/preferences.ui.h:13
++#: ../data/preferences.ui.h:11
+ msgid "_Draw CPU chart as stacked area chart"
+ msgstr "CPU グラフを積み上げ面グラフで描画(_D)"
+ 
+-#: ../data/preferences.ui.h:14
++#: ../data/preferences.ui.h:12
+ msgid "_Show network speed in bits"
+ msgstr "ネットワークの速度をビット単位で表示する(_S)"
+ 
+-#: ../data/preferences.ui.h:16
++#: ../data/preferences.ui.h:14
+ msgid "Show _all file systems"
+ msgstr "すべてのファイルシステムを表示する(_A)"
+ 
+-#: ../data/preferences.ui.h:17
++#: ../data/preferences.ui.h:15
+ msgid "File system i_nformation shown in list:"
+ msgstr "一覧に表示するファイルシステムの情報(_N):"
+ 
+-#: ../data/renice.ui.h:1 ../src/procdialogs.cpp:124
++#: ../data/renice.ui.h:1 ../src/procdialogs.cpp:123
+ msgid "_Cancel"
+ msgstr "キャンセル(_C)"
+ 
+@@ -332,10 +328,14 @@
+ msgstr "Nice 値(_N):"
+ 
+ #: ../data/renice.ui.h:4
+-msgid "<small><i><b>Note:</b> The priority of a process is given by its nice value. A lower nice value corresponds to a higher priority.</i></small>"
+-msgstr "<small><i><b>注記:</b> プロセスの優先度は Nice 値で与えます。Nice 値が低いほど優先度は高くなります。</i></small>"
++msgid ""
++"<small><i><b>Note:</b> The priority of a process is given by its nice value. "
++"A lower nice value corresponds to a higher priority.</i></small>"
++msgstr ""
++"<small><i><b>注記:</b> プロセスの優先度は Nice 値で与えます。Nice 値が低いほど優先度は高くなります。</i></"
++"small>"
+ 
+-#: ../src/application.cpp:275
++#: ../src/application.cpp:305
+ msgid "A simple process and system monitor."
+ msgstr "プロセスやシステムの状態を監視するシンプルなモニターです。"
+ 
+@@ -363,7 +363,7 @@
+ msgid "Directory"
+ msgstr "フォルダー"
+ 
+-#: ../src/disks.cpp:371 ../src/gsm_color_button.c:166 ../src/openfiles.cpp:252
++#: ../src/disks.cpp:371 ../src/gsm_color_button.c:165 ../src/openfiles.cpp:252
+ msgid "Type"
+ msgstr "種類"
+ 
+@@ -408,63 +408,63 @@
+ msgid "%b %d %Y"
+ msgstr "%Y年 %B%e日"
+ 
+-#: ../src/gsm_color_button.c:142
++#: ../src/gsm_color_button.c:141
+ msgid "Fraction"
+ msgstr "一部分"
+ 
+ #. TRANSLATORS: description of the pie color picker's (mem, swap) filled percentage property
+-#: ../src/gsm_color_button.c:144
++#: ../src/gsm_color_button.c:143
+ msgid "Percentage full for pie color pickers"
+ msgstr "パイ型の部分の色を取得します"
+ 
+-#: ../src/gsm_color_button.c:151
++#: ../src/gsm_color_button.c:150
+ msgid "Title"
+ msgstr "タイトル"
+ 
+-#: ../src/gsm_color_button.c:152
++#: ../src/gsm_color_button.c:151
+ msgid "The title of the color selection dialog"
+ msgstr "色の選択ダイアログに付与するタイトルです"
+ 
+-#: ../src/gsm_color_button.c:153 ../src/gsm_color_button.c:513
++#: ../src/gsm_color_button.c:152 ../src/gsm_color_button.c:512
+ msgid "Pick a Color"
+ msgstr "色の取得"
+ 
+-#: ../src/gsm_color_button.c:159
++#: ../src/gsm_color_button.c:158
+ msgid "Current Color"
+ msgstr "現在の色"
+ 
+-#: ../src/gsm_color_button.c:160
++#: ../src/gsm_color_button.c:159
+ msgid "The selected color"
+ msgstr "選択した色"
+ 
+-#: ../src/gsm_color_button.c:167
++#: ../src/gsm_color_button.c:166
+ msgid "Type of color picker"
+ msgstr "色の取得ダイアログの種類"
+ 
+-#: ../src/gsm_color_button.c:435
++#: ../src/gsm_color_button.c:434
+ msgid "Received invalid color data\n"
+ msgstr "おかしな色データを受け取りました\n"
+ 
+-#: ../src/gsm_color_button.c:536
++#: ../src/gsm_color_button.c:535
+ msgid "Click to set graph colors"
+ msgstr "クリックしてグラフの色を指定します"
+ 
+ #. Translators: color picker title, %s is CPU, Memory, Swap, Receiving, Sending
+-#: ../src/interface.cpp:188
++#: ../src/interface.cpp:187
+ #, c-format
+ msgid "Pick a Color for '%s'"
+ msgstr "'%s' の色を選択"
+ 
+-#: ../src/interface.cpp:221 ../src/procproperties.cpp:95
++#: ../src/interface.cpp:228 ../src/procproperties.cpp:100
+ msgid "CPU"
+ msgstr "CPU"
+ 
+-#: ../src/interface.cpp:223
++#: ../src/interface.cpp:230
+ #, c-format
+ msgid "CPU%d"
+ msgstr "CPU%d"
+ 
+-#: ../src/interface.cpp:374
++#: ../src/interface.cpp:382
+ msgid "translator-credits"
+ msgstr ""
+ "相花 毅 <takeshi.aihana@gmail.com>\n"
+@@ -475,40 +475,52 @@
+ "やまねひでき <henrich@debian.org>\n"
+ "日本GNOMEユーザー会 <http://www.gnome.gr.jp/>"
+ 
+-#: ../src/load-graph.cpp:160
++#: ../src/load-graph.cpp:161
+ #, c-format
+ msgid "%u second"
+ msgid_plural "%u seconds"
+ msgstr[0] "%u 秒"
+ 
+-#: ../src/load-graph.cpp:375
++#: ../src/load-graph.cpp:370
+ msgid "not available"
+ msgstr "利用できません"
+ 
+ #. xgettext: 540MiB (53 %) of 1.0 GiB
+-#: ../src/load-graph.cpp:378
++#: ../src/load-graph.cpp:373
+ #, c-format
+ msgid "%s (%.1f%%) of %s"
+ msgstr "%s (%.1f%%) / %s"
+ 
+-#: ../src/lsof.cpp:123
++#: ../src/lsof.cpp:109
+ msgid "Error"
+ msgstr "エラー"
+ 
+-#: ../src/lsof.cpp:124
++#: ../src/lsof.cpp:110
+ #, c-format
+ msgid "'%s' is not a valid Perl regular expression."
+ msgstr "'%s' という文字列は Perl の正規表現として妥当ではありません:"
+ 
+-#: ../src/lsof.cpp:270
++#: ../src/lsof.cpp:128
++#, c-format
++msgid "%d open file"
++msgid_plural "%d open files"
++msgstr[0] "%d 開いているファイル"
++
++#: ../src/lsof.cpp:130
++#, c-format
++msgid "%d matching open file"
++msgid_plural "%d matching open files"
++msgstr[0] "%d 一致する開いているファイル"
++
++#: ../src/lsof.cpp:246
+ msgid "Process"
+ msgstr "プロセス"
+ 
+-#: ../src/lsof.cpp:282
++#: ../src/lsof.cpp:258
+ msgid "PID"
+ msgstr "PID"
+ 
+-#: ../src/lsof.cpp:292 ../src/memmaps.cpp:303
++#: ../src/lsof.cpp:268 ../src/memmaps.cpp:303
+ msgid "Filename"
+ msgstr "ファイル名"
+ 
+@@ -608,7 +620,7 @@
+ msgid "Object"
+ msgstr "オブジェクト"
+ 
+-#: ../src/openfiles.cpp:337
++#: ../src/openfiles.cpp:336
+ #, c-format
+ msgid "_Files opened by process \"%s\" (PID %u):"
+ msgstr "\"%s\" (PID: %u) がオープンしたファイルの一覧(_F):"
+@@ -630,15 +642,22 @@
+ msgstr "CPU の使用率を Solaris モードで表示する"
+ 
+ #: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:5
+-msgid "If TRUE, system-monitor operates in 'Solaris mode' where a task's CPU usage is divided by the total number of CPUs. Otherwise, it operates in 'Irix mode'."
+-msgstr "true にすると 'Solaris モード' で動作するようになります。これはタスクの CPU 使用率に CPU の個数で割った値を使うモードです。それ以外は 'IRIX モード' で動作します。"
++msgid ""
++"If TRUE, system-monitor operates in 'Solaris mode' where a task's CPU usage "
++"is divided by the total number of CPUs. Otherwise, it operates in 'Irix "
++"mode'."
++msgstr ""
++"true にすると 'Solaris モード' で動作するようになります。これはタスクの CPU 使用率に CPU "
++"の個数で割った値を使うモードです。それ以外は 'IRIX モード' で動作します。"
+ 
+ #: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:6
+ msgid "Show CPU chart as stacked area chart"
+ msgstr "CPUを積み上げ面グラフで表示"
+ 
+ #: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:7
+-msgid "If TRUE, system-monitor shows the CPU chart as a stacked area chart instead of a line chart."
++msgid ""
++"If TRUE, system-monitor shows the CPU chart as a stacked area chart instead "
++"of a line chart."
+ msgstr "true にすると、CPU グラフを折れ線グラフではなく、積み上げ面グラフで表示します。"
+ 
+ #: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:8
+@@ -662,8 +681,13 @@
+ msgstr "すべてのファイルシステムの情報を表示するかどうか"
+ 
+ #: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:13
+-msgid "Whether to display information about all file systems (including types like 'autofs' and 'procfs'). Useful for getting a list of all currently mounted file systems."
+-msgstr "すべてのファイルシステムの情報を表示するかどうかです (これは 'autofs' や 'procfs' のような種類も含まれます)。現在マウントされているすべてのファイルシステムの一覧を取得する際に便利です。"
++msgid ""
++"Whether to display information about all file systems (including types like "
++"'autofs' and 'procfs'). Useful for getting a list of all currently mounted "
++"file systems."
++msgstr ""
++"すべてのファイルシステムの情報を表示するかどうかです (これは 'autofs' や 'procfs' "
++"のような種類も含まれます)。現在マウントされているすべてのファイルシステムの一覧を取得する際に便利です。"
+ 
+ #: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:14
+ msgid "Time in milliseconds between updates of the devices list"
+@@ -987,196 +1011,194 @@
+ msgid "Open files sort order"
+ msgstr "オープンしたファイルの並び順"
+ 
+-#: ../src/prefsdialog.cpp:181
++#: ../src/prefsdialog.cpp:170
+ msgid "Icon"
+ msgstr "アイコン"
+ 
+-#: ../src/procactions.cpp:76
++#: ../src/procactions.cpp:75
+ #, c-format
+-msgid ""
+-"Cannot change the priority of process with PID %d to %d.\n"
++msgid "Cannot change the priority of process with PID %d to %d.\n"
+ "%s"
+-msgstr ""
+-"PID が %d のプロセスの優先度を %d に変更できません。\n"
++msgstr "PID が %d のプロセスの優先度を %d に変更できません。\n"
+ "%s"
+ 
+-#: ../src/procactions.cpp:154
++#: ../src/procactions.cpp:153
+ #, c-format
+-msgid ""
+-"Cannot kill process with PID %d with signal %d.\n"
++msgid "Cannot kill process with PID %d with signal %d.\n"
+ "%s"
+-msgstr ""
+-"PID が %d のプロセスをシグナル %d で強制終了できません。\n"
++msgstr "PID が %d のプロセスをシグナル %d で強制終了できません。\n"
+ "%s"
+ 
+ #. xgettext: primary alert message for killing single process
+-#: ../src/procdialogs.cpp:76
++#: ../src/procdialogs.cpp:75
+ #, c-format
+ msgid "Are you sure you want to kill the selected process “%s” (PID: %u)?"
+ msgstr "選択したプロセス “%s” (PID: %u) を強制終了しますか?"
+ 
+ #. xgettext: primary alert message for ending single process
+-#: ../src/procdialogs.cpp:81
++#: ../src/procdialogs.cpp:80
+ #, c-format
+ msgid "Are you sure you want to end the selected process “%s” (PID: %u)?"
+ msgstr "選択したプロセス “%s” (PID: %u) を終了しますか?"
+ 
+ #. xgettext: primary alert message for killing multiple processes
+-#: ../src/procdialogs.cpp:88
++#: ../src/procdialogs.cpp:87
+ #, c-format
+ msgid "Are you sure you want to kill the selected process?"
+ msgid_plural "Are you sure you want to kill the %d selected processes?"
+ msgstr[0] "選択したプロセス (%d 個) を強制終了しますか?"
+ 
+ #. xgettext: primary alert message for ending multiple processes
+-#: ../src/procdialogs.cpp:92
++#: ../src/procdialogs.cpp:91
+ #, c-format
+ msgid "Are you sure you want to end the selected process?"
+ msgid_plural "Are you sure you want to end the %d selected processes?"
+ msgstr[0] "選択したプロセス (%d 個) を終了しますか?"
+ 
+ #. xgettext: secondary alert message
+-#: ../src/procdialogs.cpp:99 ../src/procdialogs.cpp:105
+-msgid "Killing a process may destroy data, break the session or introduce a security risk. Only unresponsive processes should be killed."
+-msgstr "プロセスを強制終了すると、データの破損、セッションの異常終了、あるいはセキュリティ上の危険性の増加につながる恐れがあります。反応が無いプロセスのみを強制終了してください。"
++#: ../src/procdialogs.cpp:98 ../src/procdialogs.cpp:104
++msgid ""
++"Killing a process may destroy data, break the session or introduce a "
++"security risk. Only unresponsive processes should be killed."
++msgstr ""
++"プロセスを強制終了すると、データの破損、セッションの異常終了、あるいはセキュリティ上の危険性の増加につながる恐れがあります。反応が無いプロセスのみを強制終了してください。"
+ 
+-#: ../src/procdialogs.cpp:102
++#: ../src/procdialogs.cpp:101
+ msgid "_Kill Process"
+ msgid_plural "_Kill Processes"
+ msgstr[0] "プロセスの強制終了(_K)"
+ 
+-#: ../src/procdialogs.cpp:108
++#: ../src/procdialogs.cpp:107
+ msgid "_End Process"
+ msgid_plural "_End Processes"
+ msgstr[0] "プロセスの終了(_E)"
+ 
+-#: ../src/procdialogs.cpp:189
++#: ../src/procdialogs.cpp:188
+ #, c-format
+ msgid "Change Priority of Process “%s” (PID: %u)"
+ msgstr "プロセス “%s” (PID: %u) の優先度の変更"
+ 
+-#: ../src/procdialogs.cpp:192
++#: ../src/procdialogs.cpp:191
+ #, c-format
+ msgid "Change Priority of the selected process"
+ msgid_plural "Change Priority of %d selected processes"
+ msgstr[0] "選択したプロセス (%d 個) の優先度を変更します"
+ 
+-#: ../src/procdialogs.cpp:211
++#: ../src/procdialogs.cpp:210
+ msgid "Note:"
+ msgstr "メモ:"
+ 
+-#: ../src/procdialogs.cpp:212
+-msgid "The priority of a process is given by its nice value. A lower nice value corresponds to a higher priority."
++#: ../src/procdialogs.cpp:211
++msgid ""
++"The priority of a process is given by its nice value. A lower nice value "
++"corresponds to a higher priority."
+ msgstr "プロセスの優先度は、Nice 値で与えられます。小さい Nice 値は高い優先度に相当します。"
+ 
+-#: ../src/procproperties.cpp:56 ../src/util.cpp:431
++#: ../src/procproperties.cpp:55 ../src/procproperties.cpp:106
++#: ../src/procproperties.cpp:109 ../src/util.cpp:510
+ msgid "N/A"
+ msgstr "N/A"
+ 
+-#: ../src/procproperties.cpp:84 ../src/proctable.cpp:321
++#: ../src/procproperties.cpp:89 ../src/proctable.cpp:322
+ msgid "Process Name"
+ msgstr "プロセス名"
+ 
+-#: ../src/procproperties.cpp:85 ../src/proctable.cpp:322
++#: ../src/procproperties.cpp:90 ../src/proctable.cpp:323
+ msgid "User"
+ msgstr "ユーザー"
+ 
+-#: ../src/procproperties.cpp:86 ../src/proctable.cpp:323
++#: ../src/procproperties.cpp:91 ../src/proctable.cpp:324
+ msgid "Status"
+ msgstr "状態"
+ 
+-#: ../src/procproperties.cpp:88 ../src/proctable.cpp:324
++#: ../src/procproperties.cpp:93 ../src/proctable.cpp:325
+ msgid "Virtual Memory"
+ msgstr "仮想メモリ"
+ 
+-#: ../src/procproperties.cpp:89 ../src/proctable.cpp:325
++#: ../src/procproperties.cpp:94 ../src/proctable.cpp:326
+ msgid "Resident Memory"
+ msgstr "物理メモリ"
+ 
+-#: ../src/procproperties.cpp:90 ../src/proctable.cpp:326
++#: ../src/procproperties.cpp:95 ../src/proctable.cpp:327
+ msgid "Writable Memory"
+ msgstr "書き込み可能メモリ"
+ 
+-#: ../src/procproperties.cpp:91 ../src/proctable.cpp:327
++#: ../src/procproperties.cpp:96 ../src/proctable.cpp:328
+ msgid "Shared Memory"
+ msgstr "共有メモリ"
+ 
+-#: ../src/procproperties.cpp:93 ../src/proctable.cpp:328
++#: ../src/procproperties.cpp:98 ../src/proctable.cpp:329
+ msgid "X Server Memory"
+ msgstr "X サーバーメモリ"
+ 
+-#: ../src/procproperties.cpp:96 ../src/proctable.cpp:330
++#: ../src/procproperties.cpp:101 ../src/proctable.cpp:331
+ msgid "CPU Time"
+ msgstr "CPU 時間"
+ 
+-#: ../src/procproperties.cpp:96
++#: ../src/procproperties.cpp:101
+ #, c-format
+ msgid "%lld second"
+ msgid_plural "%lld seconds"
+ msgstr[0] "%lld 秒"
+ 
+-#: ../src/procproperties.cpp:97 ../src/proctable.cpp:331
++#: ../src/procproperties.cpp:102 ../src/proctable.cpp:332
+ msgid "Started"
+ msgstr "起動日時"
+ 
+-#: ../src/procproperties.cpp:98 ../src/proctable.cpp:332
++#: ../src/procproperties.cpp:103 ../src/proctable.cpp:333
+ msgid "Nice"
+ msgstr "Nice値"
+ 
+-#: ../src/procproperties.cpp:99 ../src/proctable.cpp:346
++#: ../src/procproperties.cpp:104 ../src/proctable.cpp:347
+ msgid "Priority"
+ msgstr "優先度"
+ 
+-#: ../src/procproperties.cpp:100 ../src/proctable.cpp:333
++#: ../src/procproperties.cpp:105 ../src/proctable.cpp:334
+ msgid "ID"
+ msgstr "ID"
+ 
+-#: ../src/procproperties.cpp:101 ../src/proctable.cpp:334
++#: ../src/procproperties.cpp:106 ../src/proctable.cpp:335
+ msgid "Security Context"
+ msgstr "セキュリティコンテキスト"
+ 
+-#: ../src/procproperties.cpp:102 ../src/proctable.cpp:335
++#: ../src/procproperties.cpp:107 ../src/proctable.cpp:336
+ msgid "Command Line"
+ msgstr "コマンドライン"
+ 
+ #. xgettext: combined noun, the function the process is waiting in, see wchan ps(1)
+-#: ../src/procproperties.cpp:103 ../src/proctable.cpp:338
++#: ../src/procproperties.cpp:108 ../src/proctable.cpp:339
+ msgid "Waiting Channel"
+ msgstr "休止中の関数"
+ 
+-#: ../src/procproperties.cpp:104 ../src/proctable.cpp:339
++#: ../src/procproperties.cpp:109 ../src/proctable.cpp:340
+ msgid "Control Group"
+ msgstr "Control Group"
+ 
+-#: ../src/procproperties.cpp:214
+-msgid "Process Properties"
+-msgstr "プロセスのプロパティ"
+-
+-#: ../src/procproperties.cpp:234
++#: ../src/procproperties.cpp:221
+ #, c-format
+-msgid "Properties of process \"%s\" (PID %u):"
+-msgstr "プロセス \"%s\" (PID %u) のプロパティ:"
++msgid "%s (PID %u)"
++msgstr "%s (PID %u)"
+ 
+-#: ../src/proctable.cpp:329
++#: ../src/proctable.cpp:330
+ #, no-c-format
+ msgid "% CPU"
+ msgstr "% CPU"
+ 
+-#: ../src/proctable.cpp:340
++#: ../src/proctable.cpp:341
+ msgid "Unit"
+ msgstr "単位"
+ 
+-#: ../src/proctable.cpp:341
++#: ../src/proctable.cpp:342
+ msgid "Session"
+ msgstr "セッション"
+ 
+ #. TRANSLATORS: Seat = i.e. the physical seat the session of the process belongs to, only
+ #. for multi-seat environments. See http://en.wikipedia.org/wiki/Multiseat_configuration
+-#: ../src/proctable.cpp:344
++#: ../src/proctable.cpp:345
+ msgid "Seat"
+ msgstr "シート"
+ 
+-#: ../src/proctable.cpp:345
++#: ../src/proctable.cpp:346
+ msgid "Owner"
+ msgstr "所有者"
+ 
+@@ -1224,80 +1246,80 @@
+ msgid "%u:%02u.%02u"
+ msgstr "%u:%02u.%02u"
+ 
+-#: ../src/util.cpp:163
++#: ../src/util.cpp:164
+ #, c-format
+ msgid "%.1f KiB"
+ msgstr "%.1f KiB"
+ 
+-#: ../src/util.cpp:164
++#: ../src/util.cpp:165
+ #, c-format
+ msgid "%.1f MiB"
+ msgstr "%.1f MiB"
+ 
+-#: ../src/util.cpp:165
++#: ../src/util.cpp:166
+ #, c-format
+ msgid "%.1f GiB"
+ msgstr "%.1f GiB"
+ 
+-#: ../src/util.cpp:166
++#: ../src/util.cpp:167
+ #, c-format
+ msgid "%.1f TiB"
+ msgstr "%.1f TiB"
+ 
+-#: ../src/util.cpp:167
++#: ../src/util.cpp:168
+ #, c-format
+ msgid "%.3g kbit"
+ msgstr "%.3g kbit"
+ 
+-#: ../src/util.cpp:168
++#: ../src/util.cpp:169
+ #, c-format
+ msgid "%.3g Mbit"
+ msgstr "%.3g Mbit"
+ 
+-#: ../src/util.cpp:169
++#: ../src/util.cpp:170
+ #, c-format
+ msgid "%.3g Gbit"
+ msgstr "%.3g Gbit"
+ 
+-#: ../src/util.cpp:170
++#: ../src/util.cpp:171
+ #, c-format
+ msgid "%.3g Tbit"
+ msgstr "%.3g Tbit"
+ 
+-#: ../src/util.cpp:185
++#: ../src/util.cpp:186
+ #, c-format
+ msgid "%u bit"
+ msgid_plural "%u bits"
+ msgstr[0] "%u ビット"
+ 
+-#: ../src/util.cpp:186
++#: ../src/util.cpp:187
+ #, c-format
+ msgid "%u byte"
+ msgid_plural "%u bytes"
+ msgstr[0] "%u バイト"
+ 
+-#: ../src/util.cpp:229
++#: ../src/util.cpp:230
+ msgid "Very High Priority"
+ msgstr "非常に高い優先度"
+ 
+-#: ../src/util.cpp:231
++#: ../src/util.cpp:232
+ msgid "High Priority"
+ msgstr "高い優先度"
+ 
+-#: ../src/util.cpp:233
++#: ../src/util.cpp:234
+ msgid "Normal Priority"
+ msgstr "普通の優先度"
+ 
+-#: ../src/util.cpp:235
++#: ../src/util.cpp:236
+ msgid "Low Priority"
+ msgstr "低い優先度"
+ 
+-#: ../src/util.cpp:237
++#: ../src/util.cpp:238
+ msgid "Very Low Priority"
+ msgstr "非常に低い優先度"
+ 
+ #. xgettext: rate, 10MiB/s or 10Mbit/s
+-#: ../src/util.cpp:629
++#: ../src/util.cpp:708
+ #, c-format
+ msgid "%s/s"
+ msgstr "%s/秒"
+diff -urN gnome-system-monitor-3.14.1/po/ko.po gnome-system-monitor-3.14.1_localized/po/ko.po
+--- gnome-system-monitor-3.14.1/po/ko.po	2014-09-25 00:46:09.000000000 +0530
++++ gnome-system-monitor-3.14.1_localized/po/ko.po	2016-03-15 16:11:04.671798032 +0530
+@@ -1,52 +1,51 @@
+ # gnome-system-monitor Korean translation
+ # This file is distributed under the same license as the gnome-system-monitor package.
+-#
++# 
+ # Young-Ho, Cha <ganadist@chollian.net> 2002, 2006, 2007
+ # Changwoo Ryu <cwryu@debian.org> 2003-2014.
+-#
++# 
+ # 새로 번역하시는 분은 아래 translator-credits에 추가하세요.
+-#
++# pnemade <pnemade@redhat.com>, 2016. #zanata
+ msgid ""
+ msgstr ""
+ "Project-Id-Version: gnome-system-monitor\n"
+-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=system-"
+-"monitor&keywords=I18N+L10N&component=general\n"
+-"POT-Creation-Date: 2014-09-05 07:43+0000\n"
+-"PO-Revision-Date: 2014-09-06 04:07+0900\n"
+-"Last-Translator: Changwoo Ryu <cwryu@debian.org>\n"
+-"Language-Team: GNOME Korea <gnome-kr@googlegroups.com>\n"
+-"Language: \n"
++"Report-Msgid-Bugs-To: \n"
++"POT-Creation-Date: 2016-02-10 09:58+0530\n"
+ "MIME-Version: 1.0\n"
+ "Content-Type: text/plain; charset=UTF-8\n"
+ "Content-Transfer-Encoding: 8bit\n"
++"PO-Revision-Date: 2014-09-05 07:07+0000\n"
++"Last-Translator: Changwoo Ryu <cwryu@debian.org>\n"
++"Language-Team: GNOME Korea <gnome-kr@googlegroups.com>\n"
++"Language: ko\n"
+ "Plural-Forms: nplurals=1; plural=0;\n"
++"X-Generator: Zanata 3.8.2\n"
+ 
+ #: ../gnome-system-monitor.desktop.in.in.h:1 ../data/interface.ui.h:1
+-#: ../src/application.cpp:268 ../src/interface.cpp:363
++#: ../src/application.cpp:263 ../src/interface.cpp:371
+ msgid "System Monitor"
+ msgstr "시스템 정보"
+ 
+ #: ../gnome-system-monitor.desktop.in.in.h:2
+-#: ../gnome-system-monitor-kde.desktop.in.in.h:2 ../src/interface.cpp:364
++#: ../gnome-system-monitor-kde.desktop.in.in.h:2 ../src/interface.cpp:372
+ msgid "View current processes and monitor system state"
+ msgstr "현재 프로세스와 시스템 상태를 봅니다"
+ 
+ #: ../gnome-system-monitor.desktop.in.in.h:3
+ msgid ""
+-"Monitor;System;Process;CPU;Memory;Network;History;Usage;Performance;Task;"
+-"Manager;"
+-msgstr "Monitor;정보;감시;System;시스템;Process;프로세스;CPU;Memory;메모리;램;Network;네트워크;History;기록;Usage;내역;Performance;성능;Task;Manager;작업;관리;"
++"Monitor;System;Process;CPU;Memory;Network;History;Usage;Performance;Task;Manager;"
++msgstr ""
++"Monitor;정보;감시;System;시스템;Process;프로세스;CPU;Memory;메모리;램;Network;네트워크;History;기록;Usage;내역;Performance;성능;Task;Manager;작업;관리;"
+ 
+ #: ../gnome-system-monitor-kde.desktop.in.in.h:1
+-#: ../gnome-system-monitor.appdata.xml.in.h:1 ../src/application.cpp:324
++#: ../gnome-system-monitor.appdata.xml.in.h:1 ../src/application.cpp:319
+ msgid "GNOME System Monitor"
+ msgstr "그놈 시스템 정보"
+ 
+ #: ../gnome-system-monitor-kde.desktop.in.in.h:3
+ msgid "Monitor;System;Process;CPU;Memory;Network;History;Usage;"
+ msgstr ""
+-"Monitor;감시;System;시스템;Process;프로세스;CPU;Memory;메모리;Network;네트워"
+-"크;History;기록;Usage;내역;"
++"Monitor;감시;System;시스템;Process;프로세스;CPU;Memory;메모리;Network;네트워크;History;기록;Usage;내역;"
+ 
+ #: ../gnome-system-monitor.appdata.xml.in.h:2
+ msgid "View and manage system resources"
+@@ -56,9 +55,7 @@
+ msgid ""
+ "System Monitor is a process viewer and system monitor with an attractive, "
+ "easy-to-use interface."
+-msgstr ""
+-"시스템 정보 프로그램은 실행 중인 프로세스를 보고 시스템 정보를 보는 프로그램"
+-"으로 보기 좋고 사용하기 쉽습니다."
++msgstr "시스템 정보 프로그램은 실행 중인 프로세스를 보고 시스템 정보를 보는 프로그램으로 보기 좋고 사용하기 쉽습니다."
+ 
+ #: ../gnome-system-monitor.appdata.xml.in.h:4
+ msgid ""
+@@ -67,17 +64,16 @@
+ "applications, force stop processes not responding, and change the state or "
+ "priority of existing processes."
+ msgstr ""
+-"시스템 정보 프로그램을 사용해 어떤 프로그램이 컴퓨터의 프로세스와 메모리를 사"
+-"용하는지 알 수 있습니다. 또 실행 중인 프로그램을 관리하고, 응답이 없는 프로세"
+-"스를 중단하고, 실행 중인 프로세스의 상태나 실행 우선 순위를 바꿀 수 있습니다."
++"시스템 정보 프로그램을 사용해 어떤 프로그램이 컴퓨터의 프로세스와 메모리를 사용하는지 알 수 있습니다. 또 실행 중인 프로그램을 "
++"관리하고, 응답이 없는 프로세스를 중단하고, 실행 중인 프로세스의 상태나 실행 우선 순위를 바꿀 수 있습니다."
+ 
+ #: ../gnome-system-monitor.appdata.xml.in.h:5
+ msgid ""
+ "The resource graphs feature shows you a quick overview of what is going on "
+ "with your computer displaying recent network, memory and processor usage."
+ msgstr ""
+-"자원 그래프 기능을 사용하면 컴퓨터에 무슨 일이 발생하고 있는지 빠르게 파악할 "
+-"수 있습니다. 여기서 최근 네트워크, 메모리, 프로세서 사용량을 표시합니다."
++"자원 그래프 기능을 사용하면 컴퓨터에 무슨 일이 발생하고 있는지 빠르게 파악할 수 있습니다. 여기서 최근 네트워크, 메모리, 프로세서 "
++"사용량을 표시합니다."
+ 
+ #: ../org.gnome.gnome-system-monitor.policy.in.in.h:1
+ msgid "Kill process"
+@@ -115,12 +111,12 @@
+ msgid "Memory and Swap History"
+ msgstr "메모리 및 스왑 사용 기록"
+ 
+-#: ../data/interface.ui.h:7 ../src/interface.cpp:260
++#: ../data/interface.ui.h:7 ../src/interface.cpp:268
+ #: ../src/procproperties.cpp:92 ../src/proctable.cpp:337
+ msgid "Memory"
+ msgstr "메모리"
+ 
+-#: ../data/interface.ui.h:8 ../src/interface.cpp:272
++#: ../data/interface.ui.h:8 ../src/interface.cpp:280
+ msgid "Swap"
+ msgstr "스왑"
+ 
+@@ -128,7 +124,7 @@
+ msgid "Network History"
+ msgstr "네트워크 사용 기록"
+ 
+-#: ../data/interface.ui.h:10 ../src/interface.cpp:300
++#: ../data/interface.ui.h:10 ../src/interface.cpp:308
+ msgid "Receiving"
+ msgstr "받기"
+ 
+@@ -136,7 +132,7 @@
+ msgid "Total Received"
+ msgstr "전체 받음"
+ 
+-#: ../data/interface.ui.h:12 ../src/interface.cpp:315
++#: ../data/interface.ui.h:12 ../src/interface.cpp:323
+ msgid "Sending"
+ msgstr "보내기"
+ 
+@@ -336,10 +332,10 @@
+ "<small><i><b>Note:</b> The priority of a process is given by its nice value. "
+ "A lower nice value corresponds to a higher priority.</i></small>"
+ msgstr ""
+-"<small><i><b>주의:</b> 프로세스의 우선순위는 그 nice 값에 따라 결정됩니다. "
+-"nice 값이 낮을 수록 우선순위가 높습니다.</i></small>"
++"<small><i><b>주의:</b> 프로세스의 우선순위는 그 nice 값에 따라 결정됩니다. nice 값이 낮을 수록 우선순위가 "
++"높습니다.</i></small>"
+ 
+-#: ../src/application.cpp:310
++#: ../src/application.cpp:305
+ msgid "A simple process and system monitor."
+ msgstr "간단한 프로세스 및 시스템 정보."
+ 
+@@ -463,19 +459,18 @@
+ msgid "Pick a Color for '%s'"
+ msgstr "'%s'에 사용할 색 선택"
+ 
+-#: ../src/interface.cpp:220 ../src/procproperties.cpp:100
++#: ../src/interface.cpp:228 ../src/procproperties.cpp:100
+ msgid "CPU"
+ msgstr "CPU"
+ 
+-#: ../src/interface.cpp:222
++#: ../src/interface.cpp:230
+ #, c-format
+ msgid "CPU%d"
+ msgstr "CPU%d"
+ 
+-#: ../src/interface.cpp:374
++#: ../src/interface.cpp:382
+ msgid "translator-credits"
+-msgstr ""
+-"류창우 <cwryu@debian.org>\n"
++msgstr "류창우 <cwryu@debian.org>\n"
+ "차영호 <ganadist@gmail.com>"
+ 
+ #: ../src/load-graph.cpp:161
+@@ -650,8 +645,8 @@
+ "is divided by the total number of CPUs. Otherwise, it operates in 'Irix "
+ "mode'."
+ msgstr ""
+-"참이면 시스템 감시는 '솔라리스 모드'로 동작하며, 작업의 CPU사용량은 CPU의 전"
+-"체 개수로 나눠집니다. 거짓이면 '아이릭스 모드'로 동작합니다."
++"참이면 시스템 감시는 '솔라리스 모드'로 동작하며, 작업의 CPU사용량은 CPU의 전체 개수로 나눠집니다. 거짓이면 '아이릭스 모드'로 "
++"동작합니다."
+ 
+ #: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:6
+ msgid "Show CPU chart as stacked area chart"
+@@ -661,8 +656,7 @@
+ msgid ""
+ "If TRUE, system-monitor shows the CPU chart as a stacked area chart instead "
+ "of a line chart."
+-msgstr ""
+-"참이면 시스템 보기에서 CPU 차트를 선 차트가 아닌 누적 영역 차트로 표시합니다."
++msgstr "참이면 시스템 보기에서 CPU 차트를 선 차트가 아닌 누적 영역 차트로 표시합니다."
+ 
+ #: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:8
+ msgid "Enable/Disable smooth refresh"
+@@ -690,8 +684,8 @@
+ "'autofs' and 'procfs'). Useful for getting a list of all currently mounted "
+ "file systems."
+ msgstr ""
+-"모든 파일 시스템에 대한 정보를 표시할 지 여부('autofs'와 'procfs'같은 파일 시"
+-"스템 형식까지). 현재 마운트된 파일 시스템의 모든 목록을 얻을 때 유용합니다."
++"모든 파일 시스템에 대한 정보를 표시할 지 여부('autofs'와 'procfs'같은 파일 시스템 형식까지). 현재 마운트된 파일 "
++"시스템의 모든 목록을 얻을 때 유용합니다."
+ 
+ #: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:14
+ msgid "Time in milliseconds between updates of the devices list"
+@@ -1021,20 +1015,16 @@
+ 
+ #: ../src/procactions.cpp:75
+ #, c-format
+-msgid ""
+-"Cannot change the priority of process with PID %d to %d.\n"
++msgid "Cannot change the priority of process with PID %d to %d.\n"
+ "%s"
+-msgstr ""
+-"PID %d인 프로세스의 우선 순위를 %d번으로 바꿀 수 없습니다.\n"
++msgstr "PID %d인 프로세스의 우선 순위를 %d번으로 바꿀 수 없습니다.\n"
+ "%s"
+ 
+ #: ../src/procactions.cpp:153
+ #, c-format
+-msgid ""
+-"Cannot kill process with PID %d with signal %d.\n"
++msgid "Cannot kill process with PID %d with signal %d.\n"
+ "%s"
+-msgstr ""
+-"PID %d인 프로세스를 시그널 %d번으로 죽일 수 없습니다.\n"
++msgstr "PID %d인 프로세스를 시그널 %d번으로 죽일 수 없습니다.\n"
+ "%s"
+ 
+ #. xgettext: primary alert message for killing single process
+@@ -1069,9 +1059,8 @@
+ "Killing a process may destroy data, break the session or introduce a "
+ "security risk. Only unresponsive processes should be killed."
+ msgstr ""
+-"프로세스를 강제로 중단하면 데이터가 파괴되거나, 실행하는 세션을 망치거나 보"
+-"안 결함을 만들 수 있습니다. 반응이 없는 잘못된 프로세스만 강제로 중단하도록 "
+-"하십시오."
++"프로세스를 강제로 중단하면 데이터가 파괴되거나, 실행하는 세션을 망치거나 보안 결함을 만들 수 있습니다. 반응이 없는 잘못된 프로세스만 "
++"강제로 중단하도록 하십시오."
+ 
+ #: ../src/procdialogs.cpp:101
+ msgid "_Kill Process"
+@@ -1103,12 +1092,10 @@
+ msgid ""
+ "The priority of a process is given by its nice value. A lower nice value "
+ "corresponds to a higher priority."
+-msgstr ""
+-"프로세스의 우선순위는 그 nice 값에 따라 결정됩니다. nice 값이 낮을 수록 우선"
+-"순위가 높습니다."
++msgstr "프로세스의 우선순위는 그 nice 값에 따라 결정됩니다. nice 값이 낮을 수록 우선순위가 높습니다."
+ 
+ #: ../src/procproperties.cpp:55 ../src/procproperties.cpp:106
+-#: ../src/procproperties.cpp:109 ../src/util.cpp:432
++#: ../src/procproperties.cpp:109 ../src/util.cpp:510
+ msgid "N/A"
+ msgstr "없음"
+ 
+@@ -1332,191 +1319,7 @@
+ msgstr "매우 낮은 우선 순위"
+ 
+ #. xgettext: rate, 10MiB/s or 10Mbit/s
+-#: ../src/util.cpp:630
++#: ../src/util.cpp:708
+ #, c-format
+ msgid "%s/s"
+ msgstr "%s/초"
+-
+-#~ msgid "_Name contains:"
+-#~ msgstr "이름에 포함(_N):"
+-
+-#~ msgid "_Find"
+-#~ msgstr "찾기(_F)"
+-
+-#~ msgid "C_lear"
+-#~ msgstr "지우기(_L)"
+-
+-#~ msgid "S_earch results:"
+-#~ msgstr "검색 결과(_E):"
+-
+-#~ msgid "_Close"
+-#~ msgstr "닫기(_C)"
+-
+-#~ msgid "_Help"
+-#~ msgstr "도움말(_H)"
+-
+-#~ msgid "Process Properties"
+-#~ msgstr "프로세스 속성"
+-
+-#~ msgid "Properties of process \"%s\" (PID %u):"
+-#~ msgstr "\"%s\" 프로세스의(PID %u) 속성:"
+-
+-#~ msgid "Privileges are required to kill process"
+-#~ msgstr "프로세스를 강제 중단하려면 관리 권한이 필요합니다"
+-
+-#~ msgid "View"
+-#~ msgstr "보기"
+-
+-#~ msgid "Sent"
+-#~ msgstr "보냄"
+-
+-#~ msgid "_View"
+-#~ msgstr "보기(_V)"
+-
+-#~ msgid "_Stop Process"
+-#~ msgstr "프로세스 멈추기(_S)"
+-
+-#~ msgid "Stop process"
+-#~ msgstr "프로세스를 멈춥니다"
+-
+-#~ msgid "Continue process if stopped"
+-#~ msgstr "멈춘 프로세스를 계속 진행하게 합니다"
+-
+-#~ msgid "Force process to finish normally"
+-#~ msgstr "정상적으로 프로세스를 마칩니다"
+-
+-#~ msgid "Force process to finish immediately"
+-#~ msgstr "강제로 프로세스를 마칩니다"
+-
+-#~ msgid "Refresh the process list"
+-#~ msgstr "프로세스 목록 새로 고치기"
+-
+-#~ msgid "Open the memory maps associated with a process"
+-#~ msgstr "프로세스와 관련된 메모리 맵을 엽니다"
+-
+-#~ msgid "View the files opened by a process"
+-#~ msgstr "프로세스가 연 파일을 봅니다"
+-
+-#~ msgid "View additional information about a process"
+-#~ msgstr "프로세스에 대한 추가 정보를 봅니다"
+-
+-#~ msgid "Show parent/child relationship between processes"
+-#~ msgstr "프로세스의 부모/자식 관계를 봅니다"
+-
+-#~ msgid "Show active processes"
+-#~ msgstr "활성 프로세스를 봅니다"
+-
+-#~ msgid "Show all processes"
+-#~ msgstr "모든 프로세스를 봅니다"
+-
+-#~ msgid "Show only user-owned processes"
+-#~ msgstr "사용자 소유의 프로세스만 봅니다"
+-
+-#~ msgid "Set process priority to very high"
+-#~ msgstr "프로세스 우선 순위 매우 높음으로 설정"
+-
+-#~ msgid "Set process priority to high"
+-#~ msgstr "프로세스 우선 순위 높음으로 설정"
+-
+-#~ msgid "Set process priority to normal"
+-#~ msgstr "프로세스 우선 순위 보통으로 설정"
+-
+-#~ msgid "Set process priority to low"
+-#~ msgstr "프로세스 우선 순위 낮음으로 설정"
+-
+-#~ msgid "Set process priority to very low"
+-#~ msgstr "프로세스 우선 순위 매우 낮음으로 설정"
+-
+-#~ msgid "Set process priority manually"
+-#~ msgstr "프로세스 우선 순위 수동으로 설정"
+-
+-#~ msgid "Main Window width"
+-#~ msgstr "기본 창 너비"
+-
+-#~ msgid "Main Window height"
+-#~ msgstr "기본 창 높이"
+-
+-#~ msgid "Main Window X position"
+-#~ msgstr "기본 창 가로 위치"
+-
+-#~ msgid "Main Window Y position"
+-#~ msgstr "기본 창 세로 위치"
+-
+-#~ msgid ""
+-#~ "Determines which processes to show by default. 0 is All, 1 is user, and 2 "
+-#~ "is active"
+-#~ msgstr ""
+-#~ "어떤 프로세스를 볼 지 결정합니다. 0은 전부, 1은 사용자, 2는 활성 프로세스"
+-
+-#~ msgid ""
+-#~ "0 for the System Info, 1 for the processes list, 2 for the resources and "
+-#~ "3 for the disks list"
+-#~ msgstr "시스템정보는 0, 프로세스 목록은 1, 리소스는 2, 디스크 목록은 3"
+-
+-#~ msgid ""
+-#~ "Ending a process may destroy data, break the session or introduce a "
+-#~ "security risk. Only unresponsive processes should be ended."
+-#~ msgstr ""
+-#~ "프로세스를 끝냅니다. 데이터가 파괴되거나, 실행하는 세션을 망치거나 보안 결"
+-#~ "함을 만들 수 있습니다. 반응이 없는 잘못된 프로세스만 끝내도록 하십시오."
+-
+-#~ msgid "Load averages for the last 1, 5, 15 minutes: %0.2f, %0.2f, %0.2f"
+-#~ msgstr "최근 1분, 5분, 15분 사이의 평균 부하: %0.2f, %0.2f, %0.2f"
+-
+-#~ msgid "System"
+-#~ msgstr "시스템"
+-
+-# command line option
+-#~ msgid "Show the System tab"
+-#~ msgstr "시스템 탭을 표시합니다"
+-
+-#~ msgid "_Monitor"
+-#~ msgstr "정보(_M)"
+-
+-#~ msgid "_Edit"
+-#~ msgstr "편집(_E)"
+-
+-#~ msgid "Search for _Open Files"
+-#~ msgstr "열린 파일 검색(_O)"
+-
+-#~ msgid "Quit the program"
+-#~ msgstr "프로그램을 끝냅니다"
+-
+-#~ msgid "_Contents"
+-#~ msgstr "차례(_C)"
+-
+-#~ msgid "Open the manual"
+-#~ msgstr "도움말을 보여줍니다"
+-
+-#~ msgid "About this application"
+-#~ msgstr "이 프로그램에 대한 정보"
+-
+-#~ msgid "(%s Priority)"
+-#~ msgstr "(%s 우선 순위)"
+-
+-#~ msgid "Release %s %s"
+-#~ msgstr "릴리즈 %s %s"
+-
+-#~ msgid "%d-bit"
+-#~ msgstr "%d비트"
+-
+-#~ msgid "Kernel %s"
+-#~ msgstr "커널 %s"
+-
+-#~ msgid "GNOME %s"
+-#~ msgstr "그놈 %s"
+-
+-#~ msgid "Hardware"
+-#~ msgstr "하드웨어"
+-
+-#~ msgid "Memory:"
+-#~ msgstr "메모리:"
+-
+-#~ msgid "Processor:"
+-#~ msgstr "프로세서:"
+-
+-#~ msgid "System Status"
+-#~ msgstr "시스템 상태"
+-
+-#~ msgid "Available disk space:"
+-#~ msgstr "사용 가능한 디스크 공간:"
+diff -urN gnome-system-monitor-3.14.1/po/pt_BR.po gnome-system-monitor-3.14.1_localized/po/pt_BR.po
+--- gnome-system-monitor-3.14.1/po/pt_BR.po	2014-07-20 10:12:35.000000000 +0530
++++ gnome-system-monitor-3.14.1_localized/po/pt_BR.po	2016-03-15 16:11:04.682799183 +0530
+@@ -18,45 +18,41 @@
+ # Jonh Wendell <jwendell@gnome.org>, 2012.
+ # Rafael Ferreira <rafael.f.f1@gmail.com>, 2013.
+ # Enrico Nicoletto <liverig@gmail.com>, 2012, 2013, 2014.
+-#
++# pnemade <pnemade@redhat.com>, 2016. #zanata
+ msgid ""
+ msgstr ""
+ "Project-Id-Version: gnome-system-monitor\n"
+-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=system-"
+-"monitor&keywords=I18N+L10N&component=general\n"
+-"POT-Creation-Date: 2014-06-03 07:34+0000\n"
+-"PO-Revision-Date: 2014-06-03 10:55-0300\n"
+-"Last-Translator: Enrico Nicoletto <liverig@gmail.com>\n"
+-"Language-Team: Brazilian Portuguese <gnome-pt_br-list@gnome.org>\n"
+-"Language: pt_BR\n"
++"Report-Msgid-Bugs-To: \n"
++"POT-Creation-Date: 2016-02-10 09:58+0530\n"
+ "MIME-Version: 1.0\n"
+ "Content-Type: text/plain; charset=UTF-8\n"
+ "Content-Transfer-Encoding: 8bit\n"
++"PO-Revision-Date: 2014-06-03 01:55+0000\n"
++"Last-Translator: Enrico Nicoletto <liverig@gmail.com>\n"
++"Language-Team: Brazilian Portuguese <gnome-pt_br-list@gnome.org>\n"
++"Language: pt-BR\n"
+ "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+-"X-Generator: Poedit 1.6.5\n"
++"X-Generator: Zanata 3.8.2\n"
+ "X-Project-Style: gnome\n"
+ 
+ #: ../gnome-system-monitor.desktop.in.in.h:1 ../data/interface.ui.h:1
+-#: ../src/application.cpp:268 ../src/interface.cpp:362
++#: ../src/application.cpp:263 ../src/interface.cpp:371
+ msgid "System Monitor"
+ msgstr "Monitor do sistema"
+ 
+ #: ../gnome-system-monitor.desktop.in.in.h:2
+-#: ../gnome-system-monitor-kde.desktop.in.in.h:2 ../src/interface.cpp:363
++#: ../gnome-system-monitor-kde.desktop.in.in.h:2 ../src/interface.cpp:372
+ msgid "View current processes and monitor system state"
+ msgstr "Veja os processos atuais e monitore o estado do sistema"
+ 
+ #: ../gnome-system-monitor.desktop.in.in.h:3
+-#| msgid "Monitor;System;Process;CPU;Memory;Network;History;Usage;"
+ msgid ""
+-"Monitor;System;Process;CPU;Memory;Network;History;Usage;Performance;Task;"
+-"Manager;"
++"Monitor;System;Process;CPU;Memory;Network;History;Usage;Performance;Task;Manager;"
+ msgstr ""
+-"Monitor;Sistema;Processo;CPU;Memória;Rede;Histórico;Uso;Desempenho;"
+-"Performance;Tarefa;Gerenciador;"
++"Monitor;Sistema;Processo;CPU;Memória;Rede;Histórico;Uso;Desempenho;Performance;Tarefa;Gerenciador;"
+ 
+ #: ../gnome-system-monitor-kde.desktop.in.in.h:1
+-#: ../gnome-system-monitor.appdata.xml.in.h:1 ../src/application.cpp:324
++#: ../gnome-system-monitor.appdata.xml.in.h:1 ../src/application.cpp:319
+ msgid "GNOME System Monitor"
+ msgstr "Monitor do sistema GNOME"
+ 
+@@ -134,12 +130,12 @@
+ msgid "Memory and Swap History"
+ msgstr "Histórico da memória e swap"
+ 
+-#: ../data/interface.ui.h:7 ../src/interface.cpp:259
++#: ../data/interface.ui.h:7 ../src/interface.cpp:268
+ #: ../src/procproperties.cpp:92 ../src/proctable.cpp:337
+ msgid "Memory"
+ msgstr "Memória"
+ 
+-#: ../data/interface.ui.h:8 ../src/interface.cpp:271
++#: ../data/interface.ui.h:8 ../src/interface.cpp:280
+ msgid "Swap"
+ msgstr "Swap"
+ 
+@@ -147,7 +143,7 @@
+ msgid "Network History"
+ msgstr "Histórico da rede"
+ 
+-#: ../data/interface.ui.h:10 ../src/interface.cpp:299
++#: ../data/interface.ui.h:10 ../src/interface.cpp:308
+ msgid "Receiving"
+ msgstr "Recebidos"
+ 
+@@ -155,7 +151,7 @@
+ msgid "Total Received"
+ msgstr "Total recebidos"
+ 
+-#: ../data/interface.ui.h:12 ../src/interface.cpp:314
++#: ../data/interface.ui.h:12 ../src/interface.cpp:323
+ msgid "Sending"
+ msgstr "Enviados"
+ 
+@@ -245,23 +241,23 @@
+ msgid "_Change Priority"
+ msgstr "A_lterar prioridade"
+ 
+-#: ../data/menus.ui.h:16 ../src/util.cpp:214
++#: ../data/menus.ui.h:16 ../src/util.cpp:215
+ msgid "Very High"
+ msgstr "Muito alta"
+ 
+-#: ../data/menus.ui.h:17 ../src/util.cpp:216
++#: ../data/menus.ui.h:17 ../src/util.cpp:217
+ msgid "High"
+ msgstr "Alta"
+ 
+-#: ../data/menus.ui.h:18 ../src/util.cpp:218
++#: ../data/menus.ui.h:18 ../src/util.cpp:219
+ msgid "Normal"
+ msgstr "Normal"
+ 
+-#: ../data/menus.ui.h:19 ../src/util.cpp:220
++#: ../data/menus.ui.h:19 ../src/util.cpp:221
+ msgid "Low"
+ msgstr "Baixa"
+ 
+-#: ../data/menus.ui.h:20 ../src/util.cpp:222
++#: ../data/menus.ui.h:20 ../src/util.cpp:223
+ msgid "Very Low"
+ msgstr "Muito baixa"
+ 
+@@ -358,7 +354,7 @@
+ "<small><i><b>Note:</b> A prioridade de um processo é dada pelo seu valor "
+ "nice. Um menor valor nice corresponde a uma maior prioridade.</i></small>"
+ 
+-#: ../src/application.cpp:310
++#: ../src/application.cpp:305
+ msgid "A simple process and system monitor."
+ msgstr "Um simples monitor de processos do sistema."
+ 
+@@ -478,16 +474,16 @@
+ msgid "Pick a Color for '%s'"
+ msgstr "Selecione uma cor para \"%s\""
+ 
+-#: ../src/interface.cpp:220 ../src/procproperties.cpp:100
++#: ../src/interface.cpp:228 ../src/procproperties.cpp:100
+ msgid "CPU"
+ msgstr "CPU"
+ 
+-#: ../src/interface.cpp:222
++#: ../src/interface.cpp:230
+ #, c-format
+ msgid "CPU%d"
+ msgstr "CPU%d"
+ 
+-#: ../src/interface.cpp:373
++#: ../src/interface.cpp:382
+ msgid "translator-credits"
+ msgstr ""
+ "Francisco Petrúcio Cavalcante Junior <fpcj@impa.br>\n"
+@@ -544,15 +540,15 @@
+ msgstr[0] "%d arquivo aberto correspondente"
+ msgstr[1] "%d arquivos abertos correspondentes"
+ 
+-#: ../src/lsof.cpp:248
++#: ../src/lsof.cpp:246
+ msgid "Process"
+ msgstr "Processo"
+ 
+-#: ../src/lsof.cpp:260
++#: ../src/lsof.cpp:258
+ msgid "PID"
+ msgstr "PID"
+ 
+-#: ../src/lsof.cpp:270 ../src/memmaps.cpp:303
++#: ../src/lsof.cpp:268 ../src/memmaps.cpp:303
+ msgid "Filename"
+ msgstr "Nome do arquivo"
+ 
+@@ -608,11 +604,11 @@
+ msgid "Inode"
+ msgstr "Inode"
+ 
+-#: ../src/memmaps.cpp:437
++#: ../src/memmaps.cpp:436
+ msgid "Memory Maps"
+ msgstr "Mapas de memória"
+ 
+-#: ../src/memmaps.cpp:449
++#: ../src/memmaps.cpp:448
+ #, c-format
+ msgid "_Memory maps for process \"%s\" (PID %u):"
+ msgstr "_Mapas de memória para o processo \"%s\" (PID %u):"
+@@ -652,7 +648,7 @@
+ msgid "Object"
+ msgstr "Objeto"
+ 
+-#: ../src/openfiles.cpp:337
++#: ../src/openfiles.cpp:336
+ #, c-format
+ msgid "_Files opened by process \"%s\" (PID %u):"
+ msgstr "_Arquivos abertos pelo processo \"%s\" (PID %u):"
+@@ -893,7 +889,8 @@
+ #: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:56
+ msgid "Show process 'SELinux Security Context' column on startup"
+ msgstr ""
+-"Mostrar a coluna \"Contexto de segurança SELinux\" do processo ao inicializar"
++"Mostrar a coluna \"Contexto de segurança SELinux\" do processo ao "
++"inicializar"
+ 
+ #: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:57
+ msgid "Width of process 'Command Line' column"
+@@ -1057,20 +1054,16 @@
+ 
+ #: ../src/procactions.cpp:75
+ #, c-format
+-msgid ""
+-"Cannot change the priority of process with PID %d to %d.\n"
++msgid "Cannot change the priority of process with PID %d to %d.\n"
+ "%s"
+-msgstr ""
+-"Não é possível alterar a prioridade do processo de PID %d para %d.\n"
++msgstr "Não é possível alterar a prioridade do processo de PID %d para %d.\n"
+ "%s"
+ 
+ #: ../src/procactions.cpp:153
+ #, c-format
+-msgid ""
+-"Cannot kill process with PID %d with signal %d.\n"
++msgid "Cannot kill process with PID %d with signal %d.\n"
+ "%s"
+-msgstr ""
+-"Não é possível matar o processo de PID %d com o sinal %d.\n"
++msgstr "Não é possível matar o processo de PID %d com o sinal %d.\n"
+ "%s"
+ 
+ #. xgettext: primary alert message for killing single process
+@@ -1083,7 +1076,8 @@
+ #: ../src/procdialogs.cpp:80
+ #, c-format
+ msgid "Are you sure you want to end the selected process “%s” (PID: %u)?"
+-msgstr "Tem certeza que deseja terminar o processo selecionado “%s” (PID: %u)?"
++msgstr ""
++"Tem certeza que deseja terminar o processo selecionado “%s” (PID: %u)?"
+ 
+ #. xgettext: primary alert message for killing multiple processes
+ #: ../src/procdialogs.cpp:87
+@@ -1147,7 +1141,7 @@
+ "nice, maior a prioridade."
+ 
+ #: ../src/procproperties.cpp:55 ../src/procproperties.cpp:106
+-#: ../src/procproperties.cpp:109 ../src/util.cpp:431
++#: ../src/procproperties.cpp:109 ../src/util.cpp:510
+ msgid "N/A"
+ msgstr "N/D"
+ 
+@@ -1227,7 +1221,7 @@
+ msgid "Control Group"
+ msgstr "Grupo de controle"
+ 
+-#: ../src/procproperties.cpp:222
++#: ../src/procproperties.cpp:221
+ #, c-format
+ msgid "%s (PID %u)"
+ msgstr "%s (PID %u)"
+@@ -1300,291 +1294,82 @@
+ msgid "%u:%02u.%02u"
+ msgstr "%u:%02u.%02u"
+ 
+-#: ../src/util.cpp:163
++#: ../src/util.cpp:164
+ #, c-format
+ msgid "%.1f KiB"
+ msgstr "%.1f KB"
+ 
+-#: ../src/util.cpp:164
++#: ../src/util.cpp:165
+ #, c-format
+ msgid "%.1f MiB"
+ msgstr "%.1f MB"
+ 
+-#: ../src/util.cpp:165
++#: ../src/util.cpp:166
+ #, c-format
+ msgid "%.1f GiB"
+ msgstr "%.1f GB"
+ 
+-#: ../src/util.cpp:166
++#: ../src/util.cpp:167
+ #, c-format
+ msgid "%.1f TiB"
+ msgstr "%.1f TB"
+ 
+-#: ../src/util.cpp:167
++#: ../src/util.cpp:168
+ #, c-format
+ msgid "%.3g kbit"
+ msgstr "%.3g kbit"
+ 
+-#: ../src/util.cpp:168
++#: ../src/util.cpp:169
+ #, c-format
+ msgid "%.3g Mbit"
+ msgstr "%.3g Mbit"
+ 
+-#: ../src/util.cpp:169
++#: ../src/util.cpp:170
+ #, c-format
+ msgid "%.3g Gbit"
+ msgstr "%.3g Gbit"
+ 
+-#: ../src/util.cpp:170
++#: ../src/util.cpp:171
+ #, c-format
+ msgid "%.3g Tbit"
+ msgstr "%.3g Tbit"
+ 
+-#: ../src/util.cpp:185
++#: ../src/util.cpp:186
+ #, c-format
+ msgid "%u bit"
+ msgid_plural "%u bits"
+ msgstr[0] "%u bit"
+ msgstr[1] "%u bits"
+ 
+-#: ../src/util.cpp:186
++#: ../src/util.cpp:187
+ #, c-format
+ msgid "%u byte"
+ msgid_plural "%u bytes"
+ msgstr[0] "%u byte"
+ msgstr[1] "%u bytes"
+ 
+-#: ../src/util.cpp:229
++#: ../src/util.cpp:230
+ msgid "Very High Priority"
+ msgstr "Prioridade muito alta"
+ 
+-#: ../src/util.cpp:231
++#: ../src/util.cpp:232
+ msgid "High Priority"
+ msgstr "Prioridade alta"
+ 
+-#: ../src/util.cpp:233
++#: ../src/util.cpp:234
+ msgid "Normal Priority"
+ msgstr "Prioridade normal"
+ 
+-#: ../src/util.cpp:235
++#: ../src/util.cpp:236
+ msgid "Low Priority"
+ msgstr "Prioridade baixa"
+ 
+-#: ../src/util.cpp:237
++#: ../src/util.cpp:238
+ msgid "Very Low Priority"
+ msgstr "Prioridade muito baixa"
+ 
+ #. xgettext: rate, 10MiB/s or 10Mbit/s
+-#: ../src/util.cpp:629
++#: ../src/util.cpp:708
+ #, c-format
+ msgid "%s/s"
+ msgstr "%s/s"
+-
+-#~ msgid "_Name contains:"
+-#~ msgstr "_Nome contém:"
+-
+-#~ msgid "_Find"
+-#~ msgstr "L_ocalizar"
+-
+-#~ msgid "C_lear"
+-#~ msgstr "_Limpar"
+-
+-#~ msgid "S_earch results:"
+-#~ msgstr "R_esultados da busca:"
+-
+-#~ msgid "_Close"
+-#~ msgstr "_Fechar"
+-
+-#~ msgid "_Help"
+-#~ msgstr "Aj_uda"
+-
+-#~ msgid "Process Properties"
+-#~ msgstr "Propriedades do processo"
+-
+-#~ msgid "Properties of process \"%s\" (PID %u):"
+-#~ msgstr "Propriedades do processo \"%s\" (PID: %u):"
+-
+-#~ msgid "Show processor usage graph"
+-#~ msgstr "Mostrar um gráfico de uso do processador"
+-
+-#~ msgid "Show memory and swap usage graph"
+-#~ msgstr "Mostra um gráfico de uso de memória e de swap"
+-
+-#~ msgid "Show network traffic graph"
+-#~ msgstr "Mostrar um gráfico do tráfego da rede"
+-
+-#~ msgid "Sensitive"
+-#~ msgstr "Sensitivo"
+-
+-#~ msgid "The sensitivity value"
+-#~ msgstr "O valor sensitivo"
+-
+-#~ msgid "Load averages for the last 1, 5, 15 minutes: %0.2f, %0.2f, %0.2f"
+-#~ msgstr ""
+-#~ "Média de carregamento para os últimos 1, 5, 15 minutos: %0.2f, %0.2f, "
+-#~ "%0.2f"
+-
+-#~ msgid "View"
+-#~ msgstr "Ver"
+-
+-#~ msgid "_Stop Process"
+-#~ msgstr "_Parar processo"
+-
+-#~ msgid "Main Window width"
+-#~ msgstr "Largura da janela principal"
+-
+-#~ msgid "Main Window height"
+-#~ msgstr "Altura da janela principal"
+-
+-#~ msgid "Main Window X position"
+-#~ msgstr "Posição X da janela principal"
+-
+-#~ msgid "Main Window Y position"
+-#~ msgstr "Posição Y da janela principal"
+-
+-#~ msgid ""
+-#~ "Ending a process may destroy data, break the session or introduce a "
+-#~ "security risk. Only unresponsive processes should be ended."
+-#~ msgstr ""
+-#~ "Terminar um processo pode destruir seus dados, interromper a sessão atual "
+-#~ "ou criar um risco de segurança. Apenas processos que não respondem devem "
+-#~ "ser terminados."
+-
+-#~ msgid "Privileges are required to kill process"
+-#~ msgstr "São necessários privilégios para matar o processo"
+-
+-#~ msgid "_View"
+-#~ msgstr "_Ver"
+-
+-#~ msgid "Stop process"
+-#~ msgstr "Pára o processo"
+-
+-#~ msgid "Continue process if stopped"
+-#~ msgstr "Continua o processo se estiver parado"
+-
+-#~ msgid "Force process to finish normally"
+-#~ msgstr "Força o processo a finalizar normalmente"
+-
+-#~ msgid "Force process to finish immediately"
+-#~ msgstr "Força um processo a finalizar imediatamente"
+-
+-#~ msgid "Refresh the process list"
+-#~ msgstr "Atualiza a lista de processos"
+-
+-#~ msgid "Open the memory maps associated with a process"
+-#~ msgstr "Abre os mapas de memória associados a um processo"
+-
+-#~ msgid "View the files opened by a process"
+-#~ msgstr "Visualiza os arquivos abertos por um processo"
+-
+-#~ msgid "View additional information about a process"
+-#~ msgstr "Ver informações adicionais sobre um processo"
+-
+-#~ msgid "Show parent/child relationship between processes"
+-#~ msgstr "Mostra o relacionamento pai/filho entre processos"
+-
+-#~ msgid "Show active processes"
+-#~ msgstr "Mostra os processos ativos"
+-
+-#~ msgid "Show all processes"
+-#~ msgstr "Mostra todos os processos"
+-
+-#~ msgid "Show only user-owned processes"
+-#~ msgstr "Mostra somente os processos do usuário"
+-
+-#~ msgid "Set process priority to very high"
+-#~ msgstr "Define a prioridade do processo para muito alta"
+-
+-#~ msgid "Set process priority to high"
+-#~ msgstr "Define a prioridade do processo para alta"
+-
+-#~ msgid "Set process priority to normal"
+-#~ msgstr "Definir a prioridade do processo para normal"
+-
+-#~ msgid "Set process priority to low"
+-#~ msgstr "Define a prioridade do processo para baixa"
+-
+-#~ msgid "Set process priority to very low"
+-#~ msgstr "Define a prioridade do processo para muito baixa"
+-
+-#~ msgid "Set process priority manually"
+-#~ msgstr "Define manualmente a prioridade do processo"
+-
+-#~ msgid ""
+-#~ "Determines which processes to show by default. 0 is All, 1 is user, and 2 "
+-#~ "is active"
+-#~ msgstr ""
+-#~ "Determina quais processos mostrar por padrão. 0 = todos, 1 = usuário e 2 "
+-#~ "= ativos"
+-
+-#~ msgid ""
+-#~ "0 for the processes list, 1 for the resources and 2 for the disks list"
+-#~ msgstr ""
+-#~ "0 para a lista de processos, 1 para a lista de recursos e 2 para a lista "
+-#~ "de discos"
+-
+-#~ msgid "Sent"
+-#~ msgstr "Enviados"
+-
+-#~ msgid "System"
+-#~ msgstr "Sistema"
+-
+-#~ msgid "Show the System tab"
+-#~ msgstr "Exibir a aba sistema"
+-
+-#~ msgid "_Monitor"
+-#~ msgstr "_Monitor"
+-
+-#~ msgid "_Edit"
+-#~ msgstr "_Editar"
+-
+-#~ msgid "Search for _Open Files"
+-#~ msgstr "Pesquisar por _arquivos abertos"
+-
+-#~ msgid "Quit the program"
+-#~ msgstr "Sai do programa"
+-
+-#~ msgid "_Contents"
+-#~ msgstr "S_umário"
+-
+-#~ msgid "Open the manual"
+-#~ msgstr "Abre o manual"
+-
+-#~ msgid "About this application"
+-#~ msgstr "Sobre este aplicativo"
+-
+-#~ msgid "(%s Priority)"
+-#~ msgstr "(Prioridade %s)"
+-
+-#~ msgid "Release %s %s"
+-#~ msgstr "Lançamento %s %s"
+-
+-#~ msgid "%d-bit"
+-#~ msgstr "%d-bit"
+-
+-#~ msgid "Kernel %s"
+-#~ msgstr "Kernel %s"
+-
+-#~ msgid "GNOME %s"
+-#~ msgstr "GNOME %s"
+-
+-#~ msgid "Hardware"
+-#~ msgstr "Hardware"
+-
+-#~ msgid "Memory:"
+-#~ msgstr "Memória:"
+-
+-#~ msgid "Processor:"
+-#~ msgstr "Processador:"
+-
+-#~ msgid "System Status"
+-#~ msgstr "Status do sistema"
+-
+-#~ msgid "Available disk space:"
+-#~ msgstr "Espaço disponível no disco:"
+-
+-#~ msgid "Unknown model"
+-#~ msgstr "Modelo desconhecido"
+-
+-#~ msgid "<i>N/A</i>"
+-#~ msgstr "<i>N/A</i>"
+diff -urN gnome-system-monitor-3.14.1/po/ru.po gnome-system-monitor-3.14.1_localized/po/ru.po
+--- gnome-system-monitor-3.14.1/po/ru.po	2014-07-20 10:12:35.000000000 +0530
++++ gnome-system-monitor-3.14.1_localized/po/ru.po	2016-03-15 16:11:04.691800124 +0530
+@@ -1,6 +1,6 @@
+ # translation of gnome-system-monitor to Russian
+ # Copyright (C) 2001-2009 Free Software Foundation, Inc.
+-#
++# 
+ # Sergey Volozhanin <svo@asplinux.ru>, 2001.
+ # Valek Filippov  <frob@df.ru>, 2002.
+ # Dmitry G. Mastrukov <dmitry@taurussoft.org>, 2002-2004.
+@@ -9,46 +9,42 @@
+ # Alexander Sigachov <ajvol2@gmail.com>, 2007.
+ # Stas Solovey <whats_up@tut.by>, 2011, 2012, 2013.
+ # Yuri Myasoedov <omerta13@yandex.ru>, 2012, 2013.
+-#
++# pnemade <pnemade@redhat.com>, 2016. #zanata
+ msgid ""
+ msgstr ""
+ "Project-Id-Version: gnome-system-monitor trunk\n"
+-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=system-"
+-"monitor&keywords=I18N+L10N&component=general\n"
+-"POT-Creation-Date: 2014-06-28 07:36+0000\n"
+-"PO-Revision-Date: 2014-06-28 13:05+0400\n"
+-"Last-Translator: Yuri Myasoedov <ymyasoedov@yandex.ru>\n"
+-"Language-Team: русский <gnome-cyr@gnome.org>\n"
+-"Language: ru\n"
++"Report-Msgid-Bugs-To: \n"
++"POT-Creation-Date: 2016-02-10 09:58+0530\n"
+ "MIME-Version: 1.0\n"
+ "Content-Type: text/plain; charset=UTF-8\n"
+ "Content-Transfer-Encoding: 8bit\n"
+-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+-"X-Generator: Poedit 1.6.5\n"
++"PO-Revision-Date: 2014-06-28 09:05+0000\n"
++"Last-Translator: Yuri Myasoedov <ymyasoedov@yandex.ru>\n"
++"Language-Team: русский <gnome-cyr@gnome.org>\n"
++"Language: ru\n"
++"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
++"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
++"X-Generator: Zanata 3.8.2\n"
+ 
+ #: ../gnome-system-monitor.desktop.in.in.h:1 ../data/interface.ui.h:1
+-#: ../src/application.cpp:268 ../src/interface.cpp:362
++#: ../src/application.cpp:263 ../src/interface.cpp:371
+ msgid "System Monitor"
+ msgstr "Системный монитор"
+ 
+ #: ../gnome-system-monitor.desktop.in.in.h:2
+-#: ../gnome-system-monitor-kde.desktop.in.in.h:2 ../src/interface.cpp:363
++#: ../gnome-system-monitor-kde.desktop.in.in.h:2 ../src/interface.cpp:372
+ msgid "View current processes and monitor system state"
+ msgstr ""
+ "Программа для просмотра текущих процессов и мониторинга состояния системы"
+ 
+ #: ../gnome-system-monitor.desktop.in.in.h:3
+-#| msgid "Monitor;System;Process;CPU;Memory;Network;History;Usage;"
+ msgid ""
+-"Monitor;System;Process;CPU;Memory;Network;History;Usage;Performance;Task;"
+-"Manager;"
++"Monitor;System;Process;CPU;Memory;Network;History;Usage;Performance;Task;Manager;"
+ msgstr ""
+-"Монитор;Система;Процесс;ЦПУ;Процессор;Память;Сеть;История;Использование;"
+-"Производительность;Задача;Менеджер;Диспетчер;"
++"Монитор;Система;Процесс;ЦПУ;Процессор;Память;Сеть;История;Использование;Производительность;Задача;Менеджер;Диспетчер;"
+ 
+ #: ../gnome-system-monitor-kde.desktop.in.in.h:1
+-#: ../gnome-system-monitor.appdata.xml.in.h:1 ../src/application.cpp:324
++#: ../gnome-system-monitor.appdata.xml.in.h:1 ../src/application.cpp:319
+ msgid "GNOME System Monitor"
+ msgstr "Системный монитор среды GNOME"
+ 
+@@ -66,6 +62,7 @@
+ "easy-to-use interface."
+ msgstr ""
+ "Системный монитор — простой инструмент для просмотра и управления процессами."
++""
+ 
+ #: ../gnome-system-monitor.appdata.xml.in.h:4
+ msgid ""
+@@ -93,7 +90,8 @@
+ 
+ #: ../org.gnome.gnome-system-monitor.policy.in.in.h:2
+ msgid "Privileges are required to control other users' processes"
+-msgstr "Привилегии, необходимые для управления процессами других пользователей"
++msgstr ""
++"Привилегии, необходимые для управления процессами других пользователей"
+ 
+ #: ../org.gnome.gnome-system-monitor.policy.in.in.h:3
+ msgid "Renice process"
+@@ -123,12 +121,12 @@
+ msgid "Memory and Swap History"
+ msgstr "Использование памяти и подкачки"
+ 
+-#: ../data/interface.ui.h:7 ../src/interface.cpp:259
++#: ../data/interface.ui.h:7 ../src/interface.cpp:268
+ #: ../src/procproperties.cpp:92 ../src/proctable.cpp:337
+ msgid "Memory"
+ msgstr "Память"
+ 
+-#: ../data/interface.ui.h:8 ../src/interface.cpp:271
++#: ../data/interface.ui.h:8 ../src/interface.cpp:280
+ msgid "Swap"
+ msgstr "Подкачка"
+ 
+@@ -136,7 +134,7 @@
+ msgid "Network History"
+ msgstr "Использование сети"
+ 
+-#: ../data/interface.ui.h:10 ../src/interface.cpp:299
++#: ../data/interface.ui.h:10 ../src/interface.cpp:308
+ msgid "Receiving"
+ msgstr "Приём"
+ 
+@@ -144,7 +142,7 @@
+ msgid "Total Received"
+ msgstr "Всего принято"
+ 
+-#: ../data/interface.ui.h:12 ../src/interface.cpp:314
++#: ../data/interface.ui.h:12 ../src/interface.cpp:323
+ msgid "Sending"
+ msgstr "Отправка"
+ 
+@@ -170,7 +168,6 @@
+ msgstr "Фильтровать файлы по имени"
+ 
+ #: ../data/lsof.ui.h:3
+-#| msgid "Case insensitive matching"
+ msgid "Case insensitive"
+ msgstr "Не учитывать регистр"
+ 
+@@ -235,23 +232,23 @@
+ msgid "_Change Priority"
+ msgstr "И_зменить приоритет"
+ 
+-#: ../data/menus.ui.h:16 ../src/util.cpp:214
++#: ../data/menus.ui.h:16 ../src/util.cpp:215
+ msgid "Very High"
+ msgstr "Очень высокий"
+ 
+-#: ../data/menus.ui.h:17 ../src/util.cpp:216
++#: ../data/menus.ui.h:17 ../src/util.cpp:217
+ msgid "High"
+ msgstr "Высокий"
+ 
+-#: ../data/menus.ui.h:18 ../src/util.cpp:218
++#: ../data/menus.ui.h:18 ../src/util.cpp:219
+ msgid "Normal"
+ msgstr "Обычный"
+ 
+-#: ../data/menus.ui.h:19 ../src/util.cpp:220
++#: ../data/menus.ui.h:19 ../src/util.cpp:221
+ msgid "Low"
+ msgstr "Низкий"
+ 
+-#: ../data/menus.ui.h:20 ../src/util.cpp:222
++#: ../data/menus.ui.h:20 ../src/util.cpp:223
+ msgid "Very Low"
+ msgstr "Очень низкий"
+ 
+@@ -349,7 +346,7 @@
+ "уступчивости (nice). Меньшее значение «nice» соответствует более высокому "
+ "приоритету.</i></small>"
+ 
+-#: ../src/application.cpp:310
++#: ../src/application.cpp:305
+ msgid "A simple process and system monitor."
+ msgstr "Простой диспетчер процессов и системы."
+ 
+@@ -469,16 +466,16 @@
+ msgid "Pick a Color for '%s'"
+ msgstr "Выбрать цвет для «%s»"
+ 
+-#: ../src/interface.cpp:220 ../src/procproperties.cpp:100
++#: ../src/interface.cpp:228 ../src/procproperties.cpp:100
+ msgid "CPU"
+ msgstr "ЦП"
+ 
+-#: ../src/interface.cpp:222
++#: ../src/interface.cpp:230
+ #, c-format
+ msgid "CPU%d"
+ msgstr "ЦП%d"
+ 
+-#: ../src/interface.cpp:373
++#: ../src/interface.cpp:382
+ msgid "translator-credits"
+ msgstr ""
+ "Sergey Volozhanin <svo@asplinux.ru>, 2001.\n"
+@@ -518,7 +515,6 @@
+ 
+ #: ../src/lsof.cpp:128
+ #, c-format
+-#| msgid "Open Files"
+ msgid "%d open file"
+ msgid_plural "%d open files"
+ msgstr[0] "%d открытый файл"
+@@ -533,15 +529,15 @@
+ msgstr[1] "%d совпадающих открытых файла"
+ msgstr[2] "%d совпадающих открытых файлов"
+ 
+-#: ../src/lsof.cpp:248
++#: ../src/lsof.cpp:246
+ msgid "Process"
+ msgstr "Процесс"
+ 
+-#: ../src/lsof.cpp:260
++#: ../src/lsof.cpp:258
+ msgid "PID"
+ msgstr "PID"
+ 
+-#: ../src/lsof.cpp:270 ../src/memmaps.cpp:303
++#: ../src/lsof.cpp:268 ../src/memmaps.cpp:303
+ msgid "Filename"
+ msgstr "Имя файла"
+ 
+@@ -597,11 +593,11 @@
+ msgid "Inode"
+ msgstr "Inode"
+ 
+-#: ../src/memmaps.cpp:437
++#: ../src/memmaps.cpp:436
+ msgid "Memory Maps"
+ msgstr "Карты памяти"
+ 
+-#: ../src/memmaps.cpp:449
++#: ../src/memmaps.cpp:448
+ #, c-format
+ msgid "_Memory maps for process \"%s\" (PID %u):"
+ msgstr "_Карты памяти для процесса «%s» (PID %u):"
+@@ -641,7 +637,7 @@
+ msgid "Object"
+ msgstr "Объект"
+ 
+-#: ../src/openfiles.cpp:337
++#: ../src/openfiles.cpp:336
+ #, c-format
+ msgid "_Files opened by process \"%s\" (PID %u):"
+ msgstr "Файлы, открытые процессом «%s» (PID %u):"
+@@ -1042,20 +1038,16 @@
+ 
+ #: ../src/procactions.cpp:75
+ #, c-format
+-msgid ""
+-"Cannot change the priority of process with PID %d to %d.\n"
++msgid "Cannot change the priority of process with PID %d to %d.\n"
+ "%s"
+-msgstr ""
+-"Не удаётся изменить приоритет процесса с PID %d на %d.\n"
++msgstr "Не удаётся изменить приоритет процесса с PID %d на %d.\n"
+ "%s"
+ 
+ #: ../src/procactions.cpp:153
+ #, c-format
+-msgid ""
+-"Cannot kill process with PID %d with signal %d.\n"
++msgid "Cannot kill process with PID %d with signal %d.\n"
+ "%s"
+-msgstr ""
+-"Не удаётся завершить процесс с PID %d при помощи сигнала %d.\n"
++msgstr "Не удаётся завершить процесс с PID %d при помощи сигнала %d.\n"
+ "%s"
+ 
+ #. xgettext: primary alert message for killing single process
+@@ -1138,7 +1130,7 @@
+ "уступчивости, тем выше приоритет процесса."
+ 
+ #: ../src/procproperties.cpp:55 ../src/procproperties.cpp:106
+-#: ../src/procproperties.cpp:109 ../src/util.cpp:431
++#: ../src/procproperties.cpp:109 ../src/util.cpp:510
+ msgid "N/A"
+ msgstr "Н/Д"
+ 
+@@ -1219,7 +1211,7 @@
+ msgid "Control Group"
+ msgstr "Контрольная группа"
+ 
+-#: ../src/procproperties.cpp:222
++#: ../src/procproperties.cpp:221
+ #, c-format
+ msgid "%s (PID %u)"
+ msgstr "%s (PID %u)"
+@@ -1291,47 +1283,47 @@
+ msgid "%u:%02u.%02u"
+ msgstr "%u:%02u.%02u"
+ 
+-#: ../src/util.cpp:163
++#: ../src/util.cpp:164
+ #, c-format
+ msgid "%.1f KiB"
+ msgstr "%.1f КиБ"
+ 
+-#: ../src/util.cpp:164
++#: ../src/util.cpp:165
+ #, c-format
+ msgid "%.1f MiB"
+ msgstr "%.1f МиБ"
+ 
+-#: ../src/util.cpp:165
++#: ../src/util.cpp:166
+ #, c-format
+ msgid "%.1f GiB"
+ msgstr "%.1f ГиБ"
+ 
+-#: ../src/util.cpp:166
++#: ../src/util.cpp:167
+ #, c-format
+ msgid "%.1f TiB"
+ msgstr "%.1f ТиБ"
+ 
+-#: ../src/util.cpp:167
++#: ../src/util.cpp:168
+ #, c-format
+ msgid "%.3g kbit"
+ msgstr "%.3g Кбит"
+ 
+-#: ../src/util.cpp:168
++#: ../src/util.cpp:169
+ #, c-format
+ msgid "%.3g Mbit"
+ msgstr "%.3g Мбит"
+ 
+-#: ../src/util.cpp:169
++#: ../src/util.cpp:170
+ #, c-format
+ msgid "%.3g Gbit"
+ msgstr "%.3g Гбит"
+ 
+-#: ../src/util.cpp:170
++#: ../src/util.cpp:171
+ #, c-format
+ msgid "%.3g Tbit"
+ msgstr "%.3g Тбит"
+ 
+-#: ../src/util.cpp:185
++#: ../src/util.cpp:186
+ #, c-format
+ msgid "%u bit"
+ msgid_plural "%u bits"
+@@ -1339,7 +1331,7 @@
+ msgstr[1] "%u бита"
+ msgstr[2] "%u бит"
+ 
+-#: ../src/util.cpp:186
++#: ../src/util.cpp:187
+ #, c-format
+ msgid "%u byte"
+ msgid_plural "%u bytes"
+@@ -1347,52 +1339,28 @@
+ msgstr[1] "%u байта"
+ msgstr[2] "%u байт"
+ 
+-#: ../src/util.cpp:229
++#: ../src/util.cpp:230
+ msgid "Very High Priority"
+ msgstr "Очень высокий приоритет"
+ 
+-#: ../src/util.cpp:231
++#: ../src/util.cpp:232
+ msgid "High Priority"
+ msgstr "Высокий приоритет"
+ 
+-#: ../src/util.cpp:233
++#: ../src/util.cpp:234
+ msgid "Normal Priority"
+ msgstr "Обычный приоритет"
+ 
+-#: ../src/util.cpp:235
++#: ../src/util.cpp:236
+ msgid "Low Priority"
+ msgstr "Низкий приоритет"
+ 
+-#: ../src/util.cpp:237
++#: ../src/util.cpp:238
+ msgid "Very Low Priority"
+ msgstr "Очень низкий приоритет"
+ 
+ #. xgettext: rate, 10MiB/s or 10Mbit/s
+-#: ../src/util.cpp:629
++#: ../src/util.cpp:708
+ #, c-format
+ msgid "%s/s"
+ msgstr "%s/с"
+-
+-#~ msgid "_Name contains:"
+-#~ msgstr "_Имя содержит:"
+-
+-#~ msgid "_Find"
+-#~ msgstr "_Найти"
+-
+-#~ msgid "C_lear"
+-#~ msgstr "О_чистить"
+-
+-#~ msgid "S_earch results:"
+-#~ msgstr "_Результаты поиска:"
+-
+-#~ msgid "_Close"
+-#~ msgstr "_Закрыть"
+-
+-#~ msgid "_Help"
+-#~ msgstr "_Справка"
+-
+-#~ msgid "Process Properties"
+-#~ msgstr "Свойства процесса"
+-
+-#~ msgid "Properties of process \"%s\" (PID %u):"
+-#~ msgstr "Свойства процесса «%s» (PID %u):"
+diff -urN gnome-system-monitor-3.14.1/po/zh_CN.po gnome-system-monitor-3.14.1_localized/po/zh_CN.po
+--- gnome-system-monitor-3.14.1/po/zh_CN.po	2014-09-25 00:46:09.000000000 +0530
++++ gnome-system-monitor-3.14.1_localized/po/zh_CN.po	2016-03-15 16:11:04.699800961 +0530
+@@ -7,51 +7,47 @@
+ # Wind He <lofwind@gmail.com>, 2011.
+ # Mike Manilone <crtmike@gmail.com>, 2012.
+ # YunQiang Su <wzssyqa@gmail.com>, 2012.
+-#
++# pnemade <pnemade@redhat.com>, 2016. #zanata
+ msgid ""
+ msgstr ""
+ "Project-Id-Version: procman\n"
+-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=system-"
+-"monitor&keywords=I18N+L10N&component=general\n"
+-"POT-Creation-Date: 2014-08-20 04:18+0000\n"
+-"PO-Revision-Date: 2014-08-18 20:11+0800\n"
+-"Last-Translator: irisgyq <gouyingqiyanxuan321@gmail.com>\n"
+-"Language-Team: Chinese (simplified) <i18n-zh@googlegroups.com>\n"
+-"Language: zh_CN\n"
++"Report-Msgid-Bugs-To: \n"
++"POT-Creation-Date: 2016-02-10 09:58+0530\n"
+ "MIME-Version: 1.0\n"
+ "Content-Type: text/plain; charset=UTF-8\n"
+ "Content-Transfer-Encoding: 8bit\n"
++"PO-Revision-Date: 2014-08-18 12:11+0000\n"
++"Last-Translator: irisgyq <gouyingqiyanxuan321@gmail.com>\n"
++"Language-Team: Chinese (simplified) <i18n-zh@googlegroups.com>\n"
++"Language: zh-CN\n"
+ "Plural-Forms: nplurals=1; plural=0;\n"
+-"X-Generator: Poedit 1.5.4\n"
++"X-Generator: Zanata 3.8.2\n"
+ 
+ #: ../gnome-system-monitor.desktop.in.in.h:1 ../data/interface.ui.h:1
+-#: ../src/application.cpp:268 ../src/interface.cpp:363
++#: ../src/application.cpp:263 ../src/interface.cpp:371
+ msgid "System Monitor"
+ msgstr "系统监视器"
+ 
+ #: ../gnome-system-monitor.desktop.in.in.h:2
+-#: ../gnome-system-monitor-kde.desktop.in.in.h:2 ../src/interface.cpp:364
++#: ../gnome-system-monitor-kde.desktop.in.in.h:2 ../src/interface.cpp:372
+ msgid "View current processes and monitor system state"
+ msgstr "查看当前进程及监视系统状态"
+ 
+ #: ../gnome-system-monitor.desktop.in.in.h:3
+ msgid ""
+-"Monitor;System;Process;CPU;Memory;Network;History;Usage;Performance;Task;"
+-"Manager;"
++"Monitor;System;Process;CPU;Memory;Network;History;Usage;Performance;Task;Manager;"
+ msgstr ""
+-"Monitor;System;Process;CPU;Memory;Network;History;Usage;Performance;Task;"
+-"Manager;监视器;系统;进程;中央处理器;内存;网络;历史;用量;绩效;任务;管理员;"
++"Monitor;System;Process;CPU;Memory;Network;History;Usage;Performance;Task;Manager;监视器;系统;进程;中央处理器;内存;网络;历史;用量;绩效;任务;管理员;"
+ 
+ #: ../gnome-system-monitor-kde.desktop.in.in.h:1
+-#: ../gnome-system-monitor.appdata.xml.in.h:1 ../src/application.cpp:324
++#: ../gnome-system-monitor.appdata.xml.in.h:1 ../src/application.cpp:319
+ msgid "GNOME System Monitor"
+ msgstr "GNOME 系统监视器"
+ 
+ #: ../gnome-system-monitor-kde.desktop.in.in.h:3
+ msgid "Monitor;System;Process;CPU;Memory;Network;History;Usage;"
+ msgstr ""
+-"Monitor;System;Process;CPU;Memory;Network;History;Usage;监视器;系统;进程;内"
+-"存;网络;历史;使用;占用;用量;"
++"Monitor;System;Process;CPU;Memory;Network;History;Usage;监视器;系统;进程;内存;网络;历史;使用;占用;用量;"
+ 
+ #: ../gnome-system-monitor.appdata.xml.in.h:2
+ msgid "View and manage system resources"
+@@ -69,17 +65,13 @@
+ "processor or the memory of your computer, can manage the running "
+ "applications, force stop processes not responding, and change the state or "
+ "priority of existing processes."
+-msgstr ""
+-"系统监视器可帮您查看哪个程序正在使用计算机内存或处理器、管理正在运行的程序、"
+-"强制停止无响应的进程和更改已有进程的状态或优先级。"
++msgstr "系统监视器可帮您查看哪个程序正在使用计算机内存或处理器、管理正在运行的程序、强制停止无响应的进程和更改已有进程的状态或优先级。"
+ 
+ #: ../gnome-system-monitor.appdata.xml.in.h:5
+ msgid ""
+ "The resource graphs feature shows you a quick overview of what is going on "
+ "with your computer displaying recent network, memory and processor usage."
+-msgstr ""
+-"资源图表功能为您展示了计算机当前运行状态的快速预览，包括近期网络、内存和处理"
+-"器使用情况。"
++msgstr "资源图表功能为您展示了计算机当前运行状态的快速预览，包括近期网络、内存和处理器使用情况。"
+ 
+ #: ../org.gnome.gnome-system-monitor.policy.in.in.h:1
+ msgid "Kill process"
+@@ -117,12 +109,12 @@
+ msgid "Memory and Swap History"
+ msgstr "内存和交换历史"
+ 
+-#: ../data/interface.ui.h:7 ../src/interface.cpp:260
++#: ../data/interface.ui.h:7 ../src/interface.cpp:268
+ #: ../src/procproperties.cpp:92 ../src/proctable.cpp:337
+ msgid "Memory"
+ msgstr "内存"
+ 
+-#: ../data/interface.ui.h:8 ../src/interface.cpp:272
++#: ../data/interface.ui.h:8 ../src/interface.cpp:280
+ msgid "Swap"
+ msgstr "交换"
+ 
+@@ -130,7 +122,7 @@
+ msgid "Network History"
+ msgstr "网络历史"
+ 
+-#: ../data/interface.ui.h:10 ../src/interface.cpp:300
++#: ../data/interface.ui.h:10 ../src/interface.cpp:308
+ msgid "Receiving"
+ msgstr "正在接收"
+ 
+@@ -138,7 +130,7 @@
+ msgid "Total Received"
+ msgstr "总计已接收"
+ 
+-#: ../data/interface.ui.h:12 ../src/interface.cpp:315
++#: ../data/interface.ui.h:12 ../src/interface.cpp:323
+ msgid "Sending"
+ msgstr "正在发送"
+ 
+@@ -337,11 +329,9 @@
+ msgid ""
+ "<small><i><b>Note:</b> The priority of a process is given by its nice value. "
+ "A lower nice value corresponds to a higher priority.</i></small>"
+-msgstr ""
+-"<small><i><b>注：</b>进程的优先级由它的 nice 值指定。较低的 nice 值对应较高的"
+-"优先级。</i></small>"
++msgstr "<small><i><b>注：</b>进程的优先级由它的 nice 值指定。较低的 nice 值对应较高的优先级。</i></small>"
+ 
+-#: ../src/application.cpp:310
++#: ../src/application.cpp:305
+ msgid "A simple process and system monitor."
+ msgstr "简单的进程和系统监视器。"
+ 
+@@ -461,16 +451,16 @@
+ msgid "Pick a Color for '%s'"
+ msgstr "为“%s”拾取一种颜色"
+ 
+-#: ../src/interface.cpp:220 ../src/procproperties.cpp:100
++#: ../src/interface.cpp:228 ../src/procproperties.cpp:100
+ msgid "CPU"
+ msgstr "CPU"
+ 
+-#: ../src/interface.cpp:222
++#: ../src/interface.cpp:230
+ #, c-format
+ msgid "CPU%d"
+ msgstr "CPU%d"
+ 
+-#: ../src/interface.cpp:374
++#: ../src/interface.cpp:382
+ msgid "translator-credits"
+ msgstr ""
+ "GNOME 简体中文翻译 <i18n-translation@lists.linux.net.cn>.\n"
+@@ -657,8 +647,7 @@
+ "is divided by the total number of CPUs. Otherwise, it operates in 'Irix "
+ "mode'."
+ msgstr ""
+-"如果为 TRUE，系统监视器将工作在“Solaris 模式”，其中任务的 CPU 使用量将被除以"
+-"总的 CPU 数目。否则它将工作在“Irix 模式”。"
++"如果为 TRUE，系统监视器将工作在“Solaris 模式”，其中任务的 CPU 使用量将被除以总的 CPU 数目。否则它将工作在“Irix 模式”。"
+ 
+ #: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:6
+ msgid "Show CPU chart as stacked area chart"
+@@ -695,9 +684,7 @@
+ "Whether to display information about all file systems (including types like "
+ "'autofs' and 'procfs'). Useful for getting a list of all currently mounted "
+ "file systems."
+-msgstr ""
+-"是否应显示关于全部文件系统的信息(包含类似“autofs”和“procfs”的文件系统)。借此"
+-"功能可以获知当前挂载的所有文件系统。"
++msgstr "是否应显示关于全部文件系统的信息(包含类似“autofs”和“procfs”的文件系统)。借此功能可以获知当前挂载的所有文件系统。"
+ 
+ #: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:14
+ msgid "Time in milliseconds between updates of the devices list"
+@@ -1027,20 +1014,16 @@
+ 
+ #: ../src/procactions.cpp:75
+ #, c-format
+-msgid ""
+-"Cannot change the priority of process with PID %d to %d.\n"
++msgid "Cannot change the priority of process with PID %d to %d.\n"
+ "%s"
+-msgstr ""
+-"无法将 PID 为 %d 的进程的优先级更改为 %d\n"
++msgstr "无法将 PID 为 %d 的进程的优先级更改为 %d\n"
+ "%s"
+ 
+ #: ../src/procactions.cpp:153
+ #, c-format
+-msgid ""
+-"Cannot kill process with PID %d with signal %d.\n"
++msgid "Cannot kill process with PID %d with signal %d.\n"
+ "%s"
+-msgstr ""
+-"无法用信号 %2$d 杀死 PID 为 %1$d 的进程。\n"
++msgstr "无法用信号 %2$d 杀死 PID 为 %1$d 的进程。\n"
+ "%3$s"
+ 
+ #. xgettext: primary alert message for killing single process
+@@ -1074,8 +1057,7 @@
+ msgid ""
+ "Killing a process may destroy data, break the session or introduce a "
+ "security risk. Only unresponsive processes should be killed."
+-msgstr ""
+-"杀死进程可能导致数据损坏，中断会话或带来安全风险。您应该只杀死无响应的进程。"
++msgstr "杀死进程可能导致数据损坏，中断会话或带来安全风险。您应该只杀死无响应的进程。"
+ 
+ #: ../src/procdialogs.cpp:101
+ msgid "_Kill Process"
+@@ -1109,7 +1091,7 @@
+ msgstr "进程的优先级由它的 nice 值指定。较低的 nice 值对应较高的优先级。"
+ 
+ #: ../src/procproperties.cpp:55 ../src/procproperties.cpp:106
+-#: ../src/procproperties.cpp:109 ../src/util.cpp:432
++#: ../src/procproperties.cpp:109 ../src/util.cpp:510
+ msgid "N/A"
+ msgstr "不适用"
+ 
+@@ -1333,222 +1315,7 @@
+ msgstr "非常低优先级"
+ 
+ #. xgettext: rate, 10MiB/s or 10Mbit/s
+-#: ../src/util.cpp:630
++#: ../src/util.cpp:708
+ #, c-format
+ msgid "%s/s"
+ msgstr "%s/秒"
+-
+-#~ msgid "_Name contains:"
+-#~ msgstr "名称包含(_N)："
+-
+-#~ msgid "_Find"
+-#~ msgstr "查找(_F)"
+-
+-#~ msgid "C_lear"
+-#~ msgstr "清除(_L)"
+-
+-#~ msgid "S_earch results:"
+-#~ msgstr "搜索结果(_E)："
+-
+-#~ msgid "_Close"
+-#~ msgstr "关闭(_C)"
+-
+-#~ msgid "_Help"
+-#~ msgstr "帮助(_H)"
+-
+-#~ msgid "Process Properties"
+-#~ msgstr "进程属性"
+-
+-#~ msgid "Properties of process \"%s\" (PID %u):"
+-#~ msgstr "进程“%s”(PID %u)的属性："
+-
+-#~ msgid "Privileges are required to kill process"
+-#~ msgstr "杀死进程需要权限"
+-
+-#~ msgid "View"
+-#~ msgstr "查看"
+-
+-#~ msgid "Sent"
+-#~ msgstr "已发送"
+-
+-#~ msgid "_View"
+-#~ msgstr "查看(_V)"
+-
+-#~ msgid "_Stop Process"
+-#~ msgstr "停止进程(_S)"
+-
+-#~ msgid "Stop process"
+-#~ msgstr "停止进程"
+-
+-#~ msgid "Continue process if stopped"
+-#~ msgstr "如果进程已停止，则继续进程"
+-
+-#~ msgid "Force process to finish normally"
+-#~ msgstr "强行中止一个进程"
+-
+-#~ msgid "Force process to finish immediately"
+-#~ msgstr "立即强行结束一个进程"
+-
+-#~ msgid "Refresh the process list"
+-#~ msgstr "刷新进程列表"
+-
+-#~ msgid "Open the memory maps associated with a process"
+-#~ msgstr "打开与进程关联的内存映射"
+-
+-#~ msgid "View the files opened by a process"
+-#~ msgstr "查看进程所打开的文件"
+-
+-#~ msgid "View additional information about a process"
+-#~ msgstr "浏览某个进程的附加信息"
+-
+-#~ msgid "Show parent/child relationship between processes"
+-#~ msgstr "显示进程间的父子关系"
+-
+-#~ msgid "Show active processes"
+-#~ msgstr "显示活动的进程"
+-
+-#~ msgid "Show all processes"
+-#~ msgstr "显示全部进程"
+-
+-#~ msgid "Show only user-owned processes"
+-#~ msgstr "仅显示用户所有的进程"
+-
+-#~ msgid "Set process priority to very high"
+-#~ msgstr "将进程优先级设置为非常高"
+-
+-#~ msgid "Set process priority to high"
+-#~ msgstr "将进程优先级设置为高"
+-
+-#~ msgid "Set process priority to normal"
+-#~ msgstr "将进程优先级设置为普通"
+-
+-#~ msgid "Set process priority to low"
+-#~ msgstr "将进程优先级设置为低"
+-
+-#~ msgid "Set process priority to very low"
+-#~ msgstr "将进程优先级设置为非常低"
+-
+-#~ msgid "Set process priority manually"
+-#~ msgstr "手动设置进程优先级"
+-
+-#~ msgid "Main Window width"
+-#~ msgstr "主窗口宽度"
+-
+-#~ msgid "Main Window height"
+-#~ msgstr "主窗口高度"
+-
+-#~ msgid "Main Window X position"
+-#~ msgstr "主窗口水平位置"
+-
+-#~ msgid "Main Window Y position"
+-#~ msgstr "主窗口竖直位置"
+-
+-#~ msgid ""
+-#~ "Determines which processes to show by default. 0 is All, 1 is user, and 2 "
+-#~ "is active"
+-#~ msgstr "确定默认情况下要显示哪些进程。0 代表全部，1 代表用户，2 代表活动"
+-
+-#~ msgid ""
+-#~ "0 for the System Info, 1 for the processes list, 2 for the resources and "
+-#~ "3 for the disks list"
+-#~ msgstr "0 代表系统信息，1 代表进程列表，2 代表资源，3 代表磁盘列表"
+-
+-#~ msgid ""
+-#~ "Ending a process may destroy data, break the session or introduce a "
+-#~ "security risk. Only unresponsive processes should be ended."
+-#~ msgstr ""
+-#~ "结束进程可能导致数据损坏，中断会话或带来安全风险。您应该只结束无响应的进"
+-#~ "程。"
+-
+-#~ msgid "Load averages for the last 1, 5, 15 minutes: %0.2f, %0.2f, %0.2f"
+-#~ msgstr "前一分钟、五分钟、十五分钟的平均负载：%0.2f，%0.2f，%0.2f"
+-
+-#~ msgid "System"
+-#~ msgstr "系统"
+-
+-#~ msgid "Show the System tab"
+-#~ msgstr "显示系统标签页"
+-
+-#~ msgid "_Monitor"
+-#~ msgstr "监视器(_M)"
+-
+-#~ msgid "_Edit"
+-#~ msgstr "编辑(_E)"
+-
+-#~ msgid "Search for _Open Files"
+-#~ msgstr "搜索打开的文件(_O)"
+-
+-#~ msgid "Quit the program"
+-#~ msgstr "退出程序"
+-
+-#~ msgid "_Contents"
+-#~ msgstr "目录(_C)"
+-
+-#~ msgid "Open the manual"
+-#~ msgstr "打开手册"
+-
+-#~ msgid "About this application"
+-#~ msgstr "关于此应用程序"
+-
+-#~ msgid "(%s Priority)"
+-#~ msgstr "(%s优先级)"
+-
+-#~ msgid "Release %s %s"
+-#~ msgstr "版本 %s %s"
+-
+-#~ msgid "%d-bit"
+-#~ msgstr "%d 位"
+-
+-#~ msgid "Kernel %s"
+-#~ msgstr "内核 %s"
+-
+-#~ msgid "GNOME %s"
+-#~ msgstr "GNOME %s"
+-
+-#~ msgid "Hardware"
+-#~ msgstr "硬件"
+-
+-#~ msgid "Memory:"
+-#~ msgstr "内存："
+-
+-#~ msgid "Processor:"
+-#~ msgstr "处理器："
+-
+-#~ msgid "System Status"
+-#~ msgstr "系统状态"
+-
+-#~ msgid "Available disk space:"
+-#~ msgstr "可用的磁盘空间："
+-
+-#~ msgid "Unknown model"
+-#~ msgstr "未知型号"
+-
+-#~ msgid "<i>N/A</i>"
+-#~ msgstr "<i>不可用</i>"
+-
+-#~ msgid "_Change Priority…"
+-#~ msgstr "改变优先级(_C)..."
+-
+-#~ msgid "Default graph CPU color"
+-#~ msgstr "图形中 CPU 的默认颜色"
+-
+-#~ msgid "Processor %d:"
+-#~ msgstr "处理器 %d："
+-
+-#~ msgid "_Change Priority..."
+-#~ msgstr "更改优先级(_C)..."
+-
+-#~ msgid "Show process 'arguments' column on startup"
+-#~ msgstr "启动时显示进程“参数”列"
+-
+-#~ msgid "Show process 'estimated memory usage' column on startup"
+-#~ msgstr "启动时显示进程“预计内存使用”列"
+-
+-#~ msgid "Width of process 'arguments' column"
+-#~ msgstr "进程参数列的宽度"
+-
+-#~ msgid "Width of process 'estimated memory usage' column"
+-#~ msgstr "预计内存占用列的宽度"
+-
+-#~ msgid "Solaris mode"
+-#~ msgstr "Solaris 模式"
+diff -urN gnome-system-monitor-3.14.1/po/zh_TW.po gnome-system-monitor-3.14.1_localized/po/zh_TW.po
+--- gnome-system-monitor-3.14.1/po/zh_TW.po	2014-09-25 00:46:09.000000000 +0530
++++ gnome-system-monitor-3.14.1_localized/po/zh_TW.po	2016-03-15 16:11:04.708801902 +0530
+@@ -5,52 +5,47 @@
+ # Chao-Hsiung Liao  <j_h_liau@yahoo.com.tw>, 2008, 2009.
+ # Wei-Lun Chao <chaoweilun@gmail.com>, 2010.
+ # Pin-hsien Li <pspeter9931@gmail.com>, 2011.
+-#
++# pnemade <pnemade@redhat.com>, 2016. #zanata
+ msgid ""
+ msgstr ""
+ "Project-Id-Version: gnome-system-monitor 3.3.4\n"
+-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=system-"
+-"monitor&keywords=I18N+L10N&component=general\n"
+-"POT-Creation-Date: 2014-08-18 19:44+0000\n"
+-"PO-Revision-Date: 2014-08-19 14:49+0800\n"
+-"Last-Translator: Chao-Hsiung Liao <j_h_liau@yahoo.com.tw>\n"
+-"Language-Team: Chinese (Taiwan) <zh-l10n@lists.linux.org.tw>\n"
+-"Language: zh_TW\n"
++"Report-Msgid-Bugs-To: \n"
++"POT-Creation-Date: 2016-02-10 09:58+0530\n"
+ "MIME-Version: 1.0\n"
+ "Content-Type: text/plain; charset=UTF-8\n"
+ "Content-Transfer-Encoding: 8bit\n"
++"PO-Revision-Date: 2014-08-19 06:49+0000\n"
++"Last-Translator: Chao-Hsiung Liao <j_h_liau@yahoo.com.tw>\n"
++"Language-Team: Chinese (Taiwan) <zh-l10n@lists.linux.org.tw>\n"
++"Language: zh-TW\n"
+ "Plural-Forms: nplurals=1; plural=0;\n"
+-"X-Generator: Poedit 1.6.5\n"
++"X-Generator: Zanata 3.8.2\n"
+ 
+ #: ../gnome-system-monitor.desktop.in.in.h:1 ../data/interface.ui.h:1
+-#: ../src/application.cpp:268 ../src/interface.cpp:363
++#: ../src/application.cpp:263 ../src/interface.cpp:371
+ msgid "System Monitor"
+ msgstr "系統監控"
+ 
+ #: ../gnome-system-monitor.desktop.in.in.h:2
+-#: ../gnome-system-monitor-kde.desktop.in.in.h:2 ../src/interface.cpp:364
++#: ../gnome-system-monitor-kde.desktop.in.in.h:2 ../src/interface.cpp:372
+ msgid "View current processes and monitor system state"
+ msgstr "顯示目前的程序並監控系統的狀態"
+ 
+ #: ../gnome-system-monitor.desktop.in.in.h:3
+-#| msgid "Monitor;System;Process;CPU;Memory;Network;History;Usage;"
+ msgid ""
+-"Monitor;System;Process;CPU;Memory;Network;History;Usage;Performance;Task;"
+-"Manager;"
++"Monitor;System;Process;CPU;Memory;Network;History;Usage;Performance;Task;Manager;"
+ msgstr ""
+-"Monitor;System;Process;CPU;Memory;Network;History;Usage;Performance;Task;"
+-"Manager;監視器;系統;處理器;記憶體;網路;紀錄;使用量;效能;工作;管理程式;"
++"Monitor;System;Process;CPU;Memory;Network;History;Usage;Performance;Task;Manager;監視器;系統;處理器;記憶體;網路;紀錄;使用量;效能;工作;管理程式;"
+ 
+ #: ../gnome-system-monitor-kde.desktop.in.in.h:1
+-#: ../gnome-system-monitor.appdata.xml.in.h:1 ../src/application.cpp:324
++#: ../gnome-system-monitor.appdata.xml.in.h:1 ../src/application.cpp:319
+ msgid "GNOME System Monitor"
+ msgstr "GNOME 系統監控程式"
+ 
+ #: ../gnome-system-monitor-kde.desktop.in.in.h:3
+ msgid "Monitor;System;Process;CPU;Memory;Network;History;Usage;"
+ msgstr ""
+-"Monitor;System;Process;CPU;Memory;Network;History;Usage;監視器;系統;處理器;記"
+-"憶體;網路;紀錄;使用量;"
++"Monitor;System;Process;CPU;Memory;Network;History;Usage;監視器;系統;處理器;記憶體;網路;紀錄;使用量;"
+ 
+ #: ../gnome-system-monitor.appdata.xml.in.h:2
+ msgid "View and manage system resources"
+@@ -69,16 +64,13 @@
+ "applications, force stop processes not responding, and change the state or "
+ "priority of existing processes."
+ msgstr ""
+-"系統監控可以協助您找出哪個應用程式正在使用電腦上的處理器或記憶體，可以管理執"
+-"行中的應用程式，強制沒有回應的程序停止，以及改變現有程序的狀態或優先等級。"
++"系統監控可以協助您找出哪個應用程式正在使用電腦上的處理器或記憶體，可以管理執行中的應用程式，強制沒有回應的程序停止，以及改變現有程序的狀態或優先等級。"
+ 
+ #: ../gnome-system-monitor.appdata.xml.in.h:5
+ msgid ""
+ "The resource graphs feature shows you a quick overview of what is going on "
+ "with your computer displaying recent network, memory and processor usage."
+-msgstr ""
+-"資源圖表功能顯示出您的電腦目前情況的快速概覽，包含目前網路、記憶體與處理器的"
+-"使用量。"
++msgstr "資源圖表功能顯示出您的電腦目前情況的快速概覽，包含目前網路、記憶體與處理器的使用量。"
+ 
+ #: ../org.gnome.gnome-system-monitor.policy.in.in.h:1
+ msgid "Kill process"
+@@ -116,12 +108,12 @@
+ msgid "Memory and Swap History"
+ msgstr "記憶體/交換記憶使用量記錄"
+ 
+-#: ../data/interface.ui.h:7 ../src/interface.cpp:260
++#: ../data/interface.ui.h:7 ../src/interface.cpp:268
+ #: ../src/procproperties.cpp:92 ../src/proctable.cpp:337
+ msgid "Memory"
+ msgstr "記憶體"
+ 
+-#: ../data/interface.ui.h:8 ../src/interface.cpp:272
++#: ../data/interface.ui.h:8 ../src/interface.cpp:280
+ msgid "Swap"
+ msgstr "置換"
+ 
+@@ -129,7 +121,7 @@
+ msgid "Network History"
+ msgstr "網路記錄"
+ 
+-#: ../data/interface.ui.h:10 ../src/interface.cpp:300
++#: ../data/interface.ui.h:10 ../src/interface.cpp:308
+ msgid "Receiving"
+ msgstr "接收中"
+ 
+@@ -137,7 +129,7 @@
+ msgid "Total Received"
+ msgstr "總共接收"
+ 
+-#: ../data/interface.ui.h:12 ../src/interface.cpp:315
++#: ../data/interface.ui.h:12 ../src/interface.cpp:323
+ msgid "Sending"
+ msgstr "傳送中"
+ 
+@@ -163,7 +155,6 @@
+ msgstr "依名稱過濾隱藏檔案"
+ 
+ #: ../data/lsof.ui.h:3
+-#| msgid "Case insensitive matching"
+ msgid "Case insensitive"
+ msgstr "區分大小寫"
+ 
+@@ -339,10 +330,9 @@
+ "<small><i><b>Note:</b> The priority of a process is given by its nice value. "
+ "A lower nice value corresponds to a higher priority.</i></small>"
+ msgstr ""
+-"<small><i><b>注意：</b> 程序是否優先執行可由它的 nice 值得出。較低的 nice 值"
+-"表示較優先執行。</i></small>"
++"<small><i><b>注意：</b> 程序是否優先執行可由它的 nice 值得出。較低的 nice 值表示較優先執行。</i></small>"
+ 
+-#: ../src/application.cpp:310
++#: ../src/application.cpp:305
+ msgid "A simple process and system monitor."
+ msgstr "簡易的程序和系統監視器。"
+ 
+@@ -462,16 +452,16 @@
+ msgid "Pick a Color for '%s'"
+ msgstr "挑選「%s」的顏色"
+ 
+-#: ../src/interface.cpp:220 ../src/procproperties.cpp:100
++#: ../src/interface.cpp:228 ../src/procproperties.cpp:100
+ msgid "CPU"
+ msgstr "CPU"
+ 
+-#: ../src/interface.cpp:222
++#: ../src/interface.cpp:230
+ #, c-format
+ msgid "CPU%d"
+ msgstr "CPU%d"
+ 
+-#: ../src/interface.cpp:374
++#: ../src/interface.cpp:382
+ msgid "translator-credits"
+ msgstr ""
+ "如對翻譯有任何意見，請送一封電子郵件給\n"
+@@ -508,27 +498,25 @@
+ 
+ #: ../src/lsof.cpp:128
+ #, c-format
+-#| msgid "Open Files"
+ msgid "%d open file"
+ msgid_plural "%d open files"
+ msgstr[0] "%d 個開啟的檔案"
+ 
+ #: ../src/lsof.cpp:130
+ #, c-format
+-#| msgid "Search for open files"
+ msgid "%d matching open file"
+ msgid_plural "%d matching open files"
+ msgstr[0] "%d 個符合開啟的檔案"
+ 
+-#: ../src/lsof.cpp:248
++#: ../src/lsof.cpp:246
+ msgid "Process"
+ msgstr "程序"
+ 
+-#: ../src/lsof.cpp:260
++#: ../src/lsof.cpp:258
+ msgid "PID"
+ msgstr "PID"
+ 
+-#: ../src/lsof.cpp:270 ../src/memmaps.cpp:303
++#: ../src/lsof.cpp:268 ../src/memmaps.cpp:303
+ msgid "Filename"
+ msgstr "檔案名稱"
+ 
+@@ -584,11 +572,11 @@
+ msgid "Inode"
+ msgstr "Inode"
+ 
+-#: ../src/memmaps.cpp:437
++#: ../src/memmaps.cpp:436
+ msgid "Memory Maps"
+ msgstr "記憶對映"
+ 
+-#: ../src/memmaps.cpp:449
++#: ../src/memmaps.cpp:448
+ #, c-format
+ msgid "_Memory maps for process \"%s\" (PID %u):"
+ msgstr "程序 “%s” (_PID %u) 的記憶配置："
+@@ -628,7 +616,7 @@
+ msgid "Object"
+ msgstr "物件"
+ 
+-#: ../src/openfiles.cpp:337
++#: ../src/openfiles.cpp:336
+ #, c-format
+ msgid "_Files opened by process \"%s\" (PID %u):"
+ msgstr "程序 “%s” (PI_D %u) 所開啟的檔案:"
+@@ -655,8 +643,8 @@
+ "is divided by the total number of CPUs. Otherwise, it operates in 'Irix "
+ "mode'."
+ msgstr ""
+-"如設為 TRUE，system-monitor 會以「Solaris 模式」運行，即每個工作的 CPU 使用量"
+-"會除以總 CPU 數來均分。否則它會以「Irix 模式」運行。"
++"如設為 TRUE，system-monitor 會以「Solaris 模式」運行，即每個工作的 CPU 使用量會除以總 CPU "
++"數來均分。否則它會以「Irix 模式」運行。"
+ 
+ #: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:6
+ msgid "Show CPU chart as stacked area chart"
+@@ -666,8 +654,7 @@
+ msgid ""
+ "If TRUE, system-monitor shows the CPU chart as a stacked area chart instead "
+ "of a line chart."
+-msgstr ""
+-"如果設定為 TRUE，system-monitor 會將 CPU 圖表顯示為堆疊區域圖表而非長條圖。"
++msgstr "如果設定為 TRUE，system-monitor 會將 CPU 圖表顯示為堆疊區域圖表而非長條圖。"
+ 
+ #: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:8
+ msgid "Enable/Disable smooth refresh"
+@@ -695,8 +682,7 @@
+ "'autofs' and 'procfs'). Useful for getting a list of all currently mounted "
+ "file systems."
+ msgstr ""
+-"是否要顯示關於所有檔案系統的資訊 (這裡包括了像「autofs」和「procfs」這種檔案"
+-"類型)。在取得目前所有掛載的檔案系統清單時會很有用。"
++"是否要顯示關於所有檔案系統的資訊 (這裡包括了像「autofs」和「procfs」這種檔案類型)。在取得目前所有掛載的檔案系統清單時會很有用。"
+ 
+ #: ../src/org.gnome.gnome-system-monitor.gschema.xml.in.in.h:14
+ msgid "Time in milliseconds between updates of the devices list"
+@@ -1026,20 +1012,16 @@
+ 
+ #: ../src/procactions.cpp:75
+ #, c-format
+-msgid ""
+-"Cannot change the priority of process with PID %d to %d.\n"
++msgid "Cannot change the priority of process with PID %d to %d.\n"
+ "%s"
+-msgstr ""
+-"無法將 PID 為 %d 的程序之優先等級變更為 %d。\n"
++msgstr "無法將 PID 為 %d 的程序之優先等級變更為 %d。\n"
+ "%s"
+ 
+ #: ../src/procactions.cpp:153
+ #, c-format
+-msgid ""
+-"Cannot kill process with PID %d with signal %d.\n"
++msgid "Cannot kill process with PID %d with signal %d.\n"
+ "%s"
+-msgstr ""
+-"不能用 signal %2$d 來強行終止 PID 為 %1$d 的程序。\n"
++msgstr "不能用 signal %2$d 來強行終止 PID 為 %1$d 的程序。\n"
+ "%3$s"
+ 
+ #. xgettext: primary alert message for killing single process
+@@ -1073,9 +1055,7 @@
+ msgid ""
+ "Killing a process may destroy data, break the session or introduce a "
+ "security risk. Only unresponsive processes should be killed."
+-msgstr ""
+-"強行終止程序可能導致損失資料，中斷作業階段，甚至可以造成安全性漏洞。請只強行"
+-"終止無回應的程序。"
++msgstr "強行終止程序可能導致損失資料，中斷作業階段，甚至可以造成安全性漏洞。請只強行終止無回應的程序。"
+ 
+ #: ../src/procdialogs.cpp:101
+ msgid "_Kill Process"
+@@ -1109,7 +1089,7 @@
+ msgstr "程序是否優先執行可由它的 nice 值得出。較低的 nice 值表示較優先執行。"
+ 
+ #: ../src/procproperties.cpp:55 ../src/procproperties.cpp:106
+-#: ../src/procproperties.cpp:109 ../src/util.cpp:432
++#: ../src/procproperties.cpp:109 ../src/util.cpp:510
+ msgid "N/A"
+ msgstr "N/A"
+ 
+@@ -1189,7 +1169,7 @@
+ msgid "Control Group"
+ msgstr "控制群組"
+ 
+-#: ../src/procproperties.cpp:222
++#: ../src/procproperties.cpp:221
+ #, c-format
+ msgid "%s (PID %u)"
+ msgstr "%s (PID %u)"
+@@ -1335,218 +1315,7 @@
+ msgstr "非常低優先等級"
+ 
+ #. xgettext: rate, 10MiB/s or 10Mbit/s
+-#: ../src/util.cpp:630
++#: ../src/util.cpp:708
+ #, c-format
+ msgid "%s/s"
+ msgstr "%s/s"
+-
+-#~ msgid "_Name contains:"
+-#~ msgstr "名稱包含(_N):"
+-
+-#~ msgid "_Find"
+-#~ msgstr "尋找(_F)"
+-
+-#~ msgid "C_lear"
+-#~ msgstr "清除(_L)"
+-
+-#~ msgid "S_earch results:"
+-#~ msgstr "搜尋結果(_E):"
+-
+-#~ msgid "_Close"
+-#~ msgstr "關閉(_C)"
+-
+-#~ msgid "Process Properties"
+-#~ msgstr "程序屬性"
+-
+-#~ msgid "Properties of process \"%s\" (PID %u):"
+-#~ msgstr "程序「%s」的屬性 (PID %u)："
+-
+-#~| msgid "Help"
+-#~ msgid "_Help"
+-#~ msgstr "求助(_H)"
+-
+-#~ msgid "Sensitive"
+-#~ msgstr "敏感度"
+-
+-#~ msgid "The sensitivity value"
+-#~ msgstr "敏感度的數值"
+-
+-#~| msgid "Show process 'Memory' column on startup"
+-#~ msgid "Show processor usage graph"
+-#~ msgstr "顯示處理器使用率圖表"
+-
+-#~ msgid "Show memory and swap usage graph"
+-#~ msgstr "顯示記憶體與置換區使用率圖表"
+-
+-#~| msgid "Show network traffic in bits"
+-#~ msgid "Show network traffic graph"
+-#~ msgstr "顯示網路流量圖表"
+-
+-#~ msgid "Load averages for the last 1, 5, 15 minutes: %0.2f, %0.2f, %0.2f"
+-#~ msgstr "最後 1、5、15 分鐘的平均負載：%0.2f, %0.2f, %0.2f"
+-
+-#~ msgid "Privileges are required to kill process"
+-#~ msgstr "強行終止程序需要管理權限"
+-
+-#~ msgid "View"
+-#~ msgstr "檢視"
+-
+-#~ msgid "Sent"
+-#~ msgstr "已傳送"
+-
+-#~ msgid "_View"
+-#~ msgstr "檢視(_V)"
+-
+-#~ msgid "_Stop Process"
+-#~ msgstr "停止程序(_S)"
+-
+-#~ msgid "Stop process"
+-#~ msgstr "停止程序"
+-
+-#~ msgid "Continue process if stopped"
+-#~ msgstr "繼續已被停止的程序"
+-
+-#~ msgid "Force process to finish normally"
+-#~ msgstr "立刻以正常方式終止程序"
+-
+-#~ msgid "Force process to finish immediately"
+-#~ msgstr "立刻強行終止程序"
+-
+-#~ msgid "Refresh the process list"
+-#~ msgstr "重新整理程序清單"
+-
+-#~ msgid "Open the memory maps associated with a process"
+-#~ msgstr "顯示該程序的記憶對映情況"
+-
+-#~ msgid "View the files opened by a process"
+-#~ msgstr "顯示該程序開啟了哪些檔案"
+-
+-#~ msgid "View additional information about a process"
+-#~ msgstr "檢視關於程序的額外資訊"
+-
+-#~ msgid "Show parent/child relationship between processes"
+-#~ msgstr "顯示各程序之間的主從關係"
+-
+-#~ msgid "Show active processes"
+-#~ msgstr "顯示運行中的程序"
+-
+-#~ msgid "Show all processes"
+-#~ msgstr "顯示所有程序"
+-
+-#~ msgid "Show only user-owned processes"
+-#~ msgstr "顯示使用者擁有的程序"
+-
+-#~ msgid "Set process priority to very high"
+-#~ msgstr "將優先等級設為非常高"
+-
+-#~ msgid "Set process priority to high"
+-#~ msgstr "將程序優先等級設為高"
+-
+-#~ msgid "Set process priority to normal"
+-#~ msgstr "將程序的優先等級設為一般"
+-
+-#~ msgid "Set process priority to low"
+-#~ msgstr "將程序優先等級設為低"
+-
+-#~ msgid "Set process priority to very low"
+-#~ msgstr "將優先等級設為非常低"
+-
+-#~ msgid "Set process priority manually"
+-#~ msgstr "手動程序優先等級"
+-
+-#~ msgid "Main Window width"
+-#~ msgstr "主視窗寬度"
+-
+-#~ msgid "Main Window height"
+-#~ msgstr "主視窗高度"
+-
+-#~ msgid "Main Window X position"
+-#~ msgstr "主視窗 X 位置"
+-
+-#~ msgid "Main Window Y position"
+-#~ msgstr "主視窗 Y 位置"
+-
+-#~ msgid ""
+-#~ "Determines which processes to show by default. 0 is All, 1 is user, and 2 "
+-#~ "is active"
+-#~ msgstr ""
+-#~ "決定顯示哪一類程序。0 表示全部，1 只顯示用家自己的程序，2 只顯示目前仍然活"
+-#~ "躍的程序。"
+-
+-#~ msgid ""
+-#~ "0 for the System Info, 1 for the processes list, 2 for the resources and "
+-#~ "3 for the disks list"
+-#~ msgstr "0  為系統資訊，1 為程序清單，2 為資源，3 為磁碟清單"
+-
+-#~ msgid ""
+-#~ "Ending a process may destroy data, break the session or introduce a "
+-#~ "security risk. Only unresponsive processes should be ended."
+-#~ msgstr ""
+-#~ "結束程序可能導致損失資料，中斷作業階段，甚至可以造成安全性漏洞。請只結束無"
+-#~ "回應的程序。"
+-
+-#~ msgid "System"
+-#~ msgstr "系統"
+-
+-#~ msgid "\n"
+-#~ msgstr "\n"
+-
+-#~ msgid "Show the System tab"
+-#~ msgstr "顯示系統分頁"
+-
+-#~ msgid "_Monitor"
+-#~ msgstr "監控(_M)"
+-
+-#~ msgid "_Edit"
+-#~ msgstr "編輯(_E)"
+-
+-#~ msgid "Search for _Open Files"
+-#~ msgstr "搜尋已開啟檔案(_O)"
+-
+-#~ msgid "Quit the program"
+-#~ msgstr "離開本程式"
+-
+-#~ msgid "_Contents"
+-#~ msgstr "內容(_C)"
+-
+-#~ msgid "Open the manual"
+-#~ msgstr "開啟使用手冊"
+-
+-#~ msgid "About this application"
+-#~ msgstr "關於此程式"
+-
+-#~ msgid "(%s Priority)"
+-#~ msgstr "(%s優先等級)"
+-
+-#~ msgid "Release %s %s"
+-#~ msgstr "發行版本 %s %s"
+-
+-#~ msgid "%d-bit"
+-#~ msgstr "%d-位元"
+-
+-#~ msgid "Kernel %s"
+-#~ msgstr "核心 %s"
+-
+-#~ msgid "GNOME %s"
+-#~ msgstr "GNOME %s"
+-
+-#~ msgid "Hardware"
+-#~ msgstr "硬體"
+-
+-#~ msgid "Memory:"
+-#~ msgstr "記憶體："
+-
+-#~ msgid "Processor:"
+-#~ msgstr "處理器："
+-
+-#~ msgid "System Status"
+-#~ msgstr "系統狀態"
+-
+-#~ msgid "Available disk space:"
+-#~ msgstr "磁碟可用空間："
+-
+-#~ msgid "<i>N/A</i>"
+-#~ msgstr "<i>N/A</i>"
+-
+-#~ msgid "Unknown model"
+-#~ msgstr "不明的型號"

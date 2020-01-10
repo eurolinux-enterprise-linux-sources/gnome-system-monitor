@@ -9,7 +9,7 @@
 Summary: Process and resource monitor
 Name: gnome-system-monitor
 Version: 3.14.1
-Release: 3%{?dist}
+Release: 4%{?dist}
 License: GPLv2+
 Group: Applications/System
 URL: http://www.gnome.org/
@@ -21,6 +21,8 @@ Patch1: 0001-Fix-desktop-file-keywords-translation-syntax-error.patch
 Patch2: gnome-system-monitor-3.14.1-high-n-cpus.patch
 # https://bugzilla.redhat.com/show_bug.cgi?id=1254332
 Patch3: gnome-system-monitor-3.14.1-improve-ncpu-detection.patch
+# https://bugzilla.redhat.com/show_bug.cgi?id=1272383
+Patch4: gnome-system-monitor-3.14.1-translations.patch
 
 BuildRequires: libgtop2-devel >= %{libgtop2_version}
 BuildRequires: libwnck3-devel >= %{libwnck_version}
@@ -47,6 +49,7 @@ such as CPU and memory.
 %patch1 -p1
 %patch2 -p1 -b .CPUs
 %patch3 -p1 -b .nCPUs
+%patch4 -p1 -b .translations
 
 %build
 %configure --enable-systemd
@@ -81,6 +84,9 @@ glib-compile-schemas %{_datadir}/glib-2.0/schemas &>/dev/null || :
 %{_libexecdir}/gnome-system-monitor/gsm-*
 
 %changelog
+* Tue Mar 29 2016 David King <dking@redhat.com> - 3.14.1-4
+- Update translations (#1272383)
+
 * Thu Aug 20 2015 David King <dking@redhat.com> - 3.14.1-3
 - Improve detection of number of CPUs (#1254332)
 

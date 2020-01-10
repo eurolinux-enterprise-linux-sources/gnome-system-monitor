@@ -37,15 +37,15 @@
       <mal:email>jhardlin@orange.fr</mal:email>
       <mal:years>2014</mal:years>
     </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Leonor Palazzo</mal:name>
+      <mal:email>leonor.palazzo@gmail.com</mal:email>
+      <mal:years>2015</mal:years>
+    </mal:credit>
   </info>
 
   <title>Définition du mode Solaris</title>
-
-  <comment>
-    <cite date="2011-06-18" href="mailto:philbull@gmail.com">Phil Bull</cite>
-    <p>Very brief topic. Explain what "Solaris mode" in the preferences dialog
- means. The current manual has some information.</p>
-  </comment>
 
   <p>Dans un système qui a plusieurs CPU ou <link xref="cpu-multicore">cœurs</link>, les processus peuvent en utiliser plus d'un en même temps. Il est possible que la colonne <gui>% CPU</gui> affiche des valeurs supérieures à 100% (par exemple 400% dans un système à 4 cœurs). Le <gui>Mode Solaris</gui> divise le <gui>% CPU</gui> pour chaque processus par le nombre de CPU du système pour que le total soit 100%.</p>
 

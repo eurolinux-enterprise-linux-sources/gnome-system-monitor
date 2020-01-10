@@ -17,7 +17,13 @@
       <years>2014</years>
     </credit>
 
-    <desc>πληροφορίες για τη παρακολούθηση του συστήματος μπορούν επίσης να βρεθούν χρησιμοποιώντας τα εργαλεία της γραμμής εντολών.</desc>
+    <desc>Πληροφορίες για τη παρακολούθηση του συστήματος μπορούν επίσης να βρεθούν χρησιμοποιώντας τα εργαλεία της γραμμής εντολών.</desc>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Ελληνική μεταφραστική ομάδα GNOME</mal:name>
+      <mal:email>team@gnome.gr</mal:email>
+      <mal:years>2014</mal:years>
+    </mal:credit>
   
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name> Δημήτρης Σπίγγος</mal:name>
@@ -27,12 +33,6 @@
   </info>
 
   <title>Λήψη των ίδιων πληροφοριών από τη γραμμή εντολών</title>
-
-  <comment>
-    <cite date="2011-06-18" href="mailto:philbull@gmail.com">Phil Bull</cite>
-    <p>Briefly list a few useful command line tools which can provide some of
-    the same information as System Monitor. Don't go into too much detail.</p>
-  </comment>
 
   <p>Οι περισσότερες από τις εμφανιζόμενες πληροφορίες από την παρακολούθηση συστήματος μπορούν επίσης να ληφθούν χρησιμοποιώντας αυτά τα εργαλεία της γραμμής εντολών.</p>
 

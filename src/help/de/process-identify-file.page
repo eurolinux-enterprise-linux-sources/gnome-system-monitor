@@ -23,7 +23,7 @@
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>Christian Kirbach</mal:name>
       <mal:email>christian.kirbach@gmail.com</mal:email>
-      <mal:years>2014</mal:years>
+      <mal:years>2014, 2015</mal:years>
     </mal:credit>
   
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
@@ -35,18 +35,10 @@
 
   <title>Herausfinden, welches Programm eine spezifische Datei verwendet</title>
 
-  <comment>
-    <cite date="2011-06-18" href="mailto:philbull@gmail.com">Phil Bull</cite>
-    <p>Explain how you can search for a file (or part of a filename) and it will
-    show which processes are using it. Explain why this might be useful.</p>
-  </comment>
-
   <p>Gelegentlich wird eine Fehlermeldung mitteilen, dass ein Gerät (z.B. die Sound-Karte oder das DVD-ROM) belegt ist, oder dass die Datei, welche Sie bearbeiten wollen, geöffnet ist. So finden Sie den verantwortlichen Prozess bzw. die verantwortlichen Prozesse:</p>
 
     <steps>
-      <item><p>Klicken Sie auf <guiseq><gui>Systemüberwachung</gui><gui>Einstellungen</gui></guiseq>.</p>
-      </item>
-      <item><p>Klicken Sie auf <gui>Nach offenen Dateien suchen</gui>.</p>
+      <item><p>Klicken Sie auf <guiseq><gui>Systemüberwachung</gui><gui>Offene Dateien suchen</gui></guiseq>.</p>
       </item>
       <item><p>Geben Sie einen Dateinamen oder einen Teil davon ein. Dies ist z.B. <file>/dev/snd</file> für das Audio-Gerät oder <file>/media/cdrom</file> für ein DVD-ROM.</p>
       </item>

@@ -43,10 +43,6 @@
 #include <set>
 #include <list>
 
-#ifdef HAVE_SYSTEMD
-#include <systemd/sd-login.h>
-#endif
-
 #ifdef HAVE_WNCK
 #define WNCK_I_KNOW_THIS_IS_UNSTABLE
 #include <libwnck/libwnck.h>
@@ -61,6 +57,11 @@
 #include "settings-keys.h"
 #include "cgroups.h"
 #include "treeview.h"
+#include "systemd.h"
+
+#ifdef GDK_WINDOWING_X11
+#include <gdk/gdkx.h>
+#endif
 
 ProcInfo::UserMap ProcInfo::users;
 ProcInfo::List ProcInfo::all;
@@ -215,17 +216,26 @@ iter_matches_search_key (GtkTreeModel *model, GtkTreeIter *iter, const gchar *ke
 {
     char *name;
     char *user;
+    pid_t pid;
+    char *pids;
+    char *args;
     gboolean found;
 
     gtk_tree_model_get (model, iter,
                         COL_NAME, &name,
                         COL_USER, &user,
+                        COL_PID, &pid,
+                        COL_ARGS, &args,
                         -1);
 
-    found = (name && strcasestr (name, key)) || (user && strcasestr (user, key));
+    pids = g_strdup_printf ("%d", pid);
+    found = (name && strcasestr (name, key)) || (user && strcasestr (user, key))
+            || (pids && strcasestr (pids, key)) || (args && strcasestr (args, key));
 
     g_free (name);
     g_free (user);
+    g_free (args);
+    g_free (pids);
 
     return found;
 }
@@ -237,8 +247,10 @@ process_visibility_func (GtkTreeModel *model, GtkTreeIter *iter, gpointer data)
     const gchar * search_text = app->search_entry == NULL ? "" : gtk_entry_get_text (GTK_ENTRY (app->search_entry));
     GtkTreePath *tree_path = gtk_tree_model_get_path (model, iter);
 
-    if (strcmp (search_text, "") == 0)
+    if (strcmp (search_text, "") == 0) {
+        gtk_tree_path_free (tree_path);
         return TRUE;
+    }
 
 	// in case we are in dependencies view, we show (and expand) rows not matching the text, but having a matching child
     gboolean match = false;
@@ -554,9 +566,7 @@ proctable_new (GsmApplication * const app)
     if (!cgroups_enabled ())
         gsm_tree_view_add_excluded_column (GSM_TREE_VIEW (proctree), COL_CGROUP);
 
-#ifdef HAVE_SYSTEMD
-    if (!LOGIND_RUNNING ())
-#endif
+    if (!procman::systemd_logind_running())
     {
         gsm_tree_view_add_excluded_column (GSM_TREE_VIEW (proctree), COL_UNIT);
         gsm_tree_view_add_excluded_column (GSM_TREE_VIEW (proctree), COL_SESSION);
@@ -686,16 +696,20 @@ get_process_memory_writable (ProcInfo *info)
 
     maps = glibtop_get_proc_map(&buf, info->pid);
 
+    const bool use_private_dirty = buf.flags & (1 << GLIBTOP_MAP_ENTRY_PRIVATE_DIRTY);
+
     gulong memwritable = 0;
     const unsigned number = buf.number;
 
     for (unsigned i = 0; i < number; ++i) {
-#ifdef __linux__
-        memwritable += maps[i].private_dirty;
-#else
-        if (maps[i].perm & GLIBTOP_MAP_PERM_WRITE)
+        if (use_private_dirty) {
+            // clang++ 3.4 is not smart enough to move this invariant out of the loop
+            // but who cares ?
+            memwritable += maps[i].private_dirty;
+        }
+        else if (maps[i].perm & GLIBTOP_MAP_PERM_WRITE) {
             memwritable += maps[i].size;
-#endif
+        }
     }
 
     info->memwritable = memwritable;
@@ -707,14 +721,20 @@ static void
 get_process_memory_info(ProcInfo *info)
 {
     glibtop_proc_mem procmem;
+
 #ifdef HAVE_WNCK
-    WnckResourceUsage xresources;
+    info->memxserver = 0;
+#ifdef GDK_WINDOWING_X11
+    if (GDK_IS_X11_DISPLAY (gdk_display_get_default ())) {
+        WnckResourceUsage xresources;
 
-    wnck_pid_read_resource_usage (gdk_screen_get_display (gdk_screen_get_default ()),
-                                  info->pid,
-                                  &xresources);
+        wnck_pid_read_resource_usage (gdk_display_get_default (),
+                                      info->pid,
+                                      &xresources);
 
-    info->memxserver = xresources.total_bytes_estimate;
+        info->memxserver = xresources.total_bytes_estimate;
+    }
+#endif
 #endif
 
     glibtop_get_proc_mem(&procmem, info->pid);
@@ -853,35 +873,6 @@ remove_info_from_tree (GsmApplication *app, GtkTreeModel *model,
     procman::poison(current->node, 0x69);
 }
 
-static void
-get_process_systemd_info(ProcInfo *info)
-{
-#ifdef HAVE_SYSTEMD
-    uid_t uid;
-
-    if (!LOGIND_RUNNING())
-        return;
-
-    free(info->unit);
-    info->unit = NULL;
-    sd_pid_get_unit(info->pid, &info->unit);
-
-    free(info->session);
-    info->session = NULL;
-    sd_pid_get_session(info->pid, &info->session);
-
-    free(info->seat);
-    info->seat = NULL;
-
-    if (info->session != NULL)
-        sd_session_get_seat(info->session, &info->seat);
-
-    if (sd_pid_get_owner_uid(info->pid, &uid) >= 0)
-        info->owner = info->lookup_user(uid);
-    else
-        info->owner = "";
-#endif
-}
 
 static void
 update_info (GsmApplication *app, ProcInfo *info)
@@ -917,20 +908,31 @@ update_info (GsmApplication *app, ProcInfo *info)
 
     ProcInfo::cpu_times[info->pid] = info->cpu_time = proctime.rtime;
     info->nice = procuid.nice;
-    info->ppid = procuid.ppid;
+
+    // set the ppid only if one can exist
+    // i.e. pid=0 can never have a parent
+    if (info->pid > 0) {
+        info->ppid = procuid.ppid;
+    }
+
+    g_assert(info->pid != info->ppid);
+    g_assert(info->ppid != -1 || info->pid == 0);
 
     /* get cgroup data */
     get_process_cgroup_info(info);
 
-    get_process_systemd_info(info);
+    procman::get_process_systemd_info(info);
 }
 
 ProcInfo::ProcInfo(pid_t pid)
-    : tooltip(NULL),
+    : node(),
+      pixbuf(),
+      tooltip(NULL),
       name(NULL),
       arguments(NULL),
       security_context(NULL),
       pid(pid),
+      ppid(-1),
       uid(-1)
 {
     ProcInfo * const info = this;
@@ -1049,6 +1051,8 @@ refresh_list (GsmApplication *app, const pid_t* pid_list, const guint n)
 
 
                 // inserts the process in the treeview if :
+                // - it has no parent (ppid = -1),
+                //   ie it is for example the [kernel] on FreeBSD
                 // - it is init
                 // - its parent is already in tree
                 // - its parent is unreachable
@@ -1062,7 +1066,7 @@ refresh_list (GsmApplication *app, const pid_t* pid_list, const guint n)
                 // see proctable_update (ProcData * const procdata)
 
 
-                if ((*it)->ppid == 0 or in_tree.find((*it)->ppid) != in_tree.end()) {
+                if ((*it)->ppid <= 0 or in_tree.find((*it)->ppid) != in_tree.end()) {
                     insert_info_to_tree(*it, app);
                     in_tree.insert((*it)->pid);
                     it = addition.erase(it);
@@ -1122,7 +1126,10 @@ proctable_update (GsmApplication *app)
     glibtop_get_cpu (&cpu);
     app->cpu_total_time = MAX(cpu.total - app->cpu_total_time_last, 1);
     app->cpu_total_time_last = cpu.total;
-    
+
+    // FIXME: not sure if glibtop always returns a sorted list of pid
+    // but it is important otherwise refresh_list won't find the parent
+    std::sort(pid_list, pid_list + proclist.number);
     refresh_list (app, pid_list, proclist.number);
 
     // juggling with tree scroll position to fix https://bugzilla.gnome.org/show_bug.cgi?id=92724

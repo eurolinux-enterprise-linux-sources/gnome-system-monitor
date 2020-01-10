@@ -24,7 +24,7 @@
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>Christian Kirbach</mal:name>
       <mal:email>christian.kirbach@gmail.com</mal:email>
-      <mal:years>2014</mal:years>
+      <mal:years>2014, 2015</mal:years>
     </mal:credit>
   
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
@@ -35,11 +35,6 @@
   </info>
 
   <title>Verwendung von Speicherfeldern</title>
-
-  <comment>
-    <cite date="2011-06-18" href="mailto:philbull@gmail.com">Phil Bull</cite>
-    <p>Explain how to use the Memory Map feature.</p>
-  </comment>
 
   <p><gui>Virtueller Speicher</gui> ist eine Darstellungsform der Kombination von <gui>Physikalischem Arbeitsspeicher</gui> und <link xref="mem-swap">Auslagerungsspeicher</link> eines Systems. Er ermöglicht laufenden Prozessen mit <em>mehr</em> als dem vorhandenen physikalischen Speicher zu arbeiten, indem Teile des physikalischen Speichers in Dateien auf einem Datenträger <gui>abgebildet</gui> werden. Sobald das System mehr Speicherseiten als verfügbar benötigt, werden einige der bestehenden Seiten <em>ausgelagert</em> oder in den Auslagerungsspeicher geschrieben.</p>
 
@@ -67,10 +62,7 @@
       <p>Zur Laufzeit kann ein Prozess dynamisch mehr Speicher in einem <em>Heap</em> genannten Bereich belegen. Argumente und Variablen werden in einem anderen Bereich namens <em>Stack</em> abgelegt.</p>
     </item>
     <item>
-      <p>The program itself and each of the shared libraries has three entries
-      each, one for the read-execute text segment, one for the read-write data
-      segment and one for a read-only data segment. Both data segments need to
-      be paged out at swap time.</p>
+      <p>Das Programm selbst und jede der gemeinsam verwendeten Bibliotheken hat jeweils drei Einträge. Einen für das Lesen-und-ausführen Textsegment, einen für das Lesen-und-schreiben Datensegment und einen für das Nur-lesen Datensegment. Beide Datensegmente müssen bei Auslagerung auf Datenträger geschrieben werden.</p>
     </item>
   </list>
 
@@ -138,9 +130,7 @@
   </tr>
   <tr>
 	  <td><p>Gerät</p></td>
-	  <td><p>The major and minor numbers of the device on which the shared
-    library filename is located. Together these specify a partition on the
-    system.</p></td>
+	  <td><p>Die »major«- und »minor«-Zahl des Geräts, auf dem die gemeinsam verwendete Bibliothek abgelegt ist. Gemeinsam geben diese eine Systempartition an.</p></td>
   </tr>
   <tr>
 	  <td><p>Inode</p></td>

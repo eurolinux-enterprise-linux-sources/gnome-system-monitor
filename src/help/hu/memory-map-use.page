@@ -30,11 +30,6 @@
 
   <title>Memóriatérképek használata</title>
 
-  <comment>
-    <cite date="2011-06-18" href="mailto:philbull@gmail.com">Phil Bull</cite>
-    <p>Explain how to use the Memory Map feature.</p>
-  </comment>
-
   <p>A <gui>virtuális memória</gui> a <gui>fizikai memória</gui> és a <link xref="mem-swap">swap terület</link> egyesített ábrázolása a rendszeren. Ez a fizikai memóriában lévő helyek lemezen lévő fájlokra való <gui>leképezésével</gui> lehetővé teszi a folyamatoknak, hogy a meglévő fizikai memóriánál <em>többet</em> érjenek el. Ha a rendszernek az elérhetőnél több memórialapra van szüksége, akkor a meglévő lapok egy része a swap területre kerül kiírásra.</p>
 
   <p>A <gui>memóriatérkép</gui> megjeleníti a folyamat teljes virtuálismemória-használatát, és használatával megállapítható a program egy vagy több példányának memóriaköltsége, ellenőrizhető a megfelelő megosztott programkönyvtárak használata, illetve a program esetlegesen elérhető  teljesítményhangolási paramétereinek hatása, vagy felismerhetők a memóriaszivárgáshoz hasonló problémák.</p>

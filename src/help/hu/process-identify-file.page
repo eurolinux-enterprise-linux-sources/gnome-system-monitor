@@ -29,18 +29,10 @@
 
   <title>Adott fájlt használó program megkeresése</title>
 
-  <comment>
-    <cite date="2011-06-18" href="mailto:philbull@gmail.com">Phil Bull</cite>
-    <p>Explain how you can search for a file (or part of a filename) and it will
-    show which processes are using it. Explain why this might be useful.</p>
-  </comment>
-
   <p>Néha kaphat olyan hibaüzenetet, amely szerint egy eszköz (például hangeszköz vagy a DVD-olvasó) foglalt, vagy a szerkeszteni kívánt fájl használatban van. Az ezért felelős folyamatok megkereséséhez:</p>
 
     <steps>
-      <item><p>Válassza a <guiseq><gui>Rendszerfigyelő</gui><gui>Beállítások</gui></guiseq> menüpontot.</p>
-      </item>
-      <item><p>Kattintson a <gui>Nyitott fájlok keresése</gui> menüpontra.</p>
+      <item><p>Válassza a <guiseq><gui>Rendszerfigyelő</gui><gui>Nyitott fájlok keresése</gui></guiseq> menüpontot.</p>
       </item>
       <item><p>Írja be a fájlnevet vagy annak egy részét. Ez lehet például <file>/dev/snd</file> a hangeszköz esetén, vagy <file>/media/cdrom</file> a DVD-olvasóhoz.</p>
       </item>

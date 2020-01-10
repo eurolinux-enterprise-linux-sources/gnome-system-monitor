@@ -21,6 +21,12 @@
     <desc>Ταξινομήστε τον κατάλογο των διεργασιών κατά <gui>% CPU</gui> για να δείτε ποια εφαρμογή χρησιμοποιεί τους πόρους του υπολογιστή.</desc>
   
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Ελληνική μεταφραστική ομάδα GNOME</mal:name>
+      <mal:email>team@gnome.gr</mal:email>
+      <mal:years>2014</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name> Δημήτρης Σπίγγος</mal:name>
       <mal:email>dmtrs32@gmail.com</mal:email>
       <mal:years>2014</mal:years>
@@ -28,13 +34,6 @@
   </info>
 
   <title>Ποιο πρόγραμμα κάνει τον υπολογιστή να τρέχει αργά;</title>
-
-  <comment>
-    <cite date="2011-06-18" href="mailto:philbull@gmail.com">Phil Bull</cite>
-    <p>Explain how the System Monitor can be used to find
-    misbehaving/resource-hogging processes. (A lot of process use 100% CPU or
-    similar if they hang, for example.)</p>
-  </comment>
 
   <p>Ένα πρόγραμμα που χρησιμοποιεί περισσότερη από το μερίδιο του στην CPU μπορεί να επιβραδύνει όλον τον υπολογιστή. Για να βρείτε ποια διεργασία μπορεί να το κάνει αυτό:</p>
 

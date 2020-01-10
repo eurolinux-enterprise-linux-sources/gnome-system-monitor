@@ -1,18 +1,19 @@
-# Serbian translation of procman
-# Courtesy of Prevod.org team (http://www.prevod.org/) -- 2003—2014.
+# Serbian translation of gnome-system-monitor
+# Courtesy of Prevod.org team (http://www.prevod.org/) -- 2003—2016.
 # This file is distributed under the same license as the procman package.
-# Maintainer: Душан Марјановић <mdfk@root.co.yu>
-# Reviewed on 2005-03-06 by: Данило Шеган <danilo@prevod.org>
-# Мирослав Николић <miroslavnikolic@rocketmail.com>, 2011—2014.
+# Душан Марјановић <mdfk@root.co.yu>
+# Данило Шеган <danilo@prevod.org>, 2005.
+# Мирослав Николић <miroslavnikolic@rocketmail.com>, 2011—2016.
+# Марко М. Костић <marko.m.kostic@gmail.com>, 2015.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-system-monitor\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product"
-"=system-monitor&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-09-25 19:44+0000\n"
-"PO-Revision-Date: 2014-09-25 22:30+0200\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=system-"
+"monitor&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2016-08-20 12:40+0000\n"
+"PO-Revision-Date: 2016-08-28 09:34+0200\n"
 "Last-Translator: Мирослав Николић <miroslavnikolic@rocketmail.com>\n"
-"Language-Team: Serbian <gnom@prevod.org>\n"
+"Language-Team: српски <gnome-sr@googlegroups.org>\n"
 "Language: sr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,7 +23,7 @@ msgstr ""
 "X-Project-Style: gnome\n"
 
 #: ../gnome-system-monitor.desktop.in.in.h:1 ../data/interface.ui.h:1
-#: ../src/application.cpp:268 ../src/interface.cpp:363
+#: ../src/application.cpp:262 ../src/interface.cpp:363
 msgid "System Monitor"
 msgstr "Праћење система"
 
@@ -32,16 +33,15 @@ msgid "View current processes and monitor system state"
 msgstr "Прегледајте текуће процесе и пратите стање система"
 
 #: ../gnome-system-monitor.desktop.in.in.h:3
-#| msgid "Monitor;System;Process;CPU;Memory;Network;History;Usage;"
 msgid ""
 "Monitor;System;Process;CPU;Memory;Network;History;Usage;Performance;Task;"
 "Manager;"
 msgstr ""
-"праћење;систем;процес;процесор;меморија;мрежа;историјат;употреба;одлике;зада"
-"так;управник;"
+"праћење;систем;процес;процесор;меморија;мрежа;историјат;употреба;задатак;"
+"управник;"
 
 #: ../gnome-system-monitor-kde.desktop.in.in.h:1
-#: ../gnome-system-monitor.appdata.xml.in.h:1 ../src/application.cpp:324
+#: ../gnome-system-monitor.appdata.xml.in.h:1 ../src/application.cpp:317
 msgid "GNOME System Monitor"
 msgstr "Гномов пратилац система"
 
@@ -51,15 +51,15 @@ msgstr "праћење;систем;процес;процесор;мемориј
 
 #: ../gnome-system-monitor.appdata.xml.in.h:2
 msgid "View and manage system resources"
-msgstr "Прегледајте и управљајте извориштима система"
+msgstr "Прегледајте и управљајте ресурсима система"
 
 #: ../gnome-system-monitor.appdata.xml.in.h:3
 msgid ""
 "System Monitor is a process viewer and system monitor with an attractive, "
 "easy-to-use interface."
 msgstr ""
-"Пратилац система је прегледач процеса и пратилац система са привлачним, "
-"лаким за употребу сучељем."
+"Пратилац система је прегледач процеса и пратилац система са привлачним "
+"сучељем лак за коришћење."
 
 #: ../gnome-system-monitor.appdata.xml.in.h:4
 msgid ""
@@ -68,18 +68,37 @@ msgid ""
 "applications, force stop processes not responding, and change the state or "
 "priority of existing processes."
 msgstr ""
-"Пратилац система вам може помоћи да сазнате који програми користе процесор "
+"Пратилац система вам може помоћи да откријете који програми користе процесор "
 "или меморију вашег рачунара, може да управља покренутим програмима, да "
-"примора заустављање процеса који се не одазивају, и да измени стање или "
-"хитност постојећих процеса."
+"присили заустављање процеса који не одговарају, и да измени стање или "
+"важност постојећих процеса."
 
 #: ../gnome-system-monitor.appdata.xml.in.h:5
 msgid ""
 "The resource graphs feature shows you a quick overview of what is going on "
 "with your computer displaying recent network, memory and processor usage."
 msgstr ""
-"Функција графика изворишта вам даје брз преглед о дешавањима на вашем "
+"Функција графика ресурса вам показује брзи преглед дешавања на вашем "
 "рачунару приказујући недавно коришћење мреже, меморије и процесора."
+
+#: ../gnome-system-monitor.appdata.xml.in.h:6
+#| msgid "Process view sort order"
+msgid "Process list view"
+msgstr "Преглед списка процеса"
+
+#: ../gnome-system-monitor.appdata.xml.in.h:7
+#| msgid "Resources"
+msgid "Resources overview"
+msgstr "Преглед изворишта"
+
+#: ../gnome-system-monitor.appdata.xml.in.h:8
+#| msgid "File Systems"
+msgid "File Systems view"
+msgstr "Преглед система датотека"
+
+#: ../gnome-system-monitor.appdata.xml.in.h:9
+msgid "The GNOME Project"
+msgstr "Гномов пројекат"
 
 #: ../org.gnome.gnome-system-monitor.policy.in.in.h:1
 msgid "Kill process"
@@ -118,7 +137,7 @@ msgid "Memory and Swap History"
 msgstr "Временски дијаграм оперативне и виртуелне меморије"
 
 #: ../data/interface.ui.h:7 ../src/interface.cpp:260
-#: ../src/procproperties.cpp:92 ../src/proctable.cpp:337
+#: ../src/procproperties.cpp:70 ../src/proctable.cpp:349
 msgid "Memory"
 msgstr "Оперативна меморија"
 
@@ -155,23 +174,22 @@ msgid "File Systems"
 msgstr "Системи датотека"
 
 #: ../data/lsof.ui.h:1
-msgctxt "Window title for 'Search for Open Files' dialog"
+msgctxt "Window title for Search for Open Files dialog"
 msgid "Search for Open Files"
-msgstr "Потражите отворене датотеке"
+msgstr "Претрага отворених датотека"
 
 #: ../data/lsof.ui.h:2
 msgid "Filter files by name"
 msgstr "Издвојте датотеке према називу"
 
 #: ../data/lsof.ui.h:3
-#| msgid "Case insensitive matching"
 msgid "Case insensitive"
 msgstr "Не разликуј величину слова"
 
 #: ../data/menus.ui.h:1
-msgctxt "Menu item to Open 'Search for Open Files' dialog"
+msgctxt "Menu item to Open Search for Open Files dialog"
 msgid "Search for Open Files"
-msgstr "Потражи отворене датотеке"
+msgstr "Потражите отворене датотеке"
 
 #: ../data/menus.ui.h:2
 msgid "Preferences"
@@ -210,20 +228,17 @@ msgid "_Dependencies"
 msgstr "_Међузависности"
 
 #: ../data/menus.ui.h:11
-msgid "_Stop"
-msgstr "_Заустави"
+msgid "_Properties"
+msgstr "_Особине"
 
 #: ../data/menus.ui.h:12
-msgid "_Continue"
-msgstr "_Настави"
+msgid "_Memory Maps"
+msgstr "Мапе _меморије"
 
-#: ../data/menus.ui.h:13
-msgid "_End"
-msgstr "_Окончај"
-
+#. Translators: this means
 #: ../data/menus.ui.h:14
-msgid "_Kill"
-msgstr "_Убиj"
+msgid "Open _Files"
+msgstr "Отворене _датотеке"
 
 #: ../data/menus.ui.h:15
 msgid "_Change Priority"
@@ -254,17 +269,20 @@ msgid "Custom"
 msgstr "Произвољно"
 
 #: ../data/menus.ui.h:22
-msgid "_Memory Maps"
-msgstr "Мапе _меморије"
+msgid "_Stop"
+msgstr "_Заустави"
 
-#. Translators: this means 'Files that are open' (open is not a verb here)
+#: ../data/menus.ui.h:23
+msgid "_Continue"
+msgstr "_Настави"
+
 #: ../data/menus.ui.h:24
-msgid "Open _Files"
-msgstr "Отворене _датотеке"
+msgid "_End"
+msgstr "_Окончај"
 
 #: ../data/menus.ui.h:25
-msgid "_Properties"
-msgstr "_Особине"
+msgid "_Kill"
+msgstr "_Убиj"
 
 #: ../data/openfiles.ui.h:1
 msgid "Open Files"
@@ -322,7 +340,7 @@ msgstr "Прикажи _све системе датотека"
 msgid "File system i_nformation shown in list:"
 msgstr "Подаци о систему _датотека приказани на списку:"
 
-#: ../data/renice.ui.h:1 ../src/procdialogs.cpp:123
+#: ../data/renice.ui.h:1 ../src/procdialogs.cpp:153
 msgid "_Cancel"
 msgstr "_Откажи"
 
@@ -342,51 +360,51 @@ msgstr ""
 "<small><i><b>Напомена:</b> Приоритет процеса је задат вредношћу његовог "
 "лепог понашања. Нижа вредност представља виши приоритет.</i></small>"
 
-#: ../src/application.cpp:310
+#: ../src/application.cpp:303
 msgid "A simple process and system monitor."
 msgstr "Једноставан програм за праћење система и процеса."
 
-#: ../src/argv.cpp:21
+#: ../src/argv.cpp:22
 msgid "Show the Processes tab"
 msgstr "Прикажи језичак процеса"
 
-#: ../src/argv.cpp:26
+#: ../src/argv.cpp:27
 msgid "Show the Resources tab"
 msgstr "Прикажи језичак ресурса"
 
-#: ../src/argv.cpp:31
+#: ../src/argv.cpp:32
 msgid "Show the File Systems tab"
 msgstr "Прикажи језичак система датотека"
 
-#: ../src/argv.cpp:35
+#: ../src/argv.cpp:36
 msgid "Show the application's version"
 msgstr "Прикажи издање програма"
 
-#: ../src/disks.cpp:369 ../src/memmaps.cpp:325
+#: ../src/disks.cpp:361 ../src/memmaps.cpp:329
 msgid "Device"
 msgstr "Уређај"
 
-#: ../src/disks.cpp:370
+#: ../src/disks.cpp:362
 msgid "Directory"
 msgstr "Директоријум"
 
-#: ../src/disks.cpp:371 ../src/gsm_color_button.c:165 ../src/openfiles.cpp:252
+#: ../src/disks.cpp:363 ../src/gsm_color_button.c:165 ../src/openfiles.cpp:252
 msgid "Type"
 msgstr "Врста"
 
-#: ../src/disks.cpp:372
+#: ../src/disks.cpp:364
 msgid "Total"
 msgstr "Укупно"
 
-#: ../src/disks.cpp:373
+#: ../src/disks.cpp:365
 msgid "Free"
 msgstr "Слободно"
 
-#: ../src/disks.cpp:374
+#: ../src/disks.cpp:366
 msgid "Available"
 msgstr "Расположиво"
 
-#: ../src/disks.cpp:375
+#: ../src/disks.cpp:367
 msgid "Used"
 msgstr "Заузето"
 
@@ -432,7 +450,7 @@ msgstr "Наслов"
 msgid "The title of the color selection dialog"
 msgstr "Наслов прозорчета за избор боје"
 
-#: ../src/gsm_color_button.c:152 ../src/gsm_color_button.c:512
+#: ../src/gsm_color_button.c:152 ../src/gsm_color_button.c:515
 msgid "Pick a Color"
 msgstr "Изаберите боју"
 
@@ -448,11 +466,11 @@ msgstr "Изабрана боја"
 msgid "Type of color picker"
 msgstr "Врста изборника боје"
 
-#: ../src/gsm_color_button.c:434
+#: ../src/gsm_color_button.c:437
 msgid "Received invalid color data\n"
 msgstr "Примљени су неисправни подаци\n"
 
-#: ../src/gsm_color_button.c:535
+#: ../src/gsm_color_button.c:538
 msgid "Click to set graph colors"
 msgstr "Кликните да поставите боје графика"
 
@@ -462,7 +480,7 @@ msgstr "Кликните да поставите боје графика"
 msgid "Pick a Color for '%s'"
 msgstr "Изаберите боју за „%s“"
 
-#: ../src/interface.cpp:220 ../src/procproperties.cpp:100
+#: ../src/interface.cpp:220 ../src/procproperties.cpp:78
 msgid "CPU"
 msgstr "Процесор"
 
@@ -484,7 +502,7 @@ msgstr ""
 "Prevod.org — превод на српски језик."
 
 # bug(slobo): Множински облици. Данило — овај је твој.
-#: ../src/load-graph.cpp:161
+#: ../src/load-graph.cpp:157
 #, c-format
 msgid "%u second"
 msgid_plural "%u seconds"
@@ -493,113 +511,103 @@ msgstr[1] "%u секунде"
 msgstr[2] "%u секунди"
 msgstr[3] "Једна секунда"
 
-#: ../src/load-graph.cpp:370
+#: ../src/load-graph.cpp:366
 msgid "not available"
 msgstr "није доступан"
 
 #. xgettext: 540MiB (53 %) of 1.0 GiB
-#: ../src/load-graph.cpp:373
+#: ../src/load-graph.cpp:369
 #, c-format
 msgid "%s (%.1f%%) of %s"
 msgstr "%s (%.1f%%) од %s"
 
-#: ../src/lsof.cpp:109
-msgid "Error"
-msgstr "Грeшкa"
-
-#: ../src/lsof.cpp:110
+#: ../src/lsof.cpp:118
 #, c-format
-msgid "'%s' is not a valid Perl regular expression."
-msgstr "„%s“ није исправан регуларни израз у Перлу."
-
-#: ../src/lsof.cpp:128
-#, c-format
-#| msgid "Open Files"
 msgid "%d open file"
 msgid_plural "%d open files"
 msgstr[0] "%d отворена датотека"
 msgstr[1] "%d отворене датотеке"
 msgstr[2] "%d отворених датотека"
-msgstr[3] "Једна отворена датотека"
+msgstr[3] "једна oтворенa датотекa"
 
-#: ../src/lsof.cpp:130
+#: ../src/lsof.cpp:120
 #, c-format
 msgid "%d matching open file"
 msgid_plural "%d matching open files"
 msgstr[0] "%d одговарајућа отворена датотека"
 msgstr[1] "%d одговарајуће отворене датотеке"
 msgstr[2] "%d одговарајућих отворених датотека"
-msgstr[3] "Једна одговарајућа отворена датотека"
+msgstr[3] "једна одговарајућа отворена датотека"
 
-#: ../src/lsof.cpp:246
+#: ../src/lsof.cpp:247
 msgid "Process"
 msgstr "Процес"
 
-#: ../src/lsof.cpp:258
+#: ../src/lsof.cpp:259
 msgid "PID"
 msgstr "ПИД"
 
-#: ../src/lsof.cpp:268 ../src/memmaps.cpp:303
+#: ../src/lsof.cpp:269 ../src/memmaps.cpp:307
 msgid "Filename"
 msgstr "Назив датотеке"
 
 #. xgettext: virtual memory start
-#: ../src/memmaps.cpp:305
+#: ../src/memmaps.cpp:309
 msgid "VM Start"
 msgstr "Почетак ВМ"
 
 #. xgettext: virtual memory end
-#: ../src/memmaps.cpp:307
+#: ../src/memmaps.cpp:311
 msgid "VM End"
 msgstr "Крај ВМ"
 
 #. xgettext: virtual memory syze
-#: ../src/memmaps.cpp:309
+#: ../src/memmaps.cpp:313
 msgid "VM Size"
 msgstr "Величина ВМ"
 
-#: ../src/memmaps.cpp:310
+#: ../src/memmaps.cpp:314
 msgid "Flags"
 msgstr "Параметри"
 
 #. xgettext: virtual memory offset
-#: ../src/memmaps.cpp:312
+#: ../src/memmaps.cpp:316
 msgid "VM Offset"
 msgstr "Померај ВМ"
 
 #. xgettext: memory that has not been modified since
 #. it has been allocated
-#: ../src/memmaps.cpp:315
+#: ../src/memmaps.cpp:319
 msgid "Private clean"
 msgstr "Приватна немењана"
 
 #. xgettext: memory that has been modified since it
 #. has been allocated
-#: ../src/memmaps.cpp:318
+#: ../src/memmaps.cpp:322
 msgid "Private dirty"
 msgstr "Приватна мењана"
 
 #. xgettext: shared memory that has not been modified
 #. since it has been allocated
-#: ../src/memmaps.cpp:321
+#: ../src/memmaps.cpp:325
 msgid "Shared clean"
 msgstr "Дељена немењана"
 
 #. xgettext: shared memory that has been modified
 #. since it has been allocated
-#: ../src/memmaps.cpp:324
+#: ../src/memmaps.cpp:328
 msgid "Shared dirty"
 msgstr "Дељена мењана"
 
-#: ../src/memmaps.cpp:326
+#: ../src/memmaps.cpp:330
 msgid "Inode"
 msgstr "И-чвор"
 
-#: ../src/memmaps.cpp:436
+#: ../src/memmaps.cpp:440
 msgid "Memory Maps"
 msgstr "Мапе меморије"
 
-#: ../src/memmaps.cpp:448
+#: ../src/memmaps.cpp:452
 #, c-format
 msgid "_Memory maps for process \"%s\" (PID %u):"
 msgstr "_Мапе меморије за процес „%s“ (ИБ процеса %u):"
@@ -1036,7 +1044,7 @@ msgstr "Колона поретка отворених датотека"
 msgid "Open files sort order"
 msgstr "Редослед ређања отворених датотека"
 
-#: ../src/prefsdialog.cpp:170
+#: ../src/prefsdialog.cpp:171
 msgid "Icon"
 msgstr "Иконица"
 
@@ -1059,40 +1067,60 @@ msgstr ""
 "%s"
 
 #. xgettext: primary alert message for killing single process
-#: ../src/procdialogs.cpp:75
+#: ../src/procdialogs.cpp:76
 #, c-format
 msgid "Are you sure you want to kill the selected process “%s” (PID: %u)?"
-msgstr "Да ли сте сигурни да желите да убијете изабрани процес „%s“ (ПИБ: %u)?"
+msgstr "Да ли сигурно желите да убијете изабрани процес „%s“ (ПИБ: %u)?"
 
 #. xgettext: primary alert message for ending single process
-#: ../src/procdialogs.cpp:80
+#: ../src/procdialogs.cpp:82
 #, c-format
 msgid "Are you sure you want to end the selected process “%s” (PID: %u)?"
-msgstr ""
-"Да ли сте сигурни да желите да окончате изабрани процес „%s“ (ПИБ: %u)?"
+msgstr "Да ли сигурно желите да окончате изабрани процес „%s“ (ПИБ: %u)?"
+
+#. SIGSTOP
+#. xgettext: primary alert message for stopping single process
+#: ../src/procdialogs.cpp:88
+#, c-format
+#| msgid "Are you sure you want to end the selected process “%s” (PID: %u)?"
+msgid "Are you sure you want to stop the selected process “%s” (PID: %u)?"
+msgstr "Да ли сигурно желите да зауставите изабрани процес „%s“ (ПИБ: %u)?"
 
 #. xgettext: primary alert message for killing multiple processes
-#: ../src/procdialogs.cpp:87
+#: ../src/procdialogs.cpp:97
 #, c-format
 msgid "Are you sure you want to kill the selected process?"
 msgid_plural "Are you sure you want to kill the %d selected processes?"
-msgstr[0] "Да ли сте сигурни да желите да убијете %d изабрани процес?"
-msgstr[1] "Да ли сте сигурни да желите да убијете %d изабрана процеса?"
-msgstr[2] "Да ли сте сигурни да желите да убијете %d изабраних процеса?"
-msgstr[3] "Да ли сте сигурни да желите да убијете један изабрани процес?"
+msgstr[0] "Да ли сигурно желите да убијете %d изабрани процес?"
+msgstr[1] "Да ли сигурно желите да убијете %d изабрана процеса?"
+msgstr[2] "Да ли сигурно желите да убијете %d изабраних процеса?"
+msgstr[3] "Да ли сигурно желите да убијете изабрани процес"
 
 #. xgettext: primary alert message for ending multiple processes
-#: ../src/procdialogs.cpp:91
+#: ../src/procdialogs.cpp:103
 #, c-format
 msgid "Are you sure you want to end the selected process?"
 msgid_plural "Are you sure you want to end the %d selected processes?"
-msgstr[0] "Да ли сте сигурни да желите да окончате %d изабрани процес?"
-msgstr[1] "Да ли сте сигурни да желите да окончате %d изабрана процеса?"
-msgstr[2] "Да ли сте сигурни да желите да окончате %d изабраних процеса?"
-msgstr[3] "Да ли сте сигурни да желите да окончате један изабрани процес?"
+msgstr[0] "Да ли сигурно желите да окончате %d изабрани процес?"
+msgstr[1] "Да ли сигурно желите да окончате %d изабрана процеса?"
+msgstr[2] "Да ли сигурно желите да окончате %d изабраних процеса?"
+msgstr[3] "Да ли сигурно желите да окончате изабрани процес"
+
+#. SIGSTOP
+#. xgettext: primary alert message for stopping multiple processes
+#: ../src/procdialogs.cpp:109
+#, c-format
+#| msgid "Are you sure you want to end the selected process?"
+#| msgid_plural "Are you sure you want to end the %d selected processes?"
+msgid "Are you sure you want to stop the selected process?"
+msgid_plural "Are you sure you want to stop the %d selected processes?"
+msgstr[0] "Да ли сигурно желите да зауставите %d изабрани процес?"
+msgstr[1] "Да ли сигурно желите да зауставите %d изабрана процеса?"
+msgstr[2] "Да ли сигурно желите да зауставите %d изабраних процеса?"
+msgstr[3] "Да ли сигурно желите да зауставите изабрани процес"
 
 #. xgettext: secondary alert message
-#: ../src/procdialogs.cpp:98 ../src/procdialogs.cpp:104
+#: ../src/procdialogs.cpp:119
 msgid ""
 "Killing a process may destroy data, break the session or introduce a "
 "security risk. Only unresponsive processes should be killed."
@@ -1101,7 +1129,7 @@ msgstr ""
 "проузроковати безбедносни пропуст. Требало би убијати само процесе који се "
 "не одазивају."
 
-#: ../src/procdialogs.cpp:101
+#: ../src/procdialogs.cpp:122
 msgid "_Kill Process"
 msgid_plural "_Kill Processes"
 msgstr[0] "_Убиј процес"
@@ -1109,7 +1137,20 @@ msgstr[1] "_Убиј процесе"
 msgstr[2] "_Убиј процесе"
 msgstr[3] "_Убиј процес"
 
-#: ../src/procdialogs.cpp:107
+#. xgettext: secondary alert message
+#: ../src/procdialogs.cpp:126
+#| msgid ""
+#| "Killing a process may destroy data, break the session or introduce a "
+#| "security risk. Only unresponsive processes should be killed."
+msgid ""
+"Ending a process may destroy data, break the session or introduce a security "
+"risk. Only unresponsive processes should be ended."
+msgstr ""
+"Окончавање неког процеса може уништити податке, прекинути текућу сесију или "
+"проузроковати безбедносни пропуст. Требало би окончавати само процесе који "
+"се не одазивају."
+
+#: ../src/procdialogs.cpp:129
 msgid "_End Process"
 msgid_plural "_End Processes"
 msgstr[0] "_Окончај процес"
@@ -1117,12 +1158,36 @@ msgstr[1] "_Окончај процесе"
 msgstr[2] "_Окончај процесе"
 msgstr[3] "_Окончај процес"
 
-#: ../src/procdialogs.cpp:188
+#. SIGSTOP
+#. xgettext: secondary alert message
+#: ../src/procdialogs.cpp:133
+#| msgid ""
+#| "Killing a process may destroy data, break the session or introduce a "
+#| "security risk. Only unresponsive processes should be killed."
+msgid ""
+"Stopping a process may destroy data, break the session or introduce a "
+"security risk. Only unresponsive processes should be stopped."
+msgstr ""
+"Заустављање неког процеса може уништити податке, прекинути текућу сесију или "
+"проузроковати безбедносни пропуст. Требало би заустављати само процесе који "
+"се не одазивају."
+
+#: ../src/procdialogs.cpp:136
+#| msgid "_End Process"
+#| msgid_plural "_End Processes"
+msgid "_Stop Process"
+msgid_plural "_Stop Processes"
+msgstr[0] "_Заустави процес"
+msgstr[1] "_Заустави процесе"
+msgstr[2] "_Заустави процесе"
+msgstr[3] "_Заустави процес"
+
+#: ../src/procdialogs.cpp:218
 #, c-format
 msgid "Change Priority of Process “%s” (PID: %u)"
 msgstr "Измените приоритет процеса „%s“ (ИБ процеса %u)"
 
-#: ../src/procdialogs.cpp:191
+#: ../src/procdialogs.cpp:221
 #, c-format
 msgid "Change Priority of the selected process"
 msgid_plural "Change Priority of %d selected processes"
@@ -1131,11 +1196,11 @@ msgstr[1] "Измените важност %d изабрана процеса"
 msgstr[2] "Измените важност %d изабраних процеса"
 msgstr[3] "Измените важност изабраног процеса"
 
-#: ../src/procdialogs.cpp:210
+#: ../src/procdialogs.cpp:240
 msgid "Note:"
 msgstr "Обавештење:"
 
-#: ../src/procdialogs.cpp:211
+#: ../src/procdialogs.cpp:241
 msgid ""
 "The priority of a process is given by its nice value. A lower nice value "
 "corresponds to a higher priority."
@@ -1143,115 +1208,105 @@ msgstr ""
 "Приоритет процеса је задат вредношћу његовог лепог понашања. Нижа вредност "
 "представља виши приоритет."
 
-#: ../src/procproperties.cpp:55 ../src/procproperties.cpp:106
-#: ../src/procproperties.cpp:109 ../src/util.cpp:432
+#: ../src/procproperties.cpp:50 ../src/procproperties.cpp:84
+#: ../src/procproperties.cpp:87 ../src/util.cpp:432
 msgid "N/A"
 msgstr "Н/Д"
 
-#: ../src/procproperties.cpp:89 ../src/proctable.cpp:322
+#: ../src/procproperties.cpp:67 ../src/proctable.cpp:334
 msgid "Process Name"
 msgstr "Назив процеса"
 
-#: ../src/procproperties.cpp:90 ../src/proctable.cpp:323
+#: ../src/procproperties.cpp:68 ../src/proctable.cpp:335
 msgid "User"
 msgstr "Корисник"
 
-#: ../src/procproperties.cpp:91 ../src/proctable.cpp:324
+#: ../src/procproperties.cpp:69 ../src/proctable.cpp:336
 msgid "Status"
 msgstr "Стање"
 
-#: ../src/procproperties.cpp:93 ../src/proctable.cpp:325
+#: ../src/procproperties.cpp:71 ../src/proctable.cpp:337
 msgid "Virtual Memory"
 msgstr "Виртуелна меморија"
 
-#: ../src/procproperties.cpp:94 ../src/proctable.cpp:326
+#: ../src/procproperties.cpp:72 ../src/proctable.cpp:338
 msgid "Resident Memory"
 msgstr "Резидентна меморија"
 
-#: ../src/procproperties.cpp:95 ../src/proctable.cpp:327
+#: ../src/procproperties.cpp:73 ../src/proctable.cpp:339
 msgid "Writable Memory"
 msgstr "Уписива меморија"
 
-#: ../src/procproperties.cpp:96 ../src/proctable.cpp:328
+#: ../src/procproperties.cpp:74 ../src/proctable.cpp:340
 msgid "Shared Memory"
 msgstr "Дељена меморија"
 
-#: ../src/procproperties.cpp:98 ../src/proctable.cpp:329
+#: ../src/procproperties.cpp:76 ../src/proctable.cpp:341
 msgid "X Server Memory"
 msgstr "Меморија Икс сервера"
 
-#: ../src/procproperties.cpp:101 ../src/proctable.cpp:331
+#: ../src/procproperties.cpp:79 ../src/proctable.cpp:343
 msgid "CPU Time"
 msgstr "Време процесора"
 
-# bug(slobo): Множински облици. Данило — овај је твој.
-#: ../src/procproperties.cpp:101
-#, c-format
-msgid "%lld second"
-msgid_plural "%lld seconds"
-msgstr[0] "%lld секунда"
-msgstr[1] "%lld секунде"
-msgstr[2] "%lld секунди"
-msgstr[3] "Једна секунда"
-
-#: ../src/procproperties.cpp:102 ../src/proctable.cpp:332
+#: ../src/procproperties.cpp:80 ../src/proctable.cpp:344
 msgid "Started"
 msgstr "Покренут"
 
-#: ../src/procproperties.cpp:103 ../src/proctable.cpp:333
+#: ../src/procproperties.cpp:81 ../src/proctable.cpp:345
 msgid "Nice"
 msgstr "Приоритет"
 
-#: ../src/procproperties.cpp:104 ../src/proctable.cpp:347
+#: ../src/procproperties.cpp:82 ../src/proctable.cpp:359
 msgid "Priority"
 msgstr "Важност"
 
-#: ../src/procproperties.cpp:105 ../src/proctable.cpp:334
+#: ../src/procproperties.cpp:83 ../src/proctable.cpp:346
 msgid "ID"
 msgstr "ИБ"
 
-#: ../src/procproperties.cpp:106 ../src/proctable.cpp:335
+#: ../src/procproperties.cpp:84 ../src/proctable.cpp:347
 msgid "Security Context"
 msgstr "Безбедносни контекст"
 
-#: ../src/procproperties.cpp:107 ../src/proctable.cpp:336
+#: ../src/procproperties.cpp:85 ../src/proctable.cpp:348
 msgid "Command Line"
 msgstr "Линија наредби"
 
 #. xgettext: combined noun, the function the process is waiting in, see wchan ps(1)
-#: ../src/procproperties.cpp:108 ../src/proctable.cpp:339
+#: ../src/procproperties.cpp:86 ../src/proctable.cpp:351
 msgid "Waiting Channel"
 msgstr "Канал чекања"
 
-#: ../src/procproperties.cpp:109 ../src/proctable.cpp:340
+#: ../src/procproperties.cpp:87 ../src/proctable.cpp:352
 msgid "Control Group"
 msgstr "Група управљања"
 
-#: ../src/procproperties.cpp:221
+#: ../src/procproperties.cpp:199
 #, c-format
 msgid "%s (PID %u)"
 msgstr "%s (ЛИБ %u)"
 
-#: ../src/proctable.cpp:330
+#: ../src/proctable.cpp:342
 #, no-c-format
 msgid "% CPU"
 msgstr "Процесор — %"
 
-#: ../src/proctable.cpp:341
+#: ../src/proctable.cpp:353
 msgid "Unit"
 msgstr "Јединица"
 
-#: ../src/proctable.cpp:342
+#: ../src/proctable.cpp:354
 msgid "Session"
 msgstr "Сесија"
 
 #. TRANSLATORS: Seat = i.e. the physical seat the session of the process belongs to, only
 #. for multi-seat environments. See http://en.wikipedia.org/wiki/Multiseat_configuration
-#: ../src/proctable.cpp:345
+#: ../src/proctable.cpp:357
 msgid "Seat"
 msgstr "Смештај"
 
-#: ../src/proctable.cpp:346
+#: ../src/proctable.cpp:358
 msgid "Owner"
 msgstr "Власник"
 
@@ -1387,6 +1442,16 @@ msgstr "Врло ниска важност"
 msgid "%s/s"
 msgstr "%s/s"
 
+#~ msgctxt "Menu item to Open 'Search for Open Files' dialog"
+#~ msgid "Search for Open Files"
+#~ msgstr "Потражи отворене датотеке"
+
+#~ msgid "Error"
+#~ msgstr "Грeшкa"
+
+#~ msgid "'%s' is not a valid Perl regular expression."
+#~ msgstr "„%s“ није исправан регуларни израз у Перлу."
+
 #~ msgid "_Name contains:"
 #~ msgstr "_Назив садржи:"
 
@@ -1405,6 +1470,14 @@ msgstr "%s/s"
 #~| msgid "Help"
 #~ msgid "_Help"
 #~ msgstr "По_моћ"
+
+# bug(slobo): Множински облици. Данило — овај је твој.
+#~ msgid "%lld second"
+#~ msgid_plural "%lld seconds"
+#~ msgstr[0] "%lld секунда"
+#~ msgstr[1] "%lld секунде"
+#~ msgstr[2] "%lld секунди"
+#~ msgstr[3] "Једна секунда"
 
 #~ msgid "Process Properties"
 #~ msgstr "Својства процеса"

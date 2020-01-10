@@ -23,24 +23,16 @@
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>Daniel Mustieles</mal:name>
       <mal:email>daniel.mustieles@gmail.com</mal:email>
-      <mal:years>2014</mal:years>
+      <mal:years>2014 - 2015</mal:years>
     </mal:credit>
   </info>
 
   <title>Saber qué programa está usando un archivo en concreto</title>
 
-  <comment>
-    <cite date="2011-06-18" href="mailto:philbull@gmail.com">Phil Bull</cite>
-    <p>Explain how you can search for a file (or part of a filename) and it will
-    show which processes are using it. Explain why this might be useful.</p>
-  </comment>
-
   <p>A veces un mensaje de error dice que un dispositivo (como la tarjeta de sonido o el DVD) está ocupado, o que el archivo que quiere editar se está usando. Para buscar el proceso o los procesos responsables.</p>
 
     <steps>
-      <item><p>Pulse en <guiseq><gui>Monitor del sistema</gui><gui>Preferencias</gui></guiseq>.</p>
-      </item>
-      <item><p>Pulse <gui>Buscar archivos abiertos</gui>.</p>
+      <item><p>Pulse en <guiseq><gui>Monitor del sistema</gui><gui>Buscar archivos abiertos</gui></guiseq>.</p>
       </item>
       <item><p>Introduzca el nombre del archivo o una parte del nombre. Esto puede ser <file>/dev/snd</file> para el dispositivo de sonido o <file>/media/cdrom</file> para el DVD.</p>
       </item>

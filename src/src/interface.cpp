@@ -403,10 +403,10 @@ on_activate_send_signal (GSimpleAction *, GVariant *parameter, gpointer data)
     /* no confirmation */
     gint32 signal = g_variant_get_int32(parameter);
     switch (signal) {
-        case SIGSTOP:
         case SIGCONT:
             kill_process (app, signal);
             break;
+        case SIGSTOP:
         case SIGTERM:
         case SIGKILL:
             kill_process_with_confirmation (app, signal);
@@ -459,6 +459,7 @@ on_activate_search (GSimpleAction *action, GVariant *parameter, gpointer data)
     GVariant *state = g_action_get_state (G_ACTION (action));
     gboolean is_search_shortcut = g_variant_get_boolean (parameter);
     gboolean is_search_bar = gtk_search_bar_get_search_mode (GTK_SEARCH_BAR (app->search_bar));
+    gtk_widget_set_visible (app->search_bar, is_search_bar || is_search_shortcut);
     if (is_search_shortcut && is_search_bar) {
         gtk_widget_grab_focus (app->search_entry);
     } else {
@@ -615,6 +616,7 @@ cb_main_window_state_changed (GtkWidget *window, GdkEventWindowState *event, gpo
             disks_thaw (app);
         }
     }
+    g_free (current_page);
     return FALSE;
 }
 
@@ -626,6 +628,8 @@ create_main_window (GsmApplication *app)
     GtkWidget *process_menu_button;
     GMenuModel *process_menu_model;
 
+    const char* session;
+
     int width, height, xpos, ypos;
 
     GtkBuilder *builder = gtk_builder_new();
@@ -636,6 +640,19 @@ create_main_window (GsmApplication *app)
     gtk_window_set_application (GTK_WINDOW (main_window), app->gobj());
     gtk_widget_set_name (main_window, "gnome-system-monitor");
     app->main_window = main_window;
+
+    session = g_getenv ("XDG_CURRENT_DESKTOP");
+    if (session && !strstr (session, "GNOME")){
+        GtkWidget *mainbox;
+        GtkWidget *headerbar;
+
+        mainbox = GTK_WIDGET (gtk_builder_get_object (builder, "main_box"));
+        headerbar = GTK_WIDGET (gtk_builder_get_object (builder, "header_bar"));
+        gtk_style_context_remove_class (gtk_widget_get_style_context (headerbar), "titlebar");
+        gtk_window_set_titlebar (GTK_WINDOW (main_window), NULL);
+        gtk_header_bar_set_show_close_button (GTK_HEADER_BAR (headerbar), FALSE);
+        gtk_box_pack_start (GTK_BOX(mainbox), headerbar, FALSE, FALSE, 0);
+    }
 
     g_settings_get (app->settings, GSM_SETTING_WINDOW_STATE, "(iiii)",
                     &width, &height, &xpos, &ypos);

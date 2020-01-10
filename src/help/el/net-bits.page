@@ -21,20 +21,21 @@
     <desc>Επιλέξτε τις μονάδες που θα εμφανίσουν την ταχύτητα δικτύου.</desc>
   
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Ελληνική μεταφραστική ομάδα GNOME</mal:name>
+      <mal:email>team@gnome.gr</mal:email>
+      <mal:years>2014</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name> Δημήτρης Σπίγγος</mal:name>
       <mal:email>dmtrs32@gmail.com</mal:email>
       <mal:years>2014</mal:years>
     </mal:credit>
   </info>
 
-  <title>Εμφανίστε την ταχύτητα δικτύου σε δυαδικά αντί για ψηφιολέξεις ανά δευτερόλεπτο</title>
+  <title>Εμφανίστε την ταχύτητα δικτύου σε δυαδικά αντί για bytes ανά δευτερόλεπτο</title>
 
-  <comment>
-    <cite date="2011-06-18" href="mailto:philbull@gmail.com">Phil Bull</cite>
-    <p>Brief topic. Explain how to do this, and why you might want to do it.</p>
-  </comment>
-
-  <p>Η ταχύτητα δικτύου εμφανίζεται συχνά σε δυαδικά ανά δευτερόλεπτο, αντί για ψηφιολέξεις ανά δευτερόλεπτο. Αυτό λέγεται <em>ρυθμός δυαδικών</em>, ή <em>ρυθμός δεδομένων</em>.</p>
+  <p>Η ταχύτητα δικτύου εμφανίζεται συχνά σε bits ανά δευτερόλεπτο, αντί για bytes ανά δευτερόλεπτο. Αυτό λέγεται <em>ρυθμός bit</em>, ή <em>ρυθμός δεδομένων</em>.</p>
 
   <p>Για να εμφανίσετε την ταχύτητα δικτύου σε δυαδικά:</p>
 

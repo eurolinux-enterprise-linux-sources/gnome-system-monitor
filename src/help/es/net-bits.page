@@ -23,16 +23,11 @@
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>Daniel Mustieles</mal:name>
       <mal:email>daniel.mustieles@gmail.com</mal:email>
-      <mal:years>2014</mal:years>
+      <mal:years>2014 - 2015</mal:years>
     </mal:credit>
   </info>
 
   <title>Mostrar la velocidad de la red en bits en lugar de en bytes por segundo</title>
-
-  <comment>
-    <cite date="2011-06-18" href="mailto:philbull@gmail.com">Phil Bull</cite>
-    <p>Brief topic. Explain how to do this, and why you might want to do it.</p>
-  </comment>
 
   <p>A menudo, la velocidad de la red se muestra en bits por segundo, en lugar de en bytes por segundo. Esto se llama <em>tasa de bits</em>, o <em>tasa de datos</em>.</p>
 

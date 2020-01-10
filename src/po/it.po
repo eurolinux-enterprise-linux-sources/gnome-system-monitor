@@ -1,18 +1,18 @@
 # Italian messages for gnome-system-monitor
-# Copyright (C) 2001-2009, 2012, 2013, 2014 Free Software Foundation, Inc.
+# Copyright (C) 2001-2009, 2012, 2013, 2014, 2015 Free Software Foundation, Inc.
 # This package is distributed under the same license as the gnome-system-monitor package.
 # Alessio Frusciante <algol@firenze.linux.it>, 2001, 2002, 2003, 2004, 2005, 2006, 2007.
 # Davide Falanga <davide.falanga@alice.it>, 2009.
 # Luca Ferretti <lferrett@gnome.org>, 2007, 2008, 2011.
-# Milo Casagrande <milo@milo.name>, 2008, 2009, 2012, 2013, 2014.
+# Milo Casagrande <milo@milo.name>, 2008, 2009, 2012, 2013, 2014, 2015.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-system-monitor\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=system-"
 "monitor&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-10-05 07:47+0000\n"
-"PO-Revision-Date: 2014-10-05 17:34+0100\n"
+"POT-Creation-Date: 2016-09-22 17:41+0000\n"
+"PO-Revision-Date: 2016-10-07 08:42+0200\n"
 "Last-Translator: Milo Casagrande <milo@milo.name>\n"
 "Language-Team: Italian <tp@lists.linux.it>\n"
 "Language: it\n"
@@ -21,10 +21,10 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 "X-Launchpad-Export-Date: 2012-04-05 10:00+0000\n"
-"X-Generator: Poedit 1.6.9\n"
+"X-Generator: Poedit 1.8.9\n"
 
 #: ../gnome-system-monitor.desktop.in.in.h:1 ../data/interface.ui.h:1
-#: ../src/application.cpp:268 ../src/interface.cpp:363
+#: ../src/application.cpp:262 ../src/interface.cpp:363
 msgid "System Monitor"
 msgstr "Monitor di sistema"
 
@@ -42,7 +42,7 @@ msgstr ""
 "Cronologia;Utilizzo;Uso;Prestazioni;Performance;Task;Lavori;Manager;Gestione;"
 
 #: ../gnome-system-monitor-kde.desktop.in.in.h:1
-#: ../gnome-system-monitor.appdata.xml.in.h:1 ../src/application.cpp:324
+#: ../gnome-system-monitor.appdata.xml.in.h:1 ../src/application.cpp:317
 msgid "GNOME System Monitor"
 msgstr "Monitor di sistema GNOME"
 
@@ -84,6 +84,22 @@ msgstr ""
 "Il grafico delle risorse consente di avere una panoramica sullo stato del "
 "sistema visualizzando l'utilizzo della rete, della memoria e del processore."
 
+#: ../gnome-system-monitor.appdata.xml.in.h:6
+msgid "Process list view"
+msgstr "Vista dei processi"
+
+#: ../gnome-system-monitor.appdata.xml.in.h:7
+msgid "Resources overview"
+msgstr "Panoramica risorse"
+
+#: ../gnome-system-monitor.appdata.xml.in.h:8
+msgid "File Systems view"
+msgstr "Vista file system"
+
+#: ../gnome-system-monitor.appdata.xml.in.h:9
+msgid "The GNOME Project"
+msgstr "Il progetto GNOME"
+
 #: ../org.gnome.gnome-system-monitor.policy.in.in.h:1
 msgid "Kill process"
 msgstr "Uccidi processo"
@@ -123,7 +139,7 @@ msgid "Memory and Swap History"
 msgstr "Cronologia memoria e swap"
 
 #: ../data/interface.ui.h:7 ../src/interface.cpp:260
-#: ../src/procproperties.cpp:92 ../src/proctable.cpp:337
+#: ../src/procproperties.cpp:70 ../src/proctable.cpp:349
 msgid "Memory"
 msgstr "Memoria"
 
@@ -162,7 +178,7 @@ msgid "File Systems"
 msgstr "File system"
 
 #: ../data/lsof.ui.h:1
-msgctxt "Window title for 'Search for Open Files' dialog"
+msgctxt "Window title for Search for Open Files dialog"
 msgid "Search for Open Files"
 msgstr "Cerca file aperti"
 
@@ -175,7 +191,7 @@ msgid "Case insensitive"
 msgstr "Nessuna distinzione tra maiuscole/minuscole"
 
 #: ../data/menus.ui.h:1
-msgctxt "Menu item to Open 'Search for Open Files' dialog"
+msgctxt "Menu item to Open Search for Open Files dialog"
 msgid "Search for Open Files"
 msgstr "Cerca file aperti"
 
@@ -216,20 +232,17 @@ msgid "_Dependencies"
 msgstr "_Dipendenze"
 
 #: ../data/menus.ui.h:11
-msgid "_Stop"
-msgstr "_Ferma"
+msgid "_Properties"
+msgstr "_Proprietà"
 
 #: ../data/menus.ui.h:12
-msgid "_Continue"
-msgstr "_Continua"
+msgid "_Memory Maps"
+msgstr "_Mappe memoria"
 
-#: ../data/menus.ui.h:13
-msgid "_End"
-msgstr "_Termina"
-
+#. Translators: this means
 #: ../data/menus.ui.h:14
-msgid "_Kill"
-msgstr "_Uccidi"
+msgid "Open _Files"
+msgstr "_File aperti"
 
 #: ../data/menus.ui.h:15
 msgid "_Change Priority"
@@ -260,17 +273,20 @@ msgid "Custom"
 msgstr "Personalizzata"
 
 #: ../data/menus.ui.h:22
-msgid "_Memory Maps"
-msgstr "_Mappe memoria"
+msgid "_Stop"
+msgstr "_Ferma"
 
-#. Translators: this means 'Files that are open' (open is not a verb here)
+#: ../data/menus.ui.h:23
+msgid "_Continue"
+msgstr "_Continua"
+
 #: ../data/menus.ui.h:24
-msgid "Open _Files"
-msgstr "_File aperti"
+msgid "_End"
+msgstr "_Termina"
 
 #: ../data/menus.ui.h:25
-msgid "_Properties"
-msgstr "_Proprietà"
+msgid "_Kill"
+msgstr "_Uccidi"
 
 #: ../data/openfiles.ui.h:1
 msgid "Open Files"
@@ -329,7 +345,7 @@ msgstr "Mostrare _tutti i file system"
 msgid "File system i_nformation shown in list:"
 msgstr "In_formazioni sul file system mostrate nell'elenco:"
 
-#: ../data/renice.ui.h:1 ../src/procdialogs.cpp:123
+#: ../data/renice.ui.h:1 ../src/procdialogs.cpp:153
 msgid "_Cancel"
 msgstr "A_nnulla"
 
@@ -349,56 +365,56 @@ msgstr ""
 "<small><i><b>Nota:</b> la priorità di un processo è data dal suo valore di "
 "nice. Un valore più basso corrisponde a una priorità più alta.</i></small>"
 
-#: ../src/application.cpp:310
+#: ../src/application.cpp:303
 msgid "A simple process and system monitor."
 msgstr "Un semplice monitor dei processi e del sistema."
 
-#: ../src/argv.cpp:21
+#: ../src/argv.cpp:22
 msgid "Show the Processes tab"
 msgstr "Mostra la scheda \"Processi\""
 
 # (ndt) messo tra "", è un'opzione a riga di comando
-#: ../src/argv.cpp:26
+#: ../src/argv.cpp:27
 msgid "Show the Resources tab"
 msgstr "Mostra la scheda \"Risorse\""
 
 # (ndt) messo tra "", è un'opzione a riga di comando
-#: ../src/argv.cpp:31
+#: ../src/argv.cpp:32
 msgid "Show the File Systems tab"
 msgstr "Mostra la scheda \"File system\""
 
-#: ../src/argv.cpp:35
+#: ../src/argv.cpp:36
 msgid "Show the application's version"
 msgstr "Mostra la versione dell'applicazione"
 
-#: ../src/disks.cpp:369 ../src/memmaps.cpp:325
+#: ../src/disks.cpp:361 ../src/memmaps.cpp:329
 msgid "Device"
 msgstr "Device"
 
-#: ../src/disks.cpp:370
+#: ../src/disks.cpp:362
 msgid "Directory"
 msgstr "Directory"
 
-#: ../src/disks.cpp:371 ../src/gsm_color_button.c:165 ../src/openfiles.cpp:252
+#: ../src/disks.cpp:363 ../src/gsm_color_button.c:165 ../src/openfiles.cpp:252
 msgid "Type"
 msgstr "Tipo"
 
-#: ../src/disks.cpp:372
+#: ../src/disks.cpp:364
 msgid "Total"
 msgstr "Totale"
 
 # spazio su disco, quindi maschile
-#: ../src/disks.cpp:373
+#: ../src/disks.cpp:365
 msgid "Free"
 msgstr "Libero"
 
 # spazio su disco, quindi maschile
-#: ../src/disks.cpp:374
+#: ../src/disks.cpp:366
 msgid "Available"
 msgstr "Disponibile"
 
 # spazio su disco, quindi maschile
-#: ../src/disks.cpp:375
+#: ../src/disks.cpp:367
 msgid "Used"
 msgstr "Usato"
 
@@ -409,19 +425,19 @@ msgstr "?"
 
 #: ../src/e_date.c:163
 msgid "Today %l:%M %p"
-msgstr "Oggi %k.%M"
+msgstr "Oggi %H:%M"
 
 #: ../src/e_date.c:172
 msgid "Yesterday %l:%M %p"
-msgstr "Ieri %k.%M"
+msgstr "Ieri %H:%M"
 
 #: ../src/e_date.c:184
 msgid "%a %l:%M %p"
-msgstr "%a %k.%M"
+msgstr "%a %H:%M"
 
 #: ../src/e_date.c:192
 msgid "%b %d %l:%M %p"
-msgstr "%d %b %k.%M"
+msgstr "%d %b %H:%M"
 
 #: ../src/e_date.c:194
 msgid "%b %d %Y"
@@ -444,7 +460,7 @@ msgstr "Titolo"
 msgid "The title of the color selection dialog"
 msgstr "Il titolo del dialogo di selezione del colore"
 
-#: ../src/gsm_color_button.c:152 ../src/gsm_color_button.c:512
+#: ../src/gsm_color_button.c:152 ../src/gsm_color_button.c:515
 msgid "Pick a Color"
 msgstr "Scegliere un colore"
 
@@ -460,11 +476,11 @@ msgstr "Il colore selezionato"
 msgid "Type of color picker"
 msgstr "Il tipo di selettore colore"
 
-#: ../src/gsm_color_button.c:434
+#: ../src/gsm_color_button.c:437
 msgid "Received invalid color data\n"
 msgstr "Ricevuti dati colore non validi\n"
 
-#: ../src/gsm_color_button.c:535
+#: ../src/gsm_color_button.c:538
 msgid "Click to set graph colors"
 msgstr "Fare clic per impostare i colori del grafico"
 
@@ -474,7 +490,7 @@ msgstr "Fare clic per impostare i colori del grafico"
 msgid "Pick a Color for '%s'"
 msgstr "Scelta colore per «%s»"
 
-#: ../src/interface.cpp:220 ../src/procproperties.cpp:100
+#: ../src/interface.cpp:220 ../src/procproperties.cpp:78
 msgid "CPU"
 msgstr "CPU"
 
@@ -491,7 +507,7 @@ msgstr ""
 "Alessio Frusciante <algol@firenze.linux.it>\n"
 "Davide Falanga <davide.falanga@alice.it>"
 
-#: ../src/load-graph.cpp:161
+#: ../src/load-graph.cpp:157
 #, c-format
 msgid "%u second"
 msgid_plural "%u seconds"
@@ -499,108 +515,99 @@ msgstr[0] "%u secondo"
 msgstr[1] "%u secondi"
 
 # spazio su disco, quindi maschile
-#: ../src/load-graph.cpp:370
+#: ../src/load-graph.cpp:366
 msgid "not available"
 msgstr "non disponibile"
 
 #. xgettext: 540MiB (53 %) of 1.0 GiB
-#: ../src/load-graph.cpp:373
+#: ../src/load-graph.cpp:369
 #, c-format
 msgid "%s (%.1f%%) of %s"
 msgstr "%s (%.1f%%) di %s"
 
-#: ../src/lsof.cpp:109
-msgid "Error"
-msgstr "Errore"
-
-#: ../src/lsof.cpp:110
-#, c-format
-msgid "'%s' is not a valid Perl regular expression."
-msgstr "«%s» non è un'espressione regolare valida in Perl."
-
-#: ../src/lsof.cpp:128
+#: ../src/lsof.cpp:118
 #, c-format
 msgid "%d open file"
 msgid_plural "%d open files"
 msgstr[0] "%d file aperto"
 msgstr[1] "%d file aperti"
 
-#: ../src/lsof.cpp:130
+#: ../src/lsof.cpp:120
 #, c-format
 msgid "%d matching open file"
 msgid_plural "%d matching open files"
 msgstr[0] "%d file corrispondente aperto"
 msgstr[1] "%d file corrispondenti aperti"
 
-#: ../src/lsof.cpp:246
+#: ../src/lsof.cpp:247
 msgid "Process"
 msgstr "Processi"
 
-#: ../src/lsof.cpp:258
+#: ../src/lsof.cpp:259
 msgid "PID"
 msgstr "PID"
 
-#: ../src/lsof.cpp:268 ../src/memmaps.cpp:303
+#: ../src/lsof.cpp:269 ../src/memmaps.cpp:307
 msgid "Filename"
 msgstr "Nome file"
 
 #. xgettext: virtual memory start
-#: ../src/memmaps.cpp:305
+#: ../src/memmaps.cpp:309
 msgid "VM Start"
 msgstr "Inizio VM"
 
 #. xgettext: virtual memory end
-#: ../src/memmaps.cpp:307
+#: ../src/memmaps.cpp:311
 msgid "VM End"
 msgstr "Fine VM"
 
 #. xgettext: virtual memory syze
-#: ../src/memmaps.cpp:309
+#: ../src/memmaps.cpp:313
 msgid "VM Size"
 msgstr "Dimensione VM"
 
-#: ../src/memmaps.cpp:310
+#: ../src/memmaps.cpp:314
 msgid "Flags"
 msgstr "Flag"
 
 #. xgettext: virtual memory offset
-#: ../src/memmaps.cpp:312
+#: ../src/memmaps.cpp:316
 msgid "VM Offset"
 msgstr "Offset VM"
 
 #. xgettext: memory that has not been modified since
 #. it has been allocated
-#: ../src/memmaps.cpp:315
+#: ../src/memmaps.cpp:319
 msgid "Private clean"
 msgstr "Privata clean"
 
 #. xgettext: memory that has been modified since it
 #. has been allocated
-#: ../src/memmaps.cpp:318
+#: ../src/memmaps.cpp:322
 msgid "Private dirty"
 msgstr "Privata dirty"
 
 #. xgettext: shared memory that has not been modified
 #. since it has been allocated
-#: ../src/memmaps.cpp:321
+#: ../src/memmaps.cpp:325
 msgid "Shared clean"
 msgstr "Condivisa clean"
 
 #. xgettext: shared memory that has been modified
 #. since it has been allocated
-#: ../src/memmaps.cpp:324
+#: ../src/memmaps.cpp:328
 msgid "Shared dirty"
 msgstr "Condivisa dirty"
 
-#: ../src/memmaps.cpp:326
+#: ../src/memmaps.cpp:330
 msgid "Inode"
 msgstr "Inode"
 
-#: ../src/memmaps.cpp:436
+#: ../src/memmaps.cpp:440
 msgid "Memory Maps"
 msgstr "Mappe della memoria"
 
-#: ../src/memmaps.cpp:448
+#: ../src/memmaps.cpp:452
 #, c-format
 msgid "_Memory maps for process \"%s\" (PID %u):"
 msgstr "_Mappe di memoria per il processo «%s» (PID %u):"
@@ -1040,7 +1047,7 @@ msgstr "Colonna per ordinare i file aperti"
 msgid "Open files sort order"
 msgstr "Ordine dei file aperti"
 
-#: ../src/prefsdialog.cpp:170
+#: ../src/prefsdialog.cpp:171
 msgid "Icon"
 msgstr "Icona"
 
@@ -1063,19 +1070,26 @@ msgstr ""
 "%s"
 
 #. xgettext: primary alert message for killing single process
-#: ../src/procdialogs.cpp:75
+#: ../src/procdialogs.cpp:76
 #, c-format
 msgid "Are you sure you want to kill the selected process “%s” (PID: %u)?"
 msgstr "Uccidere il processo «%s» selezionato (PID: %u)?"
 
 #. xgettext: primary alert message for ending single process
-#: ../src/procdialogs.cpp:80
+#: ../src/procdialogs.cpp:82
 #, c-format
 msgid "Are you sure you want to end the selected process “%s” (PID: %u)?"
 msgstr "Terminare il processo «%s» selezionato (PID: %u)?"
 
+#. SIGSTOP
+#. xgettext: primary alert message for stopping single process
+#: ../src/procdialogs.cpp:88
+#, c-format
+msgid "Are you sure you want to stop the selected process “%s” (PID: %u)?"
+msgstr "Fermare il processo «%s» selezionato (PID: %u)?"
+
 #. xgettext: primary alert message for killing multiple processes
-#: ../src/procdialogs.cpp:87
+#: ../src/procdialogs.cpp:97
 #, c-format
 msgid "Are you sure you want to kill the selected process?"
 msgid_plural "Are you sure you want to kill the %d selected processes?"
@@ -1083,15 +1097,24 @@ msgstr[0] "Uccidere il processo selezionato?"
 msgstr[1] "Uccidere i %d processi selezionati?"
 
 #. xgettext: primary alert message for ending multiple processes
-#: ../src/procdialogs.cpp:91
+#: ../src/procdialogs.cpp:103
 #, c-format
 msgid "Are you sure you want to end the selected process?"
 msgid_plural "Are you sure you want to end the %d selected processes?"
 msgstr[0] "Terminare il processo selezionato?"
 msgstr[1] "Terminare i %d processi selezionati?"
 
+#. SIGSTOP
+#. xgettext: primary alert message for stopping multiple processes
+#: ../src/procdialogs.cpp:109
+#, c-format
+msgid "Are you sure you want to stop the selected process?"
+msgid_plural "Are you sure you want to stop the %d selected processes?"
+msgstr[0] "Fermare il processo selezionato?"
+msgstr[1] "Fermare i %d processi selezionati?"
+
 #. xgettext: secondary alert message
-#: ../src/procdialogs.cpp:98 ../src/procdialogs.cpp:104
+#: ../src/procdialogs.cpp:119
 msgid ""
 "Killing a process may destroy data, break the session or introduce a "
 "security risk. Only unresponsive processes should be killed."
@@ -1100,31 +1123,58 @@ msgstr ""
 "sessione di lavoro o introdurre un rischio di sicurezza. Solo i processi "
 "fuori controllo dovrebbero essere uccisi."
 
-#: ../src/procdialogs.cpp:101
+#: ../src/procdialogs.cpp:122
 msgid "_Kill Process"
 msgid_plural "_Kill Processes"
 msgstr[0] "_Uccidi processo"
 msgstr[1] "_Uccidi processi"
 
-#: ../src/procdialogs.cpp:107
+#. xgettext: secondary alert message
+#: ../src/procdialogs.cpp:126
+msgid ""
+"Ending a process may destroy data, break the session or introduce a security "
+"risk. Only unresponsive processes should be ended."
+msgstr ""
+"Terminando un processo si potrebbero perdere dei dati, interrompere la "
+"sessione di lavoro o introdurre un rischio di sicurezza. Solo i processi "
+"fuori controllo dovrebbero essere terminati."
+
+#: ../src/procdialogs.cpp:129
 msgid "_End Process"
 msgid_plural "_End Processes"
 msgstr[0] "_Termina processo"
 msgstr[1] "_Termina processi"
 
-#: ../src/procdialogs.cpp:188
+#. SIGSTOP
+#. xgettext: secondary alert message
+#: ../src/procdialogs.cpp:133
+msgid ""
+"Stopping a process may destroy data, break the session or introduce a "
+"security risk. Only unresponsive processes should be stopped."
+msgstr ""
+"Fermando un processo si potrebbero perdere dei dati, interrompere la "
+"sessione di lavoro o introdurre un rischio di sicurezza. Solo i processi "
+"fuori controllo dovrebbero essere fermati."
+
+#: ../src/procdialogs.cpp:136
+msgid "_Stop Process"
+msgid_plural "_Stop Processes"
+msgstr[0] "_Ferma processo"
+msgstr[1] "_Ferma processi"
+
+#: ../src/procdialogs.cpp:218
 #, c-format
 msgid "Change Priority of Process “%s” (PID: %u)"
 msgstr "Cambia priorità del processo «%s» (PID %u)"
 
-#: ../src/procdialogs.cpp:191
+#: ../src/procdialogs.cpp:221
 #, c-format
 msgid "Change Priority of the selected process"
 msgid_plural "Change Priority of %d selected processes"
 msgstr[0] "Modifica priorità del processo selezionato"
 msgstr[1] "Modifica priorità dei %d processi selezionati"
 
-#: ../src/procdialogs.cpp:210
+#: ../src/procdialogs.cpp:240
 msgid "Note:"
 msgstr "Nota:"
 
@@ -1134,7 +1184,7 @@ msgstr "Nota:"
 #
 # È staccato per non mettere i markup, peccato si siano
 # dimenticati che anche i : vanno localizzati... mah  --Luca
-#: ../src/procdialogs.cpp:211
+#: ../src/procdialogs.cpp:241
 msgid ""
 "The priority of a process is given by its nice value. A lower nice value "
 "corresponds to a higher priority."
@@ -1142,115 +1192,108 @@ msgstr ""
 "la priorità di un processo è data dal suo valore di nice. Un valore più "
 "basso corrisponde a una priorità più alta."
 
-#: ../src/procproperties.cpp:55 ../src/procproperties.cpp:106
-#: ../src/procproperties.cpp:109 ../src/util.cpp:432
+#: ../src/procproperties.cpp:50 ../src/procproperties.cpp:84
+#: ../src/procproperties.cpp:87 ../src/util.cpp:432
 msgid "N/A"
 msgstr "N/D"
 
-#: ../src/procproperties.cpp:89 ../src/proctable.cpp:322
+#: ../src/procproperties.cpp:67 ../src/proctable.cpp:334
 msgid "Process Name"
 msgstr "Nome del processo"
 
-#: ../src/procproperties.cpp:90 ../src/proctable.cpp:323
+#: ../src/procproperties.cpp:68 ../src/proctable.cpp:335
 msgid "User"
 msgstr "Utente"
 
-#: ../src/procproperties.cpp:91 ../src/proctable.cpp:324
+#: ../src/procproperties.cpp:69 ../src/proctable.cpp:336
 msgid "Status"
 msgstr "Stato"
 
-#: ../src/procproperties.cpp:93 ../src/proctable.cpp:325
+#: ../src/procproperties.cpp:71 ../src/proctable.cpp:337
 msgid "Virtual Memory"
 msgstr "Memoria virtuale"
 
-#: ../src/procproperties.cpp:94 ../src/proctable.cpp:326
+#: ../src/procproperties.cpp:72 ../src/proctable.cpp:338
 msgid "Resident Memory"
 msgstr "Memoria residente"
 
-#: ../src/procproperties.cpp:95 ../src/proctable.cpp:327
+#: ../src/procproperties.cpp:73 ../src/proctable.cpp:339
 msgid "Writable Memory"
 msgstr "Memoria scrivibile"
 
-#: ../src/procproperties.cpp:96 ../src/proctable.cpp:328
+#: ../src/procproperties.cpp:74 ../src/proctable.cpp:340
 msgid "Shared Memory"
 msgstr "Memoria condivisa"
 
-#: ../src/procproperties.cpp:98 ../src/proctable.cpp:329
+#: ../src/procproperties.cpp:76 ../src/proctable.cpp:341
 msgid "X Server Memory"
 msgstr "Memoria server X"
 
-#: ../src/procproperties.cpp:101 ../src/proctable.cpp:331
+#: ../src/procproperties.cpp:79 ../src/proctable.cpp:343
 msgid "CPU Time"
 msgstr "Tempo CPU"
 
-#: ../src/procproperties.cpp:101
-#, c-format
-msgid "%lld second"
-msgid_plural "%lld seconds"
-msgstr[0] "%lld secondo"
-msgstr[1] "%lld secondi"
-
 # colonna di data e ora di avvio del processo
-#: ../src/procproperties.cpp:102 ../src/proctable.cpp:332
+#: ../src/procproperties.cpp:80 ../src/proctable.cpp:344
 msgid "Started"
 msgstr "Avviato"
 
-#: ../src/procproperties.cpp:103 ../src/proctable.cpp:333
+#: ../src/procproperties.cpp:81 ../src/proctable.cpp:345
 msgid "Nice"
 msgstr "Nice"
 
-#: ../src/procproperties.cpp:104 ../src/proctable.cpp:347
+#: ../src/procproperties.cpp:82 ../src/proctable.cpp:359
 msgid "Priority"
 msgstr "Priorità"
 
-#: ../src/procproperties.cpp:105 ../src/proctable.cpp:334
+#: ../src/procproperties.cpp:83 ../src/proctable.cpp:346
 msgid "ID"
 msgstr "ID"
 
-#: ../src/procproperties.cpp:106 ../src/proctable.cpp:335
+#: ../src/procproperties.cpp:84 ../src/proctable.cpp:347
 msgid "Security Context"
 msgstr "Security Context"
 
-#: ../src/procproperties.cpp:107 ../src/proctable.cpp:336
+#: ../src/procproperties.cpp:85 ../src/proctable.cpp:348
 msgid "Command Line"
 msgstr "Riga di comando"
 
 # (ndt) non so come renderlo bene in italiano...
 # nel caso venga tradotto, va tradotto anche + sopra
 #. xgettext: combined noun, the function the process is waiting in, see wchan ps(1)
-#: ../src/procproperties.cpp:108 ../src/proctable.cpp:339
+#: ../src/procproperties.cpp:86 ../src/proctable.cpp:351
 msgid "Waiting Channel"
 msgstr "WCHAN"
 
-#: ../src/procproperties.cpp:109 ../src/proctable.cpp:340
+#: ../src/procproperties.cpp:87 ../src/proctable.cpp:352
 msgid "Control Group"
 msgstr "Gruppo di controllo"
 
-#: ../src/procproperties.cpp:221
+#: ../src/procproperties.cpp:199
 #, c-format
 msgid "%s (PID %u)"
 msgstr "%s (PID %u)"
 
-#: ../src/proctable.cpp:330
+#: ../src/proctable.cpp:342
 #, no-c-format
 msgid "% CPU"
 msgstr "% CPU"
 
-#: ../src/proctable.cpp:341
+#: ../src/proctable.cpp:353
 msgid "Unit"
 msgstr "Unità"
 
-#: ../src/proctable.cpp:342
+#: ../src/proctable.cpp:354
 msgid "Session"
 msgstr "Sessione"
 
 #. TRANSLATORS: Seat = i.e. the physical seat the session of the process belongs to, only
 #. for multi-seat environments. See http://en.wikipedia.org/wiki/Multiseat_configuration
-#: ../src/proctable.cpp:345
+#: ../src/proctable.cpp:357
 msgid "Seat"
 msgstr "Postazione"
 
-#: ../src/proctable.cpp:346
+#: ../src/proctable.cpp:358
 msgid "Owner"
 msgstr "Proprietario"
 
@@ -1377,27 +1420,3 @@ msgstr "Priorità molto bassa"
 #, c-format
 msgid "%s/s"
 msgstr "%s/s"
-
-#~ msgid "_Name contains:"
-#~ msgstr "_Nome contiene:"
-
-#~ msgid "_Find"
-#~ msgstr "_Trova"
-
-#~ msgid "C_lear"
-#~ msgstr "Pu_lisci"
-
-#~ msgid "S_earch results:"
-#~ msgstr "Risultati della ric_erca:"
-
-#~ msgid "_Close"
-#~ msgstr "_Chiudi"
-
-#~ msgid "_Help"
-#~ msgstr "A_iuto"
-
-#~ msgid "Process Properties"
-#~ msgstr "Priorità processi"
-
-#~ msgid "Properties of process \"%s\" (PID %u):"
-#~ msgstr "Proprietà del process «%s» (PID %u):"

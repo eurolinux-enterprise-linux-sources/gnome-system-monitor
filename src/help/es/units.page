@@ -23,16 +23,11 @@
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>Daniel Mustieles</mal:name>
       <mal:email>daniel.mustieles@gmail.com</mal:email>
-      <mal:years>2014</mal:years>
+      <mal:years>2014 - 2015</mal:years>
     </mal:credit>
   </info>
 
   <title>¿Es lo mismo GiB que GB (gigabyte)?</title>
-
-  <comment>
-    <cite date="2011-06-18" href="mailto:philbull@gmail.com">Phil Bull</cite>
-    <p>Answer this question, quite briefly.</p>
-  </comment>
 
     <p>Las estadísticas de memoria y de espacio de disco se muestran usando <em>prefijos binarios IEC</em>, KiB, MiB, GiB, TiB (para kibi, mebi, gibi y tebi). Estos es así para distinguir los tamaños en binario usados por el Monitor del sistema (múltiplos de 1024) de los tamaños decimales (múltiplos de 1000) usados frecuentemente, por ejemplo, en las especificaciones de los discos duros.</p>
 

@@ -37,14 +37,15 @@
       <mal:email>jhardlin@orange.fr</mal:email>
       <mal:years>2014</mal:years>
     </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Leonor Palazzo</mal:name>
+      <mal:email>leonor.palazzo@gmail.com</mal:email>
+      <mal:years>2015</mal:years>
+    </mal:credit>
   </info>
 
   <title>Différences entre Gio (gibioctet) et Go (gigaoctet)</title>
-
-  <comment>
-    <cite date="2011-06-18" href="mailto:philbull@gmail.com">Phil Bull</cite>
-    <p>Answer this question, quite briefly.</p>
-  </comment>
 
     <p>Les statistiques de l'espace mémoire et disque sont affichées à l'aide des <em>préfixes binaires de la CEI</em>, Kio, Mio, Gio, Tio (pour kibi, mebi, gibi et tebi). Ceci pour distinguer l'unité de mesure en base binaire utilisée par le moniteur système (multiples de 1024) de l'unité de mesure en base décimale (multiples de 1000) utilisée habituellement, par exemple, sur les boîtes des disques durs.</p>
 

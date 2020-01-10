@@ -29,13 +29,6 @@
 
   <title>Az információk gyorsabb vagy lassabb frissítése</title>
 
-  <comment>
-    <cite date="2011-06-18" href="mailto:philbull@gmail.com">Phil Bull</cite>
-    <p>Explain how to make the info update faster (see Preferences dialog).
-    Explain that faster updates mean that the System Monitor will use more
-    CPU.</p>
-  </comment>
-
   <p>Az információk frissítési sebességének módosításához:</p>
 
   <steps>

@@ -29,13 +29,6 @@
 
   <title>Mi az a folyamat?</title>
 
-  <comment>
-    <cite date="2011-06-18" href="mailto:philbull@gmail.com">Phil Bull</cite>
-    <p>Explain, in simple terms, what a process is, how they relate to
- applications, how some are 'system processes', and what you can do with a
- process.</p>
-  </comment>
-
   <p>A <gui>folyamat</gui> egy éppen végrehajtás alatt álló program vagy alkalmazás a rendszeren. Egy alkalmazás elindításakor a rendszer egy egyedi folyamatazonosítót (PID) rendel hozzá, és az utasításai és adatai betöltésre kerülnek a memóriába.</p>
 
   <p>A <gui>Folyamatok</gui> lap megjeleníti a folyamatok információit, és lehetővé teszi azok <gui>Leállítását</gui>, <gui>Folytatását</gui>, <gui>Befejezését</gui>, <gui>Kilövését</gui> vagy a prioritásuk megváltoztatását. Ha <gui>Minden folyamat</gui> megjelenítését választja, akkor a folyamatlista tartalmazni fogja a <em>rendszerfolyamatokat</em>, amelyek a háttérben futnak és különböző, a számítógép működéséhez szükséges szolgáltatásokat biztosítanak.</p>

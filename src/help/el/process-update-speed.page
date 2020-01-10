@@ -21,6 +21,12 @@
     <desc>Ανανεώστε τις εμφανιζόμενες πληροφορίες στην παρακολούθηση συστήματος με μεγαλύτερο ή μικρότερο διάστημα.</desc>
   
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Ελληνική μεταφραστική ομάδα GNOME</mal:name>
+      <mal:email>team@gnome.gr</mal:email>
+      <mal:years>2014</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name> Δημήτρης Σπίγγος</mal:name>
       <mal:email>dmtrs32@gmail.com</mal:email>
       <mal:years>2014</mal:years>
@@ -28,13 +34,6 @@
   </info>
 
   <title>Κάντε την ενημέρωση πληροφοριών πιο γρήγορη ή πιο αργή</title>
-
-  <comment>
-    <cite date="2011-06-18" href="mailto:philbull@gmail.com">Phil Bull</cite>
-    <p>Explain how to make the info update faster (see Preferences dialog).
-    Explain that faster updates mean that the System Monitor will use more
-    CPU.</p>
-  </comment>
 
   <p>Για να αλλάξετε την ταχύτητα ανανέωσης πληροφοριών:</p>
 

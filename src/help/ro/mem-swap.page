@@ -25,12 +25,6 @@
 
   <title>What is "swap" memory?</title>
 
-  <comment>
-    <cite date="2011-06-18" href="mailto:philbull@gmail.com">Phil Bull</cite>
-    <p>Explain what swap is and how it helps. Explain that the computer may run
-    slowly if it's swapping too much.</p>
-  </comment>
-
   <p>Swap memory or <em>swap space</em> is the on-disk component of the virtual
   memory system. It is pre-configured as a <em>swap partition</em> or a
   <em>swap file</em> when Linux is first installed, but can also be added

@@ -23,7 +23,7 @@
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>Christian Kirbach</mal:name>
       <mal:email>christian.kirbach@gmail.com</mal:email>
-      <mal:years>2014</mal:years>
+      <mal:years>2014, 2015</mal:years>
     </mal:credit>
   
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
@@ -34,11 +34,6 @@
   </info>
 
   <title>Ist GiB das gleiche wie GB (Gigabyte)?</title>
-
-  <comment>
-    <cite date="2011-06-18" href="mailto:philbull@gmail.com">Phil Bull</cite>
-    <p>Answer this question, quite briefly.</p>
-  </comment>
 
     <p>Die Statistiken für Arbeitsspeicher und Festplattenspeicher werden mit <em>IEC Binärvorsätzen</em>: KiB, MiB, GiB, TiB für (kibi, mebi, gibi und tebi) angegeben. Damit ist beabsichtigt zwischen den in der Systemüberwachung verwendeten binären Größenangaben (Vielfache von 1024) und den bei Festplatten gewöhnlich genutzten dezimalen Größenangaben (Vielfache von 1000) zu unterscheiden.</p>
 

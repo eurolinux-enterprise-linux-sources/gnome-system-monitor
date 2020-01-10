@@ -23,18 +23,11 @@
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>Daniel Mustieles</mal:name>
       <mal:email>daniel.mustieles@gmail.com</mal:email>
-      <mal:years>2014</mal:years>
+      <mal:years>2014 - 2015</mal:years>
     </mal:credit>
   </info>
 
   <title>Hacer que la información se actualice con mayor o menor frecuencia</title>
-
-  <comment>
-    <cite date="2011-06-18" href="mailto:philbull@gmail.com">Phil Bull</cite>
-    <p>Explain how to make the info update faster (see Preferences dialog).
-    Explain that faster updates mean that the System Monitor will use more
-    CPU.</p>
-  </comment>
 
   <p>Para cambiar la velocidad de actualización de la información.</p>
 

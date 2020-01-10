@@ -21,6 +21,12 @@
     <desc>Μια διαδικασία μπορεί να χειριστεί από τον κατάλογο διεργασιών.</desc>
   
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Ελληνική μεταφραστική ομάδα GNOME</mal:name>
+      <mal:email>team@gnome.gr</mal:email>
+      <mal:years>2014</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name> Δημήτρης Σπίγγος</mal:name>
       <mal:email>dmtrs32@gmail.com</mal:email>
       <mal:years>2014</mal:years>
@@ -28,13 +34,6 @@
   </info>
 
   <title>Τι είναι μια διεργασία;</title>
-
-  <comment>
-    <cite date="2011-06-18" href="mailto:philbull@gmail.com">Phil Bull</cite>
-    <p>Explain, in simple terms, what a process is, how they relate to
- applications, how some are 'system processes', and what you can do with a
- process.</p>
-  </comment>
 
   <p>Μια <gui>διεργασία</gui> είναι ένα πρόγραμμα ή εφαρμογή που εκτελείται από το σύστημα. Όταν μια εφαρμογή ξεκινήσει, το σύστημα εκχωρεί ένα μοναδικό αναγνωριστικό διεργασίας (PID) και οι εντολές του και τα δεδομένα φορτώνονται στη μνήμη.</p>
 

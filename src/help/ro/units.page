@@ -23,11 +23,6 @@
 
   <title>Is GiB the same as GB (gigabyte)?</title>
 
-  <comment>
-    <cite date="2011-06-18" href="mailto:philbull@gmail.com">Phil Bull</cite>
-    <p>Answer this question, quite briefly.</p>
-  </comment>
-
     <p>The memory and disk space statistics are displayed using <em>IEC binary
  prefixes</em>, KiB, MiB, GiB, TiB (for kibi, mebi, gibi and tebi). These are
  intended to distinguish binary reporting of sizes used in System Monitor

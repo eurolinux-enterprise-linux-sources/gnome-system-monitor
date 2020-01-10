@@ -4,15 +4,15 @@
 #
 # Andraž Tori <andraz.tori1@guest.arnes.si>, 2002.
 # Matic Žgur <mr.zgur@gmail.com>, 2006-2007.
-# Matej Urbančič <mateju@svn.gnome.org>, 2007-2014.
+# Matej Urbančič <mateju@svn.gnome.org>, 2007-2016.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-system-monitor master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=system-"
 "monitor&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-06-16 19:38+0000\n"
-"PO-Revision-Date: 2014-06-16 22:32+0100\n"
+"POT-Creation-Date: 2016-08-18 22:22+0200\n"
+"PO-Revision-Date: 2016-08-18 22:25+0200\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "Language: sl\n"
@@ -22,15 +22,15 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 1.8.7.1\n"
 
 #: ../gnome-system-monitor.desktop.in.in.h:1 ../data/interface.ui.h:1
-#: ../src/application.cpp:268 ../src/interface.cpp:362
+#: ../src/application.cpp:262 ../src/interface.cpp:363
 msgid "System Monitor"
 msgstr "Nadzornik sistema"
 
 #: ../gnome-system-monitor.desktop.in.in.h:2
-#: ../gnome-system-monitor-kde.desktop.in.in.h:2 ../src/interface.cpp:363
+#: ../gnome-system-monitor-kde.desktop.in.in.h:2 ../src/interface.cpp:364
 msgid "View current processes and monitor system state"
 msgstr "Ogled trenutnih opravil in nadzor stanja sistema"
 
@@ -40,10 +40,10 @@ msgid ""
 "Manager;"
 msgstr ""
 "Nadzor;Sistem;Opravila;CPE;OPE;Pomnilnik;Omrežje;Zgodovina;Uporaba;Zmožnost;"
-"Naloge;Upravljalnik;"
+"Naloge;Upravljalnik"
 
 #: ../gnome-system-monitor-kde.desktop.in.in.h:1
-#: ../gnome-system-monitor.appdata.xml.in.h:1 ../src/application.cpp:324
+#: ../gnome-system-monitor.appdata.xml.in.h:1 ../src/application.cpp:317
 msgid "GNOME System Monitor"
 msgstr "Sistemski nadzornik za GNOME"
 
@@ -79,6 +79,22 @@ msgid ""
 msgstr ""
 "Možnost diagramov virov omogoča hiter pregled dogajanja v sistemu s prikazom "
 "omrežne in procesorske rabe ter zasedenosti pomnilnika."
+
+#: ../gnome-system-monitor.appdata.xml.in.h:6
+msgid "Process list view"
+msgstr "Pogled opravil"
+
+#: ../gnome-system-monitor.appdata.xml.in.h:7
+msgid "Resources overview"
+msgstr "Pregled virov"
+
+#: ../gnome-system-monitor.appdata.xml.in.h:8
+msgid "File Systems view"
+msgstr "Pogled sistemskih datotek"
+
+#: ../gnome-system-monitor.appdata.xml.in.h:9
+msgid "The GNOME Project"
+msgstr "Projekt GNOME"
 
 #: ../org.gnome.gnome-system-monitor.policy.in.in.h:1
 msgid "Kill process"
@@ -116,12 +132,12 @@ msgstr "Zgodovina uporabe CPE"
 msgid "Memory and Swap History"
 msgstr "Zgodovina porabe pomnilnika in izmenjevalnega prostora"
 
-#: ../data/interface.ui.h:7 ../src/interface.cpp:259
-#: ../src/procproperties.cpp:92 ../src/proctable.cpp:337
+#: ../data/interface.ui.h:7 ../src/interface.cpp:260
+#: ../src/procproperties.cpp:70 ../src/proctable.cpp:347
 msgid "Memory"
 msgstr "Pomnilnik"
 
-#: ../data/interface.ui.h:8 ../src/interface.cpp:271
+#: ../data/interface.ui.h:8 ../src/interface.cpp:272
 msgid "Swap"
 msgstr "Izmenjevalni razdelek"
 
@@ -129,7 +145,7 @@ msgstr "Izmenjevalni razdelek"
 msgid "Network History"
 msgstr "Zgodovina uporabe mrežnih povezav"
 
-#: ../data/interface.ui.h:10 ../src/interface.cpp:299
+#: ../data/interface.ui.h:10 ../src/interface.cpp:300
 msgid "Receiving"
 msgstr "Prejemanje"
 
@@ -137,7 +153,7 @@ msgstr "Prejemanje"
 msgid "Total Received"
 msgstr "Skupaj prejeto"
 
-#: ../data/interface.ui.h:12 ../src/interface.cpp:314
+#: ../data/interface.ui.h:12 ../src/interface.cpp:315
 msgid "Sending"
 msgstr "Pošiljanje"
 
@@ -154,7 +170,7 @@ msgid "File Systems"
 msgstr "Datotečni sistemi"
 
 #: ../data/lsof.ui.h:1
-msgctxt "Window title for 'Search for Open Files' dialog"
+msgctxt "Window title for Search for Open Files dialog"
 msgid "Search for Open Files"
 msgstr "Iskanje odprtih datotek"
 
@@ -167,9 +183,9 @@ msgid "Case insensitive"
 msgstr "Ne upoštevaj velikosti črk"
 
 #: ../data/menus.ui.h:1
-msgctxt "Menu item to Open 'Search for Open Files' dialog"
+msgctxt "Menu item to Open Search for Open Files dialog"
 msgid "Search for Open Files"
-msgstr "Iskanje odprtih datotek"
+msgstr "Poišči odprte datoteke"
 
 #: ../data/menus.ui.h:2
 msgid "Preferences"
@@ -208,42 +224,39 @@ msgid "_Dependencies"
 msgstr "_Odvisnosti"
 
 #: ../data/menus.ui.h:11
-msgid "_Stop"
-msgstr "_Zaustavi"
+msgid "_Properties"
+msgstr "_Lastnosti"
 
 #: ../data/menus.ui.h:12
-msgid "_Continue"
-msgstr "N_adaljuj"
+msgid "_Memory Maps"
+msgstr "_Karte pomnilnika"
 
-#: ../data/menus.ui.h:13
-msgid "_End"
-msgstr "_Končaj"
-
+#. Translators: this means
 #: ../data/menus.ui.h:14
-msgid "_Kill"
-msgstr "_Uniči"
+msgid "Open _Files"
+msgstr "Odpri _datoteke"
 
 #: ../data/menus.ui.h:15
 msgid "_Change Priority"
 msgstr "_Spremeni prednost"
 
-#: ../data/menus.ui.h:16 ../src/util.cpp:214
+#: ../data/menus.ui.h:16 ../src/util.cpp:215
 msgid "Very High"
 msgstr "Zelo visoko"
 
-#: ../data/menus.ui.h:17 ../src/util.cpp:216
+#: ../data/menus.ui.h:17 ../src/util.cpp:217
 msgid "High"
 msgstr "Visoko"
 
-#: ../data/menus.ui.h:18 ../src/util.cpp:218
+#: ../data/menus.ui.h:18 ../src/util.cpp:219
 msgid "Normal"
 msgstr "Običajno"
 
-#: ../data/menus.ui.h:19 ../src/util.cpp:220
+#: ../data/menus.ui.h:19 ../src/util.cpp:221
 msgid "Low"
 msgstr "Nizko"
 
-#: ../data/menus.ui.h:20 ../src/util.cpp:222
+#: ../data/menus.ui.h:20 ../src/util.cpp:223
 msgid "Very Low"
 msgstr "Zelo nizko"
 
@@ -252,17 +265,20 @@ msgid "Custom"
 msgstr "Po meri"
 
 #: ../data/menus.ui.h:22
-msgid "_Memory Maps"
-msgstr "_Karte pomnilnika"
+msgid "_Stop"
+msgstr "_Zaustavi"
 
-#. Translators: this means 'Files that are open' (open is not a verb here)
+#: ../data/menus.ui.h:23
+msgid "_Continue"
+msgstr "N_adaljuj"
+
 #: ../data/menus.ui.h:24
-msgid "Open _Files"
-msgstr "Odpri _datoteke"
+msgid "_End"
+msgstr "_Končaj"
 
 #: ../data/menus.ui.h:25
-msgid "_Properties"
-msgstr "_Lastnosti"
+msgid "_Kill"
+msgstr "_Uniči"
 
 #: ../data/openfiles.ui.h:1
 msgid "Open Files"
@@ -320,7 +336,7 @@ msgstr "Pokaži _vse datotečne sisteme"
 msgid "File system i_nformation shown in list:"
 msgstr "Podatki o _datotečnem sistemu prikazani v seznamu:"
 
-#: ../data/renice.ui.h:1 ../src/procdialogs.cpp:123
+#: ../data/renice.ui.h:1 ../src/procdialogs.cpp:153
 msgid "_Cancel"
 msgstr "_Prekliči"
 
@@ -340,51 +356,51 @@ msgstr ""
 "<small><i><b>Opomba:</b> Prednost opravila je podana z oceno prednostni "
 "delovanja. Nižja vrednost ustreza višji prednosti.</i></small>"
 
-#: ../src/application.cpp:310
+#: ../src/application.cpp:303
 msgid "A simple process and system monitor."
 msgstr "Enostaven nadzornik sistema in opravil"
 
-#: ../src/argv.cpp:21
+#: ../src/argv.cpp:22
 msgid "Show the Processes tab"
 msgstr "Pokaži zavihek opravil"
 
-#: ../src/argv.cpp:26
+#: ../src/argv.cpp:27
 msgid "Show the Resources tab"
 msgstr "Pokaži zavihek virov"
 
-#: ../src/argv.cpp:31
+#: ../src/argv.cpp:32
 msgid "Show the File Systems tab"
 msgstr "Pokaži zavihek datotečnih sistemov"
 
-#: ../src/argv.cpp:35
+#: ../src/argv.cpp:36
 msgid "Show the application's version"
 msgstr "Pokaži različico programa"
 
-#: ../src/disks.cpp:369 ../src/memmaps.cpp:325
+#: ../src/disks.cpp:361 ../src/memmaps.cpp:329
 msgid "Device"
 msgstr "Naprava"
 
-#: ../src/disks.cpp:370
+#: ../src/disks.cpp:362
 msgid "Directory"
 msgstr "Mapa"
 
-#: ../src/disks.cpp:371 ../src/gsm_color_button.c:165 ../src/openfiles.cpp:252
+#: ../src/disks.cpp:363 ../src/gsm_color_button.c:165 ../src/openfiles.cpp:252
 msgid "Type"
 msgstr "Vrsta"
 
-#: ../src/disks.cpp:372
+#: ../src/disks.cpp:364
 msgid "Total"
 msgstr "Skupno"
 
-#: ../src/disks.cpp:373
+#: ../src/disks.cpp:365
 msgid "Free"
 msgstr "Prosto"
 
-#: ../src/disks.cpp:374
+#: ../src/disks.cpp:366
 msgid "Available"
 msgstr "Razpoložljivo"
 
-#: ../src/disks.cpp:375
+#: ../src/disks.cpp:367
 msgid "Used"
 msgstr "Uporabljeno"
 
@@ -460,7 +476,7 @@ msgstr "Kliknite za nastavitev barv grafa"
 msgid "Pick a Color for '%s'"
 msgstr "Izbor barve za '%s'"
 
-#: ../src/interface.cpp:220 ../src/procproperties.cpp:100
+#: ../src/interface.cpp:220 ../src/procproperties.cpp:78
 msgid "CPU"
 msgstr "CPE"
 
@@ -469,7 +485,7 @@ msgstr "CPE"
 msgid "CPU%d"
 msgstr "CPE%d"
 
-#: ../src/interface.cpp:373
+#: ../src/interface.cpp:374
 msgid "translator-credits"
 msgstr ""
 "Matic Žgur <mr.zgur@gmail.com>\n"
@@ -477,7 +493,7 @@ msgstr ""
 "Tilen Travnik <tilen.travnik@guest.arnes.si>\n"
 "Matej Urbančič <mateju@svn.gnome.org>"
 
-#: ../src/load-graph.cpp:161
+#: ../src/load-graph.cpp:157
 #, c-format
 msgid "%u second"
 msgid_plural "%u seconds"
@@ -486,26 +502,17 @@ msgstr[1] "%u sekunda"
 msgstr[2] "%u sekundi"
 msgstr[3] "%u sekunde"
 
-#: ../src/load-graph.cpp:370
+#: ../src/load-graph.cpp:366
 msgid "not available"
 msgstr "ni na voljo"
 
 #. xgettext: 540MiB (53 %) of 1.0 GiB
-#: ../src/load-graph.cpp:373
+#: ../src/load-graph.cpp:369
 #, c-format
 msgid "%s (%.1f%%) of %s"
 msgstr "%s (%.1f%%) od %s"
 
-#: ../src/lsof.cpp:109
-msgid "Error"
-msgstr "Napaka"
-
-#: ../src/lsof.cpp:110
-#, c-format
-msgid "'%s' is not a valid Perl regular expression."
-msgstr "'%s' ni veljaven logični izraz, zapisan v jeziku Perl."
-
-#: ../src/lsof.cpp:128
+#: ../src/lsof.cpp:118
 #, c-format
 msgid "%d open file"
 msgid_plural "%d open files"
@@ -514,7 +521,7 @@ msgstr[1] "%d odprta datoteka"
 msgstr[2] "%d odprti datoteki"
 msgstr[3] "%d odprte datoteke"
 
-#: ../src/lsof.cpp:130
+#: ../src/lsof.cpp:120
 #, c-format
 msgid "%d matching open file"
 msgid_plural "%d matching open files"
@@ -523,75 +530,75 @@ msgstr[1] "%d skladna odprta datoteka"
 msgstr[2] "%d skladni odprti datoteki"
 msgstr[3] "%d skladne odprte datoteke"
 
-#: ../src/lsof.cpp:248
+#: ../src/lsof.cpp:247
 msgid "Process"
 msgstr "Opravilo"
 
-#: ../src/lsof.cpp:260
+#: ../src/lsof.cpp:259
 msgid "PID"
 msgstr "PID"
 
-#: ../src/lsof.cpp:270 ../src/memmaps.cpp:303
+#: ../src/lsof.cpp:269 ../src/memmaps.cpp:307
 msgid "Filename"
 msgstr "Ime datoteke"
 
 #. xgettext: virtual memory start
-#: ../src/memmaps.cpp:305
+#: ../src/memmaps.cpp:309
 msgid "VM Start"
 msgstr "Začetek navideznega pomnilnika"
 
 #. xgettext: virtual memory end
-#: ../src/memmaps.cpp:307
+#: ../src/memmaps.cpp:311
 msgid "VM End"
 msgstr "Konec navideznega pomnilnika"
 
 #. xgettext: virtual memory syze
-#: ../src/memmaps.cpp:309
+#: ../src/memmaps.cpp:313
 msgid "VM Size"
 msgstr "Velikost navideznega pomnilnika"
 
-#: ../src/memmaps.cpp:310
+#: ../src/memmaps.cpp:314
 msgid "Flags"
 msgstr "Zastavice"
 
 #. xgettext: virtual memory offset
-#: ../src/memmaps.cpp:312
+#: ../src/memmaps.cpp:316
 msgid "VM Offset"
 msgstr "Odmik navideznega pomnilnika"
 
 #. xgettext: memory that has not been modified since
 #. it has been allocated
-#: ../src/memmaps.cpp:315
+#: ../src/memmaps.cpp:319
 msgid "Private clean"
 msgstr "Nespremenjen pomnilnik"
 
 #. xgettext: memory that has been modified since it
 #. has been allocated
-#: ../src/memmaps.cpp:318
+#: ../src/memmaps.cpp:322
 msgid "Private dirty"
 msgstr "Spremenjen pomnilnik"
 
 #. xgettext: shared memory that has not been modified
 #. since it has been allocated
-#: ../src/memmaps.cpp:321
+#: ../src/memmaps.cpp:325
 msgid "Shared clean"
 msgstr "Spremenjen skupni pomnilnik"
 
 #. xgettext: shared memory that has been modified
 #. since it has been allocated
-#: ../src/memmaps.cpp:324
+#: ../src/memmaps.cpp:328
 msgid "Shared dirty"
 msgstr "nespremenjen skupni pomnilnik"
 
-#: ../src/memmaps.cpp:326
+#: ../src/memmaps.cpp:330
 msgid "Inode"
 msgstr "Inode"
 
-#: ../src/memmaps.cpp:437
+#: ../src/memmaps.cpp:440
 msgid "Memory Maps"
 msgstr "Karte pomnilnika"
 
-#: ../src/memmaps.cpp:449
+#: ../src/memmaps.cpp:452
 #, c-format
 msgid "_Memory maps for process \"%s\" (PID %u):"
 msgstr "_Karte pomnilnika za opravilo \"%s\" (PID %u):"
@@ -631,7 +638,7 @@ msgstr "FD"
 msgid "Object"
 msgstr "Predmet"
 
-#: ../src/openfiles.cpp:337
+#: ../src/openfiles.cpp:336
 #, c-format
 msgid "_Files opened by process \"%s\" (PID %u):"
 msgstr "_Datoteke, ki jih je odprlo opravilo \"%s\" (PID %u):"
@@ -1028,7 +1035,7 @@ msgstr "Stolpec razvrščanja odprtih datotek"
 msgid "Open files sort order"
 msgstr "Način razvrščanja odprtih datotek"
 
-#: ../src/prefsdialog.cpp:170
+#: ../src/prefsdialog.cpp:171
 msgid "Icon"
 msgstr "Ikona"
 
@@ -1051,19 +1058,27 @@ msgstr ""
 "%s"
 
 #. xgettext: primary alert message for killing single process
-#: ../src/procdialogs.cpp:75
+#: ../src/procdialogs.cpp:76
 #, c-format
 msgid "Are you sure you want to kill the selected process “%s” (PID: %u)?"
 msgstr "Ali ste prepričani, da želite uničiti izbrano opravilo “%s” (PID: %u)?"
 
 #. xgettext: primary alert message for ending single process
-#: ../src/procdialogs.cpp:80
+#: ../src/procdialogs.cpp:82
 #, c-format
 msgid "Are you sure you want to end the selected process “%s” (PID: %u)?"
 msgstr "Ali ste prepričani, da želite končati izbrano opravilo “%s” (PID: %u)?"
 
+#. SIGSTOP
+#. xgettext: primary alert message for stopping single process
+#: ../src/procdialogs.cpp:88
+#, c-format
+msgid "Are you sure you want to stop the selected process “%s” (PID: %u)?"
+msgstr ""
+"Ali ste prepričani, da želite zaustaviti izbrano opravilo “%s” (PID: %u)?"
+
 #. xgettext: primary alert message for killing multiple processes
-#: ../src/procdialogs.cpp:87
+#: ../src/procdialogs.cpp:97
 #, c-format
 msgid "Are you sure you want to kill the selected process?"
 msgid_plural "Are you sure you want to kill the %d selected processes?"
@@ -1073,7 +1088,7 @@ msgstr[2] "Ali ste prepričani, da želite uničiti %d izbrani opravili?"
 msgstr[3] "Ali ste prepričani, da želite uničiti %d izbrana opravila?"
 
 #. xgettext: primary alert message for ending multiple processes
-#: ../src/procdialogs.cpp:91
+#: ../src/procdialogs.cpp:103
 #, c-format
 msgid "Are you sure you want to end the selected process?"
 msgid_plural "Are you sure you want to end the %d selected processes?"
@@ -1082,8 +1097,19 @@ msgstr[1] "Ali ste prepričani, da želite končati %d izbrano opravilo?"
 msgstr[2] "Ali ste prepričani, da želite končati %d izbrani opravili?"
 msgstr[3] "Ali ste prepričani, da želite končati %d izbrana opravila?"
 
+#. SIGSTOP
+#. xgettext: primary alert message for stopping multiple processes
+#: ../src/procdialogs.cpp:109
+#, c-format
+msgid "Are you sure you want to stop the selected process?"
+msgid_plural "Are you sure you want to stop the %d selected processes?"
+msgstr[0] "Ali ste prepričani, da želite zaustaviti %d izbranih opravil?"
+msgstr[1] "Ali ste prepričani, da želite zaustaviti %d izbrano opravilo?"
+msgstr[2] "Ali ste prepričani, da želite zaustaviti %d izbrani opravili?"
+msgstr[3] "Ali ste prepričani, da želite zaustaviti %d izbrana opravila?"
+
 #. xgettext: secondary alert message
-#: ../src/procdialogs.cpp:98 ../src/procdialogs.cpp:104
+#: ../src/procdialogs.cpp:119
 msgid ""
 "Killing a process may destroy data, break the session or introduce a "
 "security risk. Only unresponsive processes should be killed."
@@ -1092,7 +1118,7 @@ msgstr ""
 "pa dejanje predstavlja varnostno tveganje. Uničiti je razumljivo le "
 "opravila, ki niso odzivna."
 
-#: ../src/procdialogs.cpp:101
+#: ../src/procdialogs.cpp:122
 msgid "_Kill Process"
 msgid_plural "_Kill Processes"
 msgstr[0] "_Uniči opravila"
@@ -1100,7 +1126,17 @@ msgstr[1] "_Uniči opravilo"
 msgstr[2] "_Uniči opravili"
 msgstr[3] "_Uniči opravila"
 
-#: ../src/procdialogs.cpp:107
+#. xgettext: secondary alert message
+#: ../src/procdialogs.cpp:126
+msgid ""
+"Ending a process may destroy data, break the session or introduce a security "
+"risk. Only unresponsive processes should be ended."
+msgstr ""
+"Z vsiljenim končanjem opravila se podatki lahko izgubijo, sesuje se lahko "
+"seja ali pa dejanje predstavlja varnostno tveganje. Vsiljeno končati je "
+"razumljivo le opravila, ki niso odzivna."
+
+#: ../src/procdialogs.cpp:129
 msgid "_End Process"
 msgid_plural "_End Processes"
 msgstr[0] "_Končaj opravila"
@@ -1108,12 +1144,30 @@ msgstr[1] "_Končaj opravilo"
 msgstr[2] "_Končaj opravili"
 msgstr[3] "_Končaj opravila"
 
-#: ../src/procdialogs.cpp:188
+#. SIGSTOP
+#. xgettext: secondary alert message
+#: ../src/procdialogs.cpp:133
+msgid ""
+"Stopping a process may destroy data, break the session or introduce a "
+"security risk. Only unresponsive processes should be stopped."
+msgstr ""
+"Zaustavljanje opravil lahko poškoduje podatke, okvari sejo oziroma povzroči "
+"varnostno tveganje. Zaustavljena so lahko le neodzivna opravila."
+
+#: ../src/procdialogs.cpp:136
+msgid "_Stop Process"
+msgid_plural "_Stop Processes"
+msgstr[0] "_Zaustavi opravila"
+msgstr[1] "_Zaustavi opravilo"
+msgstr[2] "_Zaustavi opravili"
+msgstr[3] "_Zaustavi opravila"
+
+#: ../src/procdialogs.cpp:218
 #, c-format
 msgid "Change Priority of Process “%s” (PID: %u)"
 msgstr "Spremeni prednost opravila “%s” (PID %u)"
 
-#: ../src/procdialogs.cpp:191
+#: ../src/procdialogs.cpp:221
 #, c-format
 msgid "Change Priority of the selected process"
 msgid_plural "Change Priority of %d selected processes"
@@ -1122,11 +1176,11 @@ msgstr[1] "Spremeni vrstni red prednosti %d opravila"
 msgstr[2] "Spremeni vrstni red prednosti %d opravil"
 msgstr[3] "Spremeni vrstni red prednosti %d opravil"
 
-#: ../src/procdialogs.cpp:210
+#: ../src/procdialogs.cpp:240
 msgid "Note:"
 msgstr "Opomba:"
 
-#: ../src/procdialogs.cpp:211
+#: ../src/procdialogs.cpp:241
 msgid ""
 "The priority of a process is given by its nice value. A lower nice value "
 "corresponds to a higher priority."
@@ -1134,115 +1188,106 @@ msgstr ""
 "Prednost opravila je podana z oceno prednostni delovanja. Nižja vrednost "
 "ustreza višji prednosti."
 
-#: ../src/procproperties.cpp:55 ../src/procproperties.cpp:106
-#: ../src/procproperties.cpp:109 ../src/util.cpp:431
+#: ../src/procproperties.cpp:50 ../src/procproperties.cpp:84
+#: ../src/procproperties.cpp:87 ../src/util.cpp:432
 msgid "N/A"
 msgstr "N/A"
 
-#: ../src/procproperties.cpp:89 ../src/proctable.cpp:322
+#: ../src/procproperties.cpp:67 ../src/proctable.cpp:332
 msgid "Process Name"
 msgstr "Ime opravila"
 
-#: ../src/procproperties.cpp:90 ../src/proctable.cpp:323
+#: ../src/procproperties.cpp:68 ../src/proctable.cpp:333
 msgid "User"
 msgstr "Uporabnik"
 
-#: ../src/procproperties.cpp:91 ../src/proctable.cpp:324
+#: ../src/procproperties.cpp:69 ../src/proctable.cpp:334
 msgid "Status"
 msgstr "Stanje"
 
-#: ../src/procproperties.cpp:93 ../src/proctable.cpp:325
+#: ../src/procproperties.cpp:71 ../src/proctable.cpp:335
 msgid "Virtual Memory"
 msgstr "Navidezni pomnilnik"
 
-#: ../src/procproperties.cpp:94 ../src/proctable.cpp:326
+#: ../src/procproperties.cpp:72 ../src/proctable.cpp:336
 msgid "Resident Memory"
 msgstr "Stalni pomnilnik"
 
-#: ../src/procproperties.cpp:95 ../src/proctable.cpp:327
+#: ../src/procproperties.cpp:73 ../src/proctable.cpp:337
 msgid "Writable Memory"
 msgstr "Zapisljiv pomnilnik"
 
-#: ../src/procproperties.cpp:96 ../src/proctable.cpp:328
+#: ../src/procproperties.cpp:74 ../src/proctable.cpp:338
 msgid "Shared Memory"
 msgstr "Skupni pomnilnik"
 
-#: ../src/procproperties.cpp:98 ../src/proctable.cpp:329
+#: ../src/procproperties.cpp:76 ../src/proctable.cpp:339
 msgid "X Server Memory"
 msgstr "Pomnilnik strežnika X"
 
-#: ../src/procproperties.cpp:101 ../src/proctable.cpp:331
+#: ../src/procproperties.cpp:79 ../src/proctable.cpp:341
 msgid "CPU Time"
 msgstr "Procesorski čas"
 
-#: ../src/procproperties.cpp:101
-#, c-format
-msgid "%lld second"
-msgid_plural "%lld seconds"
-msgstr[0] "%lld sekund"
-msgstr[1] "%lld sekunda"
-msgstr[2] "%lld sekundi"
-msgstr[3] "%lld sekunde"
-
-#: ../src/procproperties.cpp:102 ../src/proctable.cpp:332
+#: ../src/procproperties.cpp:80 ../src/proctable.cpp:342
 msgid "Started"
 msgstr "Začeto"
 
-#: ../src/procproperties.cpp:103 ../src/proctable.cpp:333
+#: ../src/procproperties.cpp:81 ../src/proctable.cpp:343
 msgid "Nice"
 msgstr "Ocena prednostni delovanja"
 
-#: ../src/procproperties.cpp:104 ../src/proctable.cpp:347
+#: ../src/procproperties.cpp:82 ../src/proctable.cpp:357
 msgid "Priority"
 msgstr "Prednost"
 
-#: ../src/procproperties.cpp:105 ../src/proctable.cpp:334
+#: ../src/procproperties.cpp:83 ../src/proctable.cpp:344
 msgid "ID"
 msgstr "ID"
 
-#: ../src/procproperties.cpp:106 ../src/proctable.cpp:335
+#: ../src/procproperties.cpp:84 ../src/proctable.cpp:345
 msgid "Security Context"
 msgstr "Vsebinska varnost"
 
-#: ../src/procproperties.cpp:107 ../src/proctable.cpp:336
+#: ../src/procproperties.cpp:85 ../src/proctable.cpp:346
 msgid "Command Line"
 msgstr "Ukazna vrstica"
 
 #. xgettext: combined noun, the function the process is waiting in, see wchan ps(1)
-#: ../src/procproperties.cpp:108 ../src/proctable.cpp:339
+#: ../src/procproperties.cpp:86 ../src/proctable.cpp:349
 msgid "Waiting Channel"
 msgstr "Čakajoč kanal"
 
-#: ../src/procproperties.cpp:109 ../src/proctable.cpp:340
+#: ../src/procproperties.cpp:87 ../src/proctable.cpp:350
 msgid "Control Group"
 msgstr "Primerjalna skupina"
 
-#: ../src/procproperties.cpp:222
+#: ../src/procproperties.cpp:199
 #, c-format
 msgid "%s (PID %u)"
 msgstr "%s (PID %u)"
 
-#: ../src/proctable.cpp:330
+#: ../src/proctable.cpp:340
 #, no-c-format
 msgid "% CPU"
 msgstr "% CPE"
 
-#: ../src/proctable.cpp:341
+#: ../src/proctable.cpp:351
 msgid "Unit"
 msgstr "Enota"
 
-#: ../src/proctable.cpp:342
+#: ../src/proctable.cpp:352
 msgid "Session"
 msgstr "Seja"
 
 # multiseat = multi-station =  multiterminal
 #. TRANSLATORS: Seat = i.e. the physical seat the session of the process belongs to, only
 #. for multi-seat environments. See http://en.wikipedia.org/wiki/Multiseat_configuration
-#: ../src/proctable.cpp:345
+#: ../src/proctable.cpp:355
 msgid "Seat"
 msgstr "Večterminalni odvod"
 
-#: ../src/proctable.cpp:346
+#: ../src/proctable.cpp:356
 msgid "Owner"
 msgstr "Lastnik"
 
@@ -1290,47 +1335,47 @@ msgstr "%u:%02u:%02u"
 msgid "%u:%02u.%02u"
 msgstr "%u:%02u.%02u"
 
-#: ../src/util.cpp:163
+#: ../src/util.cpp:164
 #, c-format
 msgid "%.1f KiB"
 msgstr "%.1f KiB"
 
-#: ../src/util.cpp:164
+#: ../src/util.cpp:165
 #, c-format
 msgid "%.1f MiB"
 msgstr "%.1f MiB"
 
-#: ../src/util.cpp:165
+#: ../src/util.cpp:166
 #, c-format
 msgid "%.1f GiB"
 msgstr "%.1f GiB"
 
-#: ../src/util.cpp:166
+#: ../src/util.cpp:167
 #, c-format
 msgid "%.1f TiB"
 msgstr "%.1f TiB"
 
-#: ../src/util.cpp:167
+#: ../src/util.cpp:168
 #, c-format
 msgid "%.3g kbit"
 msgstr "%.3g kbitov"
 
-#: ../src/util.cpp:168
+#: ../src/util.cpp:169
 #, c-format
 msgid "%.3g Mbit"
 msgstr "%.3g Mbitov"
 
-#: ../src/util.cpp:169
+#: ../src/util.cpp:170
 #, c-format
 msgid "%.3g Gbit"
 msgstr "%.3g Gbitov"
 
-#: ../src/util.cpp:170
+#: ../src/util.cpp:171
 #, c-format
 msgid "%.3g Tbit"
 msgstr "%.3g Tbitov"
 
-#: ../src/util.cpp:185
+#: ../src/util.cpp:186
 #, c-format
 msgid "%u bit"
 msgid_plural "%u bits"
@@ -1339,7 +1384,7 @@ msgstr[1] "%u bit"
 msgstr[2] "%u bita"
 msgstr[3] "%u biti"
 
-#: ../src/util.cpp:186
+#: ../src/util.cpp:187
 #, c-format
 msgid "%u byte"
 msgid_plural "%u bytes"
@@ -1348,31 +1393,60 @@ msgstr[1] "%u bajt"
 msgstr[2] "%u bajta"
 msgstr[3] "%u bajti"
 
-#: ../src/util.cpp:229
+#: ../src/util.cpp:230
 msgid "Very High Priority"
 msgstr "Zelo visoka prednost"
 
-#: ../src/util.cpp:231
+#: ../src/util.cpp:232
 msgid "High Priority"
 msgstr "Visoka prednost"
 
-#: ../src/util.cpp:233
+#: ../src/util.cpp:234
 msgid "Normal Priority"
 msgstr "Običajna prednost"
 
-#: ../src/util.cpp:235
+#: ../src/util.cpp:236
 msgid "Low Priority"
 msgstr "Nizka prednost"
 
-#: ../src/util.cpp:237
+#: ../src/util.cpp:238
 msgid "Very Low Priority"
 msgstr "Zelo nizka prednost"
 
 #. xgettext: rate, 10MiB/s or 10Mbit/s
-#: ../src/util.cpp:629
+#: ../src/util.cpp:630
 #, c-format
 msgid "%s/s"
 msgstr "%s/s"
+
+#~ msgctxt "Window title for "
+#~ msgid "Search for Open Files"
+#~ msgstr "Iskanje odprtih datotek"
+
+#~ msgctxt "Menu item to Open "
+#~ msgid "Search for Open Files"
+#~ msgstr "Poišči odprte datoteke"
+
+#~ msgctxt "Window title for 'Search for Open Files' dialog"
+#~ msgid "Search for Open Files"
+#~ msgstr "Iskanje odprtih datotek"
+
+#~ msgctxt "Menu item to Open 'Search for Open Files' dialog"
+#~ msgid "Search for Open Files"
+#~ msgstr "Iskanje odprtih datotek"
+
+#~ msgid "Error"
+#~ msgstr "Napaka"
+
+#~ msgid "'%s' is not a valid Perl regular expression."
+#~ msgstr "'%s' ni veljaven logični izraz, zapisan v jeziku Perl."
+
+#~ msgid "%lld second"
+#~ msgid_plural "%lld seconds"
+#~ msgstr[0] "%lld sekund"
+#~ msgstr[1] "%lld sekunda"
+#~ msgstr[2] "%lld sekundi"
+#~ msgstr[3] "%lld sekunde"
 
 #~ msgid "_Name contains:"
 #~ msgstr "_Ime vsebuje:"
@@ -1411,9 +1485,6 @@ msgstr "%s/s"
 
 #~ msgid "_View"
 #~ msgstr "Po_gled"
-
-#~ msgid "_Stop Process"
-#~ msgstr "_Zaustavi opravilo"
 
 #~ msgid "Stop process"
 #~ msgstr "Zaustavi opravilo"
@@ -1493,14 +1564,6 @@ msgstr "%s/s"
 #~ msgstr ""
 #~ "0 za podrobnosti o sistemu, 1 za seznam virov in 2 za vire in 3 za seznam "
 #~ "diskov"
-
-#~ msgid ""
-#~ "Ending a process may destroy data, break the session or introduce a "
-#~ "security risk. Only unresponsive processes should be ended."
-#~ msgstr ""
-#~ "Z vsiljenim končanjem opravila se podatki lahko izgubijo, sesuje se lahko "
-#~ "seja ali pa dejanje predstavlja varnostno tveganje. Vsiljeno končati je "
-#~ "razumljivo le opravila, ki niso odzivna."
 
 #~ msgid "Load averages for the last 1, 5, 15 minutes: %0.2f, %0.2f, %0.2f"
 #~ msgstr "Povprečna obremenitev zadnjih 1, 5, 15 minut: %0.2f, %0.2f, %0.2f"

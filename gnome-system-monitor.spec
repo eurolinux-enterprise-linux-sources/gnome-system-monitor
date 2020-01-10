@@ -1,42 +1,28 @@
-# Note that this is NOT a relocatable package
+%global libgtop2_version 2.28.2
+%global libwnck_version 2.91.0
+%global desktop_file_utils_version 0.2.90
 
-%define libgtop2_version 2.28.2
-%define libwnck_version 2.91.0
-%define desktop_file_utils_version 0.2.90
-%define libselinux_version 1.23.2
-%define polkit_version 0.92
+Name:           gnome-system-monitor
+Version:        3.22.2
+Release:        2%{?dist}
+Summary:        Process and resource monitor
 
-Summary: Process and resource monitor
-Name: gnome-system-monitor
-Version: 3.14.1
-Release: 4%{?dist}
-License: GPLv2+
-Group: Applications/System
-URL: http://www.gnome.org/
-#VCS: git:git://git.gnome.org/gnome-system-monitor
-Source: http://download.gnome.org/sources/gnome-system-monitor/3.14/%{name}-%{version}.tar.xz
+License:        GPLv2+
+URL:            http://www.gnome.org/
+Source0:        http://download.gnome.org/sources/%{name}/3.22/%{name}-%{version}.tar.xz
+# https://bugzilla.redhat.com/show_bug.cgi?id=1449674
+Patch0:         gnome-system-monitor-3.22.2-ja-translation.patch
 
-Patch0: 0001-Fix-Ukrainian-translation-for-desktop-file-keywords.patch
-Patch1: 0001-Fix-desktop-file-keywords-translation-syntax-error.patch
-Patch2: gnome-system-monitor-3.14.1-high-n-cpus.patch
-# https://bugzilla.redhat.com/show_bug.cgi?id=1254332
-Patch3: gnome-system-monitor-3.14.1-improve-ncpu-detection.patch
-# https://bugzilla.redhat.com/show_bug.cgi?id=1272383
-Patch4: gnome-system-monitor-3.14.1-translations.patch
-
-BuildRequires: libgtop2-devel >= %{libgtop2_version}
-BuildRequires: libwnck3-devel >= %{libwnck_version}
-BuildRequires: gtk3-devel
-BuildRequires: gtkmm30-devel
-BuildRequires: desktop-file-utils
-BuildRequires: startup-notification-devel
-BuildRequires: intltool gettext
-BuildRequires: libselinux-devel >= %{libselinux_version}
-BuildRequires: pcre-devel
-BuildRequires: systemd-devel
-BuildRequires: librsvg2-devel
-BuildRequires: libxml2-devel
-BuildRequires: itstool
+BuildRequires:  pkgconfig(libgtop-2.0) >= %{libgtop2_version}
+BuildRequires:  pkgconfig(libwnck-3.0) >= %{libwnck_version}
+BuildRequires:  pkgconfig(gtk+-3.0)
+BuildRequires:  pkgconfig(gtkmm-3.0)
+BuildRequires:  pkgconfig(libsystemd)
+BuildRequires:  pkgconfig(librsvg-2.0)
+BuildRequires:  pkgconfig(libxml-2.0)
+BuildRequires:  desktop-file-utils
+BuildRequires:  intltool gettext
+BuildRequires:  itstool
 
 %description
 gnome-system-monitor allows to graphically view and manipulate the running
@@ -46,17 +32,13 @@ such as CPU and memory.
 %prep
 %setup -q
 %patch0 -p1
-%patch1 -p1
-%patch2 -p1 -b .CPUs
-%patch3 -p1 -b .nCPUs
-%patch4 -p1 -b .translations
 
 %build
-%configure --enable-systemd
+%configure --enable-systemd --enable-wnck
 make %{?_smp_mflags}
 
 %install
-make install DESTDIR=$RPM_BUILD_ROOT
+%make_install
 
 %find_lang %{name} --with-gnome
 
@@ -73,7 +55,8 @@ fi
 glib-compile-schemas %{_datadir}/glib-2.0/schemas &>/dev/null || :
 
 %files -f %{name}.lang
-%doc AUTHORS NEWS COPYING README
+%license COPYING
+%doc AUTHORS NEWS README
 %{_bindir}/gnome-system-monitor
 %{_datadir}/appdata/gnome-system-monitor.appdata.xml
 %{_datadir}/applications/gnome-system-monitor.desktop
@@ -84,6 +67,13 @@ glib-compile-schemas %{_datadir}/glib-2.0/schemas &>/dev/null || :
 %{_libexecdir}/gnome-system-monitor/gsm-*
 
 %changelog
+* Tue May 30 2017 David King <dking@redhat.com> - 3.22.2-2
+- Update Japanese translation (#1449674)
+
+* Thu Nov 24 2016 Kalev Lember <klember@redhat.com> - 3.22.2-1
+- Update to 3.22.2
+- Resolves: #1386962
+
 * Tue Mar 29 2016 David King <dking@redhat.com> - 3.14.1-4
 - Update translations (#1272383)
 

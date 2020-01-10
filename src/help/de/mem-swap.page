@@ -24,7 +24,7 @@
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>Christian Kirbach</mal:name>
       <mal:email>christian.kirbach@gmail.com</mal:email>
-      <mal:years>2014</mal:years>
+      <mal:years>2014, 2015</mal:years>
     </mal:credit>
   
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
@@ -35,12 +35,6 @@
   </info>
 
   <title>Was ist »Auslagerungsspeicher«?</title>
-
-  <comment>
-    <cite date="2011-06-18" href="mailto:philbull@gmail.com">Phil Bull</cite>
-    <p>Explain what swap is and how it helps. Explain that the computer may run
-    slowly if it's swapping too much.</p>
-  </comment>
 
   <p>Auslagerungsspeicher ist der Teil des virtuellen Speichersystems auf der Festplatte. Der Speicher wird bei der ersten Installation von Linux als <em>Auslagerungspartition</em> oder <em>Auslagerungsdatei</em> eingerichtet, kann aber auch später hinzugefügt werden.</p>
 

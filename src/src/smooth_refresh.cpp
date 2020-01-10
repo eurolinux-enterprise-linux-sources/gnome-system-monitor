@@ -30,12 +30,12 @@ unsigned SmoothRefresh::get_own_cpu_usage()
     if (elapsed) { // avoid division by 0
         glibtop_get_proc_time(&proctime, getpid());
         usage = (proctime.rtime - this->last_cpu_time) * 100 / elapsed;
+        this->last_cpu_time = proctime.rtime;
     }
 
     usage = CLAMP(usage, 0, 100);
 
     this->last_total_time = cpu.total;
-    this->last_cpu_time = proctime.rtime;
 
     return usage;
 }
@@ -60,7 +60,13 @@ void SmoothRefresh::load_settings_value(const gchar *key)
 
 SmoothRefresh::SmoothRefresh(GSettings *a_settings)
     :
-    settings(a_settings)
+    settings(a_settings),
+    active(false),
+    connection(0),
+    interval(0),
+    last_pcpu(0),
+    last_total_time(0ULL),
+    last_cpu_time(0ULL)
 {
     this->connection = g_signal_connect(G_OBJECT(settings),
                                         "changed::smooth-refresh",

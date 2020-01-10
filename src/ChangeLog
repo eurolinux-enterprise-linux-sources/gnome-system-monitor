@@ -1,3 +1,974 @@
+2016-10-18  Boyuan Yang  <073plan@gmail.com>
+
+	Update zh_CN translation
+
+2016-10-16  Kjartan Maraas  <kmaraas@gnome.org>
+
+	Updated Norwegian bokmål translation from Kjartan Maraas.
+
+2016-10-07  Milo Casagrande  <milo@ubuntu.com>
+
+	Update Italian translation
+
+2016-09-24  gogo  <trebelnik2@gmail.com>
+
+	Updated Croatian translation
+
+2016-09-21  Benoit Dejean  <bdejean@gmail.com>
+
+	Post-release version bump.
+
+2016-09-20  Jeremy Bicha  <jbicha@ubuntu.com>
+
+	Fix typo in Spanish translations header
+
+2016-09-19  Robert Roth  <robert.roth.off@gmail.com>
+
+	Prepared release 3.22.0
+
+2016-09-15  Daniel Korostil  <ted.korostiled@gmail.com>
+
+	Updated Ukrainian translation
+
+2016-09-13  Arash Mousavi  <mousavi.arash@gmail.com>
+
+	[l10n] update Persian translations
+
+2016-09-12  Seong-ho Cho  <shcho@gnome.org>
+
+	Updated Korean translation
+
+2016-09-13  Robert Roth  <robert.roth.off@gmail.com>
+
+	Prepared release 3.21.91
+
+2016-09-12  Tom Tryfonidis  <tomtryf@gnome.org>
+
+	Updated Greek translation
+
+2016-09-12  Ask Hjorth Larsen  <asklarsen@gmail.com>
+
+	Updated Danish translation
+
+2016-09-10  Akom Chotiphantawanon  <knight2000@gmail.com>
+
+	Updated Thai translation
+
+2016-09-09  Fran Dieguez  <fran.dieguez@mabishu.com>
+
+	Updated Galician translations
+
+2016-09-08  Rūdolfs Mazurs  <rudolfsm@src.gnome.org>
+
+	Update Latvian translation
+
+2016-09-08  Anders Jonsson  <anders.jonsson@norsjovallen.se>
+
+	Updated Swedish translation
+
+2016-09-06  Trần Ngọc Quân  <vnwildman@gmail.com>
+
+	Updated Vietnamese translation
+
+	Signed-off-by: Trần Ngọc Quân <vnwildman@gmail.com>
+
+2016-09-05  Aurimas Černius  <aurisc4@gmail.com>
+
+	Updated Lithuanian translation
+
+2016-09-04  David King  <amigadave@amigadave.com>
+
+	Update British English translation
+
+2016-09-03  Baurzhan Muftakhidinov  <baurthefirst@gmail.com>
+
+	Updated Kazakh translation
+
+2016-08-31  Alexandre Franke  <alexandre.franke@gmail.com>
+
+	Updated French translation
+
+2016-08-31  Tiago Santos  <tiagofsantos81@sapo.pt>
+
+	Updated Portuguese translation
+
+2016-08-31  Tiago Santos  <tiagofsantos81@sapo.pt>
+
+	Added Portuguese translation
+
+2016-08-30  Robert Roth  <robert.roth.off@gmail.com>
+
+	Prepared release 3.21.91
+
+2016-08-30  Robert Roth  <robert.roth.off@gmail.com>
+
+	Increased small default widths
+
+2016-08-28  Мирослав Николић  <miroslavnikolic@rocketmail.com>
+
+	Updated Serbian translation
+
+2016-08-28  Мирослав Николић  <miroslavnikolic@rocketmail.com>
+
+	Updated Serbian translation
+
+2016-08-26  Ask Hjorth Larsen  <asklarsen@gmail.com>
+
+	Updated Danish translation
+
+2016-08-22  Fabio Tomat  <f.t.public@gmail.com>
+
+	Updated Friulian translation
+
+2016-08-21  Mario Blättermann  <mario.blaettermann@gmail.com>
+
+	Updated German translation
+
+2016-08-21  Jiri Grönroos  <jiri.gronroos@iki.fi>
+
+	Updated Finnish translation
+
+2016-08-20  Balázs Úr  <urbalazs@gmail.com>
+
+	Updated Hungarian translation
+
+2016-08-19  Eric R. Schulz  <eric@ers35.com>
+
+	Fix memory leak in cb_main_window_state_changed()
+
+	Match call to g_settings_get_string() with g_free().
+
+	https://bugzilla.gnome.org/show_bug.cgi?id=770116
+
+2016-08-19  Eric R. Schulz  <eric@ers35.com>
+
+	Fix memory leak in gsm_tree_view_load_state()
+
+	Match call to gtk_tree_view_get_columns() with g_list_free().
+
+	https://bugzilla.gnome.org/show_bug.cgi?id=770116
+
+2016-08-19  Eric R. Schulz  <eric@ers35.com>
+
+	Fix memory leak in fill_image_buffer_from_resource().
+
+	https://bugzilla.gnome.org/show_bug.cgi?id=770116
+
+2016-08-19  Eric R. Schulz  <eric@ers35.com>
+
+	Fix memory leak in process_visibility_func()
+
+	tree_path was being leaked for every call of process_visibility_func().
+	This bug was introduced in 65712f7
+
+	https://bugzilla.gnome.org/show_bug.cgi?id=770116
+
+2016-08-18  Matej Urbančič  <mateju@svn.gnome.org>
+
+	Updated Slovenian translation
+
+2016-08-17  Marek Černocký  <marek@manet.cz>
+
+	Updated Czech translation
+
+2016-08-16  Piotr Drąg  <piotrdrag@gmail.com>
+
+	Updated Polish translation
+
+2016-08-16  Daniel Mustieles  <daniel.mustieles@gmail.com>
+
+	Updated Spanish translation
+
+2016-08-16  Daniel Mustieles  <daniel.mustieles@gmail.com>
+
+	Updated Spanish translation
+
+2016-08-15  Robert Roth  <robert.roth.off@gmail.com>
+
+	Prepared release 3.21.90
+
+2016-08-15  Andika Triwidada  <atriwidada@gnome.org>
+
+	Updated Indonesian translation
+
+2016-08-14  Tiago Santos  <tiagofsantos81@sapo.pt>
+
+	Updated Portuguese translation
+
+2016-08-14  Yosef Or Boczko  <yoseforb@src.gnome.org>
+
+	Updated Hebrew translation
+
+2016-08-12  Gustavo Marques  <gutodisse@gmail.com>
+
+	Updated Brazilian Portuguese translation
+
+2016-08-12  Dušan Kazik  <prescott66@gmail.com>
+
+	Updated Slovak translation
+
+2016-08-12  Piotr Drąg  <piotrdrag@gmail.com>
+
+	Move XML declaration to the first line in the appdata file
+
+	Otherwise, it doesn't validate and xgettext throws an error:
+
+	XML or text declaration not at start of entity at line 2, column 0, byte 36 at /usr/lib/perl5/XML/Parser.pm line 187
+	xgettext: error while opening "../gnome-system-monitor.appdata.xml.in.h" for reading: No such file or directory
+	ERROR: xgettext failed to generate PO template file. Please consult
+	error message above if there is any.
+
+2016-08-11  Robert Roth  <robert.roth.off@gmail.com>
+
+	Use non-0 default width for columns.
+
+2016-08-11  Robert Roth  <robert.roth.off@gmail.com>
+
+	Upgraded appdata file
+
+2016-08-10  Yosef Or Boczko  <yoseforb@src.gnome.org>
+
+	Updated Hebrew translation
+
+2016-08-10  Dušan Kazik  <prescott66@gmail.com>
+
+	Updated Slovak translation
+
+2016-08-10  Marek Černocký  <marek@manet.cz>
+
+	Updated Czech translation
+
+2016-08-10  Robert Roth  <robert.roth.off@gmail.com>
+
+	Use non-zero default width for X Server Memory column
+
+2016-08-10  Hussam Al-Tayeb  <me@hussam.eu.org>
+
+	Fix default width (bgo#768063)
+
+	https://bugzilla.gnome.org/show_bug.cgi?id=768063
+	Use non-zero value for default column width.
+
+2016-08-10  Robert Roth  <robert.roth.off@gmail.com>
+
+	Reordered process context menu (bgo#769680)
+
+	https://bugzilla.gnome.org/show_bug.cgi?id=769680
+	Moved the potentially dangerous menu item farther away
+	from the mouse position on right-click, and moved the informative
+	actions in their place, so that an accidental click will not have
+	severe consequences.
+
+2016-08-10  Robert Roth  <robert.roth.off@gmail.com>
+
+	Ask for confirmation on stopping a process (bgo#769680)
+
+	https://bugzilla.gnome.org/show_bug.cgi?id=769680
+
+2016-07-21  Piotr Drąg  <piotrdrag@gmail.com>
+
+	Add Language headers to po files
+
+	Future versions of gettext will fail if this header is missing.
+
+2016-06-21  Robert Roth  <robert.roth.off@gmail.com>
+
+	Prepared release 3.21.3
+
+2016-06-11  GNOME Translation Robot  <gnome-sysadmin@gnome.org>
+
+	Updated Scottish Gaelic translation
+
+2016-05-30  Cédric Valmary  <cvalmary@yahoo.fr>
+
+	Updated Occitan translation
+
+2016-05-19  Guido Trentalancia  <guido@trentalancia.net>
+
+	Patch to properly normalise the y axis in the CPU history graph (Resources tab)
+
+	https://bugzilla.gnome.org/show_bug.cgi?id=748999
+
+2016-05-09  Cédric Valmary  <cvalmary@yahoo.fr>
+
+	Updated Occitan translation
+
+2016-04-28  Tiago Santos  <tiagofsantos81@sapo.pt>
+
+	Updated Portuguese translation
+
+2016-04-26  Derek Stavis  <derek@dba.eng.br>
+
+	disks: Add 4px padding to 'Used' column progress bar
+
+	The padding helps to keep visual harmony, by making the progress
+	bar approach the height of other cells' content.
+
+	https://bugzilla.gnome.org/show_bug.cgi?id=764266
+
+2016-04-15  Fabio Tomat  <f.t.public@gmail.com>
+
+	Updated Friulian translation
+
+2016-04-11  Robert Roth  <robert.roth.off@gmail.com>
+
+	Prepared release 3.20.1
+
+2016-04-10  Khaled Hosny  <khaledhosny@eglug.org>
+
+	Update Arabic translation
+
+2016-04-08  Fabio Tomat  <f.t.public@gmail.com>
+
+	Updated Friulian translation
+
+2016-04-05  Fabio Tomat  <f.t.public@gmail.com>
+
+	Updated Friulian translation
+
+2016-03-28  Richard Hughes  <richard@hughsie.com>
+
+	AppData: Mark as unremovable in GNOME Software
+
+2016-03-22  Robert Roth  <robert.roth.off@gmail.com>
+
+	Prepared release 3.20.0
+
+2016-03-20  Ask Hjorth Larsen  <asklarsen@gmail.com>
+
+	Updated Danish translation
+
+2016-03-20  Seong-ho Cho  <shcho@gnome.org>
+
+	Add Korean help translation
+
+2016-03-14  Robert Roth  <robert.roth.off@gmail.com>
+
+	Prepared release 3.19.92
+
+2016-03-13  Gil Forcada  <gforcada@gnome.org>
+
+	[l10n] Updated Catalan translation
+
+2016-03-03  Fabio Tomat  <f.t.public@gmail.com>
+
+	Updated Friulian translation
+
+2016-03-02  Daniel Korostil  <ted.korostiled@gmail.com>
+
+	Updated Ukrainian translation
+
+2016-02-29  Cédric Valmary  <cvalmary@yahoo.fr>
+
+	Updated Occitan translation
+
+2016-02-29  Robert Roth  <robert.roth.off@gmail.com>
+
+	Prepared release 3.19.91
+
+2016-02-25  Anders Jonsson  <anders.jonsson@norsjovallen.se>
+
+	Updated Swedish translation
+
+2016-02-22  Alberts Muktupāvels  <alberts.muktupavels@gmail.com>
+
+	application: use gtk_window_get_size not gtk_widget_get_size
+
+	https://bugzilla.gnome.org/show_bug.cgi?id=762231
+
+2016-02-17  Matthias Clasen  <mclasen@redhat.com>
+
+	Save window size properly
+
+	This is following the current best practice as layed out in
+	https://wiki.gnome.org/HowDoI/SaveWindowState. It is important
+	to use gtk_window_get_size, otherwise the window will grow
+	under Wayland.
+
+	https://bugzilla.gnome.org/show_bug.cgi?id=762231
+
+2016-02-16  Robert Roth  <robert.roth.off@gmail.com>
+
+	Prepared release 3.19.90
+
+2016-02-06  Alexander Shopov  <ash@kambanaria.org>
+
+	Updated Bulgarian translation
+
+2016-02-03  Robert Roth  <robert.roth.off@gmail.com>
+
+	Fixed padding issue on Processes tab (bgo#761124)
+
+2016-01-25  Richard Hughes  <richard@hughsie.com>
+
+	Add a missing tag to the AppData file
+
+2016-01-25  Richard Hughes  <richard@hughsie.com>
+
+	Add a missing tag to the AppData file
+
+2016-01-18  Robert Roth  <robert.roth.off@gmail.com>
+
+	Prepared release 3.19.4
+
+2016-01-17  Aurimas Černius  <aurisc4@gmail.com>
+
+	Updated Lithuanian translation
+
+2016-01-17  Akom Chotiphantawanon  <knight2000@gmail.com>
+
+	Updated Thai translation
+
+2015-12-14  Robert Roth  <robert.roth.off@gmail.com>
+
+	Prepared release 3.19.3
+
+2015-11-16  GNOME Translation Robot  <gnome-sysadmin@gnome.org>
+
+	Updated Scottish Gaelic translation
+
+2015-11-10  Kalev Lember  <klember@redhat.com>
+
+	Fix a syntax error in desktop file keywords Romanian translation
+
+2015-11-09  Robert Roth  <robert.roth.off@gmail.com>
+
+	Fix autogen deprecation warnings
+
+2015-11-09  Robert Roth  <robert.roth.off@gmail.com>
+
+	Prepared release 3.18.2
+
+2015-11-09  Jeff Bai  <jeffbai@aosc.xyz>
+
+	update zh_CN translation
+
+2015-11-03  Daniel Șerbănescu  <daniel@serbanescu.dk>
+
+	Updated Romanian translation
+
+2015-11-02  Sveinn í Felli  <sv1@fellsnet.is>
+
+	Updated Icelandic translation
+
+2015-10-14  Inaki Larranaga Murgoitio  <dooteo@zundan.com>
+
+	Updated Basque language
+
+2015-09-28  Trần Ngọc Quân  <vnwildman@gmail.com>
+
+	Updated Vietnamese translation
+
+	Signed-off-by: Trần Ngọc Quân <vnwildman@gmail.com>
+
+2015-09-23  Robert Roth  <robert.roth.off@gmail.com>
+
+	Prepared release 3.18.0.1
+
+2015-09-23  Robert Roth  <robert.roth.off@gmail.com>
+
+	Fixed search bar spacing (bgo #755204)
+
+	https://bugzilla.gnome.org/show_bug.cgi?id=755204
+
+2015-09-21  Милош Поповић  <gpopac@gmail.com>
+
+	Updated Serbian Latin translation
+
+2015-09-21  Марко Костић  <marko.m.kostic@gmail.com>
+
+	Updated Serbian translation
+
+2015-09-21  Robert Roth  <robert.roth.off@gmail.com>
+
+	Prepared release 3.18.0
+
+2015-09-20  Ask Hjorth Larsen  <asklarsen@gmail.com>
+
+	Updated Danish translation
+
+2015-09-19  Anders Jonsson  <anders.jonsson@norsjovallen.se>
+
+	Updated Swedish translation
+
+2015-09-18  Rūdolfs Mazurs  <rudolfsm@src.gnome.org>
+
+	Updated Latvian translation
+
+2015-09-17  Balázs Úr  <urbalazs@gmail.com>
+
+	Updated Hungarian translation
+
+2015-09-15  Enrico Nicoletto  <liverig@gmail.com>
+
+	Updated Brazilian Portuguese translation
+
+2015-09-14  Kalev Lember  <klember@redhat.com>
+
+	Fix a syntax error in desktop file keywords Slovenian translation
+
+2015-09-14  Robert Roth  <robert.roth.off@gmail.com>
+
+	Prepared release 3.17.92
+
+2015-09-14  Marek Černocký  <marek@manet.cz>
+
+	Updated Czech translation
+
+2015-09-13  Arash Mousavi  <mousavi.arash@gmail.com>
+
+	Update Persian translations
+
+2015-09-10  Jiri Grönroos  <jiri.gronroos+l10n@iki.fi>
+
+	Finnish translation update
+
+2015-09-08  Matej Urbančič  <mateju@svn.gnome.org>
+
+	Updated Slovenian translation
+
+2015-09-07  Kjartan Maraas  <kmaraas@gnome.org>
+
+	Updated Norwegian bokmål translation.
+
+2015-09-06  Baurzhan Muftakhidinov  <baurthefirst@gmail.com>
+
+	Updated Kazakh translation
+
+2015-09-05  Bernd Homuth  <dev@hmt.im>
+
+	Updated German translation
+
+2015-09-06  Changwoo Ryu  <cwryu@debian.org>
+
+	Updated Korean translation
+
+2015-09-04  Christian Kirbach  <Christian.Kirbach@gmail.com>
+
+	Updated German translation
+
+2015-09-04  Baurzhan Muftakhidinov  <baurthefirst@gmail.com>
+
+	Updated Kazakh translation
+
+2015-09-04  Milo Casagrande  <milo@ubuntu.com>
+
+	Updated Italian translation
+
+2015-09-03  Aurimas Černius  <aurisc4@gmail.com>
+
+	Updated Lithuanian translation
+
+2015-08-31  Robert Roth  <robert.roth.off@gmail.com>
+
+	Prepare release 3.17.91
+
+2015-08-31  Robert Roth  <robert.roth.off@gmail.com>
+
+	Set the icon name for the application window
+
+2015-08-31  Matthias Clasen  <mclasen@redhat.com>
+
+	Work under wayland even when built with wnck
+
+	There is really no need to ask libwnck for X resource consumption
+	when the display we are using is not an X display. This makes
+	gnome-system-monitor work under Wayland, even when the X resource
+	support is compiled in.
+
+	https://bugzilla.gnome.org/show_bug.cgi?id=753972
+
+2015-08-30  Andika Triwidada  <andika@gmail.com>
+
+	Updated Indonesian translation
+
+2015-08-30  Yosef Or Boczko  <yoseforb@src.gnome.org>
+
+	Updated Hebrew translation
+
+2015-08-29  Yuri Myasoedov  <ymyasoedov@yandex.ru>
+
+	Updated Russian translation
+
+2015-08-28  Tom Tryfonidis  <tomtryf@gmail.com>
+
+	Updated Greek translation
+
+2015-08-25  Muhammet Kara  <muhammetk@gmail.com>
+
+	Updated Turkish translation
+
+2015-08-25  Fran Dieguez  <fran@openhost.es>
+
+	Updated Galician translations
+
+2015-08-25  Chao-Hsiung Liao  <j_h_liau@yahoo.com.tw>
+
+	Updated Chinese (Taiwan) translation
+
+2015-08-25  Daniel Mustieles  <daniel.mustieles@gmail.com>
+
+	Updated Spanish translation
+
+2015-08-25  Pedro Albuquerque  <palbuquerque73@gmail.com>
+
+	Updated Portuguese translation
+
+2015-08-24  Alexandre Franke  <alexandre.franke@gmail.com>
+
+	Updated French translation
+
+2015-08-24  Dušan Kazik  <prescott66@gmail.com>
+
+	Updated Slovak translation
+
+2015-08-24  Piotr Drąg  <piotrdrag@gmail.com>
+
+	Updated Polish translation
+
+2015-08-24  Piotr Drąg  <piotrdrag@gmail.com>
+
+	Remove apostrophes from string contexts in UI files
+
+	Something (gettext? intltool?) doesn't like them and breaks the strings,
+	and they are not absolutely required to understand the text.
+
+2015-08-22  Fabio Tomat  <f.t.public@gmail.com>
+
+	Added Friulian translation
+
+2015-08-21  Benoît Dejean  <bdejean@gmail.com>
+
+	Use sysinfo to get the number of CPU instead of guessing using cpu(). See https://bugzilla.gnome.org/show_bug.cgi?id=753731
+
+2015-08-17  Robert Roth  <robert.roth.off@gmail.com>
+
+	Prepare release 3.17.90
+
+2015-08-14  Alexandre Franke  <alexandre.franke@gmail.com>
+
+	Updated French translation
+
+2015-08-02  Dušan Kazik  <prescott66@gmail.com>
+
+	Updated Slovak translation
+
+2015-08-02  Benoît Dejean  <bdejean@gmail.com>
+
+	We don't need anymore the CFLAGS gnu89. Compilers are modern enough.
+
+2015-08-02  Benoît Dejean  <bdejean@gmail.com>
+
+	Add a smart CXXFLAGS / std=c++11 switch. Code from glom and murrayc http://www.murrayc.com/permalink/2015/07/31/gtkmm-now-uses-c11/ .
+
+2015-08-02  Benoît Dejean  <bdejean@gmail.com>
+
+	Post release version bump.
+
+2015-08-01  Ting-Wei Lan  <lantw@src.gnome.org>
+
+	build: Replace -std=c++98 with -std=c++11
+
+	Gtkmm requires C++11 now.
+
+	https://bugzilla.gnome.org/show_bug.cgi?id=753121
+
+2015-07-20  Robert Roth  <robert.roth.off@gmail.com>
+
+	Prepare 3.17.4
+
+2015-07-19  Benoit Dejean  <bdejean@gmail.com>
+
+	Use procman_format_date_for_display instead of hazardous typecast and ctime.
+
+2015-07-19  Benoit Dejean  <bdejean@gmail.com>
+
+	Give procman_format_date_for_display a proper C linkage.
+
+2015-07-07  Kristjan SCHMIDT  <kristjan.schmidt@googlemail.com>
+
+	Updated Esperanto translation
+
+2015-06-29  Pedro Albuquerque  <palbuquerque73@gmail.com>
+
+	Updated Portuguese translation
+
+2015-06-29  Robert Roth  <robert.roth.off@gmail.com>
+
+	Search text in PID and arguments
+
+2015-06-28  Michael Biebl  <biebl@debian.org>
+
+	Add support for libsystemd
+
+	In systemd v209 the various libsystemd-* libraries were merged into a
+	single libsystemd library. So first check for this library and fall back
+	to libsystemd-login if not found.
+	While at it, simplify the check by bumping the minimum required version
+	to v44.
+
+	https://bugzilla.gnome.org/show_bug.cgi?id=749560
+
+2015-06-23  Kristjan SCHMIDT  <kristjan.schmidt@googlemail.com>
+
+	Updated Esperanto translation
+
+2015-06-22  Robert Roth  <robert.roth.off@gmail.com>
+
+	Prepare 3.17.3
+
+2015-05-25  Cédric Valmary  <cvalmary@yahoo.fr>
+
+	Updated Occitan translation
+
+2015-05-21  Cédric Valmary  <cvalmary@yahoo.fr>
+
+	Updated Occitan translation
+
+2015-05-08  Khaled Hosny  <khaledhosny@eglug.org>
+
+	Update Arabic translation
+
+2015-04-24  Sveinn í Felli  <sv1@fellsnet.is>
+
+	Added Icelandic translation
+
+2015-04-23  Daniel Mustieles  <daniel.mustieles@gmail.com>
+
+	Updated Spanish translation
+
+2015-04-08  Mattias Põldaru  <mahfiaz@gmail.com>
+
+	[l10n] Updated Estonian translation
+
+2015-04-03  Hannie Dumoleyn  <hannie@ubuntu-nl.org>
+
+	Updated Dutch translation 3.16
+
+2015-04-02  Stas Solovey  <whats_up@tut.by>
+
+	Updated Russian translation
+
+2015-03-23  Robert Roth  <robert.roth.off@gmail.com>
+
+	Prepare release 3.16.0
+
+2015-03-23  Tom Tryfonidis  <tomtryf@gmail.com>
+
+	Updated Greek help translation
+
+2015-03-22  Marek Černocký  <marek@manet.cz>
+
+	Updated Czech translation
+
+2015-03-22  Balázs Úr  <urbalazs@gmail.com>
+
+	Updated Hungarian translation
+
+2015-03-22  Jiro Matsuzawa  <jmatsuzawa@gnome.org>
+
+	help: Fix wrong step to search open files
+
+	https://bugzilla.gnome.org/show_bug.cgi?id=746569
+
+2015-03-18  Kalev Lember  <kalevlember@gmail.com>
+
+	Fix a syntax error in desktop file keywords Bosnian translation
+
+2015-03-17  Daniel Martinez  <dmartinez@src.gnome.org>
+
+	Add Aragonese translation
+
+2015-03-16  Robert Roth  <robert.roth.off@gmail.com>
+
+	Release 3.15.92
+
+2015-03-15  Robert Roth  <robert.roth.off@gmail.com>
+
+	Use gtk-defined style constant for lsof search error
+
+2015-03-15  Benoît Dejean  <bdejean@gmail.com>
+
+	Don't display an error dialog when open files regex is invalid or incomplete (because user is still typing). Instead, set the search entry style to error.
+
+	https://bugzilla.gnome.org/show_bug.cgi?id=746208.
+
+2015-03-15  Jiro Matsuzawa  <jmatsuzawa@gnome.org>
+
+	l10n: Update Japanese translation
+
+2015-03-14  Victor Ibragimov  <victor.ibragimov@gmail.com>
+
+	Updated Tajik translation
+
+2015-03-13  Samir Ribic  <samir.ribic@etf.unsa.ba>
+
+	Updated Bosnian translation
+
+2015-03-05  Мирослав Николић  <miroslavnikolic@rocketmail.com>
+
+	Updated Serbian translation
+
+2015-03-02  Robert Roth  <robert.roth.off@gmail.com>
+
+	Release 3.15.91
+
+2015-03-02  Benoit Dejean  <bdejean@gmail.com>
+
+	Remove code specific to linux to compute the writable memory. Use instead libgtop flags.
+
+	Signed-off-by: Robert Roth <robert.roth.off@gmail.com>
+
+2015-03-02  Benoit Dejean  <bdejean@gmail.com>
+
+	Move all code related to systemd in systemd.{cpp,h} to have a clean interface instead of #ifdef all over the place.
+
+	Signed-off-by: Robert Roth <robert.roth.off@gmail.com>
+
+2015-03-02  Benoit Dejean  <bdejean@gmail.com>
+
+	Use the same CPU time format in the process properties than in the process list by using format_duration_for_display(). Get rid of useless OS-specific code.
+
+	Signed-off-by: Robert Roth <robert.roth.off@gmail.com>
+
+2015-03-01  Benoît Dejean  <bdejean@gmail.com>
+
+	Fixed forward declaration of class ProcInfo.
+
+2015-02-18  Milo Casagrande  <milo@ubuntu.com>
+
+	Updated Italian translation
+
+2015-02-17  Milo Casagrande  <milo@ubuntu.com>
+
+	Updated Italian translation
+
+2015-01-19  Robert Roth  <robert.roth.off@gmail.com>
+
+	Release 3.15.4
+
+2015-01-10  Robert Roth  <robert.roth.off@gmail.com>
+
+	Removed iconthemewrapper
+
+2015-01-03  Robert Roth  <robert.roth.off@gmail.com>
+
+	Removed dummy process with 0 PID
+
+2015-01-03  Benoît Dejean  <bdejean@gmail.com>
+
+	Initialize all MemMapsData members.
+
+	https://bugzilla.gnome.org/show_bug.cgi?id=742070
+
+2015-01-03  Benoît Dejean  <bdejean@gmail.com>
+
+	Initialize all members of GUI and make it NonCopyable.
+
+	https://bugzilla.gnome.org/show_bug.cgi?id=742070
+
+2015-01-03  Benoît Dejean  <bdejean@gmail.com>
+
+	Initialize all LoadGraph and OptionGroup members.
+
+	https://bugzilla.gnome.org/show_bug.cgi?id=742070
+
+2015-01-03  Benoît Dejean  <bdejean@gmail.com>
+
+	Initialize all members of ProcConfig, MutableProcInfo and GsmApplication. And make them NonCopyable.
+
+	https://bugzilla.gnome.org/show_bug.cgi?id=742070
+
+2015-01-03  Benoît Dejean  <bdejean@gmail.com>
+
+	Initialize all ProcInfo members.
+
+	https://bugzilla.gnome.org/show_bug.cgi?id=742070
+
+2015-01-03  Benoît Dejean  <bdejean@gmail.com>
+
+	Initialize all SmoothRefresh members.
+
+	https://bugzilla.gnome.org/show_bug.cgi?id=742070
+
+2015-01-03  Benoît Dejean  <bdejean@gmail.com>
+
+	Make SmoothRefresh non-copyable.
+
+	https://bugzilla.gnome.org/show_bug.cgi?id=742070
+
+2015-01-03  Benoît Dejean  <bdejean@gmail.com>
+
+	Make LoadGraph non-copyable.
+
+	https://bugzilla.gnome.org/show_bug.cgi?id=742070
+
+2015-01-03  Benoît Dejean  <bdejean@gmail.com>
+
+	Define a helper NonCopyable base class.
+
+	https://bugzilla.gnome.org/show_bug.cgi?id=742070
+
+2015-01-03  Benoît Dejean  <bdejean@gmail.com>
+
+	Test & fix for pid=0
+
+	https://bugzilla.gnome.org/show_bug.cgi?id=742070
+
+2014-12-15  Robert Roth  <robert.roth.off@gmail.com>
+
+	Release 3.15.3
+
+2014-12-08  Tim Lunn  <tim@feathertop.org>
+
+	Don't set "titlebar" class when using headerbar widget as a toolbar
+
+	https://bugzilla.gnome.org/show_bug.cgi?id=741236
+
+2014-12-06  Trần Ngọc Quân  <vnwildman@gmail.com>
+
+	Updated Vietnamses translation
+
+	Signed-off-by: Trần Ngọc Quân <vnwildman@gmail.com>
+
+2014-12-04  Robert Roth  <robert.roth.off@gmail.com>
+
+	Fixed bogus assignment (bgo #738110)
+
+2014-12-04  Tim Lunn  <tim@feathertop.org>
+
+	Use traditional titlebars on !GNOME DE's
+
+	https://bugzilla.gnome.org/show_bug.cgi?id=741044
+
+2014-11-17  Duarte Loreto  <happyguy_pt@hotmail.com>
+
+	Updated Portuguese translation
+
+2014-11-03  Timo Jyrinki  <timo@debian.org>
+
+	Change Finnish translation team web page to l10n.gnome.org
+
+2014-10-30  Baurzhan Muftakhidinov  <baurthefirst@gmail.com>
+
+	Added Kazakh translation
+
+2014-10-28  Robert Roth  <robert.roth.off@gmail.com>
+
+	Release 3.15.1
+
+2014-10-20  Robert Roth  <robert.roth.off@gmail.com>
+
+	Do not ship executables (bgo #738752)
+
+2014-10-15  Robert Roth  <robert.roth.off@gmail.com>
+
+	Added padding before search button (bgo #735302)
+
+2014-10-14  Kalev Lember  <kalevlember@gmail.com>
+
+	Fix desktop file keywords translation syntax error
+
 2014-10-13  Matthias Clasen  <mclasen@redhat.com>
 
 	Ensure icons are at the right size
@@ -7,17 +978,9 @@
 
 	https://bugzilla.gnome.org/show_bug.cgi?id=738467
 
-2014-10-13  Robert Roth  <robert.roth.off@gmail.com>
+2014-10-13  David King  <amigadave@amigadave.com>
 
-	Disable internal polkit agent (bgo #737098)
-
-2014-10-10  Sweta Kothari  <swkothar@redhat.com>
-
-	Updated gujarati translations
-
-2014-10-10  Sweta Kothari  <swkothar@redhat.com>
-
-	Updated gujarati translations
+	Fix Czech help translation
 
 2014-10-10  Arash Mousavi  <mousavi.arash@gmail.com>
 
@@ -27,21 +990,27 @@
 
 	Updated Bulgarian translation
 
-2014-10-08  Saibal Ray  <sray@redhat.com>
-
-	Updated Bengali (India) translation
-
 2014-10-05  Milo Casagrande  <milo@ubuntu.com>
 
 	Updated Italian translation
 
-2014-09-25  Мирослав Николић  <miroslavnikolic@rocketmail.com>
+2014-09-25  Saibal Ray  <sray@redhat.com>
 
-	Updated Serbian translation
+	Updated Bengali (India) translation
+
+2014-09-24  Robert Roth  <robert.roth.off@gmail.com>
+
+	Disable internal polkit agent (bgo #737098)
 
 2014-09-23  Krishnababu Krothapalli  <k.meetme@gmail.com>
 
 	Updated Telugu translation
+
+2014-09-22  Kalev Lember  <kalevlember@gmail.com>
+
+	Fix Ukrainian translation for desktop file keywords
+
+	It's a string list and must be terminated with a semicolon.
 
 2014-09-22  Robert Roth  <robert.roth.off@gmail.com>
 

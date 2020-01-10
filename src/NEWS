@@ -1,18 +1,280 @@
-New in 3.14.1 - 13 October 2014
+New in 3.22.2 - 8 November 2016
 
 * added/updated translations
-  bg, courtesy of Krasimir Chonov
-  bn_IN, courtesy of Saibal Ray
-  fa, courtesy of Arash Mousavi
-  gu, courtesy of Sweta Kothari
-  it, courtesy of Milo Casagrande
-  sr, courtesy of Мирослав Николић
-  sr@latin, courtesy of Miroslav Nikolić
-  te, courtesy of Krishnababu Krothapalli
+  gogo (hr)
+  Milo Casagrande (it)
+  Kjartan Maraas (nb)
+
+New in 3.22.0 - 19 September 2016
+
+* added/updated translations
+  Seong-ho Cho (ko)
+  Arash Mousavi (fa)
+  Daniel Korostil (uk)
+
+New in 3.21.92 - 12 September 2016
+
+* added/updated translations
+  Akom Chotiphantawanon (th)
+  Alexandre Franke (fr)
+  Anders Jonsson (sv)
+  Ask Hjorth Larsen (da)
+  Aurimas Černius (lt)
+  Baurzhan Muftakhidinov (kk)
+  David King (en_GB)
+  Fran Dieguez (gl)
+  Rūdolfs Mazurs (lv)
+  Tom Tryfonidis (el)
+  Trần Ngọc Quân (vi)
+  Tiago Santos (pt)
+
+New in 3.21.91 - 29 August 2016
+
+* added/updated translations
+  Ask Hjorth Larsen (da)
+  Balázs Úr (hu)
+  Daniel Mustieles (es)
+  Fabio Tomat (fur)
+  Jiri Grönroos (fi)
+  Marek Černocký (cs)
+  Mario Blättermann (de)
+  Matej Urbančič (sl)
+  Piotr Drąg (pl)
+  Мирослав Николић (sr) (sr@latin)
 
 List of fixed bugs
-  737098 polkit console auth agent freezing xsession
-  738467 some icons are enormously large
+  770116 Fixed several memory leaks (Eric R. Schulz)
+
+New in 3.21.90 - 15 August 2016
+
+* added/updated translations
+  cs, courtesy of Marek Černocký 
+  he, courtesy of Yosef Or Boczko 
+  id, courtesy of Andika Triwidada 
+  pt_BR, courtesy of Gustavo Marques 
+  pt, courtesy of Tiago Santos 
+  sk, courtesy of Dušan Kazik 
+
+List of fixed bugs
+  768063 fixed default column width
+  769680 reordered process context menu and ask for confirmation on stop
+
+New in 3.21.3 - 20 June 2016
+
+* added/updated translations
+  fur, courtesy of Fabio Tomat
+  oc, courtesy of Cédric Valmary (totenoc.eu)
+  pt, courtesy of Sérgio Cardeira
+
+List of fixed bugs
+  764266 added padding to 'used' column progress bar
+  748999 Properly normalize CPU resource graph
+
+New in 3.20.1 - 11 April 2016
+
+* added/updated translations
+  fur, courtesy of Fabio Tomat 
+  ar, courtesy of Khaled Hosny 
+* marked as non-removable for GNOME
+
+New in 3.20.0 - 22 March 2016
+
+* added/updated translations
+  ko, courtesy of Seong-ho Cho 
+  da, courtesy of Ask Hjorth Larsen 
+
+New in 3.19.92 - 14 March 2016
+
+* added/updated translations
+  ca, courtesy of Gil Forcada 
+  fur, courtesy of Fabio Tomat 
+  oc, courtesy of Cédric Valmary (totenoc.eu) 
+  uk, courtesy of Daniel Korostil 
+
+New in 3.19.91 - 29 February 2016
+
+* added/updated translations
+  se, courtesy of Anders Jonsson
+
+List of fixed bugs
+   762231 Save window size properly
+
+New in 3.19.90 - 16 February 2016
+
+* added/updated translations
+  bg, courtesy of Alexander Shopov 
+
+List of fixed bugs
+         added missing tag to Appdata Files
+  761124 Fixed padding issue on the Processes tab
+
+New in 3.19.4 - 18 January 2016
+
+* added/updated translations
+  lt, courtesy of Aurimas Černius 
+  th, courtesy of Akom Chotiphantawanon 
+
+New in 3.19.3 - 14 December 2015
+
+* added/updated translations
+  gd, courtesy of GunChleoc 
+  ro, courtesy of Daniel Șerbănescu 
+
+New in 3.18.2 - 9 November 2015
+
+* added/updated translations
+  eu, courtesy of Iñaki Larrañaga Murgoitio 
+  is, courtesy of Sveinn í Felli 
+  ro, courtesy of Daniel Șerbănescu 
+  vi, courtesy of Trần Ngọc Quân 
+  zh_CN, courtesy of Jeff Bai 
+
+New in 3.18.0.1 - 23 September 2015
+
+* added/updated translations
+  sr, courtesy of Марко Костић 
+  sr@latin, courtesy of Милош Поповић
+
+List of fixed bugs
+  755204  Empty space above the process list
+
+New in 3.18.0 - 21 September 2015
+
+* added/updated translations
+  da, courtesy of Kenneth Nielsen 
+  hu, courtesy of Balázs Úr 
+  lv, courtesy of Rūdolfs Mazurs 
+  pt_BR, courtesy of Enrico Nicoletto 
+  sl, courtesy of Matej Urbančič 
+  sv, courtesy of Anders Jonsson 
+
+New in 3.17.92 - 14 September 2015
+
+* added/updated translations
+  cs, courtesy of Marek Černocký 
+  de, courtesy of Bernd Homuth 
+  de, courtesy of Christian Kirbach 
+  fa, courtesy of Arash Mousavi 
+  fi, courtesy of Jiri Grönroos 
+  it, courtesy of Milo Casagrande 
+  kk, courtesy of Baurzhan Muftakhidinov 
+  ko, courtesy of Changwoo Ryu 
+  lt, courtesy of Aurimas Černius 
+  nb, courtesy of Kjartan Maraas 
+  sl, courtesy of Matej Urbančič 
+
+New in 3.17.91 - 31 August 2015
+
+* added/updated translations
+  el, courtesy of Tom Tryfonidis 
+  es, courtesy of Daniel Mustieles 
+  fr, courtesy of Claude Paroz 
+  fur, courtesy of Fabio Tomat
+  gl, courtesy of Fran Dieguez 
+  he, courtesy of Yosef Or Boczko 
+  id, courtesy of Andika Triwidada 
+  pl, courtesy of Piotr Drąg 
+  pt, courtesy of Pedro Albuquerque 
+  ru, courtesy of Yuri Myasoedov 
+  sk, courtesy of Dušan Kazik 
+  tr, courtesy of Muhammet Kara 
+  zh_TW, courtesy of Chao-Hsiung Liao
+
+List of fixed bugs
+         use sysinfo to get number of CPUs
+         set the application icon name
+  753972 work under wayland even with wnck
+
+New in 3.17.90 - 17 August 2015
+
+* added/updated translations
+  sk, courtesy of Dušan Kazik
+  fr, courtesy of Alexander Franke
+
+List of fixed bugs
+  753121 build with c++11
+
+New in 3.17.4 - 20 July 2015
+
+* added/updated translations
+  eo, courtesy of Kristjan SCHMIDT
+  pt, courtesy of Pedro Albuquerque
+
+List of fixed bugs
+  749560 added support for libsystemd
+  749645 search in pid and command line arguments
+
+New in 3.17.3 - 22 June 2015
+
+* added/updated translations
+  ar, courtesy of Khaled Hosny 
+  es, courtesy of Daniel Mustieles 
+  et, courtesy of Mattias Põldaru 
+  is, courtesy of Sveinn í Felli 
+  nl, courtesy of Hannie Dumoleyn 
+  oc, courtesy of Cédric Valmary (Tot en òc) 
+  ru, courtesy of Julia Dronova 
+
+
+New in 3.16.0 - 23 March 2015
+
+* added/updated translations
+  an, courtesy of Daniel Martinez
+  hu, courtesy of Balázs Úr
+  cz, courtesy of Marek Černocký
+  el, courtesy of Tom Tryfonidis
+
+New in 3.15.92 - 16 March 2015
+
+* added/updated translations
+  bs, courtesy of Samir Ribic 
+  ja, courtesy of Jiro Matsuzawa 
+  sr, courtesy of Мирослав Николић 
+  sr@latin, courtesy of Miroslav Nikolić 
+  tg, courtesy of Victor Ibragimov 
+
+List of fixed bugs
+  746208 fixed lsof regex error modal dialogs
+
+New in 3.15.91 - 2 March 2015
+
+* added/updated translations
+  it, courtesy of Milo Casagrande
+
+New in 3.15.4 - 19 January 2015
+
+List of fixed bugs
+  742070 fixed freebsd crasher caused by PID 0
+
+New in 3.15.3 - 15 December 2014
+
+* added/updated translations
+  fi, courtesy of Jiri Grönroos
+  kk, courtesy of Baurzhan Muftakhidinov
+  pt, courtesy of Pedro Albuquerque
+  vi, courtesy of Trần Ngọc Quân
+
+List of fixed bugs
+  738110 fixed bogus assignment
+  741044 Use traditional titlebars on non-gnome
+  741234 Don't set titlebar when using headerbar as toolbar
+
+New in 3.15.1 - 27 October 2014
+
+* added/updated translations
+  bg, courtesy of Krasimir Chonov 
+  bn_IN, courtesy of Saibal Ray
+  cs, courtesy of Marek Černocký 
+  fa, courtesy of Arash Mousavi 
+  it, courtesy of Milo Casagrande 
+  te, courtesy of Krishnababu Krothapalli 
+  uk, courtesy of Daniel Korostil
+
+List of fixed bugs
+  737098 disable internal polkit agent to avoid x freeze
+  738467 ensure icons are at the right size
+  735302 added padding before search buttons
+  738752 do not ship executables in the tarball
 
 New in 3.14.0 - 22 September 2014
 

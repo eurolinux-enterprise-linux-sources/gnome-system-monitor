@@ -22,6 +22,12 @@
     <desc>Προβολή της απεικόνισης μνήμης μιας διεργασίας.</desc>
   
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Ελληνική μεταφραστική ομάδα GNOME</mal:name>
+      <mal:email>team@gnome.gr</mal:email>
+      <mal:years>2014</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name> Δημήτρης Σπίγγος</mal:name>
       <mal:email>dmtrs32@gmail.com</mal:email>
       <mal:years>2014</mal:years>
@@ -29,11 +35,6 @@
   </info>
 
   <title>Χρήση απεικονίσεων μνήμης</title>
-
-  <comment>
-    <cite date="2011-06-18" href="mailto:philbull@gmail.com">Phil Bull</cite>
-    <p>Explain how to use the Memory Map feature.</p>
-  </comment>
 
   <p>Η <gui>εικονική μνήμη</gui> είναι μια απεικόνιση μιας συνδυασμένης <gui>φυσικής μνήμης</gui> και ενός <link xref="mem-swap">χώρου εναλλαγής</link> σε ένα σύστημα. Ενεργοποιεί την εκτέλεση διεργασιών για να προσπελάσει <em>περισσότερη</em> από την υπάρχουσα φυσική μνήμη <gui>αντιστοιχώντας</gui> θέσεις στη φυσική μνήμη σε αρχεία στον δίσκο. Όταν το σύστημα χρειάζεται περισσότερες σελίδες μνήμης από αυτές που είναι διαθέσιμες, κάποιες από τις υπάρχουσες σελίδες θα <em>εκτοπιστούν</em> ή θα γραφτούν στον χώρος εναλλαγής.</p>
 

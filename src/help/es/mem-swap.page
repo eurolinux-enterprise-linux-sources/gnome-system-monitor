@@ -24,17 +24,11 @@
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>Daniel Mustieles</mal:name>
       <mal:email>daniel.mustieles@gmail.com</mal:email>
-      <mal:years>2014</mal:years>
+      <mal:years>2014 - 2015</mal:years>
     </mal:credit>
   </info>
 
   <title>¿Qué es la memoria «swap»?</title>
-
-  <comment>
-    <cite date="2011-06-18" href="mailto:philbull@gmail.com">Phil Bull</cite>
-    <p>Explain what swap is and how it helps. Explain that the computer may run
-    slowly if it's swapping too much.</p>
-  </comment>
 
   <p>La memoria «swap» o <em>espacio de intercambio</em> es una parte de la memoria virtual del sistema en disco. Está configurada como una <em>partición de intercambio</em> o un <em>archivo de intercambio</em> donde se ha instalado Linux, pero se puede haber añadido posteriormente.</p>
 

@@ -6,6 +6,7 @@
     <property name="title" translatable="yes">System Monitor</property>
     <property name="default_width">440</property>
     <property name="default_height">495</property>
+    <property name="icon_name">utilities-system-monitor</property>
     <child type="titlebar">
       <object class="GtkHeaderBar" id="header_bar">
         <property name="visible">True</property>
@@ -28,7 +29,7 @@
             <property name="halign">end</property>
             <property name="direction">none</property>
             <style>
-              <class name="image-button"/>
+              <class name="title-button"/>
             </style>
           </object>
           <packing>
@@ -40,10 +41,11 @@
             <property name="visible">True</property>
             <property name="active">False</property>
             <property name="valign">center</property>
+            <property name="margin_start">6</property>
             <property name="action_name">win.search</property>
             <property name="action_target">@b false</property>
             <style>
-              <class name="image-button"/>
+              <class name="title-button"/>
             </style>
             <child>
               <object class="GtkImage" id="search_image">
@@ -79,8 +81,10 @@
                 <property name="orientation">vertical</property>
                 <child>
                   <object class="GtkSearchBar" id="proc_searchbar">
-                    <property name="visible">True</property>
+                    <property name="visible">False</property>
                     <property name="can_focus">False</property>
+                    <property name="vexpand_set">True</property>
+                    <property name="vexpand">False</property>
                     <child>
                       <object class="GtkSearchEntry" id="proc_searchentry">
                         <property name="visible">True</property>

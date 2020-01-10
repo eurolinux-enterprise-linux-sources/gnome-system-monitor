@@ -21,6 +21,12 @@
     <desc>Μονάδες μέτρησης για μνήμη και χώρο δίσκου</desc>
   
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Ελληνική μεταφραστική ομάδα GNOME</mal:name>
+      <mal:email>team@gnome.gr</mal:email>
+      <mal:years>2014</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name> Δημήτρης Σπίγγος</mal:name>
       <mal:email>dmtrs32@gmail.com</mal:email>
       <mal:years>2014</mal:years>
@@ -28,11 +34,6 @@
   </info>
 
   <title>Είναι το ίδιο GiB με GB (gigabyte);</title>
-
-  <comment>
-    <cite date="2011-06-18" href="mailto:philbull@gmail.com">Phil Bull</cite>
-    <p>Answer this question, quite briefly.</p>
-  </comment>
 
     <p>Τα στατιστικά μνήμης και δίσκου εμφανίζονται χρησιμοποιώντας <em>δυαδικά προθέματα IEC</em>, KiB, MiB, GiB, TiB (για kibi, mebi, gibi and tebi). Αυτά αποσκοπούν στη διάκριση δυαδικών αναφορών μεγεθών που χρησιμοποιούνται στην παρακολούθηση συστήματος (πολλαπλάσια του 1024) από τα δεκαδικά μεγέθη (πολλαπλάσια του 1000) συνήθως χρησιμοποιούμενα, για παράδειγμα, στη συσκευασία σκληρών δίσκων.</p>
 

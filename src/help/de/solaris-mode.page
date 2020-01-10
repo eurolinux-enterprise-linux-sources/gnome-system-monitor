@@ -23,7 +23,7 @@
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>Christian Kirbach</mal:name>
       <mal:email>christian.kirbach@gmail.com</mal:email>
-      <mal:years>2014</mal:years>
+      <mal:years>2014, 2015</mal:years>
     </mal:credit>
   
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
@@ -34,12 +34,6 @@
   </info>
 
   <title>Was ist der Solaris-Modus?</title>
-
-  <comment>
-    <cite date="2011-06-18" href="mailto:philbull@gmail.com">Phil Bull</cite>
-    <p>Very brief topic. Explain what "Solaris mode" in the preferences dialog
- means. The current manual has some information.</p>
-  </comment>
 
   <p>In einem System mit mehreren CPUs oder <link xref="cpu-multicore">Kernen</link> können Prozesse mehr als eine/einen gleichzeitig verwenden. In der Spalte <gui>% CPU</gui> können Werte auftauchen, die in Summe mehr als 100% ergeben (z.B. 400% in einem System mit 4 CPUs). <gui>Solaris-Modus</gui> teilt den Wert <gui>% CPU</gui> für jeden Prozess durch die Anzahl der CPUs im System, so dass die Summe höchstens 100% ergibt.</p>
 

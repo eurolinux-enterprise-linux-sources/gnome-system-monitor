@@ -37,22 +37,20 @@
       <mal:email>jhardlin@orange.fr</mal:email>
       <mal:years>2014</mal:years>
     </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Leonor Palazzo</mal:name>
+      <mal:email>leonor.palazzo@gmail.com</mal:email>
+      <mal:years>2015</mal:years>
+    </mal:credit>
   </info>
 
   <title>Recherche du programme utilisant un fichier spécifique</title>
 
-  <comment>
-    <cite date="2011-06-18" href="mailto:philbull@gmail.com">Phil Bull</cite>
-    <p>Explain how you can search for a file (or part of a filename) and it will
-    show which processes are using it. Explain why this might be useful.</p>
-  </comment>
-
   <p>Parfois un message d'erreur vous indique qu'un périphérique (comme le périphérique son ou le DVD ROM) est occupé, ou que le fichier que vous souhaitez modifier est utilisé. Pour chercher le processus responsable :</p>
 
     <steps>
-      <item><p>ouvrez <guiseq><gui>Moniteur système</gui><gui>Préférences</gui></guiseq>,</p>
-      </item>
-      <item><p>cliquez sur <gui>Rechercher des fichiers ouverts</gui>,</p>
+      <item><p>Ouvrez <guiseq><gui>Moniteur système</gui><gui>Rechercher des fichiers ouverts</gui></guiseq>.</p>
       </item>
       <item><p>saisissez un nom de fichier ou une partie d'un nom de fichier, ce peut être <file>/dev/snd</file> pour le périphérique son ou <file>/media/cdrom</file> pour le DVD ROM,</p>
       </item>

@@ -29,11 +29,6 @@
 
   <title>A másodpercenkénti hálózati sebesség megjelenítése bitekben bájtok helyett</title>
 
-  <comment>
-    <cite date="2011-06-18" href="mailto:philbull@gmail.com">Phil Bull</cite>
-    <p>Brief topic. Explain how to do this, and why you might want to do it.</p>
-  </comment>
-
   <p>A hálózati sebesség gyakran bit/másodpercben jelenik meg bájt/másodperc helyett. Ezt <em>bitsebességnek</em> vagy <em>adatsebességnek</em> is hívják.</p>
 
   <p>A hálózati sebesség bitekben való megjelenítéséhez:</p>

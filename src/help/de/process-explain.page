@@ -23,7 +23,7 @@
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>Christian Kirbach</mal:name>
       <mal:email>christian.kirbach@gmail.com</mal:email>
-      <mal:years>2014</mal:years>
+      <mal:years>2014, 2015</mal:years>
     </mal:credit>
   
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
@@ -34,13 +34,6 @@
   </info>
 
   <title>Was ist ein Prozess?</title>
-
-  <comment>
-    <cite date="2011-06-18" href="mailto:philbull@gmail.com">Phil Bull</cite>
-    <p>Explain, in simple terms, what a process is, how they relate to
- applications, how some are 'system processes', and what you can do with a
- process.</p>
-  </comment>
 
   <p>Ein <gui>Prozess</gui> ist ein Programm oder eine Anwendung, die vom System ausgeführt wird. Wenn eine Anwendung gestartet wird, so weist ihr das System eine eindeutige Prozesskennung (PID) zu und die zugehörigen Anweisungen und Daten werden in den Speicher geladen.</p>
 

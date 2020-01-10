@@ -23,13 +23,6 @@
 
   <title>What is a process?</title>
 
-  <comment>
-    <cite date="2011-06-18" href="mailto:philbull@gmail.com">Phil Bull</cite>
-    <p>Explain, in simple terms, what a process is, how they relate to
- applications, how some are 'system processes', and what you can do with a
- process.</p>
-  </comment>
-
   <p>A <gui>process</gui> is a program or application being executed by the
  system. When an application is launched, the system assigns a unique process ID
  (PID), and its instructions and data are loaded into memory.</p>

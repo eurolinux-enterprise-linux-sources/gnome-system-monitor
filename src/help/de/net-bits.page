@@ -23,7 +23,7 @@
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>Christian Kirbach</mal:name>
       <mal:email>christian.kirbach@gmail.com</mal:email>
-      <mal:years>2014</mal:years>
+      <mal:years>2014, 2015</mal:years>
     </mal:credit>
   
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
@@ -34,11 +34,6 @@
   </info>
 
   <title>Die Netzwerkgeschwindigkeit in Bit anstelle von Byte pro Sekunde anzeigen.</title>
-
-  <comment>
-    <cite date="2011-06-18" href="mailto:philbull@gmail.com">Phil Bull</cite>
-    <p>Brief topic. Explain how to do this, and why you might want to do it.</p>
-  </comment>
 
   <p>Die Netzwerkgeschwindigkeit wird oft in Bit pro Sekunde dargestellt anstatt Byte pro Sekunde. Dies wird die <em>Bitrate</em> bzw. <em>Datenrate</em> genannt.</p>
 

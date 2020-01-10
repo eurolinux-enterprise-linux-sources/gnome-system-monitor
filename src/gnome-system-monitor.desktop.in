@@ -12,5 +12,5 @@ NotShowIn=KDE;
 X-GNOME-Bugzilla-Bugzilla=GNOME
 X-GNOME-Bugzilla-Product=system-monitor
 X-GNOME-Bugzilla-Component=general
-X-GNOME-Bugzilla-Version=3.14.1
+X-GNOME-Bugzilla-Version=3.22.2
 _Keywords=Monitor;System;Process;CPU;Memory;Network;History;Usage;Performance;Task;Manager;

@@ -8,9 +8,6 @@
 
 using std::string;
 
-/* check if logind is running */
-#define LOGIND_RUNNING() (access("/run/systemd/seats/", F_OK) >= 0)
-
 GtkWidget*
 procman_make_label_for_mmaps_or_ofiles(const char *format,
                                        const char *process_name,
@@ -45,6 +42,8 @@ inline string make_string(char *c_str)
 
 namespace procman
 {
+    char* format_duration_for_display(unsigned centiseconds);
+
     void size_cell_data_func(GtkTreeViewColumn *col, GtkCellRenderer *renderer,
                              GtkTreeModel *model, GtkTreeIter *iter,
                              gpointer user_data);
@@ -127,6 +126,17 @@ namespace procman
 
     std::string format_network(guint64 rate, guint64 max_rate = 0);
     std::string format_network_rate(guint64 rate, guint64 max_rate = 0);
+
+    class NonCopyable
+    {
+    protected:
+        NonCopyable() {}  // = default
+        ~NonCopyable() {} // = default
+    private:
+        NonCopyable(const NonCopyable&)            /* = delete */;
+        NonCopyable& operator=(const NonCopyable&) /* = delete */;
+    };
+
 }
 
 #endif /* _GSM_UTIL_H_ */

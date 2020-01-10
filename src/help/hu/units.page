@@ -29,11 +29,6 @@
 
   <title>A GiB ugyanaz, mint a GB (gigabájt)?</title>
 
-  <comment>
-    <cite date="2011-06-18" href="mailto:philbull@gmail.com">Phil Bull</cite>
-    <p>Answer this question, quite briefly.</p>
-  </comment>
-
     <p>A megjelenített memória- és lemezterület-statisztikák <em>IEC bináris előtagokat</em> használnak: KiB, MiB, GiB, TiB (kibi, mebi, gibi és tebi). Ezeket a Rendszerfigyelő által használt bináris méretek (1024 többszörösei) megkülönböztetésére szolgál az általánosan, például háttértárak csomagolásain használt decimális méretektől (1000 többszörösei).</p>
 
     <p>Tipikus bináris egységek:</p>

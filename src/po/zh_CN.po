@@ -7,25 +7,27 @@
 # Wind He <lofwind@gmail.com>, 2011.
 # Mike Manilone <crtmike@gmail.com>, 2012.
 # YunQiang Su <wzssyqa@gmail.com>, 2012.
+# Jeff Bai <jeffbai@aosc.xyz>, 2015.
+# Boyuan Yang <073plan@gmail.com>, 2016.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: procman\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=system-"
 "monitor&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-08-20 04:18+0000\n"
-"PO-Revision-Date: 2014-08-18 20:11+0800\n"
-"Last-Translator: irisgyq <gouyingqiyanxuan321@gmail.com>\n"
+"POT-Creation-Date: 2016-10-07 06:43+0000\n"
+"PO-Revision-Date: 2016-10-10 16:45+0800\n"
+"Last-Translator: Boyuan Yang <073plan@gmail.com>\n"
 "Language-Team: Chinese (simplified) <i18n-zh@googlegroups.com>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 1.8.9\n"
 
 #: ../gnome-system-monitor.desktop.in.in.h:1 ../data/interface.ui.h:1
-#: ../src/application.cpp:268 ../src/interface.cpp:363
+#: ../src/application.cpp:262 ../src/interface.cpp:363
 msgid "System Monitor"
 msgstr "系统监视器"
 
@@ -43,7 +45,7 @@ msgstr ""
 "Manager;监视器;系统;进程;中央处理器;内存;网络;历史;用量;绩效;任务;管理员;"
 
 #: ../gnome-system-monitor-kde.desktop.in.in.h:1
-#: ../gnome-system-monitor.appdata.xml.in.h:1 ../src/application.cpp:324
+#: ../gnome-system-monitor.appdata.xml.in.h:1 ../src/application.cpp:317
 msgid "GNOME System Monitor"
 msgstr "GNOME 系统监视器"
 
@@ -80,6 +82,22 @@ msgid ""
 msgstr ""
 "资源图表功能为您展示了计算机当前运行状态的快速预览，包括近期网络、内存和处理"
 "器使用情况。"
+
+#: ../gnome-system-monitor.appdata.xml.in.h:6
+msgid "Process list view"
+msgstr "进程列表视图"
+
+#: ../gnome-system-monitor.appdata.xml.in.h:7
+msgid "Resources overview"
+msgstr "资源概览"
+
+#: ../gnome-system-monitor.appdata.xml.in.h:8
+msgid "File Systems view"
+msgstr "文件系统视图"
+
+#: ../gnome-system-monitor.appdata.xml.in.h:9
+msgid "The GNOME Project"
+msgstr "GNOME 项目"
 
 #: ../org.gnome.gnome-system-monitor.policy.in.in.h:1
 msgid "Kill process"
@@ -118,7 +136,7 @@ msgid "Memory and Swap History"
 msgstr "内存和交换历史"
 
 #: ../data/interface.ui.h:7 ../src/interface.cpp:260
-#: ../src/procproperties.cpp:92 ../src/proctable.cpp:337
+#: ../src/procproperties.cpp:70 ../src/proctable.cpp:349
 msgid "Memory"
 msgstr "内存"
 
@@ -155,9 +173,9 @@ msgid "File Systems"
 msgstr "文件系统"
 
 #: ../data/lsof.ui.h:1
-msgctxt "Window title for 'Search for Open Files' dialog"
+msgctxt "Window title for Search for Open Files dialog"
 msgid "Search for Open Files"
-msgstr "搜索打开的文件"
+msgstr "搜索已打开的文件"
 
 #: ../data/lsof.ui.h:2
 msgid "Filter files by name"
@@ -168,9 +186,9 @@ msgid "Case insensitive"
 msgstr "不区分大小写"
 
 #: ../data/menus.ui.h:1
-msgctxt "Menu item to Open 'Search for Open Files' dialog"
+msgctxt "Menu item to Open Search for Open Files dialog"
 msgid "Search for Open Files"
-msgstr "搜索打开的文件"
+msgstr "搜索已打开的文件"
 
 #: ../data/menus.ui.h:2
 msgid "Preferences"
@@ -209,20 +227,17 @@ msgid "_Dependencies"
 msgstr "依赖关系(_D)"
 
 #: ../data/menus.ui.h:11
-msgid "_Stop"
-msgstr "停止(_S)"
+msgid "_Properties"
+msgstr "属性(_P)"
 
 #: ../data/menus.ui.h:12
-msgid "_Continue"
-msgstr "继续进程(_C)"
+msgid "_Memory Maps"
+msgstr "内存映射(_M)"
 
-#: ../data/menus.ui.h:13
-msgid "_End"
-msgstr "结束(_E)"
-
+#. Translators: this means
 #: ../data/menus.ui.h:14
-msgid "_Kill"
-msgstr "杀死(_K)"
+msgid "Open _Files"
+msgstr "打开的文件(_F)"
 
 #: ../data/menus.ui.h:15
 msgid "_Change Priority"
@@ -253,17 +268,20 @@ msgid "Custom"
 msgstr "自定义"
 
 #: ../data/menus.ui.h:22
-msgid "_Memory Maps"
-msgstr "内存映射(_M)"
+msgid "_Stop"
+msgstr "停止(_S)"
 
-#. Translators: this means 'Files that are open' (open is not a verb here)
+#: ../data/menus.ui.h:23
+msgid "_Continue"
+msgstr "继续进程(_C)"
+
 #: ../data/menus.ui.h:24
-msgid "Open _Files"
-msgstr "打开的文件(_F)"
+msgid "_End"
+msgstr "结束(_E)"
 
 #: ../data/menus.ui.h:25
-msgid "_Properties"
-msgstr "属性(_P)"
+msgid "_Kill"
+msgstr "杀死(_K)"
 
 #: ../data/openfiles.ui.h:1
 msgid "Open Files"
@@ -321,7 +339,7 @@ msgstr "显示全部文件系统(_A)"
 msgid "File system i_nformation shown in list:"
 msgstr "列表中显示的文件系统信息(_N)："
 
-#: ../data/renice.ui.h:1 ../src/procdialogs.cpp:123
+#: ../data/renice.ui.h:1 ../src/procdialogs.cpp:153
 msgid "_Cancel"
 msgstr "取消(_C)"
 
@@ -341,51 +359,51 @@ msgstr ""
 "<small><i><b>注：</b>进程的优先级由它的 nice 值指定。较低的 nice 值对应较高的"
 "优先级。</i></small>"
 
-#: ../src/application.cpp:310
+#: ../src/application.cpp:303
 msgid "A simple process and system monitor."
 msgstr "简单的进程和系统监视器。"
 
-#: ../src/argv.cpp:21
+#: ../src/argv.cpp:22
 msgid "Show the Processes tab"
 msgstr "显示进程标签页"
 
-#: ../src/argv.cpp:26
+#: ../src/argv.cpp:27
 msgid "Show the Resources tab"
 msgstr "显示资源标签页"
 
-#: ../src/argv.cpp:31
+#: ../src/argv.cpp:32
 msgid "Show the File Systems tab"
 msgstr "显示文件系统标签页"
 
-#: ../src/argv.cpp:35
+#: ../src/argv.cpp:36
 msgid "Show the application's version"
 msgstr "显示应用程序版本"
 
-#: ../src/disks.cpp:369 ../src/memmaps.cpp:325
+#: ../src/disks.cpp:361 ../src/memmaps.cpp:329
 msgid "Device"
 msgstr "设备"
 
-#: ../src/disks.cpp:370
+#: ../src/disks.cpp:362
 msgid "Directory"
 msgstr "目录"
 
-#: ../src/disks.cpp:371 ../src/gsm_color_button.c:165 ../src/openfiles.cpp:252
+#: ../src/disks.cpp:363 ../src/gsm_color_button.c:165 ../src/openfiles.cpp:252
 msgid "Type"
 msgstr "类型"
 
-#: ../src/disks.cpp:372
+#: ../src/disks.cpp:364
 msgid "Total"
 msgstr "总数"
 
-#: ../src/disks.cpp:373
+#: ../src/disks.cpp:365
 msgid "Free"
 msgstr "空闲"
 
-#: ../src/disks.cpp:374
+#: ../src/disks.cpp:366
 msgid "Available"
 msgstr "可用"
 
-#: ../src/disks.cpp:375
+#: ../src/disks.cpp:367
 msgid "Used"
 msgstr "已用"
 
@@ -431,7 +449,7 @@ msgstr "标题"
 msgid "The title of the color selection dialog"
 msgstr "颜色选择对话框标题"
 
-#: ../src/gsm_color_button.c:152 ../src/gsm_color_button.c:512
+#: ../src/gsm_color_button.c:152 ../src/gsm_color_button.c:515
 msgid "Pick a Color"
 msgstr "拾取颜色"
 
@@ -447,11 +465,11 @@ msgstr "选中的颜色"
 msgid "Type of color picker"
 msgstr "颜色拾取器类型"
 
-#: ../src/gsm_color_button.c:434
+#: ../src/gsm_color_button.c:437
 msgid "Received invalid color data\n"
 msgstr "接收到非法颜色数据\n"
 
-#: ../src/gsm_color_button.c:535
+#: ../src/gsm_color_button.c:538
 msgid "Click to set graph colors"
 msgstr "点击以设置图形颜色"
 
@@ -461,7 +479,7 @@ msgstr "点击以设置图形颜色"
 msgid "Pick a Color for '%s'"
 msgstr "为“%s”拾取一种颜色"
 
-#: ../src/interface.cpp:220 ../src/procproperties.cpp:100
+#: ../src/interface.cpp:220 ../src/procproperties.cpp:78
 msgid "CPU"
 msgstr "CPU"
 
@@ -484,113 +502,104 @@ msgstr ""
 "YunQiang Su <wzssyqa@gmail.com>, 2012\n"
 "tuhaihe <1132321739qq@gmail.com>, 2012, 2013"
 
-#: ../src/load-graph.cpp:161
+#: ../src/load-graph.cpp:157
 #, c-format
 msgid "%u second"
 msgid_plural "%u seconds"
 msgstr[0] "%u 秒"
 
-#: ../src/load-graph.cpp:370
+#: ../src/load-graph.cpp:366
 msgid "not available"
 msgstr "不可用"
 
 #. xgettext: 540MiB (53 %) of 1.0 GiB
-#: ../src/load-graph.cpp:373
+#: ../src/load-graph.cpp:369
 #, c-format
 msgid "%s (%.1f%%) of %s"
 msgstr "%s (%.1f %%)，共 %s"
 
-#: ../src/lsof.cpp:109
-msgid "Error"
-msgstr "错误"
-
-#: ../src/lsof.cpp:110
-#, c-format
-msgid "'%s' is not a valid Perl regular expression."
-msgstr "“%s”不是有效的 Perl 正则表达式。"
-
-#: ../src/lsof.cpp:128
+#: ../src/lsof.cpp:118
 #, c-format
 msgid "%d open file"
 msgid_plural "%d open files"
 msgstr[0] "%d 个打开了的文件"
 
-#: ../src/lsof.cpp:130
+#: ../src/lsof.cpp:120
 #, c-format
 msgid "%d matching open file"
 msgid_plural "%d matching open files"
 msgstr[0] "%d 个匹配的打开了的文件"
 
-#: ../src/lsof.cpp:246
+#: ../src/lsof.cpp:247
 msgid "Process"
 msgstr "进程"
 
-#: ../src/lsof.cpp:258
+#: ../src/lsof.cpp:259
 msgid "PID"
 msgstr "PID"
 
-#: ../src/lsof.cpp:268 ../src/memmaps.cpp:303
+#: ../src/lsof.cpp:269 ../src/memmaps.cpp:307
 msgid "Filename"
 msgstr "文件名"
 
 #. xgettext: virtual memory start
-#: ../src/memmaps.cpp:305
+#: ../src/memmaps.cpp:309
 msgid "VM Start"
 msgstr "VM 开始于"
 
 #. xgettext: virtual memory end
-#: ../src/memmaps.cpp:307
+#: ../src/memmaps.cpp:311
 msgid "VM End"
 msgstr "VM 终止于"
 
 #. xgettext: virtual memory syze
-#: ../src/memmaps.cpp:309
+#: ../src/memmaps.cpp:313
 msgid "VM Size"
 msgstr "VM 大小"
 
-#: ../src/memmaps.cpp:310
+#: ../src/memmaps.cpp:314
 msgid "Flags"
 msgstr "标志"
 
 #. xgettext: virtual memory offset
-#: ../src/memmaps.cpp:312
+#: ../src/memmaps.cpp:316
 msgid "VM Offset"
 msgstr "VM 偏移"
 
 #. xgettext: memory that has not been modified since
 #. it has been allocated
-#: ../src/memmaps.cpp:315
+#: ../src/memmaps.cpp:319
 msgid "Private clean"
 msgstr "未被修改的私有内存"
 
 #. xgettext: memory that has been modified since it
 #. has been allocated
-#: ../src/memmaps.cpp:318
+#: ../src/memmaps.cpp:322
 msgid "Private dirty"
 msgstr "已被修改的私有内存"
 
 #. xgettext: shared memory that has not been modified
 #. since it has been allocated
-#: ../src/memmaps.cpp:321
+#: ../src/memmaps.cpp:325
 msgid "Shared clean"
 msgstr "未被修改的共享内存"
 
 #. xgettext: shared memory that has been modified
 #. since it has been allocated
-#: ../src/memmaps.cpp:324
+#: ../src/memmaps.cpp:328
 msgid "Shared dirty"
 msgstr "已被修改的共享内存"
 
-#: ../src/memmaps.cpp:326
+#: ../src/memmaps.cpp:330
 msgid "Inode"
 msgstr "Inode"
 
 # 与下面的统一下翻译。
-#: ../src/memmaps.cpp:436
+#: ../src/memmaps.cpp:440
 msgid "Memory Maps"
 msgstr "内存映射"
 
-#: ../src/memmaps.cpp:448
+#: ../src/memmaps.cpp:452
 #, c-format
 msgid "_Memory maps for process \"%s\" (PID %u):"
 msgstr "进程“%s”(PID %u)的内存映射(_M)："
@@ -1021,7 +1030,7 @@ msgstr "打开文件排序列"
 msgid "Open files sort order"
 msgstr "打开文件排序方式"
 
-#: ../src/prefsdialog.cpp:170
+#: ../src/prefsdialog.cpp:171
 msgid "Icon"
 msgstr "图标"
 
@@ -1044,175 +1053,206 @@ msgstr ""
 "%3$s"
 
 #. xgettext: primary alert message for killing single process
-#: ../src/procdialogs.cpp:75
+#: ../src/procdialogs.cpp:76
 #, c-format
 msgid "Are you sure you want to kill the selected process “%s” (PID: %u)?"
 msgstr "您确定要杀死选中的进程 “%s”(PID：%u) 吗？"
 
 #. xgettext: primary alert message for ending single process
-#: ../src/procdialogs.cpp:80
+#: ../src/procdialogs.cpp:82
 #, c-format
 msgid "Are you sure you want to end the selected process “%s” (PID: %u)?"
 msgstr "您确定要结束选中的进程 “%s”(PID：%u) 吗？"
 
+#. SIGSTOP
+#. xgettext: primary alert message for stopping single process
+#: ../src/procdialogs.cpp:88
+#, c-format
+msgid "Are you sure you want to stop the selected process “%s” (PID: %u)?"
+msgstr "您确定要停止选中的进程 “%s”(PID：%u) 吗？"
+
 #. xgettext: primary alert message for killing multiple processes
-#: ../src/procdialogs.cpp:87
+#: ../src/procdialogs.cpp:97
 #, c-format
 msgid "Are you sure you want to kill the selected process?"
 msgid_plural "Are you sure you want to kill the %d selected processes?"
 msgstr[0] "您确定要杀死选中的 %d 个进程？"
 
 #. xgettext: primary alert message for ending multiple processes
-#: ../src/procdialogs.cpp:91
+#: ../src/procdialogs.cpp:103
 #, c-format
 msgid "Are you sure you want to end the selected process?"
 msgid_plural "Are you sure you want to end the %d selected processes?"
 msgstr[0] "您确定要结束选中的 %d 个进程？"
 
+#. SIGSTOP
+#. xgettext: primary alert message for stopping multiple processes
+#: ../src/procdialogs.cpp:109
+#, c-format
+msgid "Are you sure you want to stop the selected process?"
+msgid_plural "Are you sure you want to stop the %d selected processes?"
+msgstr[0] "您确定要停止选中的 %d 个进程？"
+
 #. xgettext: secondary alert message
-#: ../src/procdialogs.cpp:98 ../src/procdialogs.cpp:104
+#: ../src/procdialogs.cpp:119
 msgid ""
 "Killing a process may destroy data, break the session or introduce a "
 "security risk. Only unresponsive processes should be killed."
 msgstr ""
-"杀死进程可能导致数据损坏，中断会话或带来安全风险。您应该只杀死无响应的进程。"
+"杀死进程可能导致数据损坏、中断会话或带来安全风险。您应该只杀死无响应的进程。"
 
-#: ../src/procdialogs.cpp:101
+#: ../src/procdialogs.cpp:122
 msgid "_Kill Process"
 msgid_plural "_Kill Processes"
 msgstr[0] "杀死进程(_K)"
 
-#: ../src/procdialogs.cpp:107
+#. xgettext: secondary alert message
+#: ../src/procdialogs.cpp:126
+msgid ""
+"Ending a process may destroy data, break the session or introduce a security "
+"risk. Only unresponsive processes should be ended."
+msgstr ""
+"结束进程可能导致数据损坏、中断会话或带来安全风险。您应该只结束无响应的进程。"
+
+#: ../src/procdialogs.cpp:129
 msgid "_End Process"
 msgid_plural "_End Processes"
 msgstr[0] "结束进程(_E)"
 
-#: ../src/procdialogs.cpp:188
+#. SIGSTOP
+#. xgettext: secondary alert message
+#: ../src/procdialogs.cpp:133
+msgid ""
+"Stopping a process may destroy data, break the session or introduce a "
+"security risk. Only unresponsive processes should be stopped."
+msgstr ""
+"停止进程可能导致数据损坏、中断会话或带来安全风险。您应该只停止无响应的进程。"
+
+#: ../src/procdialogs.cpp:136
+msgid "_Stop Process"
+msgid_plural "_Stop Processes"
+msgstr[0] "停止进程(_S)"
+
+#: ../src/procdialogs.cpp:218
 #, c-format
 msgid "Change Priority of Process “%s” (PID: %u)"
 msgstr "更改进程“%s”(PID：%u)的优先级"
 
-#: ../src/procdialogs.cpp:191
+#: ../src/procdialogs.cpp:221
 #, c-format
 msgid "Change Priority of the selected process"
 msgid_plural "Change Priority of %d selected processes"
 msgstr[0] "更改所选 %d 个进程的优先级"
 
-#: ../src/procdialogs.cpp:210
+#: ../src/procdialogs.cpp:240
 msgid "Note:"
 msgstr "备忘："
 
-#: ../src/procdialogs.cpp:211
+#: ../src/procdialogs.cpp:241
 msgid ""
 "The priority of a process is given by its nice value. A lower nice value "
 "corresponds to a higher priority."
 msgstr "进程的优先级由它的 nice 值指定。较低的 nice 值对应较高的优先级。"
 
-#: ../src/procproperties.cpp:55 ../src/procproperties.cpp:106
-#: ../src/procproperties.cpp:109 ../src/util.cpp:432
+#: ../src/procproperties.cpp:50 ../src/procproperties.cpp:84
+#: ../src/procproperties.cpp:87 ../src/util.cpp:432
 msgid "N/A"
 msgstr "不适用"
 
-#: ../src/procproperties.cpp:89 ../src/proctable.cpp:322
+#: ../src/procproperties.cpp:67 ../src/proctable.cpp:334
 msgid "Process Name"
 msgstr "进程名"
 
-#: ../src/procproperties.cpp:90 ../src/proctable.cpp:323
+#: ../src/procproperties.cpp:68 ../src/proctable.cpp:335
 msgid "User"
 msgstr "用户"
 
-#: ../src/procproperties.cpp:91 ../src/proctable.cpp:324
+#: ../src/procproperties.cpp:69 ../src/proctable.cpp:336
 msgid "Status"
 msgstr "状态"
 
-#: ../src/procproperties.cpp:93 ../src/proctable.cpp:325
+#: ../src/procproperties.cpp:71 ../src/proctable.cpp:337
 msgid "Virtual Memory"
 msgstr "虚拟内存"
 
-#: ../src/procproperties.cpp:94 ../src/proctable.cpp:326
+#: ../src/procproperties.cpp:72 ../src/proctable.cpp:338
 msgid "Resident Memory"
 msgstr "驻留内存"
 
-#: ../src/procproperties.cpp:95 ../src/proctable.cpp:327
+#: ../src/procproperties.cpp:73 ../src/proctable.cpp:339
 msgid "Writable Memory"
 msgstr "可写内存"
 
-#: ../src/procproperties.cpp:96 ../src/proctable.cpp:328
+#: ../src/procproperties.cpp:74 ../src/proctable.cpp:340
 msgid "Shared Memory"
 msgstr "共享内存"
 
-#: ../src/procproperties.cpp:98 ../src/proctable.cpp:329
+#: ../src/procproperties.cpp:76 ../src/proctable.cpp:341
 msgid "X Server Memory"
 msgstr "X 服务器内存"
 
-#: ../src/procproperties.cpp:101 ../src/proctable.cpp:331
+#: ../src/procproperties.cpp:79 ../src/proctable.cpp:343
 msgid "CPU Time"
 msgstr "CPU 时间"
 
-#: ../src/procproperties.cpp:101
-#, c-format
-msgid "%lld second"
-msgid_plural "%lld seconds"
-msgstr[0] "%lld 秒"
-
-#: ../src/procproperties.cpp:102 ../src/proctable.cpp:332
+#: ../src/procproperties.cpp:80 ../src/proctable.cpp:344
 msgid "Started"
 msgstr "开始于"
 
-#: ../src/procproperties.cpp:103 ../src/proctable.cpp:333
+#: ../src/procproperties.cpp:81 ../src/proctable.cpp:345
 msgid "Nice"
 msgstr "Nice"
 
-#: ../src/procproperties.cpp:104 ../src/proctable.cpp:347
+#: ../src/procproperties.cpp:82 ../src/proctable.cpp:359
 msgid "Priority"
 msgstr "优先级"
 
-#: ../src/procproperties.cpp:105 ../src/proctable.cpp:334
+#: ../src/procproperties.cpp:83 ../src/proctable.cpp:346
 msgid "ID"
 msgstr "ID"
 
-#: ../src/procproperties.cpp:106 ../src/proctable.cpp:335
+#: ../src/procproperties.cpp:84 ../src/proctable.cpp:347
 msgid "Security Context"
 msgstr "安全环境"
 
-#: ../src/procproperties.cpp:107 ../src/proctable.cpp:336
+#: ../src/procproperties.cpp:85 ../src/proctable.cpp:348
 msgid "Command Line"
 msgstr "命令行"
 
 #. xgettext: combined noun, the function the process is waiting in, see wchan ps(1)
-#: ../src/procproperties.cpp:108 ../src/proctable.cpp:339
+#: ../src/procproperties.cpp:86 ../src/proctable.cpp:351
 msgid "Waiting Channel"
 msgstr "等候频道"
 
-#: ../src/procproperties.cpp:109 ../src/proctable.cpp:340
+#: ../src/procproperties.cpp:87 ../src/proctable.cpp:352
 msgid "Control Group"
 msgstr "控制组"
 
-#: ../src/procproperties.cpp:221
+#: ../src/procproperties.cpp:199
 #, c-format
 msgid "%s (PID %u)"
 msgstr "%s (PID %u)"
 
-#: ../src/proctable.cpp:330
+#: ../src/proctable.cpp:342
 #, no-c-format
 msgid "% CPU"
 msgstr "% CPU"
 
-#: ../src/proctable.cpp:341
+#: ../src/proctable.cpp:353
 msgid "Unit"
 msgstr "单元"
 
-#: ../src/proctable.cpp:342
+#: ../src/proctable.cpp:354
 msgid "Session"
 msgstr "会话"
 
 #. TRANSLATORS: Seat = i.e. the physical seat the session of the process belongs to, only
 #. for multi-seat environments. See http://en.wikipedia.org/wiki/Multiseat_configuration
-#: ../src/proctable.cpp:345
+#: ../src/proctable.cpp:357
 msgid "Seat"
 msgstr "席位"
 
-#: ../src/proctable.cpp:346
+#: ../src/proctable.cpp:358
 msgid "Owner"
 msgstr "拥有者"
 
@@ -1338,6 +1378,20 @@ msgstr "非常低优先级"
 msgid "%s/s"
 msgstr "%s/秒"
 
+#~ msgctxt "Menu item to Open 'Search for Open Files' dialog"
+#~ msgid "Search for Open Files"
+#~ msgstr "搜索打开的文件"
+
+#~ msgid "Error"
+#~ msgstr "错误"
+
+#~ msgid "'%s' is not a valid Perl regular expression."
+#~ msgstr "“%s”不是有效的 Perl 正则表达式。"
+
+#~ msgid "%lld second"
+#~ msgid_plural "%lld seconds"
+#~ msgstr[0] "%lld 秒"
+
 #~ msgid "_Name contains:"
 #~ msgstr "名称包含(_N)："
 
@@ -1373,9 +1427,6 @@ msgstr "%s/秒"
 
 #~ msgid "_View"
 #~ msgstr "查看(_V)"
-
-#~ msgid "_Stop Process"
-#~ msgstr "停止进程(_S)"
 
 #~ msgid "Stop process"
 #~ msgstr "停止进程"
@@ -1452,13 +1503,6 @@ msgstr "%s/秒"
 #~ "0 for the System Info, 1 for the processes list, 2 for the resources and "
 #~ "3 for the disks list"
 #~ msgstr "0 代表系统信息，1 代表进程列表，2 代表资源，3 代表磁盘列表"
-
-#~ msgid ""
-#~ "Ending a process may destroy data, break the session or introduce a "
-#~ "security risk. Only unresponsive processes should be ended."
-#~ msgstr ""
-#~ "结束进程可能导致数据损坏，中断会话或带来安全风险。您应该只结束无响应的进"
-#~ "程。"
 
 #~ msgid "Load averages for the last 1, 5, 15 minutes: %0.2f, %0.2f, %0.2f"
 #~ msgstr "前一分钟、五分钟、十五分钟的平均负载：%0.2f，%0.2f，%0.2f"

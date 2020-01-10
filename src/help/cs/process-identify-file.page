@@ -26,9 +26,7 @@
   <p>Někdy se může vyskytnou chybová zpráva, která vám sděluje, že zařízení (jako zvukové zařízení nebo DVD-ROM) je zaneprázdněné nebo že soubor, který chcete upravit, je právě používán. Pokud chcete najít proces či procesy, které jsou za to zodpovědné:</p>
 
     <steps>
-      <item><p>Klikněte na <guiseq><gui>Sledování systému</gui><gui>Předvolby</gui></guiseq>.</p>
-      </item>
-      <item><p>Klikněte na <gui>Hledat otevřené soubory</gui>.</p>
+      <item><p>Klikněte na <guiseq><gui>Sledování systému</gui><gui>Hledat otevřené soubory</gui></guiseq>.</p>
       </item>
       <item><p>Zadejte název souboru nebo aspoň část názvu. Může to být třeba <file>/dev/snd</file> pro zvukové zařízení nebo <file>/media/cdrom</file> pro DVD-ROM.</p>
       </item>

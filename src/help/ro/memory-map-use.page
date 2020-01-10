@@ -24,11 +24,6 @@
 
   <title>Using memory maps</title>
 
-  <comment>
-    <cite date="2011-06-18" href="mailto:philbull@gmail.com">Phil Bull</cite>
-    <p>Explain how to use the Memory Map feature.</p>
-  </comment>
-
   <p><gui>Virtual memory</gui> is a representation of the combined
   <gui>physical memory</gui> and <link xref="mem-swap">swap space</link> in a
   system. It enables running processes to access <em>more</em> than the

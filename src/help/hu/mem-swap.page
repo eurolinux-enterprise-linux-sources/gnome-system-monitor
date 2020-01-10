@@ -30,12 +30,6 @@
 
   <title>Mi az a „swap” memória?</title>
 
-  <comment>
-    <cite date="2011-06-18" href="mailto:philbull@gmail.com">Phil Bull</cite>
-    <p>Explain what swap is and how it helps. Explain that the computer may run
-    slowly if it's swapping too much.</p>
-  </comment>
-
   <p>A swap memória vagy <em>swap terület</em> (csere terület) a virtuálismemória-rendszer lemezen lévő része. A rendszer telepítésekor jön létre <em>swap partícióként</em> vagy <em>swap fájlként</em>, de utólag is hozzáadható.</p>
 
   <note>

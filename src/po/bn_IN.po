@@ -17,7 +17,7 @@ msgstr ""
 "PO-Revision-Date: 2014-09-25 11:54+0000\n"
 "Last-Translator: \n"
 "Language-Team: Bengali (India) <kde-i18n-doc@kde.org>\n"
-"Language: bn-IN\n"
+"Language: bn_IN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -42,7 +42,7 @@ msgid ""
 "Manager;"
 msgstr ""
 "মনিটর;সিস্টেম;প্রক্রিয়া;CPU;মেমরি;নেটওয়ার্ক;ইতিহাস;ব্যবহার;পারফরমেন্স;কাজ;ম্"
-"যানেজার"
+"যানেজার;"
 
 #: ../gnome-system-monitor-kde.desktop.in.in.h:1
 #: ../gnome-system-monitor.appdata.xml.in.h:1 ../src/application.cpp:324

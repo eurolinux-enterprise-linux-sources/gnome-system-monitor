@@ -38,15 +38,15 @@
       <mal:email>jhardlin@orange.fr</mal:email>
       <mal:years>2014</mal:years>
     </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Leonor Palazzo</mal:name>
+      <mal:email>leonor.palazzo@gmail.com</mal:email>
+      <mal:years>2015</mal:years>
+    </mal:credit>
   </info>
 
   <title>La mémoire d'échange</title>
-
-  <comment>
-    <cite date="2011-06-18" href="mailto:philbull@gmail.com">Phil Bull</cite>
-    <p>Explain what swap is and how it helps. Explain that the computer may run
-    slowly if it's swapping too much.</p>
-  </comment>
 
   <p>La mémoire d'échange ou <em>espace d'échange</em> est le composant sur disque du système de mémoire virtuelle. Elle est pré-configurée comme une <em>partition swap</em> ou un <em>fichier swap</em> quand Linux est installé pour la première fois, mais  peut être également ajoutée par la suite.</p>
 

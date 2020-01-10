@@ -23,18 +23,11 @@
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>Daniel Mustieles</mal:name>
       <mal:email>daniel.mustieles@gmail.com</mal:email>
-      <mal:years>2014</mal:years>
+      <mal:years>2014 - 2015</mal:years>
     </mal:credit>
   </info>
 
   <title>¿Qué es un proceso?</title>
-
-  <comment>
-    <cite date="2011-06-18" href="mailto:philbull@gmail.com">Phil Bull</cite>
-    <p>Explain, in simple terms, what a process is, how they relate to
- applications, how some are 'system processes', and what you can do with a
- process.</p>
-  </comment>
 
   <p>Un <gui>proceso</gui> es un programa o una aplicación que el sistema ejecuta. Cuando se lanza la aplicación, el sistema le asigna un ID de proceso único (PDI) y sus instrucciones y sus datos se cargan en la memoria.</p>
 

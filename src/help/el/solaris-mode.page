@@ -21,6 +21,12 @@
     <desc>Χρησιμοποιήστε την κατάσταση Solaris για να απεικονίσετε τον αριθμό των CPUs</desc>
   
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Ελληνική μεταφραστική ομάδα GNOME</mal:name>
+      <mal:email>team@gnome.gr</mal:email>
+      <mal:years>2014</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name> Δημήτρης Σπίγγος</mal:name>
       <mal:email>dmtrs32@gmail.com</mal:email>
       <mal:years>2014</mal:years>
@@ -28,12 +34,6 @@
   </info>
 
   <title>Τι είναι η κατάσταση Solaris;</title>
-
-  <comment>
-    <cite date="2011-06-18" href="mailto:philbull@gmail.com">Phil Bull</cite>
-    <p>Very brief topic. Explain what "Solaris mode" in the preferences dialog
- means. The current manual has some information.</p>
-  </comment>
 
   <p>Σε ένα σύστημα που έχει πολλές CPUs ή <link xref="cpu-multicore">πυρήνες</link>, οι διεργασίες μπορεί να χρησιμοποιούν περισσότερες από μία ταυτόχρονα. Είναι δυνατό η στήλη <gui>% CPU</gui> να εμφανίζει τιμές που το άθροισμα είναι μεγαλύτερο από 100%. (δηλαδή 400% σε ένα σύστημα με 4 CPU). Η <gui>κατάσταση Solaris</gui> διαιρεί την <gui>% CPU</gui> για κάθε διεργασία με τον αριθμό των CPUs στο σύστημα, έτσι ώστε το άθροισμα να είναι 100%.</p>
 
@@ -45,6 +45,6 @@
     <item><p>Επιλέξτε <gui>Διαίρεση της χρήσης CPU με τον αριθμό CPU</gui>.</p></item>
   </steps>
 
-    <note><p>Ο όρος <gui>κατάσταση Solaris</gui> προέρχεται από το UNIX της Sun, συγκρινόμενο με την προεπιλογή Λίνουξ της κατάστασης IRIX, που ονομάζεται για το UNIX της SGI.</p></note>
+    <note><p>Ο όρος <gui>κατάσταση Solaris</gui> προέρχεται από το UNIX της Sun, συγκρινόμενο με την προεπιλογή Linux της κατάστασης IRIX, που ονομάζεται για το UNIX της SGI.</p></note>
 
 </page>
